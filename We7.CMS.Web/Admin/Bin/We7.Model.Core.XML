@@ -1,0 +1,2930 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.Model.Core</name>
+    </assembly>
+    <members>
+        <member name="T:We7.Model.Core.UI.CommandContainer">
+            <summary>
+            命令类容器
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UI.ModelContainer">
+            <summary>
+            模型容器
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UI.IModelContainer">
+            <summary>
+            模型控件
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.IModelContainer.OnCommand">
+            <summary>
+            执行的命令事件
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.IModelContainer.OnPreCommand">
+            <summary>
+            执行命令之间的事件
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.IModelContainer.OnCommandComplete">
+            <summary>
+            执行命令完成之后的事件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.IModelContainer.ModelName">
+            <summary>
+            模型名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.IModelContainer.PanelName">
+            <summary>
+            面板配置名
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelContainer.OnCommandSubmit(System.String,System.Object)">
+            <summary>
+            命令提交时执行的方法
+            </summary>
+            <param name="sender"></param>
+            <param name="cmd"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelContainer.InitModelData">
+            <summary>
+            初始化模型数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelContainer.DoCommand(System.Object,System.String,We7.Model.Core.PanelContext,System.Object)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+            <param name="model">模型信息</param>
+            <param name="state">附加数据</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelContainer.DoCommand(System.Object,System.String,System.Object)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+            <param name="state">附加数据</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelContainer.DoCommand(System.Object,System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.GroupIndex">
+            <summary>
+            group的index值，默认从参数获取
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.ModelContainer.OnCommand">
+            <summary>
+            执行的命令事件
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.ModelContainer.OnPreCommand">
+            <summary>
+            执行命令之间的事件
+            </summary>
+        </member>
+        <member name="E:We7.Model.Core.UI.ModelContainer.OnCommandComplete">
+            <summary>
+            执行命令完成之后的事件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.ModelName">
+            <summary>
+            模型名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.PanelName">
+            <summary>
+            面板配置名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.UIHelper">
+            <summary>
+            UI处理对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.Info">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelContainer.Panel">
+            <summary>
+            当前面板信息
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.CommandContainer.InitModelData">
+            <summary>
+            初始化模型数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.CommandContainer.OnButtonSubmit(System.Object,System.EventArgs)">
+            <summary>
+            按钮类控件执行方法
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.EditorContainer.UpdateFields(System.Data.DataRow)">
+            <summary>
+            用数据行更新模型数据
+            </summary>
+            <param name="data">模型数据</param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.EditorContainer.ProcessAllDataColumns(We7.Model.Core.PanelContext)">
+            <summary>
+            处理所有数据列
+            </summary>
+            <param name="ctx"></param>
+        </member>
+        <member name="P:We7.Model.Core.UI.EditorContainer.IsViewer">
+            <summary>
+            是否是浏览控件
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.AutoEditor.InitContainer">
+            <summary>
+            初始化自定义容器
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ConditionContainer.SetPageIndex(System.Int32)">
+            <summary>
+            设置当前的页码
+            </summary>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ConditionContainer.SubmitQuery(System.String,System.Object)">
+            <summary>
+            执行查询
+            </summary>
+            <param name="cmd">查询命令</param>
+            <param name="args">查询参数</param>
+            <param name="action">外挂动作</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ConditionContainer.Refresh">
+            <summary>
+            刷新数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ConditionContainer.InitContainer">
+            <summary>
+            初始化容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ConditionContainer.PageIndex">
+            <summary>
+            当前页记录
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.DeleteSelected">
+            <summary>
+            多选删除操作
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ICommand">
+            <summary>
+            操作命令
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ICommand.Do(We7.Model.Core.PanelContext)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="data">模型数据</param>
+        </member>
+        <member name="M:We7.Model.Core.Command.DeleteSelected.Do(We7.Model.Core.PanelContext)">
+            <summary>
+            执行操作
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.ListContainer.BindData(We7.Model.Core.ListResult)">
+            <summary>
+            绑定数据
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ListContainer.GetDataKeys">
+            <summary>
+            取得所选行的主键字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.ModelHelper">
+            <summary>
+            模型业务类
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.CATCH_CONTENTMODEL_COLLECTION">
+            <summary>
+            缓存的关键字
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.DEFAULTLISTCONTROL">
+            <summary>
+            默认的ListControl
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetImportRow(System.String,System.String,We7.Model.Core.PanelContext@)">
+            <summary>
+            获取导入数据项
+            </summary>
+            <param name="modelName">模型名称</param>
+            <param name="panelName">面板名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetImportRow(System.String,We7.Model.Core.PanelContext@)">
+            <summary>
+            获取导入数据项
+            </summary>
+            <param name="modelName">模型名称</param>
+            <param name="panelName">面板名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveContext(We7.Model.Core.PanelContext)">
+            <summary>
+            保存当前行记录
+            </summary>
+            <param name="ctx">当前数据项</param>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.ContentModelConfigPath">
+            <summary>
+            内容模型索引文件路径
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.DefaultModelConfigPath">
+            <summary>
+            默认内容模型索引文件
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.ModelControlsIndex">
+            <summary>
+            模型控件路径
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelHelper.WidgetsSavePath">
+            <summary>
+            内容模型部件存储目录
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetAllContentModel">
+            <summary>
+            获取索引对象模型集合
+            </summary>
+            <returns>用户所有对象模型索引集合</returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.ReCreateModelIndex">
+            <summary>
+            重新创建内容模型索引
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetContentModel(We7.Model.Core.ModelType)">
+            <summary>
+            按模型类型来取模型集合
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetContentModel">
+            <summary>
+            获取所有模型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetContentModelByName(System.String)">
+            <summary>
+            获取索引对象模型
+            </summary>
+            <returns>对象模型索引</returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveContentModel(We7.Model.Core.ContentModelCollection)">
+            <summary>
+            序列化对象模型集合
+            </summary>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveContentModel(We7.Model.Core.ContentModel)">
+            <summary>
+             保存对象模型
+            </summary>
+            <param name="modelinfo">对象模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveModelInfo(We7.Model.Core.ModelInfo,System.String)">
+            <summary>
+            序列化一个对象模型
+            </summary>
+            <param name="modelInfo">内容模型</param>
+            <param name="fileName">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveModelInfo(We7.Model.Core.ModelInfo)">
+            <summary>
+            保存模型信息
+            </summary>
+            <param name="modelInfo">内容模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelInfoByName(System.String)">
+            <summary>
+            根据名称获取对象模型
+            </summary>
+            <param name="name">模型名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.DeleteContentModel(System.String,System.String@)">
+            <summary>
+            删除内容模型
+            update{
+            date:2010-10-10,
+            author:Brian.Gou,
+            Description:同步删除内容模型产生的各种残留文件及数据
+            }
+            </summary>
+            <param name="name">内容模型名称</param>
+            <param name="msg">error message</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.DeleteModelField(System.String,System.String)">
+            <summary>
+            删除字段节点(同时删除相关节点)
+            </summary>
+            <param name="modelName">模型名称</param>
+            <param name="fieldname">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetAllDataColumn(System.String)">
+            <summary>
+            获取数据字典
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelValue(System.String)">
+            <summary>
+            取得模型的Value值
+            </summary>
+            <param name="modename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetDefaultModels">
+            <summary>
+            获取默认的模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetDefaultModelInfoByName(System.String)">
+            <summary>
+            根据名称获取默认模型
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateControls(We7.Model.Core.ModelInfo)">
+            <summary>
+            创建前台控件
+            </summary>
+            <param name="model">模型信息</param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateAdviceEditWidget(We7.Model.Core.ModelInfo)">
+            <summary>
+            反馈前台录入(自动布局)
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateAdviceDetailsControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成反馈详细 前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateAdviceListControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成反馈列表 前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateAdviceQueryListControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成反馈类型 前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateAdviceEditControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成反馈类型 前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateArticleViewControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成文章类型前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateArticleViewWidget(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成文章类型前台部件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateModelLayout(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成模型布局
+            </summary>
+            <param name="model"></param>
+            <returns>布局存放路径</returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelLayoutDirectory(System.String)">
+            <summary>
+            获取布局存储目录
+            </summary>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateArticleListControl(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成文章类型前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateArticleListWidget(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成文章类型前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateArticlePagedListWidget(We7.Model.Core.ModelInfo)">
+            <summary>
+            生成文章类型前台控件
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateWidgets(We7.Framework.TemplateEnginer.NVelocityHelper,System.String,System.String[])">
+            <summary>
+            创建部件
+            </summary>
+            <param name="helper"></param>
+            <param name="refFilePath"></param>
+            <param name="tpls"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateWidgetDirectory(We7.Model.Core.ModelInfo,System.String)">
+            <summary>
+            创建部件目录
+            </summary>
+            <param name="model"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetWidgetDirectory(We7.Model.Core.ModelInfo,System.String)">
+            <summary>
+            获取内容模型存储文件目录
+            </summary>
+            <param name="model"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateDirectory(We7.Model.Core.ModelInfo,System.String,System.String,System.String)">
+            <summary>
+            创建前台目录
+            </summary>
+            <param name="model"></param>
+            <param name="type"></param>
+            <param name="refControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.SaveModelGroups(We7.Model.Core.ModelGroupCollection)">
+            <summary>
+            保存内容模型组
+            </summary>
+            <param name="mgc"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelGroupByName(System.String)">
+            <summary>
+            根据名称获取对象模型
+            </summary>
+            <param name="name">模型名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CovertModelGroupName(System.String)">
+            <summary>
+            根据模型名称获取模型组名
+            </summary>
+            <param name="modelName">模型名</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateDataSet(System.String)">
+            <summary>
+            根据模型信息创建数据集
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelPath(System.String)">
+            <summary>
+            根据模型类型获取模型路径
+            </summary>
+            <param name="modeltype">模型类型</param>
+            <returns>模型路径</returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelInfo(System.String)">
+            <summary>
+            根据模型类型取得模型数据
+            </summary>
+            <param name="modelname">根据模型名称拿模型信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.UpdateFields(We7.Model.Core.PanelContext,System.Data.DataRow)">
+            <summary>
+            用数据行更新模型数据
+            </summary>
+            <param name="data">模型数据</param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetDataControl(System.String)">
+            <summary>
+            获取模型数据控件
+            </summary>
+            <param name="lcontrol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.ExtendDataTable(System.Data.DataTable,We7.Model.Core.PanelContext)">
+            <summary>
+            扩展数据表格
+            </summary>
+            <param name="dt"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.ExtendDataTable(System.Data.DataTable,We7.Model.Core.We7DataColumnCollection)">
+            <summary>
+            扩展数据表格
+            </summary>
+            <param name="dt"></param>
+            <param name="dcc"></param>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelSchema(System.String)">
+            <summary>
+            通过模型名取得数据加构XML
+            </summary>
+            <param name="modelname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetModelConfigXml(System.String)">
+            <summary>
+            取得模型XML
+            </summary>
+            <param name="modelname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateDataset(System.String)">
+            <summary>
+            根据模型名创建数据集
+            </summary>
+            <param name="modelname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.CreateDataSet(We7.Model.Core.ModelInfo)">
+            <summary>
+            根据模型创建数据集
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.ModelHelper.GetOperation(System.String)">
+            <summary>
+            取得操作类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.ModelHelper.Assistant">
+            <summary>
+            当前Helper的数据访问对象
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UI.ModelControlField">
+            <summary>
+            模型字段数据控件字段
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelControlField.InitCellStyle(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType)">
+            <summary>
+            格式化单元格
+            </summary>
+            <param name="cell"></param>
+            <param name="cellType"></param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelControlField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState)">
+            <summary>
+            将文本或控件添加到单元格的控件集合中。
+            </summary>
+            <param name="cell">一个 System.Web.UI.WebControls.DataControlFieldCell，包含 System.Web.UI.WebControls.DataControlField的文本或控件。</param>
+            <param name="cellType">System.Web.UI.WebControls.DataControlCellType 值之一。</param>
+            <param name="rowState">System.Web.UI.WebControls.DataControlRowState 值之一，指定包含 System.Web.UI.WebControls.DataControlFieldCell的行的状态。</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelControlField.GetValue(System.Object,System.String)">
+            <summary>
+            从前的DataItem中取得数据
+            </summary>
+            <param name="dataitem">当前的DataItem</param>
+            <param name="expression">表达示</param>
+            <returns>查询到的值</returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelControlField.ParseHorizonAlign(System.String)">
+            <summary>
+            解析对齐方式
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelControlField.RowIndex">
+            <summary>
+            当前序号
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelControlField.Column">
+            <summary>
+            模型字段信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelControlField.ModelInfo">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.CtrVersion">
+            <summary>
+            控件版本
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.QueryContext">
+            <summary>
+            模型查询上下文件
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.QueryContext.Objects">
+            <summary>
+            扩展对象数据集
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.PageSize">
+            <summary>
+            页记录数
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.Orders">
+            <summary>
+            排序字符串
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.ModelName">
+            <summary>
+            当前模型名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.Model">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.DataSet">
+            <summary>
+            数据集信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.Row">
+            <summary>
+            行记录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.QueryFields">
+            <summary>
+            查询字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryContext.Table">
+            <summary>
+            当前表信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.PanelContext">
+            <summary>
+            面板上下文信息
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.PanelContext.State">
+            <summary>
+            扩展状态
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.DataKeyString">
+            <summary>
+            主键字符串
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.DataKeys">
+            <summary>
+            主键字段集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.PanelName">
+            <summary>
+            当前面板名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.Panel">
+            <summary>
+            当前面板配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.DataKey">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelContext.CtrVersion">
+            <summary>
+            控件版本
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ModelEventArgs">
+            <summary>
+            模型命令参数
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ModelEventArgs.#ctor">
+            <summary>
+            模型事件参数
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ModelEventArgs.#ctor(System.String,We7.Model.Core.PanelContext)">
+            <summary>
+            模型事件参数
+            </summary>
+            <param name="commandNamd">命令名称</param>
+            <param name="data">模型数据</param>
+        </member>
+        <member name="M:We7.Model.Core.ModelEventArgs.#ctor(System.String,System.Object,We7.Model.Core.PanelContext)">
+            <summary>
+            模型事件参数
+            </summary>
+            <param name="commandNamd">命令名称</param>
+            <param name="args">命令参数</param>
+            <param name="data">模型数据</param>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.CommandName">
+            <summary>
+            命令名称
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.CommandArguments">
+            <summary>
+            附加命令参数值
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.PanelContext">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.Disable">
+            <summary>
+            当前命令是否被禁用
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.State">
+            <summary>
+            状态信息
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelEventArgs.HashTable">
+            <summary>
+            键段对参数，用于存储更多的参数
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ModelEventHandler">
+            <summary>
+            模型委托
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:We7.Model.Core.Entity.DbProviderInfo">
+            <summary>
+            数据驱动信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Entity.DbProviderInfo.Type">
+            <summary>
+            数据驱动的模型类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Entity.DbProviderInfo.Items">
+            <summary>
+            数据驱动类型
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Entity.DbProviderInfoCollection">
+            <summary>
+            数据驱动信息集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModelCollection.Item(System.String)">
+            <summary>
+            按名称查询值。
+            </summary>
+            <param name="key">模型名称</param>
+            <returns>查询到的值。如果为空，null。</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.DbProvider.Instance(We7.Model.Core.ModelType)">
+            <summary>
+            实例化当前数据驱动
+            </summary>
+            <param name="type">驱动类型名</param>
+            <returns>当前的驱动</returns>
+        </member>
+        <member name="T:We7.Model.Core.Config.ModelConfigFileManager">
+            <summary>
+            内容模型文件管理
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Config.ModelConfigFileManager.m_fileoldchange">
+            <summary>
+            文件修改时间
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Config.ModelConfigFileManager.#cctor">
+            <summary>
+            初始化文件修改时间和对象实例
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Config.ModelConfigFileManager.LoadConfig">
+            <summary>
+            返回配置类实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Config.ModelConfigFileManager.SaveConfig">
+            <summary>
+            保存配置类实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigFileManager.ConfigInfo">
+            <summary>
+            当前的配置实例对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigFileManager.ConfigFilePath">
+            <summary>
+            模板配置文件路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.PagerContainer.RecordCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.PagerContainer.CurrentPageIndex">
+            <summary>
+            当前记录数
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.We7DataTableCollection">
+            <summary>
+            表集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataTableCollection.Item(System.String)">
+            <summary>
+            索引，根据表名取得数据表
+            </summary>
+            <param name="name">表名</param>
+            <returns>表名对应的数据表</returns>
+        </member>
+        <member name="T:We7.Model.Core.We7DataTable">
+            <summary>
+            数据表配置信息
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.We7DataTable.GetDesignField(System.String)">
+            <summary>
+            取得设计时字段
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.We7DataTable.Name">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataTable.Columns">
+            <summary>
+            字段集合
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ListResult.DataTable">
+            <summary>
+            数据表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ListResult.RecoredCount">
+            <summary>
+            总记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ListResult.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Data.IDbProvider">
+            <summary>
+            数据提供接口
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.Insert(We7.Model.Core.PanelContext)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="data">模型信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.Update(We7.Model.Core.PanelContext)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="data">模型信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.Delete(We7.Model.Core.PanelContext)">
+            <summary>
+            删除符合条件的数据
+            </summary>
+            <param name="data">模型信息</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.Query(We7.Model.Core.PanelContext,System.Int32@,System.Int32@)">
+            <summary>
+            查询信息列表,并返回满足当前条件的记录数
+            </summary>
+            <param name="model"></param>
+            <param name="recordcount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.Get(We7.Model.Core.PanelContext)">
+            <summary>
+            取得信息实体
+            </summary>
+            <param name="data">模型信息</param>
+            <returns>行数据</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDbProvider.GetCount(We7.Model.Core.PanelContext)">
+            <summary>
+            取得行数
+            </summary>
+            <param name="data">模型信息</param>
+            <returns>行数</returns>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLDbProvider.connstr">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.Insert(We7.Model.Core.PanelContext)">
+            <summary>
+            添加数据
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.Update(We7.Model.Core.PanelContext)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.Delete(We7.Model.Core.PanelContext)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.Query(We7.Model.Core.PanelContext,System.Int32@,System.Int32@)">
+            <summary>
+            查询数据
+            </summary>
+            <param name="data">模型数据</param>
+            <param name="recordcount">返回总的数据记录</param>
+            <param name="pageindex">当前的页数</param>
+            <returns>数据集</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.Get(We7.Model.Core.PanelContext)">
+            <summary>
+            取得当前数据行
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>数据行</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.SQLDbProvider.GetCount(We7.Model.Core.PanelContext)">
+            <summary>
+            取得总记录数
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="P:We7.Model.Core.Data.SQLDbProvider.ConnStr">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Data.SQLDbProvider.SqlBuilder">
+            <summary>
+            SQL构造者
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Data.IDataBaseHelper">
+            <summary>
+            数据库处理接口
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.CreateTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            根据内容模型文件创建表
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.UpdateTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            根据内容模型信息更新表结构
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.DeleteTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            根据内容模型信息删除表结构
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.GetDataRow(System.String,System.String)">
+            <summary>
+            根据Sql条件查询数据行
+            </summary>
+            <param name="table">数据表</param>
+            <param name="sqlCondition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.Count(System.String,System.String)">
+            <summary>
+            查询数据记录
+            </summary>
+            <param name="table">数据表</param>
+            <param name="sqlCondition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.Query(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            查询数据列表
+            </summary>
+            <param name="table">表名</param>
+            <param name="sqlCondition">查询条件</param>
+            <param name="start">开始记录</param>
+            <param name="querycount">查询条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.IDataBaseHelper.CreateModelTables">
+            <summary>
+            创建模型表
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Data.DataBaseHelperFactory">
+            <summary>
+            数据库处理工厂
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Data.DataBaseHelperFactory.Create">
+            <summary>
+            创建数据帮助类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.Data.ISQLBuilder">
+            <summary>
+            SQL构造器
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildInsertSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection)">
+            <summary>
+            构造添加SQL
+            </summary>
+            <param name="data">模型</param>
+            <param name="parameters">参数集合</param>
+            <returns>SQL</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildDeleteSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection)">
+            <summary>
+            构造添加SQL
+            </summary>
+            <param name="data">模型</param>
+            <param name="parameters">参数集合</param>
+            <returns>SQL</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildUpdateSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection)">
+            <summary>
+            构造添加SQL
+            </summary>
+            <param name="data">模型</param>
+            <param name="parameters">参数集合</param>
+            <returns>SQL</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildCountSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection)">
+            <summary>
+            构造添加SQL
+            </summary>
+            <param name="data">模型</param>
+            <param name="parameters">参数集合</param>
+            <returns>SQL</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildListSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection,System.Int32,System.Int32)">
+            <summary>
+            构造添加SQL
+            </summary>
+            <param name="data">模型</param>
+            <param name="parameters">参数集合</param>
+            <param name="startindex">Start Index</param>
+            <param name="itemcount">Item Count</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.BuildGetSQL(We7.Model.Core.PanelContext,System.Data.IDataParameterCollection)">
+            <summary>
+            构造获取指定SQL记录
+            </summary>
+            <param name="data">模型数据</param>
+            <param name="parameters">参数集合</param>
+            <returns>SQL</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.GetConnection">
+            <summary>
+            取得Connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.GetCommand">
+            <summary>
+            取得Command
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.GetDataAdapter">
+            <summary>
+            取得Adapter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ISQLBuilder.GetDataparameter">
+            <summary>
+            取得参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLINSERT">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLPAGELIST">
+            <summary>
+            分页列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLTOPLIST">
+            <summary>
+            前多少条记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLLIST">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLCOUNT">
+            <summary>
+            符合条件的记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLUPDATE">
+            <summary>
+            更新数据记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.AccessSQLBuilder.SQLDELETE">
+            <summary>
+            删除数据行
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.QueryCommand">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ListControl.ThumbField">
+            <summary>
+            列表显示缩略图字段
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.We7DataSet">
+            <summary>
+            数据集信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataSet.Tables">
+            <summary>
+            表集合
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Config.ModelConfigInfo">
+            <summary>
+            内容模型基本配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.BaseDirectory">
+            <summary>
+            内容模型根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ConfigsDirecotry">
+            <summary>
+            配置文件根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ControlsDirectory">
+            <summary>
+            控件根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ContainerDirectory">
+            <summary>
+            容器根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ImageFolder">
+            <summary>
+            图片上传路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.IsCreateArticleUC">
+            <summary>
+            是否生成文章前台控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.DataBaseHelper">
+            <summary>
+            数据库帮助类
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.Providers">
+            <summary>
+            模型类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ModelsDirectory">
+            <summary>
+            模块存放的路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.BaseModelDirectory">
+            <summary>
+            模型配置的路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.DefaultModelFile">
+            <summary>
+            默认模型配置文件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ModelIndexFile">
+            <summary>
+            模型索引文件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ModelGroupIndexFile">
+            <summary>
+            模型组索引文件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ModelControlsIndex">
+            <summary>
+            模型控件索引文件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.CDPath">
+            <summary>
+            数据库映射路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ModelUCConfigTemplate">
+            <summary>
+            模型前台控件路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.Commands">
+            <summary>
+            命令类型列表
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.Converters">
+            <summary>
+            转化器类型列表
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ListControls">
+            <summary>
+            数据列控件集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ListCommands">
+            <summary>
+            数据命令集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfigInfo.ColumnConvert">
+            <summary>
+            数据转化集合
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.EditCommand">
+            <summary>
+            更新命令
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UI.FieldControl">
+            <summary>
+            字段控件
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.FieldControl.InitControl">
+            <summary>
+            初始化控件
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.FieldControl.GetValue">
+            <summary>
+            取得控件值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.FieldControl.GetParam(System.String)">
+            <summary>
+            取得当前控件的Param值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.UI.FieldControl.IsEdit">
+            <summary>
+            是否是编辑状态
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.PanelCollection.Item(System.String)">
+            <summary>
+            索引，按面板名称获取指定面板
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.Panel">
+            <summary>
+            面板
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.Label">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.EditInfo">
+            <summary>
+            编辑容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.ListInfo">
+            <summary>
+            列表容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.PagerInfo">
+            <summary>
+            编辑容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.ConditionInfo">
+            <summary>
+            条件容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.CommandInfo">
+            <summary>
+            命令容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.NavigationInfo">
+            <summary>
+            导航容器配置信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Panel.Context">
+            <summary>
+            当前面板上下文
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Layout">
+            <summary>
+            布局信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Layout.Panels">
+            <summary>
+            面板集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Layout.UCContrl">
+            <summary>
+            前台控件信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.ListFields">
+            <summary>
+            前台列表字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.DetailFields">
+            <summary>
+            前台详细信息字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.WidgetListFields">
+            <summary>
+            部件列表字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.WidgetDetailFields">
+            <summary>
+            部件详细信息字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.CreateEditor">
+            <summary>
+            是否生成前台控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.AdminEidtor">
+            <summary>
+            后台录入布局
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.AdminEditorCss">
+            <summary>
+            后台录入样式
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.AdminViewer">
+            <summary>
+            后台信息预览
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UCControl.AdminViewerCss">
+            <summary>
+            后台信息预览样式
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLINSERT">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLPAGELIST">
+            <summary>
+            分页列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLTOPLIST">
+            <summary>
+            前多少条记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLLIST">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLCOUNT">
+            <summary>
+            符合条件的记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLUPDATE">
+            <summary>
+            更新数据记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MSSqlServerSQLBuilder.SQLDELETE">
+            <summary>
+            删除数据行
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Config.ModelConfig">
+            <summary>
+            内容模型配置
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Config.ModelConfig.lockHelper">
+            <summary>
+            锁变量
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Config.ModelConfig.GetConfig">
+            <summary>
+            获取聚合配置类实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Config.ModelConfig.SaveConfig(We7.Model.Core.Config.ModelConfigInfo)">
+            <summary>
+            保存配置类实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.DataBaseHelper">
+            <summary>
+            数据库帮助类
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.BaseDirectory">
+            <summary>
+            内容模型根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ModelsDirectory">
+            <summary>
+            模型文件存放路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.BaseModelDirectory">
+            <summary>
+            内容核心配置根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ModelControlTemplatePath">
+            <summary>
+            模型控件模板路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ConfigFilePath">
+            <summary>
+            配置文件的绝对路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ModelGroupIndexFile">
+            <summary>
+            内容模型组索引文件路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ControlsDirectory">
+            <summary>
+            控件根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ContainerDirectory">
+            <summary>
+            控件根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ModelControlsIndex">
+            <summary>
+            模型控件路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.CDPath">
+            <summary>
+            数据库映射路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ModelUCConfigTemplate">
+            <summary>
+            模型前台控件路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ImageFolder">
+            <summary>
+            图片上传根目录
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.IsCreateArticleUC">
+            <summary>
+            是否生成文章控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.Commands">
+            <summary>
+            命令集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.Converters">
+            <summary>
+            命令转化器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.Defaults">
+            <summary>
+            内容模型默认值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ListControls">
+            <summary>
+            表表控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Config.ModelConfig.ListCommands">
+            <summary>
+            列表命令
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.CommandFactory">
+            <summary>
+            命令工厂
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.CommandFactory.GetCommand(System.String)">
+            <summary>
+            根据命令名称获取命令对象
+            </summary>
+            <param name="cmd">命令名称</param>
+            <returns>命令对象</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="modelName">模型名称</param>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.Query(Thinkment.Data.Criteria,System.Collections.Generic.List{Thinkment.Data.Order})">
+            <summary>
+            查询记录
+            </summary>
+            <param name="ct"></param>
+            <param name="orders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.Query(Thinkment.Data.Criteria,System.Collections.Generic.List{Thinkment.Data.Order},System.Int32,System.Int32)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="ct"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.QueryPagedList(Thinkment.Data.Criteria,System.Collections.Generic.List{Thinkment.Data.Order},System.Int32,System.Int32)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="ct">查询条件</param>
+            <param name="orders">排序</param>
+            <param name="pageIndex">起始页</param>
+            <param name="pageSize">每页记录</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.QueryPagedList(Thinkment.Data.Criteria,System.Collections.Generic.List{Thinkment.Data.Order},System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="ct">查询条件</param>
+            <param name="orders">排序</param>
+            <param name="pageIndex">起始页</param>
+            <param name="pageSize">每页记录</param>
+            <param name="recordcount">返回总条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.Query(System.String)">
+            <summary>
+            查询Sql
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.Count(Thinkment.Data.Criteria)">
+            <summary>
+            按条件查询数据记录
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.ConvertTypeCodeToDbType(System.TypeCode)">
+            <summary>
+            将TypeCode枚举转化为DbType枚举
+            </summary>
+            <param name="typecode">TypeCode枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.GetModelPath(System.String)">
+            <summary>
+            根据模型类型获取模型路径
+            </summary>
+            <param name="modeltype">模型类型</param>
+            <returns>模型路径</returns>
+        </member>
+        <member name="M:We7.Model.Core.Data.ModelDBHelper.GetModelInfo(System.String)">
+            <summary>
+            根据模型类型取得模型数据
+            </summary>
+            <param name="modeltype"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.Data.ModelDBHelper.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Data.ModelDBHelper.ModelInfo">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.DeleteCommand">
+            <summary>
+            删除单条记录命令
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.LayoutEditor.IsViewer">
+            <summary>
+            是否是浏览控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.LayoutEditor.CssClass">
+            <summary>
+            布局控件样式
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.LayoutEditor.Panel">
+            <summary>
+            当前面板信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.GroupCollection">
+            <summary>
+            分组集合
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Group">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Name">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Index">
+            <summary>
+            索引值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Next">
+            <summary>
+            后继页索引值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Controls">
+            <summary>
+            控件集
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Group.Columns">
+            <summary>
+            列信息定义
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Extend.NONE">
+            <summary>
+            没有扩展
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Extend.ADD">
+            <summary>
+            扩展添加
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Extend.LIST">
+            <summary>
+            扩展列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Extend.RELATED">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLINSERT">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLPAGELIST">
+            <summary>
+            分页列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLTOPLIST">
+            <summary>
+            前多少条记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLLIST">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLCOUNT">
+            <summary>
+            符合条件的记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLUPDATE">
+            <summary>
+            更新数据记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.OracleSQLBuilder.SQLDELETE">
+            <summary>
+            删除数据行
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ListControl.UxConvertFactory">
+            <summary>
+            用户自定义转化类型
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLINSERT">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLPAGELIST">
+            <summary>
+            分页列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLTOPLIST">
+            <summary>
+            前多少条记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLLIST">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLCOUNT">
+            <summary>
+            符合条件的记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLUPDATE">
+            <summary>
+            更新数据记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.MySqlSQLBuilder.SQLDELETE">
+            <summary>
+            删除数据行
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UIHelper">
+            <summary>
+            控件界面业务类
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UIHelper.GetControl(System.String,System.Web.UI.Control)">
+            <summary>
+            从容器中查找ID与id一致的控件
+            </summary>
+            <param name="id">id</param>
+            <param name="container">容器</param>
+            <returns>查找到的控件</returns>
+        </member>
+        <member name="M:We7.Model.Core.UIHelper.GetControl``1(System.String,System.Web.UI.Control)">
+            <summary>
+            从容器中查找ID与id一致的控件
+            </summary>
+            <typeparam name="T">查找控件类型</typeparam>
+            <param name="id">控件ID</param>
+            <param name="container">容器</param>
+            <returns>查找到的控件</returns>
+        </member>
+        <member name="M:We7.Model.Core.UIHelper.GetControlPath(System.String,System.String)">
+            <summary>
+            取得控件路径
+            </summary>
+            <returns>控件的相对路径。服务器端路径,带有"~"</returns>
+        </member>
+        <member name="M:We7.Model.Core.UIHelper.GetControlPath(System.String)">
+            <summary>
+            取得控件路径
+            </summary>
+            <param name="controlname">控件名称</param>
+            <returns>控件的相对路径。服务器端路径,带有"~"</returns>
+        </member>
+        <member name="M:We7.Model.Core.UIHelper.GetContainerPath(System.String)">
+            <summary>
+            取得容器控件路径
+            </summary>
+            <param name="container">控件名称</param>
+            <returns>控件的相对路径。服务器端路径,带有"~"</returns>
+        </member>
+        <member name="P:We7.Model.Core.UIHelper.Message">
+            <summary>
+            当前页信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ColumnInfoCollection">
+            <summary>
+            表格列信息集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfoCollection.Item(System.String)">
+            <summary>
+            索引
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.ColumnInfo">
+            <summary>
+            表格列信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Name">
+            <summary>
+            列对应的数据字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Label">
+            <summary>
+            列标签
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Width">
+            <summary>
+            长
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Type">
+            <summary>
+            列类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Align">
+            <summary>
+            对应方式
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Index">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Visible">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.IsThumb">
+            <summary>
+            是否缩略图
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.IsLink">
+            <summary>
+            是否有链接
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Mapping">
+            <summary>
+            映射字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Expression">
+            <summary>
+            表达式
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.ConvertType">
+            <summary>
+            转化类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ColumnInfo.Params">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ListControl.HtmlField.GetLinkUrl(System.Object)">
+            <summary>
+            获取链接地址
+            </summary>
+            <param name="dataitem"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.ModelGroupCollection.Item(System.String)">
+            <summary>
+            索引
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.ModelGroup">
+            <summary>
+            内容模型组
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Converter.ConvertHelper.GetInputConvert(System.String,System.String[]@)">
+            <summary>
+            输入转化器
+            </summary>
+            <param name="expr"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.Converter.ConvertHelper.GetOutputConvert(System.String,System.String[]@)">
+            <summary>
+            输出转化器
+            </summary>
+            <param name="expr"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.QueryMode">
+            <summary>
+            查询模式
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.OperationType">
+            <summary>
+            查询类型
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.EQUER">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.NOTEQUER">
+            <summary>
+            不等
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.LIKE">
+            <summary>
+            模糊查询
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.LESSTHAN">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.MORETHAN">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.LESSTHANEQURE">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.OperationType.MORETHANEQURE">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.WhenNull">
+            <summary>
+            空处理
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.DataField">
+            <summary>
+            数据字段值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.DataField.Column">
+            <summary>
+            列信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.DataField.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.DataFieldCollection">
+            <summary>
+            数据字段值集合
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.DataFieldCollection.IndexOf(System.String)">
+            <summary>
+            根据列名索引数据字段
+            </summary>
+            <param name="name">列名</param>
+            <returns>数据字段</returns>
+        </member>
+        <member name="M:We7.Model.Core.DataFieldCollection.IndexByMapping(System.String)">
+            <summary>
+            按映射字段索引字段
+            </summary>
+            <param name="mappingField">映射字段</param>
+            <returns>返回数据字段</returns>
+        </member>
+        <member name="P:We7.Model.Core.DataFieldCollection.Table">
+            <summary>
+            字段值的表信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.DataFieldCollection.Item(We7.Model.Core.We7DataColumn)">
+            <summary>
+            索引
+            </summary>
+            <param name="column">列信息</param>
+            <returns>字段值</returns>
+        </member>
+        <member name="P:We7.Model.Core.DataFieldCollection.Item(System.String)">
+            <summary>
+            索引
+            </summary>
+            <param name="name">列名</param>
+            <returns>字段值</returns>
+        </member>
+        <member name="T:We7.Model.Core.QueryField">
+            <summary>
+            查询字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryField.Operator">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryField.WhenNull">
+            <summary>
+            空处理
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.QueryFieldCollection">
+            <summary>
+            查询字段信息集合
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.QueryFieldCollection.IndexOf(System.String)">
+            <summary>
+            根据列名索引数据字段
+            </summary>
+            <param name="name">列名</param>
+            <returns>数据字段</returns>
+        </member>
+        <member name="P:We7.Model.Core.QueryFieldCollection.Table">
+            <summary>
+            数据表
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.QueryFieldCollection.Item(We7.Model.Core.We7DataColumn)">
+            <summary>
+            索引
+            </summary>
+            <param name="column">列名</param>
+            <returns>字段值</returns>
+        </member>
+        <member name="P:We7.Model.Core.QueryFieldCollection.Item(System.String)">
+            <summary>
+            索引
+            </summary>
+            <param name="column">列名</param>
+            <returns>字段值</returns>
+        </member>
+        <member name="T:We7.Model.Core.UI.DefaultGenerator">
+            <summary>
+            默认值生成器
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.DefaultGenerator.GetGenerator(System.String)">
+            <summary>
+            取得默认值生成器
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.DefaultGenerator.GetDefaultValue(System.String,We7.Model.Core.PanelContext,We7.Model.Core.We7DataColumn)">
+            <summary>
+            取得默认值
+            </summary>
+            <param name="key"></param>
+            <param name="ctx"></param>
+            <param name="dc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.DefaultGenerator.GetCacheKey(System.String)">
+            <summary>
+            获取缓存关键字
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.UI.DefaultGenerator.Generate">
+            <summary>
+            创建默认值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.UI.DefaultGenerator.Ctx">
+            <summary>
+            数据的上下文信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.DefaultGenerator.DC">
+            <summary>
+            数据列信息
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.UI.DefaultNowGenerator">
+            <summary>
+            当前时间默认值
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ContainerInfo">
+            <summary>
+            容器信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContainerInfo.Path">
+            <summary>
+            容器路径
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContainerInfo.Visible">
+            <summary>
+            可见性
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContainerInfo.Name">
+            <summary>
+            容器名
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.EditInfo">
+            <summary>
+            编辑容器信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.EditInfo.Groups">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.EditInfo.Controls">
+            <summary>
+            当前容器含有的控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.EditInfo.IsUCEditor">
+            <summary>
+            是否是用户自定义控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.EditInfo.IsUCViewer">
+            <summary>
+            是否自定义浏览控件
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.EditInfo.Layout">
+            <summary>
+            布局控件
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ListInfo">
+            <summary>
+            列表容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ListInfo.Groups">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ConditionInfo">
+            <summary>
+            条件容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ConditionInfo.Controls">
+            <summary>
+            含有的查询控件
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.PagerInfo">
+            <summary>
+            分页容器
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.CommandInfo">
+            <summary>
+            命令容器
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.NavigationInfo">
+            <summary>
+            导航容器
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.We7DataColumnCollection">
+            <summary>
+            字段集合
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.We7DataColumnCollection.Contains(System.String)">
+            <summary>
+            是否包含指定列
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.Core.We7DataColumnCollection.Contains(System.String,System.Boolean)">
+            <summary>
+            是否包含指定列
+            </summary>
+            <param name="key">列名</param>
+            <param name="ignoreCase">忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumnCollection.Item(System.String)">
+            <summary>
+            索引，根据字段名查询字段
+            </summary>
+            <param name="name">字段名</param>
+            <returns>字段信息</returns>
+        </member>
+        <member name="T:We7.Model.Core.We7DataColumn">
+            <summary>
+            字段信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Label">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Expression">
+            <summary>
+            表达示
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Direction">
+            <summary>
+            数据方向
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.IsSystem">
+            <summary>
+            当前字段是否为系统字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Mapping">
+            <summary>
+            映射字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.MaxLength">
+            <summary>
+            数据的最大长度
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Nullable">
+            <summary>
+            是否可以为空
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.DefaultObject">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.DesignField">
+            <summary>
+            设计时字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7DataColumn.Params">
+            <summary>
+            字段参数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLINSERT">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLPAGELIST">
+            <summary>
+            分页列表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLTOPLIST">
+            <summary>
+            前多少条记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLLIST">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLCOUNT">
+            <summary>
+            符合条件的记录条数
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLUPDATE">
+            <summary>
+            更新数据记录
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.Data.SQLLiteSQLBuilder.SQLDELETE">
+            <summary>
+            删除数据行
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.GetCommand">
+            <summary>
+            获取记录
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.ParamCollection">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.ParamCollection.Contains(System.String)">
+            <summary>
+            包含指定属性
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.ParamCollection.Item(System.String)">
+            <summary>
+            索引，根据参数名取得参数值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.Param">
+            <summary>
+            参数信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Param.Name">
+            <summary>
+            参数名
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Param.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.Param.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Item(System.String)">
+            <summary>
+            索引，根据面板名取得当前的上下文
+            </summary>
+            <param name="panelName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.DataSet">
+            <summary>
+            数据集配置
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Layout">
+            <summary>
+            布局
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.GroupName">
+            <summary>
+            模型组名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Name">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.DbProvider">
+            <summary>
+            数据提供者
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Type">
+            <summary>
+            模型类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Label">
+            <summary>
+            模型标签
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Desc">
+            <summary>
+            关于模型的描述
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.Parameters">
+            <summary>
+            模型的其他参数
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.AuthorityType">
+            <summary>
+            文章查询权限:True,则可以查看全部信息,False则只有Admin能查看全部信息 默认为flase
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ModelInfo.RelationModelName">
+            <summary>
+            关联反馈模型:如果为空则不关联
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.Command.InsertCommand">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.Command.CompositeCommand.AddCommand(We7.Model.Core.ICommand)">
+            <summary>
+            添加操作命令
+            </summary>
+            <param name="cmd">添加的命令</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelPanel.InitContainer(System.Web.UI.Control)">
+            <summary>
+            初始化模型容器
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelPanel.DoCommandComplete(System.Object,We7.Model.Core.ModelEventArgs)">
+            <summary>
+            默认命令完成事件
+            </summary>
+            <param name="sender">触发者</param>
+            <param name="args">事件参数</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelPanel.InitPanel">
+            <summary>
+            初始化面板
+            </summary>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelPanel.DoCommand(System.Object,We7.Model.Core.ModelEventArgs)">
+            <summary>
+            默认命令处理流程
+            </summary>
+            <param name="sender">触发者</param>
+            <param name="args">事件参数</param>
+        </member>
+        <member name="M:We7.Model.Core.UI.ModelPanel.DoPreCommand(System.Object,We7.Model.Core.ModelEventArgs)">
+            <summary>
+            默认预处理命令
+            </summary>
+            <param name="sender">触发者</param>
+            <param name="args">事件参数</param>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.PanelName">
+            <summary>
+            当前面板配置名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Model">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Editor">
+            <summary>
+            编辑器容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Viewer">
+            <summary>
+            编辑器容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.List">
+            <summary>
+            列表容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Condition">
+            <summary>
+            条件容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Navigation">
+            <summary>
+            条件容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Pager">
+            <summary>
+            条件容器
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.UI.ModelPanel.Command">
+            <summary>
+            条件容器
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.DEFAULT">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.WIDTH">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.HEIGHT">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.DATEFORMAT">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.CONSTANT">
+            <summary>
+            常量
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.TEXTMODE">
+            <summary>
+            文本模型
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.QUERY">
+            <summary>
+            查询字符串
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.URL">
+            <summary>
+            url
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.DATA">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.REQUIRED">
+            <summary>
+            值不能为空
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.DIRECTION">
+            <summary>
+            重复方式。值为h与v。h示横向，v表
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.SELECTDATA">
+            <summary>
+            SelectInput 更多内容
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.SHOWTHUMB">
+            <summary>
+            要显示缩略图的类型
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.EntityID">
+            <summary>
+            每一条信息实体ID
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.UI.Constants.EntitySessionID">
+            <summary>
+            实体对象的SessionID
+            </summary>
+        </member>
+        <member name="T:We7.Model.Core.We7ControlCollection">
+            <summary>
+            控件集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7ControlCollection.Item(System.String)">
+            <summary>
+            索引，根据控件名查找控件
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.Core.We7Control">
+            <summary>
+            控件信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.ID">
+            <summary>
+            控件ID
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Type">
+            <summary>
+            控件类型
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Width">
+            <summary>
+            长
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Required">
+            <summary>
+            是否必须
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Desc">
+            <summary>
+            控件描述信息
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Visible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.IgnoreEmpty">
+            <summary>
+            当为空时是否过滤掉
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.We7Control.Params">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelType.ARTICLE">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelType.ADVICE">
+            <summary>
+            反馈
+            </summary>
+        </member>
+        <member name="F:We7.Model.Core.ModelType.ACCOUNT">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.Name">
+            <summary>
+            ModelInfo名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.Label">
+            <summary>
+            ModelInfo中文名称
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.Description">
+            <summary>
+            ModelInfo描述文字
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.State">
+            <summary>
+            模型文件是否启用
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.DefaultContentName">
+            <summary>
+            默认模板Id(如果为0则为空白模板)
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.Value">
+            <summary>
+            模型的Identity值.
+            </summary>
+        </member>
+        <member name="P:We7.Model.Core.ContentModel.Type">
+             <summary>
+            内容模型类型
+             </summary>
+        </member>
+    </members>
+</doc>

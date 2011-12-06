@@ -1,0 +1,116 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:LatestNews.LatestTopPicture
+ * Style:LatestNews_LatestTopPicture
+ * Desc::
+ * Quot:
+*************************************************************/
+.LatestNews_LatestTopPicture .content {
+	float:left;
+	width:730px;
+	overflow:hidden;
+}
+.LatestNews_LatestTopPicture .news {
+	height:33px;
+	background:url(../images/back.gif) no-repeat left -89px;
+}
+.LatestNews_LatestTopPicture .news ul {
+	padding-left:33px;
+}
+.LatestNews_LatestTopPicture .news li {
+	float:left;
+	height:23px;
+	padding-top:10px;
+	width:98px;
+	text-align:center; font-size:12px;
+}
+.LatestNews_LatestTopPicture .news li a {
+	color:#4c4c4c;
+}
+.LatestNews_LatestTopPicture .news li a:hover, .news li.on a {
+	color:#cc0100;
+}
+.LatestNews_LatestTopPicture .news li.on {
+	font-weight:bold;
+	color:#cc0100;
+	background:url(../images/news_on.gif) no-repeat center bottom;
+	height:20px;
+	padding-top:13px;
+}
+.LatestNews_LatestTopPicture .news_list {
+	padding:10px;
+	background:url(../images/news_dd.gif) repeat-y left top;
+	padding-bottom:0px;
+	height:230px;
+}
+.LatestNews_LatestTopPicture .news_list_bottom {
+	background:url(../images/back.gif) no-repeat left -128px;
+	height:10px;
+	line-height:10px;
+	font-size:0px;
+}
+.LatestNews_LatestTopPicture .news_list_01 {
+	float:left;
+	width:440px;
+	padding-left:10px;
+}
+.LatestNews_LatestTopPicture .head_news {
+	padding-bottom:10px;
+}
+.LatestNews_LatestTopPicture .news_list_01 ul {
+	padding:10px;
+}
+.LatestNews_LatestTopPicture .head_news h3 {
+	font-size:14px;
+	line-height:24px;
+	text-align:center;
+}
+.LatestNews_LatestTopPicture .head_news h3 a {
+	color:#cc0100;
+}
+.LatestNews_LatestTopPicture .head_news h3 a:hover {
+	color:#000;
+}
+.LatestNews_LatestTopPicture .head_news p {
+	padding:5px 0px;
+	line-height:170%;
+	text-indent:20px;
+	padding-bottom:10px;
+	background:url(../images/line.gif) repeat-x left bottom;
+	color:#666;
+}
+.LatestNews_LatestTopPicture .news_list_01 li {
+	height:23px;
+	line-height:24px;
+	padding-left:15px;
+	background:url(../images/icon2.gif) no-repeat left center;
+	color:#999999;
+	clear:both;
+}
+.LatestNews_LatestTopPicture .news_list_01 li span.datetime {
+	float:right;
+}
+.LatestNews_LatestTopPicture .news_list_01 li a {
+	color:#343434;
+}
+.LatestNews_LatestTopPicture .news_list_01 li a:hover {
+	color:#cc0000;
+}
+
+/*******右侧FLASH新闻*******/
+.LatestNews_LatestTopPicture .news_flash {
+	float:right;
+	width:226px;
+	padding:5px;
+	border:1px solid #e5e5e5;
+	margin-top:10px;
+	margin-right:10px;
+	display:inline;
+}
+/*************************************************************
+ * Command:End
+ * Control:LatestNews.LatestTopPicture
+ * Style:LatestNews_LatestTopPicture
+ * Desc::
+ * Quot:
+*************************************************************/

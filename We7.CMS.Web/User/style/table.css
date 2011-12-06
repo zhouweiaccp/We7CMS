@@ -1,0 +1,86 @@
+/*列表样式，表单样式，提示信息样式*/
+td,th{font-size:12px;}
+.table_list, .table_form, .table_info { margin:0 auto; width:100%; *margin-top:6px; background:#D5EDFD; border:1px solid #99d3fb;}
+.table_list caption, .table_form caption, .table_info caption { border:1px solid #99d3fb; border-bottom-width:0; font-weight:bold; color:#077ac7; background:url(images/bg_table.jpg) repeat-x 0 0; height:27px; line-height:27px; margin:6px auto 0;}
+.table_form, .table_info {}
+.table_form tr,.table_info tr,.table_list tr{ background-color:#fff;}
+.table_form td, .table_form th, .table_info td,.table_list td  { line-height:150%; padding:4px;}
+.table_form th{ text-align:right; padding-right:5px;}
+.table_form th strong, .table_info th strong { color:#077ac7;}
+.table_list {}
+.table_list th, th.form_th { text-align:center; color:#077ac7; background: url(images/bg_table.jpg) repeat-x 0 -26px; line-height:22px; height:22px;}
+.table_list td {text-align:center;}
+th.form_th { text-align:left; text-indent:2em; font-weight:bold; padding:0; line-height:1.8em;}
+td.align_left { text-align:left;}
+td.align_l { text-align:left;}
+td.align_r { text-align:right;}
+.table_info td { padding:4px;}
+/*表格变色*/
+.mouseover { background-color:#ECF7FE !important;}
+
+.messagetable {
+background:none repeat scroll 0 0 #F9FCFF;
+}
+
+.sbutton, .sbutton:hover {
+background:url("images/button-bg3.gif") no-repeat scroll left top #1885C4;
+border:medium none;
+color:#FFFFFF;
+font-weight:bold;
+height:27px;
+margin-left:2px;
+width:77px;
+}
+
+.colorblue, .colorfocus, .colorblue2 {
+background-color:#FFFFFF;
+border:1px double #B9CDE3;
+font-family:Arial,Helvetica,sans-serif;
+margin:2px;
+padding:0.2em 0;
+}
+
+.pannelbody label {
+float:left;
+font-weight:bold;
+line-height:220%;
+width:80px;
+}
+
+a.submitbutton {
+background:url("images/userbutton3.gif") no-repeat scroll left center transparent;
+padding:7px 22px;
+text-align:center;
+text-decoration:none;
+}
+
+a.selectall {
+background:url("images/usersubmit.gif") no-repeat scroll left center transparent;
+color:#333333;
+padding:7px 10px;
+text-align:center;
+text-decoration:none;
+}
+
+input.selectall {
+background:url("images/usersubmit.gif") no-repeat scroll left center transparent;
+color:#333333;
+padding:0 0px;
+margin:0;
+line-height:100%;
+text-align:center;
+text-decoration:none;
+border-bottom-style:none;
+}
+
+.pannelleft {
+float:left;
+line-height:36px;
+padding-left:10px;
+width:48%;
+}
+
+.newmessage {
+padding:10px 0;
+text-align:right;
+}

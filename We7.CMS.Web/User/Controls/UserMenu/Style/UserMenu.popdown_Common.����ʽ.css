@@ -1,0 +1,203 @@
+
+/*****************************************************************
+ * 下拉菜单控件风格
+ * 名称：jd_menu_vertical为垂直菜单
+ ******************************************************************/
+			
+{WE:STYLE} ul.jd_menu{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+{WE:STYLE} ul.jd_menu ul{
+	display: none;
+}
+
+{WE:STYLE} ul.jd_menu li {
+	float: left;text-align:center;
+}
+
+/* -- Sub-Menus -- */
+{WE:STYLE} ul.jd_menu ul{
+	position: absolute;
+	display: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10000; 
+}
+
+{WE:STYLE} ul.jd_menu ul li{
+	float: none;
+}
+
+
+{WE:STYLE} ul.jd_menu_slate {
+	height: 30px;
+	background: url(../We7Controls/ChannelMenu/Page/images/nav_001.gif) repeat-x;
+	clear: both;
+}
+
+
+
+{WE:STYLE} ul.jd_menu_slate .haveSubMenu li{ text-align:left; width:105px; line-height:20px;}
+{WE:STYLE} ul.jd_menu_slate .haveSubMenu li ul li{ text-align:left; width:135px;}
+{WE:STYLE} ul.jd_menu_slate .haveSubMenu{ line-height:30px;}
+{WE:STYLE} ul.jd_menu_slate .haveSubMenu ul li{line-height:20px;}
+{WE:STYLE} ul.jd_menu_slate a, 
+{WE:STYLE} ul.jd_menu_slate a:active,
+{WE:STYLE} ul.jd_menu_slate a:link,
+{WE:STYLE} ul.jd_menu_slate a:visited {
+	text-decoration: none;
+	color: #000;
+}
+{WE:STYLE} ul.jd_menu_slate a:hover{
+	text-decoration: none;
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_slate ul li a,
+{WE:STYLE} ul.jd_menu_slate ul li a:active,
+{WE:STYLE} ul.jd_menu_slate ul li a:link,
+{WE:STYLE} ul.jd_menu_slate ul li a:visited {
+	color: #000;
+}
+{WE:STYLE} ul.jd_menu_slate li {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	cursor: pointer;
+	white-space: nowrap; width:104px;
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_slate li.jd_menu_active_menubar,
+{WE:STYLE} ul.jd_menu_slate li.jd_menu_hover_menubar {
+	color: #00ADEF;
+	background: url(../We7Controls/ChannelMenu/Page/images/nav_002.gif) repeat-x;
+}
+
+
+
+{WE:STYLE} ul.jd_menu_slate ul {
+	background: #fff;
+	border: 1px solid #D4D2D3;
+}
+{WE:STYLE} ul.jd_menu_slate ul li {
+	border: none;
+	color: #70777D;	border-top: 1px solid #D4D2D3;
+
+}
+{WE:STYLE} ul.jd_menu_slate ul li.jd_menu_active,
+{WE:STYLE} ul.jd_menu_slate ul li.jd_menu_hover {
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_slate ul li.jd_menu_active a.jd_menu_active,
+{WE:STYLE} ul.jd_menu_slate ul li.jd_menu_hover a.jd_menu_hover {
+	color: #00ADEF;
+}
+
+
+/*****************************************************************
+ * 下拉竖向菜单控件风格
+ * 名称：CDSlideMenuControl，jd_menu_vertical为垂直菜单
+ ******************************************************************/
+{WE:STYLE} ul.jd_menu_vertical {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+{WE:STYLE} ul.jd_menu_vertical ul {
+	display: none;
+}
+
+
+/* -- Sub-Menus -- */
+{WE:STYLE} ul.jd_menu_vertical ul {
+	position: absolute;
+	display: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10000;
+}
+{WE:STYLE} ul.jd_menu_vertical ul li {
+	float: none;
+	margin: 0px;
+}
+
+{WE:STYLE} ul.jd_menu_verticalslate {
+	height: 19px;
+	border: 0px solid #70777D;
+	border-top: 0px solid #A5AFB8;
+	border-left: 0px solid #A5AFB8;
+	clear: both;
+}
+
+{WE:STYLE} ul.jd_menu_vertical {
+	width: 100%px;
+	height: auto;
+	clear: both;
+	
+}
+
+{WE:STYLE} ul.jd_menu_vertical li{
+	background: url(../We7Controls/ChannelMenu/Page/images/img08.gif) repeat-x; line-height:24px; text-indent:10px;
+	
+}
+{WE:STYLE} ul.jd_menu_verticalslate a, 
+{WE:STYLE} ul.jd_menu_verticalslate a:active,
+{WE:STYLE} ul.jd_menu_verticalslate a:link,
+{WE:STYLE} ul.jd_menu_verticalslate a:visited {
+	text-decoration: none;
+	color: #003366;
+}
+{WE:STYLE} ul.jd_menu_verticalslate a:hover {
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_verticalslate ul li a,
+{WE:STYLE} ul.jd_menu_verticalslate ul li a:active,
+{WE:STYLE} ul.jd_menu_verticalslate ul li a:link,
+{WE:STYLE} ul.jd_menu_verticalslate ul li a:visited {
+	color: #000;
+}
+
+{WE:STYLE} ul.jd_menu_verticalslate li {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	cursor: pointer;
+	white-space: nowrap;
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_verticalslate li.jd_menu_active_menubar,
+{WE:STYLE} ul.jd_menu_verticalslate li.jd_menu_hover_menubar {
+	border-left: 0px solid #ABB5BC;
+	border-right: 0px solid #929AA1;
+	border-right: 0px solid #70777D;
+	color: #00ADEF;
+}
+
+{WE:STYLE} ul.jd_menu_verticalslate li.jd_menu_active_menubar,
+{WE:STYLE} ul.jd_menu_verticalslate li.jd_menu_hover_menubar {
+	padding-top: 0px;
+	border-top: 0px solid #70777D;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+{WE:STYLE} ul.jd_menu_verticalslate ul {
+	background: #ABB5BC;
+	border: 1px solid #D4D2D3;
+}
+{WE:STYLE} ul.jd_menu_verticalslate ul li {
+	background: #fff;
+	border: none;
+	color: #000; line-height:20px;border-top: 1px solid #D4D2D3;
+}
+{WE:STYLE} ul.jd_menu_verticalslate ul li.jd_menu_active,
+{WE:STYLE} ul.jd_menu_verticalslate ul li.jd_menu_hover {
+	
+	border-bottom: 0px solid #929AA1;
+	color: #00ADEF;
+}
+{WE:STYLE} ul.jd_menu_verticalslate ul li.jd_menu_active a.jd_menu_active,
+{WE:STYLE} ul.jd_menu_verticalslate ul li.jd_menu_hover a.jd_menu_hover {
+	color: #00ADEF;
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Database	name="Youbet.Pivotal"
+			driver="Thinkment.Data.OleDbDriver"
+			connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Test.mdb">
+    <!--
+			driver="Thinkment.Data.SqlDriver"
+			connectionString="Server=Localhost;Database=TestDB;Integrated Security=True;">
+	  -->
+    <Object type="Toolkits, Thinkment.Data.Account"	table="Account" primaryKey="Id" identityExpress="">
+      <Property name="Id" field="Id" size="4" type="Int32" nullable="false" readonly="True"/>
+      <Property name="Name" field="Name" size="40" type="String" nullable="false"/>
+      <Property name="LastName" field="LastName" size="40" type="String" nullable="false"/>
+      <Property name="Age" field="Age" size="4" type="Int32" nullable="false"/>
+    </Object>
+  </Database>
+</Objects>

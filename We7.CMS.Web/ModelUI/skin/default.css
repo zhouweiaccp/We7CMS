@@ -1,0 +1,87 @@
+﻿@import url('color.css');
+@import url('label.css');
+/* 同时设置html是为了兼容FF */
+body
+{
+	font-size: 12px;
+	color: black;
+	line-height: 150%;
+	background-color: #fff;
+	text-align: center;
+	height: 100%; /*width: 98%;*/ /*下面是后来加上的*/
+	width: 100%;
+	background: #ECF7FE url(admin/skin/images/bg_body.jpg) repeat-y top left;
+	scrollbar-face-color: #E7F5FE;
+	scrollbar-highlight-color: #006699;
+	scrollbar-shadow-color: #006699;
+	scrollbar-3dlight-color: #E7F5FE;
+	scrollbar-arrow-color: #006699;
+	scrollbar-track-color: #E7F5FE;
+	scrollbar-darkshadow-color: #E7F5FE;
+	scrollbar-base-color: #E7F5FE;
+}
+/*后台头部*/
+#header
+{
+	background: url(images/bg_admin.jpg) repeat-x 0 0;
+	height: 58px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	border-bottom: 5px solid #069;
+}
+/*左边*/
+#frame_left
+{
+	width: 220px;
+	float: left;
+	display: inline;
+	height:100%;
+	border-right:solid 1px #069;
+}
+
+#frame_right
+{
+	width:expression(this.parentNode.offsetWidth-221+'px');
+	float: left;
+	display:block;
+	height:100%;
+}
+
+#nav
+{
+	background: url(images/position.gif) repeat-x 0 -1px ; position:relative;
+	border-bottom:solid 1px #069;
+}
+
+/*左边*/
+#admin_left
+{
+	width: 220px;
+	float: left;
+	display: inline;
+	position: absolute;
+	top: 62px;
+	bottom: 0;
+	left: 0;
+	z-index: 11;
+}
+/*logo*/
+.logo
+{
+	float:left;
+}
+.info_bar { float:right; color:#fff;}
+a.white:link, a.white:visited {color:#fff;}
+a.white:hover, a.white:active {color:#fff;}
+/*菜单*/
+#menu {position:absolute; top:29px; right:5px;}
+#menu li { float:left; list-style:none; text-align:right;}
+#menu li a { cursor:pointer; float:left; color:#fff; background:url(images/menu_l.gif) no-repeat 0 0; height:29px; line-height:29px;}
+#menu li a span { background:url(images/menu_r.gif) no-repeat right 0; padding:0 10px; display:block; float:left;}
+#menu li a:hover,#menu li a.selected { color:#ff0; background:url(images/menu_l.gif) no-repeat 0 -29px; height:29px; line-height:29px;}
+#menu li a:hover span,#menu li a.selected span { color:#ff0; background-position:right -29px; padding:0 10px;}
+#menu li a img { margin:9px 0;}
+
+#content{width:100%; height:100%; background-color:White;}

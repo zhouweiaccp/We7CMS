@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" desc="反馈模型" label="反馈模型" type="advice">
+  <dataSet>
+    <dataTable name="AdviceModel">
+      <dataColumn label="ID" name="ID" dataType="String" expression="" direction="InputOutput" mapping="ID" system="true"  />
+      <dataColumn label="是否前台显示" name="IsShow" dataType="String" expression="" direction="Output" mapping="IsShow" default="0" system="true" />
+      <dataColumn label="标题" name="Title" dataType="String" expression="" direction="InputOutput" system="true" />
+      <dataColumn label="姓名" name="Name" dataType="String" expression="" direction="InputOutput" system="true" />
+    </dataTable>
+  </dataSet>
+  <layout>
+    <panel name="edit" label="前台反馈">
+      <edit path="we7.Editor" visible="true">
+				<group index="0"  next="0" name="默认" enable="true">
+          <control label="ID" name="ID" type="TextInput" required="false" visible="false"/>
+          <control label="标题" name="Title" type="TextInput" required="true" visible="true"/>
+          <control label="用户名" name="Name" type="TextInput" required="true" visible="true"/>
+        </group>
+      </edit>
+      <condition visible="false" path="we7.Condition">
+        <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false" />
+      </condition>
+      <context>
+        <dataKey>ID</dataKey>
+      </context>
+    </panel>
+    <panel name="adminView" label="后台显示">
+      <edit path="Viewer" visible="true">
+				<group index="0" next="0"  name="默认" enable="true">
+          <control label="ID" name="ID" type="TextInput" required="false" visible="false"/>
+          <control label="标题" name="Title" type="TextInput" required="true" visible="true"/>
+          <control label="用户名" name="Name" type="TextInput" required="true" visible="true"/>
+        </group>
+      </edit>
+      <condition visible="false" path="we7.Condition">
+        <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false" />
+      </condition>
+      <context>
+        <dataKey>ID</dataKey>
+      </context>
+    </panel>
+  </layout>
+</ModelInfo>

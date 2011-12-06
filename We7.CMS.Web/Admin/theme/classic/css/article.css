@@ -1,0 +1,401 @@
+
+#mycontent {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 1.5em; PADDING-TOP: 5px;
+	FONT-SIZE: 12px;  FONT-FAMILY: verdana, arial, helvetica, sans-serif; 
+	margin-top:0px;
+}
+
+.Tabs A:link {
+	COLOR:#f0f0f0; TEXT-DECORATION: none
+}
+.Tabs A:visited {
+	COLOR: #f0f0f0; TEXT-DECORATION: none
+}
+
+.TabIn A:hover,
+.TabIn A:active
+ {
+	COLOR: #eb976b; TEXT-DECORATION: none;
+	background-color:Transparent;
+}
+
+.menuTab {
+	WIDTH: 100%; 
+	margin-bottom:-15px;
+}
+.menuTab .Tabs {
+	PADDING-LEFT: 32px;
+}
+
+#rightWrapper
+{
+	margin-top:0px;
+}
+
+.Icon {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+
+
+.Tab {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 10px; BORDER-BOTTOM: #a8a8a8 3px solid; POSITION: relative; HEIGHT: 20px
+}
+.Tabs {
+	PADDING-LEFT: 15px; BOTTOM: -4px; POSITION: absolute
+}
+.Tabs LI {
+	FONT-SIZE: 1.2em; FLOAT: left; MARGIN: 0px 3px; LIST-STYLE-TYPE: none
+}
+.TabIn {
+	BORDER-RIGHT: #a8a8a8 1px solid; PADDING-RIGHT: 11px; BORDER-TOP: #a8a8a8 1px solid; PADDING-LEFT: 11px; FONT-WEIGHT: bold; PADDING-BOTTOM: 3px; BORDER-LEFT: #a8a8a8 1px solid; COLOR: #eb976b; PADDING-TOP: 5px; BORDER-BOTTOM: #FBFBFB 1px solid; BACKGROUND-COLOR: #fff;
+}
+.TabOut {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 2px; PADDING-TOP: 5px; BACKGROUND-COLOR: #a8a8a8
+}
+.Tab A:link {
+	TEXT-DECORATION: none
+}
+.Tab A:visited {
+	TEXT-DECORATION: none
+}
+UL.Tabs {
+	PADDING-LEFT: 1.2em;margin:0 0 0 0;
+}
+UL.clean {
+	PADDING-LEFT: 0.5em; LIST-STYLE-TYPE: none
+}
+
+.CurrentIcon {
+	BORDER-RIGHT: #d3defa 1px solid; PADDING-RIGHT: 10px; 
+	BORDER-TOP: #d3defa 1px solid; MARGIN-TOP: 20px; 
+	PADDING-LEFT: 10px; FONT-SIZE: 12px; MARGIN-BOTTOM: 5px; 
+	PADDING-BOTTOM: 10px; VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: #d3defa 1px solid; PADDING-TOP: 10px;
+	 BORDER-BOTTOM: #d3defa 1px solid; 
+	min-height:45px;
+	BACKGROUND-COLOR: #eef2fd;
+	width:90%;
+	display:table;
+}
+.CurrentIcon IMG {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FLOAT: left; PADDING-BOTTOM: 3px; BORDER-TOP-STYLE: none; PADDING-TOP: 3px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+
+s.clear {
+	CLEAR: both; FONT-SIZE: 0px
+}
+
+.DelBtn {
+	BORDER-RIGHT: #bfb7bc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #f5f6f7 1px solid; PADDING-LEFT: 4px; BACKGROUND: #eee; PADDING-BOTTOM: 0px; BORDER-LEFT: #f5f6f7 1px solid; COLOR: #000; PADDING-TOP: 1px; BORDER-BOTTOM: #bfb7bc 1px solid;
+	vertical-align:bottom;
+	cursor:pointer;
+	height:25px;
+	background: #f2f2f2 url(../images/white-grad.png) repeat-x scroll left top; 
+}
+
+DIV#conbox_body
+{
+	FLOAT: left; MARGIN-LEFT: 0px; WIDTH: 95%;
+	margin-top:20px;
+}
+
+DIV#conbox_body TEXTAREA {
+	BORDER-RIGHT: #cfcfcf 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #cfcfcf 1px solid; PADDING-LEFT: 2px;  PADDING-BOTTOM: 2px; BORDER-LEFT: #cfcfcf 1px solid; COLOR: #585858; PADDING-TOP: 3px; BORDER-BOTTOM: #cfcfcf 1px solid
+}
+
+DIV#conbox {
+	FLOAT: left; MARGIN-LEFT: 0px; WIDTH: 100%;
+	margin-top:-20px;
+}
+DIV#conbox H1 {
+	FONT-SIZE: 14px; MARGIN-BOTTOM: 5px; COLOR: #6c9f1e
+}
+DIV#conbox INPUT.pram {
+	WIDTH: 168px; HEIGHT: 20px
+}
+
+DIV#conbox TEXTAREA {
+	BORDER-RIGHT: #cfcfcf 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #cfcfcf 1px solid; PADDING-LEFT: 2px;  PADDING-BOTTOM: 2px; BORDER-LEFT: #cfcfcf 1px solid; COLOR: #585858; PADDING-TOP: 3px; BORDER-BOTTOM: #cfcfcf 1px solid
+}
+DIV#conbox  .channelList
+{
+	padding:1px,3px;
+	margin-left:4px;
+}
+
+DIV#conbox  .channelList select
+{
+	margin:0 0 10px;
+	width:380px;
+}
+
+.txt {
+	BORDER-RIGHT: #cfcfcf 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #cfcfcf 1px solid; PADDING-LEFT: 2px;  PADDING-BOTTOM: 2px; BORDER-LEFT: #cfcfcf 1px solid; COLOR: #585858; PADDING-TOP: 3px; BORDER-BOTTOM: #cfcfcf 1px solid;
+	height:20px;
+}
+
+DIV#conbox DL {
+	MARGIN-BOTTOM: 17px
+}
+DIV#conbox DD {
+	 padding:0 15 0 20px;
+}
+DIV#conbox DT 
+{
+      padding:0 0 0 20px;
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+
+DIV#conbox DD LABEL {
+	LINE-HEIGHT: 0px !important;
+	margin:0px!important;
+	height:23px !important;
+   vertical-align: middle; 
+	padding: 2px; 
+}
+DIV#conbox DD LABEL.info_small {
+	DISPLAY: block; MARGIN-BOTTOM: 3px
+}
+DIV#conbox DD LABEL.info {
+	DISPLAY: block; FONT-SIZE: 14px; MARGIN-BOTTOM: 3px;padding:0px;
+}
+DIV#conbox DD LABEL.info_block {
+	FONT-WEIGHT: bold; BACKGROUND: #eafdd0;
+	line-height:100%;
+}
+DIV#conbox LABEL.info_left {
+	DISPLAY: block; FLOAT: left; WIDTH: 60px; MARGIN-RIGHT: 5px; TEXT-ALIGN: right
+}
+DIV#conbox H1 LABEL {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #575757
+}
+DIV#conbox H1 LABEL.info_block {
+	FONT-WEIGHT: normal
+}
+DIV#conbox H1 SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: right; COLOR: #575757
+}
+DIV#conbox DT 
+{
+    padding-left:20px;
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; COLOR: #6c9f1e; LINE-HEIGHT: 28px; BORDER-BOTTOM: #efefef 1px solid
+}
+DIV#conbox DD 
+{
+    padding-left:50px;
+}
+DIV#conbox DT LABEL {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #838383;padding:0;
+}
+
+DIV#conbox DL.blockbar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fafafa; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+DIV#conbox DL.blockbar DD {
+	PADDING-LEFT: 15px
+}
+DIV#conbox DL.blockbar LI {
+	LIST-STYLE-TYPE: none
+}
+DIV#conbox DL.blockbar LI.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #6c9f1e; LIST-STYLE-TYPE: disc
+}
+DIV#conbox UL.mylink LI {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 5px; WIDTH: 250px; PADDING-TOP: 5px; LIST-STYLE-TYPE: none
+}
+DIV#conbox UL.mylink LABEL.info_left {
+	WIDTH: 50px
+}
+DIV#conbox DD.uploadhead {
+	BACKGROUND: #fafafa; MARGIN-BOTTOM: 20px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; HEIGHT: 40px
+}
+DIV#conbox DD.uploadhead P {
+	PADDING-LEFT: 20px; FLOAT: left; MARGIN: 0px
+}
+DIV#conbox DD input
+{
+	height:23px;
+}
+DIV#conbox DD input[type="checkbox"],
+DIV#conbox DD input[type="radio"]
+{
+	vertical-align: middle; 
+}
+
+
+DIV#conbox IMG.headpic {
+	BORDER-RIGHT: #d8d8d8 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #d8d8d8 1px solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; BORDER-LEFT: #d8d8d8 1px solid; WIDTH: 40px; PADDING-TOP: 1px; BORDER-BOTTOM: #d8d8d8 1px solid; HEIGHT: 40px
+}
+DIV#conbox A.block {
+	BACKGROUND: #cffe8a; TEXT-DECORATION: none
+}
+DIV#conbox DL.myfond DD {
+	PADDING-LEFT: 20px; TEXT-ALIGN: left
+}
+DIV#conbox DL.myfond DT {
+	PADDING-LEFT: 0px; TEXT-ALIGN: left
+}
+DIV#conbox DL.myfond TEXTAREA {
+	FONT-SIZE: 13px; WIDTH: 480px
+}
+DIV#conbox DL.myfont INPUT {
+	MARGIN-LEFT: 0px! important
+}
+DIV#conbox DD.greentitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; WIDTH: 390px; COLOR: #6c9f1e
+}
+DIV#conbox DD.greentitle A {
+	FONT-SIZE: 13px; TEXT-DECORATION: underline
+}
+DIV#conbox DD.greentitle LABEL {
+	DISPLAY: block; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000
+}
+DIV#conbox DL.equipment LABEL.info_left {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #6c9f1e; LINE-HEIGHT: 24px
+}
+DIV#conbox P.mark {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 30px; PADDING-TOP: 0px
+}
+DIV#conbox UL.tempelete LI {
+	DISPLAY: block; FLOAT: left; MARGIN-LEFT: 45px; HEIGHT: 150px
+}
+DIV#conbox P.email {
+	PADDING-RIGHT: 25px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 14px; FLOAT: left; PADDING-BOTTOM: 25px; MARGIN: 10px 0px 20px; WIDTH: 290px; PADDING-TOP: 0px
+}
+DIV#conbox DL.emailguid {
+	FLOAT: left; WIDTH: 390px
+}
+DIV#conbox P.mailaddress {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 10px; PADDING-TOP: 0px
+}
+DIV#conbox DIV.email_help {
+	PADDING-RIGHT: 30px; FLOAT: left; WIDTH: 220px; COLOR: #000; LINE-HEIGHT: 18px
+}
+DIV#conbox DIV.email_help H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000
+}
+DIV#conbox DIV.email_help LABEL.info {
+	MARGIN-TOP: 5px; DISPLAY: block; COLOR: #575757
+}
+DIV#conbox DIV.email_help A {
+	COLOR: #6c9f1e; TEXT-DECORATION: underline
+}
+DIV#conbox DIV.email_help LABEL.block A {
+	BACKGROUND: #d6fda0; COLOR: #000; TEXT-DECORATION: none
+}
+DIV#conbox DIV.application {
+	CLEAR: both; MARGIN-LEFT: 40px
+}
+DIV#conbox DIV.application DIV {
+	FLOAT: left; MARGIN: 20px 0px
+}
+DIV#conbox DIV.application DIV.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 190px; COLOR: #6c9f1e; PADDING-TOP: 5px
+}
+DIV#conbox DIV.application DIV.name {
+	PADDING-LEFT: 10px; WIDTH: 430px
+}
+DIV#conbox DIV.application DIV.edit {
+	WIDTH: 60px; PADDING-TOP: 5px
+}
+DIV#conbox  H3 {
+	FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; COLOR: #eb976b
+}
+DIV#conbox LABEL.block_info {
+	MARGIN-LEFT: 5px; BACKGROUND-COLOR: #fffad6;
+}
+
+DIV#conbox DD.share INPUT,label
+{
+	float:none;
+	margin:0;
+	display:inline;
+}
+
+DIV#conbox  a:hover, 
+DIV#conbox  a:active
+{
+	COLOR: #fff; BACKGROUND: #336; 
+}
+
+.TagsList ul li
+{
+	margin-top:8px;
+	margin-bottom:6px;
+	color:#ee0000;
+	width:170px;
+	float:left;
+}
+
+.Btn {
+	height:25px!important;
+	background: #f2f2f2 url(../images/white-grad.png) repeat-x scroll left top; 
+	margin-top:5px;	padding-left:25px;
+	padding-right:25px;
+	*padding-top:2px;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #777;	cursor:pointer;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+}
+
+TABLE.InBox 
+{
+	border:0px;
+	width:760px;
+}
+
+TABLE.InBox  TH {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; BORDER-BOTTOM: #f3f3f3 1px solid;
+	background-color:Transparent;
+	background-image:none;
+
+	FONT-WEIGHT: normal; COLOR: #666; TEXT-ALIGN: left
+}
+TABLE.InBox TD {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 1em; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; BORDER-BOTTOM: #f3f3f3 1px solid;
+	FONT-SIZE: 12px; 
+}
+
+
+/* posts*/
+
+#titlediv {
+	margin-bottom: 7px;
+	padding:0 5px;
+}
+
+#titlediv div.inside {
+	margin: 0;
+}
+
+#titlediv .TitleText {
+	border-width: 1px;
+	border-style: solid;
+	border-color:#aaa;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 1.7em;
+	width: 100%;
+	outline: none;
+	
+}
+
+#titlediv input.TitleText 
+{
+	WIDTH: 530px;
+	height:30px;
+	padding:3px 7px;
+	vertical-align:baseline;
+	line-height:30px;
+}
+
+
+	

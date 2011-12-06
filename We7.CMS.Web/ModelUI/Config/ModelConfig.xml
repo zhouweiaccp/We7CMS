@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelConfigInfo  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BaseDirectory>~/ModelUI/</BaseDirectory>
+  <ControlsDirectory>~/ModelUI/Controls</ControlsDirectory>
+  <ContainerDirectory>~/ModelUI/Container</ContainerDirectory>
+  <ModelsDirectory>~/Models/</ModelsDirectory>
+  <BaseModelDirectory>~/ModelUI/Config/</BaseModelDirectory>
+  <ImageFolder>_data</ImageFolder>
+  <DefaultModelFile>~/ModelUI/Config/DefaultModel.config</DefaultModelFile>
+  <ModelIndexFile>~/Models/ContentModel.config</ModelIndexFile>
+  <ModelControlsIndex>~/ModelUI/Config/Controls.config</ModelControlsIndex>
+  <CDPath>~/App_Data/XML/CD.xml</CDPath>
+  <ModelUCConfigTemplate>~/ModelUI/Config/Template/{0}.xml</ModelUCConfigTemplate>
+  <ModelGroupIndexFile>~/Models/ContentModelGroup.config</ModelGroupIndexFile>
+  <DataBaseHelper>We7.Model.UI.Data.DataBaseHelper,We7.Model.UI</DataBaseHelper>
+  <Commands>
+    <Item name="refresh" type="We7.Model.Core.Command.RefreshCommand,We7.Model.Core"></Item>
+    <Item name="add" type="We7.Model.Core.Command.InsertCommand,We7.Model.Core"></Item>
+    <Item name="query" type="We7.Model.Core.Command.QueryCommand,We7.Model.Core"></Item>
+    <Item name="get" type="We7.Model.Core.Command.GetCommand,We7.Model.Core"></Item>
+    <Item name="edit" type="We7.Model.Core.Command.EditCommand,We7.Model.Core"></Item>
+    <Item name="delete" type="We7.Model.Core.Command.DeleteCommand,We7.Model.Core"></Item>
+    <Item name="delSel" type="We7.Model.Core.Command.DeleteSelected,We7.Model.Core"></Item>
+    <Item name="cancelTop" type="We7.Model.UI.Command.CancelTopCommand,We7.Model.UI"></Item>
+    <Item name="setTop" type="We7.Model.UI.Command.SetTopCommand,We7.Model.UI"></Item>
+    <Item name="cancelPublish" type="We7.Model.UI.Command.CancelPublishCommand,We7.Model.UI"></Item>
+    <Item name="setPublish" type="We7.Model.UI.Command.SetPublisCommand,We7.Model.UI"></Item>
+    <Item name="submitAudit" type="We7.Model.UI.Command.SubmitAuditCommand,We7.Model.UI"></Item>
+    <Item name="publishShared" type="We7.Model.UI.Command.PublishSharedCommand,We7.Model.UI"></Item>
+    <Item name="getShared" type="We7.Model.UI.Command.GetSharedCommand,We7.Model.UI"></Item>
+    <Item name="moveTo" type="We7.Model.UI.Command.MoveToCommand,We7.Model.UI"></Item>
+    <Item name="linkTo" type="We7.Model.UI.Command.LinkToCommand,We7.Model.UI"></Item>
+    <Item name="addTag" type="We7.Model.UI.Command.AddTagCommand,We7.Model.UI"></Item>
+  </Commands>
+  <Converters>
+    <Item name="get" type="We7.Model.Core.Converter.GetEntityValue,We7.Model.Core"></Item>
+    <Item name="formatTag" type="We7.Model.UI.Converter.FormatTags,We7.Model.UI"></Item>
+    <!--<Item name="checkImage" type="We7.Model.Core.Converter.CheckImageConvert,We7.Model.Core"></Item>
+    <Item name="channelName" type="We7.Model.UI.Converter.ChannelNameConverter,We7.Model.UI"></Item>
+    <Item name="channelURL" type="We7.Model.UI.Converter.ChannelFullUrlConverter,We7.Model.UI"></Item>
+    <Item name="channelPath" type="We7.Model.UI.Converter.ChannelPathConverter,We7.Model.UI"></Item>
+    <Item name="enumStr" type="We7.Model.Core.Converter.EnumStringConverter,We7.Model.Core"></Item>
+    <Item name="stateConvert" type="We7.Model.UI.Converter.StateConverter,We7.Model.UI"></Item>
+    <Item name="dateFormat" type="We7.Model.UI.Converter.DateFormatConverter,We7.Model.UI"></Item>
+    <Item name="tagFormat" type="We7.Model.UI.Converter.TagFormatConverter,We7.Model.UI"></Item>
+    <Item name="createTitle" type="We7.Model.Core.Converter.CreateTitleConvert,We7.Model.Core"></Item>
+    <Item name="ev" type="We7.Model.Core.Converter.GetEntityValueConvert,We7.Model.Core"></Item>-->
+  </Converters>
+  <Defaults>
+    <Item name="Now" type="We7.Model.Core.UI.DefaultNowGenerator,We7.Model.Core"></Item>
+  </Defaults>
+  <ListControls>
+    <Item name="html" type="We7.Model.Core.ListControl.HtmlField,We7.Model.Core"></Item>
+    <Item name="action" type="We7.Model.Core.ListControl.ActionField,We7.Model.Core"></Item>
+    <Item name="link" type="We7.Model.Core.ListControl.HyperLinkField,We7.Model.Core"></Item>
+    <Item name="ux" type="We7.Model.Core.ListControl.UxField,We7.Model.Core"></Item>
+		<Item name="thumb" type="We7.Model.Core.ListControl.ThumbField,We7.Model.Core"></Item>
+  </ListControls>
+  <ColumnConvert>
+    <Item name="" type="We7.Model.Core.ListControl.DictionaryConvert,We7.Model.Core"></Item>
+    <Item name="dic" type="We7.Model.Core.ListControl.DictionaryConvert,We7.Model.Core"></Item>
+    <Item name="UserIdToName" type="We7.Model.Core.ListControl.UserIdToNameConvert,We7.Model.UI"></Item>
+    <Item name="cat" type="We7.Model.UI.Converter.CategoryConvert,We7.Model.UI"></Item>
+    <Item name="depart" type="We7.Model.UI.Converter.DepartmentConvert,We7.Model.UI"></Item>
+    <Item name="ch" type="We7.Model.UI.Converter.ChannelConvert,We7.Model.UI"></Item>
+    <Item name="state" type="We7.Model.UI.Converter.StateConvert,We7.Model.UI"></Item>
+    <Item name="audit" type="We7.Model.UI.Converter.ProcessStateConvert,We7.Model.UI"></Item>
+  </ColumnConvert>
+  <Providers>
+    <Item type="article" provider="We7.Model.Core.Data.CompositeProvider,We7.Model.Core">
+      <cmd name="singletable" type="We7.Model.Core.Data.ThinkmentProvider,We7.Model.Core"></cmd>
+      <cmd name="articletable" type="We7.Model.UI.Data.ArticleDataProvider,We7.Model.UI"></cmd>
+    </Item>
+    <Item type="advice" provider="We7.Model.UI.Data.AdviceDataProviderProxy,We7.Model.UI"></Item>
+    <Item type="account" provider="We7.Model.UI.Data.AccountDataProvider,We7.Model.UI"></Item>
+  </Providers>
+  <ViewerControl>
+    <Item>DateTimeLabel</Item>
+    <Item>We7.AttachView</Item>
+    <Item>Text</Item>
+  </ViewerControl>
+</ModelConfigInfo>

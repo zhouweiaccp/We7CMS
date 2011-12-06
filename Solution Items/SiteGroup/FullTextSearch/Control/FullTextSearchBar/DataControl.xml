@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="站群搜索框" dir="FullTextSearchBar" desc="全文检索搜索框类控件集合">
+  <Parameter name="SubmitTitle" title="搜索按钮文字"  type="String" description="搜索按钮标题，使用图片按钮为空"
+         required="False" maximum="0" minimum="0" length="0" defaultValue=""  />
+  <Parameter name="Index" title="控件索引号"  type="Number" description="本页出现多个同类搜素框控件时，用索引号进行区别。必须是整数。"
+        required="True" maximum="0" minimum="0" length="0" defaultValue="1" />
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  
+</DataControl>

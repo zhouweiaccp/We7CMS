@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <item name="首页" url=""></item>
+  <item name="注册" url="register.aspx"></item>
+  <item name="登陆" url="login.aspx"></item>
+  <item name="找回密码" url="retrievepassword.aspx"></item>
+</root>

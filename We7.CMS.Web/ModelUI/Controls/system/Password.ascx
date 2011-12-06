@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Password.ascx.cs" Inherits="We7.Model.UI.Controls.system.Password" %>
+<asp:TextBox ID="txtInput" runat="server" TextMode="Password"></asp:TextBox>

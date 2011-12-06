@@ -1,0 +1,34 @@
+We7 CMS 10秒钟快速运行：
+
+首先先确保您的机器上已安装 .net framework 2.0，如未安装请下载。
+
+下载地址：
+http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=zh-cn
+
+
+1、直接双击 “启动网站” ，运行We7站点服务器；
+
+2、点击“运行”；
+
+3、自动弹出IE浏览器，并打开网站前台（如第一次打不开，请刷新一下）；若想登录后台，在地址栏端口号后追加“/admin/"，如“http://localhost:2700/admin/”;
+
+默认用户名：admin,密码：111111
+
+
+如无法按上面方法进行快速运行，请详细阅读 website 目录下的《安装说明.html》，按步骤在IIS上进行设置。
+
+
+
+---------------------------------------
+  We7 CMS  更多设置帮助
+---------------------------------------
+
+  请在线访问 We7 CMS 官方帮助栏目，获得更多使用文档。
+  http://help.we7.cn/
+  
+
+祝您使用愉快
+
+
+(C) We7 2011 WestEngine Inc
+http://we7.cn

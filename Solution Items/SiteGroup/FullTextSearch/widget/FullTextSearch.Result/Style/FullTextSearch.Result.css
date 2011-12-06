@@ -1,0 +1,64 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:FullTextSearch.Result
+ * Style:FullTextSearch_Result
+ * Desc:常规式
+ * Quot:
+*************************************************************/
+.FullTextSearch.Result div {}
+.FullTextSearch.Result div h1
+{
+	font-size:16px;
+}
+
+.FullTextSearch.Result  div.Contain 
+{
+	background-image:url(../We7Controls/ArticleList/Page/images/line.gif);
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	margin:5px;
+	padding:5px;
+	display:table;
+	width:100%;
+	clear:both;
+	text-align:left;
+}
+.FullTextSearch.Result  .Contain a {}
+.FullTextSearch.Result  .Contain a:link,  .Contain a:visited,  .Contain a:hover,  .Contain a:active 
+{
+	color:#000000;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+}
+
+.FullTextSearch.Result  .title
+{
+	font-size:14px;
+	color:Red;
+}
+
+.FullTextSearch.Result  .summary
+{color: #0A44A5;font-size:12px;text-decoration:none;}
+
+.FullTextSearch.Result .myLink a:link,   .myLink a:visited
+{
+	color:green;
+	font-size:12px;
+}
+
+.FullTextSearch.Result  em
+{
+	color: rgb(204, 0, 51);
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:FullTextSearch.Result
+ * Style:FullTextSearch_Result
+ * Desc:常规式
+ * Quot:
+*************************************************************/

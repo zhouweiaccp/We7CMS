@@ -1,0 +1,11 @@
+﻿<!--
+可在 <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers 中找到现有的浏览器定义
+-->
+<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.HtmlControls.HtmlForm"
+               adapterType="We7.UrlRewriter.HttpRewriterControlAdapter" />
+    </controlAdapters>
+  </browser>
+</browsers>

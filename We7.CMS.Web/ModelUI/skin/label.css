@@ -1,0 +1,87 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td
+{
+	padding: 0;
+	margin: 0;
+}
+label input
+{
+	vertical-align: middle;
+}
+html, body
+{
+	height: 100%;
+}
+a:link, a:visited
+{
+	text-decoration: none;
+	color: #077ac7;
+}
+a:hover, a:active
+{
+	text-decoration: none;
+}
+img
+{
+	border: 0;
+}
+
+/*标签菜单*/
+.tag_menu { width:100%; margin:0 auto 0; *margin-bottom:-7px; /*border-bottom:3px solid #99D3FB;*/ overflow:hidden;}
+.tag_menu ul{ text-align:left;}
+.tag_menu li { float:left; height:23px; margin-right:3px; padding:0; display:inline;}
+.tag_menu li a { background:url(images/tag_menu.gif) no-repeat 0 -23px; height:23px; line-height:23px; float:left; width:75px; display:block; white-space: nowrap; text-decoration:none; color:#1589C8; text-align:center;}
+.tag_menu li a:link, .tag_menu li a:visited { text-decoration:none;}
+.tag_menu li a:hover, .tag_menu li a:active { text-decoration:none;}
+
+.tag_menu li a.selected { background:url(images/tag_menu.gif) no-repeat 0 0;}
+.tag_menu li a.selected:link, .tag_menu li a.selected:visited { font-weight:bold; text-decoration:none; color:#fff;}
+.tag_menu li a.selected:hover, .tag_menu li a.selected:active { color:#fff; font-weight:bold; text-decoration:none;}
+.float_r {float:right;}
+.float_l {float:left;}
+
+/*表单相关*/
+input, textarea, select, button{ font-size:12px; padding-left:2px;}
+textarea {overflow:auto;}
+button{ padding-left:0;}
+input { font-family:"宋体"; font-size:12px; border:1px solid #dcdcdc;height:18px; line-height:20px;padding-left:2px;}
+.inputtitle{ background:url("images/ruler.gif") repeat-x 0 5px; height:20px;padding-left:2px;}
+.input_focus, .input_blur {	height:20px; line-height:20px; border:1px solid #dcdcdc; padding-left:2px;}
+.input_focus, .textarea_focus {	background-color:#F6FCFF; font-size: 12px; border:1px solid #C7E8F9;}
+/*列表菜单 文本区域*/
+select,textarea,.textarea_style{border:1px solid #dcdcdc;}
+/*单选框复选框*/
+.radio_style, .checkbox_style { border:0;}
+/*按钮样式*/
+.button_style { background:url(images/btn_bg.gif) repeat-x 0 0; text-align:center; border:1px solid #9cc9e0; padding:3px 4px; *padding:0 4px; color:#077ac7; cursor:pointer; height:21px; line-height:21px; overflow:hidden;}
+.file_style{ height:20px; line-height:20px;border:1px solid #dcdcdc; }
+
+/*按钮区域*/
+.button_box { text-align:left; padding:5px;}
+
+.clear { clear:both;}
+table {font-size:12px; padding:0; margin:0;}
+th {text-align:right; padding-right:5px; font-weight:normal;}
+td {line-height:200%; padding:0 5px; text-align:left;}
+/*列表样式，表单样式，提示信息样式*/
+.table_list, .table_form, .table_info { margin:0 auto; width:99%; *margin-top:6px; background:#D5EDFD; border:1px solid #99d3fb;}
+.table_list caption, .table_form caption, .table_info caption{ border:1px solid #99d3fb; border-bottom-width:0; font-weight:bold; color:#077ac7; background:url(images/bg_table.jpg) repeat-x 0 0; height:27px; line-height:27px; margin:6px auto 0;font-size:12px; font-family:"宋体"}
+h4 { border:1px solid #069; border-width:0 0 1px 0; margin-top:0; font-size:14px; text-align:left; background:url(images/bg_admin.jpg) repeat-x 0 -58px; height:28px; line-height:28px; color:#fff; width:100%;}
+h4 span{ background:url(images/bg_arrow.gif) no-repeat 5px -1px; padding-left:30px;}
+h4 img{ cursor:pointer;}
+.table_form, .table_info {}
+.table_form tr,.table_info tr,.table_list tr{ background-color:#fff;}
+.table_form td, .table_form th, .table_info td,.table_list td  { line-height:150%; padding:4px;font-size:12px; font-family:"宋体";}
+.table_form th strong, .table_info th strong { color:#077ac7;}
+.table_list {}
+.table_list th {font-weight:bold}
+.table_list th, th.form_th,th.form_th_c{ text-align:center; font-size:12px; color:#077ac7; background: url(images/bg_table.jpg) repeat-x 0 -26px; line-height:22px; height:22px;}
+th.form_th{ text-align:left; text-indent:2em; font-weight:bold; padding:0; line-height:1.8em;}
+th.form_th_c{ text-align:center; text-indent:0; font-weight:bold; padding:0; line-height:1.8em;}
+.align_left,td.align_left { text-align:left;}
+.table_info td { padding:5px;}
+td.tablerowhighlight { text-align:center; color:#077ac7; background: url(images/bg_table.jpg) repeat-x 0 -22px; line-height:22px; height:22px; font-weight:bold; }
+td.align_l,th.align_l{ text-align:left;}
+td.align_c,th.align_c{ text-align:center;}
+td.align_r,th.align_r{ text-align:right;}
+/*表格变色*/
+.mouseover { background-color:#ECF7FE !important;}

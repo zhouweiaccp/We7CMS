@@ -1,0 +1,62 @@
+﻿
+/*************************************************************
+ * Command:Start
+ * Control:Search.SearchUI
+ * Style:Search_SearchUI
+ * Desc::
+ * Quot:
+*************************************************************/
+/*********网站内容块********/
+.Search_SearchUI .content
+{
+    float: left;
+    width: 730px;
+    overflow: hidden;
+}
+
+/*****搜索*******/
+.Search_SearchUI .article_search
+{
+    height: 40px;
+    line-height: 40px;
+    padding: 9px 0 9px 70px;
+    height: 22px;
+    line-height: 22px;
+    background: url(../images/back.gif) no-repeat left -313px;
+    position: relative;
+}
+.Search_SearchUI .article_search select
+{
+    margin: 0px 3px;
+}
+.Search_SearchUI .article_search input#keyword_PowerEasy, .article_search input#keyword
+{
+    width: 170px;
+}
+.Search_SearchUI .input_button
+{
+    display: inline-block;
+    border: none;
+    background: url(../images/back.gif) no-repeat -293px -38px;
+    height: 21px;
+    width: 61px;
+}
+.Search_SearchUI .article_search a
+{
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+    background: url(../images/back.gif) no-repeat -365px -38px;
+    overflow: hidden;
+    text-indent: -9999em;
+    position: absolute;
+    top: 11px;
+    left: 550px;
+}
+/*************************************************************
+ * Command:End
+ * Control:Search.SearchUI
+ * Style:Search_SearchUI
+ * Desc::
+ * Quot:
+*************************************************************/

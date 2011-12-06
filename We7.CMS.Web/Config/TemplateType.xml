@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <item name="站点" value="site" visible="true" >
+    <subitem name="欢迎页" value="welcome" visible="true"/>
+    <subitem name="首页" value="home" visible="true"/>
+    <subitem name="登陆页" value="login" visible="true"/>
+    <subitem name="注册页" value="register" visible="true"/>
+    <subitem name="站内搜索页" value="search" visible="true"/>
+    <subitem name="站群内搜索页" value="groupsearch" visible="true"/>
+    <subitem name="找回密码" value="retrievepassword" visible="true"/>
+  </item>
+  <item name="通用" value="channel" visible="true" >
+    <subitem name="栏目页" value="index" visible="true"/>
+    <subitem name="内容页" value="detail" visible="true"/>
+    <subitem name="搜索页" value="search" visible="true"/>
+  </item>
+  <item name="模型" value="model" visible="true" >
+    <subitem name="索引页" value="index" visible="true"/>
+    <subitem name="详细页" value="detail" visible="true"/>
+    <subitem name="搜索页" value="search" visible="true"/>
+  </item>
+  <item name="会员" value="user" visible="true" />
+  <item name="标签" value="tag" visible="true"/>
+</configuration>

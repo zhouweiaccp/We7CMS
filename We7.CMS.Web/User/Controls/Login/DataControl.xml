@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="登录控件" dir="Login" desc="用户登录控件">
+  
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="ShowValidate" title="需要验证码"  type="Boolean" description="手工输入字符进行登录验证"
+        required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="IsCustomerReturnUrl" title="登录后跳转到下面页面" type="Boolean" description="是否使用自定义返回路径"
+             required="True" maxinum="0" minimun="0" length="0" defaultValue="1"/>
+  <Parameter name="CustomerReturnUrl" title="跳转页面地址" type="String" description="自定义返回路径,只有在选择了是否使用自定义返回路径后生效"
+            required="False" maximum="0" minimum="0" length="0" defaultValue="/user/index.aspx"/>
+</DataControl>

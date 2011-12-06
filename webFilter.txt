@@ -1,0 +1,11 @@
+\Document\
+\bin\
+\obj\
+\_backup\
+\_temp\
+\_data\
+\_skins\
+\log\
+
+.vspscc
+.vssscc

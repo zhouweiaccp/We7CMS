@@ -1,0 +1,1537 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS' >
+    <!--数据库字段修改:
+    注意：
+    （1）字段和表名都要加中括号；
+    （2）字段名与表名要区分大小写，要严格与CD.XML保持一致-->
+
+    <!--*******************[Account]表中添加的字段**********************-->
+    <Sql>
+      alter table [Account] add [FromSiteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Account] add [DepartmentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Department] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Email] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Account] add [LoginName] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Password] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Account] add [FirstName] nvarchar(32)
+    </Sql>
+    <Sql>
+      alter table [Account] add [MiddleName] nvarchar(32)
+    </Sql>
+    <Sql>
+      alter table [Account] add [LastName] nvarchar(32)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Photo] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Account] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Description] text
+    </Sql>
+
+    <Sql>
+      alter table [Account] add [UserType] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Home] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Account] add [PasswordHashed] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Updated] datetime
+    </Sql>
+    <!--<Sql>
+      alter table [Account] add [GroupPassport] int
+    </Sql>-->
+    <Sql>
+      alter table [Account] add [Overdue] datetime
+    </Sql>
+    <Sql>
+      alter table [Account] add [ModelXml] text
+    </Sql>
+    <Sql>
+      alter table [Account] add [UserModelName] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Mobile] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Account] add [QQ] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Point] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Prestige] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Money] money
+    </Sql>
+    <Sql>
+      alter table [Account] add [PublishCount] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [EmailValidate] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [ModelName] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Account] add [ModelConfig] text
+    </Sql>
+    <Sql>
+      alter table [Account] add [ModelSchema] text
+    </Sql>
+    <Sql>
+      alter table [Account] add [ModelState] int
+    </Sql>
+    <Sql>
+      alter table [Account] add [Tel] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Account] add [Birthday] datetime
+    </Sql>
+    <Sql>
+      alter table [Account] add [Sex] nvarchar(2)
+    </Sql>
+
+    <!--*******************[AccountRole]表中添加的字段********************-->
+    <Sql>
+      alter table [AccountRole] add [DepartmentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AccountRole] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AccountRole] add [RoleID] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AccountRole] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [AccountRole] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [AccountRole] add [RoleTitle] nvarchar(64)
+    </Sql>
+
+
+
+    <!--********************[Advice]表中添加的字段********************-->
+    <Sql>
+      alter table [Advice] add [TypeID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [Advice] add [CreateDate] datetime
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Name] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Email] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [IsShow] int
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ReplyDepID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [SN] bigint
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ReplyCount] int
+    </Sql>
+    <Sql>
+      alter table [Advice] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Advice] add [OwnID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ModelXml] text
+    </Sql>
+    <Sql>
+      alter table [Advice] add [MyQueryPwd]  nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ProcessState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ProcessDirection] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [FlowXml] text
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Source] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ProcessSiteID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [EnumState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [MustHandle] int
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ToHandleTime] datetime
+    </Sql>
+    <Sql>
+      alter table [Advice] add [AdviceInfoType] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ToOtherHandleUserID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Display1] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Display2] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Display3] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ModelName] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ModelConfig] text
+    </Sql>
+    <Sql>
+      alter table [Advice] add [ModelSchema] text
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Phone] nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Fax] nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [Address] nvarchar(100)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [AdviceTag] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Advice] add [IsRead] int
+    </Sql>
+
+    <!--********************[AdviceInfo]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceInfo] add [TypeID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Name] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Email] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [IsShow] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [IsTop] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [SN] nvarchar(12)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [State] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Public] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [ModelXml] text
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [MyQueryPwd]  nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Priority] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Display1] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Display2] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Display3] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [ModelName] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [ModelConfig] text
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [ModelSchema] text
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Phone] nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Fax] nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Address] nvarchar(100)
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [IsRead] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [Clicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [DayClicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [YesterdayClicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [WeekClicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [MonthClicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [QuarterClicks] int
+    </Sql>
+    <Sql>
+      alter table [AdviceInfo] add [YearClicks] int
+    </Sql>
+
+    <!--********************[AdviceReply]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceReply] add [AdviceID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [CreateDate] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [MailBody] text
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [EnumState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [Comment] text
+    </Sql>
+    <Sql>
+      alter table [AdviceReply] add [Suggest] text
+    </Sql>
+
+    <!--********************[AdviceReplyInfo]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceReplyInfo] add [AdviceID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceReplyInfo] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceReplyInfo] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceReplyInfo] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [AdviceReplyInfo] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceReplyInfo] add [MailBody] text
+    </Sql>
+
+    <!--********************[AdviceTransfer]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceTransfer] add [AdviceID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [FromTypeID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [ToTypeID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [Suggest] text
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [State] int
+    </Sql>
+    <Sql>
+      alter table [AdviceTransfer] add [Created] datetime
+    </Sql>
+
+    <!--********************[AdviceAuth]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceAuth] add [AuthID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceAuth] add [AdviceTypeID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceAuth] add [AuthType] int
+    </Sql>
+    <Sql>
+      alter table [AdviceAuth] add [Function] int
+    </Sql>
+
+    <!--********************[AdviceType]表中添加的字段********************-->
+    <Sql>
+      alter table [AdviceType] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [Description] text
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [CreateDate] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [ModelXml] text
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [EnumState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [ToWhichDepartment] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [FlowSeries] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [ProcessEnd] nvarchar(16)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [FlowInnerDepart] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [MailMode] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [UseSystemMail] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [MailSMTPServer] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [POPServer] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [MailUser] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [MailPassword] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [SMSUser] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [RemindDays] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [MailAddress] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [ParticipateMode] int
+    </Sql>
+    <Sql>
+      alter table [AdviceType] add [ModelName] nvarchar(255)
+    </Sql>
+
+    <!--********************[Article]表中添加的字段********************-->
+    <Sql>
+      alter table [Article] add [Title] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Article] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [OwnerID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ParentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Article] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Article] add [Author] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Article] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [Article] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Article] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Article] add [Overdue] datetime
+    </Sql>
+    <Sql>
+      alter table [Article] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Source] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [AllowComments] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Permission] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [IsImage] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [IsShow] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [SubTitle] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Article] add [Thumbnail] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [IsDeleted] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [ContentUrl] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ContentType] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [SourceID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Article] add [SN] bigint
+    </Sql>
+    <Sql>
+      alter table [Article] add [ProcessState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ProcessDirection] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ProcessSiteID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FlowXml] text
+    </Sql>
+    <Sql>
+      alter table [Article] add [ChannelName] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FullChannelPath] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ChannelFullUrl] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [CommentCount] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Tags] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ModelXml] text
+    </Sql>
+    <Sql>
+      alter table [Article] add [EnumState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [IndustryID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FromRowID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FromSiteUrl] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Article] add [KeyWord] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [DescriptionKey] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [VideoCode] text
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys1]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys2]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys3]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys4]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ListKeys5]  nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Article] add [IPStrategy]  nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ModelName]  nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Article] add [TableName]  nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Article] add [ModelConfig]  text
+    </Sql>
+    <Sql>
+      alter table [Article] add [ModelSchema]  text
+    </Sql>
+    <Sql>
+      alter table [Article] add [PrivacyLevel] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Photos] text
+    </Sql>
+    <Sql>
+      alter table [Article] add [Clicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [DayClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [YesterdayClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [WeekClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [MonthClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [QuarterClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [YearClicks] int
+    </Sql>
+    <Sql>
+      alter table [Article] add [Color]  nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FontWeight]  nvarchar(20)
+    </Sql>
+    <Sql>
+      alter table [Article] add [FontStyle]  nvarchar(20)
+    </Sql>
+
+
+    <!--********************[Tags]表中添加的字段***********************-->
+   
+    <Sql>
+      alter table [Tags] add [Identifier] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Tags] add [Frequency] int
+    </Sql>
+    <Sql>
+      alter table [Tags] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Tags] add [Created] datetime
+    </Sql>
+
+
+    <!--********************[Attachment]表中添加的字段***********************-->
+    <Sql>
+      alter table [Attachment] add [ArticleID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [FileType] nvarchar(8)
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [FileName] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [FileSize] int
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [FilePath] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [UploadDate] datetime
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [DownloadTimes] int
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Attachment] add [EnumState] nvarchar(50)
+    </Sql>
+
+
+    <!--********************[Channel]表中添加的字段***********************-->
+    <Sql>
+      alter table [Channel] add [ParentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Alias] nvarchar(16)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [FullPath] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [TemplateName] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [DetailTemplate] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [SecurityLevel] int
+    </Sql>
+    <Sql>
+      alter table [Channel] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ReferenceID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [DefaultContentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Parameter] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ChannelFolder] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [TitleImage] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Process] nvarchar(16)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Type] nvarchar(16)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ChannelName] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [RefAreaID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [IsComment] int
+    </Sql>
+    <Sql>
+      alter table [Channel] add [FullUrl] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ReturnUrl] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ProcessLayerNO] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ProcessEnd] nvarchar(16)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Channel] add [EnumState] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ArticlesCount] int
+    </Sql>
+    <Sql>
+      alter table [Channel] add [Tags] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [KeyWord] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [DescriptionKey] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [IPStrategy]  nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Channel] add [ModelName]  nvarchar(128)
+    </Sql>
+
+
+
+    <!--********************[Comments]表中添加的字段***********************-->
+    <Sql>
+      alter table [Comments] add [ArticleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Comments] add [Author] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Comments] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [Comments] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Comments] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Comments] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Comments] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Comments] add [IP] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Comments] add [AccountID] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Comments] add [ArticleName] nvarchar(100)
+    </Sql>
+
+
+    <!--********************[Department]表中添加的字段***********************-->
+    <Sql>
+      alter table [Department] add [ParentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Department] add [FromSiteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Title] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [FullName] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Department] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Department] add [Updated] datetime
+    </Sql>
+
+    <Sql>
+      alter table [Department] add [Number] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Address] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Phone] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Fax] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Email] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Department] add [MapScript] text
+    </Sql>
+    <Sql>
+      alter table [Department] add [SiteUrl] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Department] add [Text] text
+    </Sql>
+
+    <!--********************ErrorCode表中添加的字段***********************-->
+    <Sql>
+      alter table [ErrorCode] add [Level] int
+    </Sql>
+    <Sql>
+      alter table [ErrorCode] add [Title] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [ErrorCode] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [ErrorCode] add [HelpLink] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [ErrorCode] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [ErrorCode] add [Updated] datetime
+    </Sql>
+
+    <!--********************[Link]表中添加的字段***********************-->
+    <Sql>
+      alter table [Link] add [Title] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Link] add [Url] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Link] add [Tag] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Link] add [Thumbnail] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Link] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Link] add [OrderNumber] int
+    </Sql>
+    <Sql>
+      alter table [Link] add [Updated] datetime
+    </Sql>
+
+
+    <!--********************Log表中添加的字段***********************-->
+    <Sql>
+      alter table [Log] add [Title] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Log] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Log] add [Content] text
+    </Sql>
+    <Sql>
+      alter table [Log] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Log] add [Page] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Log] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Log] add [Remark] nvarchar(50)
+    </Sql>
+
+
+    <!--********************[Menu]表中添加的字段***********************-->
+    <Sql>
+      alter table [Menu] add [ParentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [SequenceIndex] int
+    </Sql>
+    <Sql>
+      alter table [Menu] add [NameText] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Title] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Href] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [EntityID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Type] int
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Icon] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [IconHover] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Menu] add [Group] int
+    </Sql>
+    <Sql>
+      alter table [Menu] add [MenuType] int
+    </Sql>
+    <Sql>
+      alter table [Menu] add [ReferenceID] nvarchar(40)
+    </Sql>
+
+    <!--********************[Message]表中添加的字段***********************-->
+    <Sql>
+      alter table [Message] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Message] add [AccountName] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Message] add [ReceiverID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Message] add [Receivers] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Message] add [Subject] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Message] add [Content] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Message] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Message] add [SendTime] datetime
+    </Sql>
+    <Sql>
+      alter table [Message] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Message] add [State] int
+    </Sql>
+    <Sql>
+      alter table [Message] add [Updated] datetime
+    </Sql>
+
+
+    <!--********************[PageVisitor]表中添加的字段***********************-->
+    <Sql>
+      alter table [PageVisitor] add [TypeCode] int
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [VisitDate] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [LogoutDate] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [VisitorIP] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Url] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Http_Referer] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Clicks] int
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [OnlineTime] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Platform] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Browser] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Screen] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [City] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [SearchEngine] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Keyword] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [Province] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitor] add [FromSite] nvarchar(50)
+    </Sql>
+
+    <!--********************[PageVisitorHistory]表中添加的字段***********************-->
+    <Sql>
+      alter table [PageVisitorHistory] add [TypeCode] int
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [UserID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [VisitDate] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [LogoutDate] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [VisitorIP] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Url] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Http_Referer] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Clicks] int
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [OnlineTime] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Platform] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Browser] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Screen] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [City] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [SearchEngine] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Keyword] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [Province] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [PageVisitorHistory] add [FromSite] nvarchar(50)
+    </Sql>
+
+    <!--********************[Permission]表中添加的字段***********************-->
+    <Sql>
+      alter table [Permission] add [OwnerType] int
+    </Sql>
+    <Sql>
+      alter table [Permission] add [OwnerID]  nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Permission] add [ObjectID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Permission] add [Url] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Permission] add [Content] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Permission] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Permission] add [Updated] datetime
+    </Sql>
+
+
+    <!--********************[RelatedArticle]表中添加的字段***********************-->
+    <Sql>
+      alter table [RelatedArticle] add [ArticleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [RelatedArticle] add [RelatedID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [RelatedArticle] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [RelatedArticle] add [Updated] datetime
+    </Sql>
+
+
+    <!--********************[Role]表中添加的字段***********************-->
+    <Sql>
+      alter table [Role] add [FromSiteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Role] add [Title] nvarchar(64)
+    </Sql>
+    <Sql>
+      alter table [Role] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Role] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Role] add [State] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Role] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Role] add [GroupRole] int
+    </Sql>
+    <Sql>
+      alter table [Role] add [RoleType] int
+    </Sql>
+
+    <!--********************Statistics表中添加的字段***********************-->
+    <Sql>
+      alter table [Statistics] add [VisitorID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [ChannelID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [ArticleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [VisitDate] datetime
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [URL] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Statistics] add [Updated] datetime
+    </Sql>
+
+    <!--********************StatisticsHistory表中添加的字段***********************-->
+    <Sql>
+      alter table [StatisticsHistory] add [VisitorID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [ChannelID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [ArticleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [VisitDate] datetime
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [URL] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [StatisticsHistory] add [Updated] datetime
+    </Sql>
+
+
+    <!--********************ArticleIndex表中添加的字段***********************-->
+    <Sql>
+      alter table [ArticleIndex] add [Operation] int
+    </Sql>
+    <Sql>
+      alter table [ArticleIndex] add [IsLock] int
+    </Sql>
+
+
+    <!--*******************[Favorite]表中添加的字段**********************-->
+    <Sql>
+      alter table [Favorite] add [Url] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Title] nvarchar(100)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Tag] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [ArticleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Favorite] add [Thumbnail] nvarchar(255)
+    </Sql>
+    <!--*******************[Point]表中添加的字段**********************-->
+    <Sql>
+      alter table [Point] add [Value] int
+    </Sql>
+    <Sql>
+      alter table [Point] add [Action] int
+    </Sql>
+    <Sql>
+      alter table [Point] add [Description] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Point] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [Point] add [ObjectID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Point] add [AccountID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Point] add [AccountName] nvarchar(40)
+    </Sql>
+    <!--*******************[Category]更新Category中的字段信息**********************-->
+    <Sql>
+      alter table [Category] add [ParentID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Category] add [Name] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [Category] add [KeyWord] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Category] add [Description] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Category] add [Options] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [Category] add [Index] int
+    </Sql>
+    <Sql>
+      alter table [Category] add [CreateDate] datetime
+    </Sql>
+
+    <!--*******************[ColumnModule]更新ColumnModule中的字段信息**********************-->
+    <Sql>
+      alter table [ColumnModule] add [Title] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [ColumnModule] add [Desc] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [ColumnModule] add [ParamIntro] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [ColumnModule] add [Path] nvarchar(255)
+    </Sql>
+
+
+    <!--*******************[ChannelModuleMapping]更新ChannelModuleMapping中的字段信息**********************-->
+    <Sql>
+      alter table [ChannelModuleMapping] add [ChannelID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [ChannelModuleMapping] add [ModuleID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [ChannelModuleMapping] add [Parameter] nvarchar(255)
+    </Sql>
+
+
+ 
+
+    <!--********************[ClickRecords]表中添加的字段***********************-->
+    <Sql>
+      alter table [ClickRecords] add [ID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [ClickRecords] add [ObjectType] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [ClickRecords] add [ObjectID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [ClickRecords] add [VisitDate] int
+    </Sql>
+    <Sql>
+      alter table [ClickRecords] add [Clicks] int
+    </Sql>
+
+    <!--********************[Vote]表中添加的字段***********************-->
+    <Sql>
+      alter table [Vote] add [ID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Vote] add [Title] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [Vote] add [OptionType] int
+    </Sql>
+    <Sql>
+      alter table [Vote] add [AddDate] datetime
+    </Sql>
+    <Sql>
+      alter table [Vote] add [EndDate] datetime
+    </Sql>
+    <Sql>
+      alter table [Vote] add [VotePeoples] int
+    </Sql>
+    <Sql>
+      alter table [Vote] add [IsCanRepeat] bit
+    </Sql>
+
+    <!--********************[VoteEntry]表中添加的字段***********************-->
+    <Sql>
+      alter table [VoteEntry] add [ID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteEntry] add [VoteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteEntry] add [EntryText] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [VoteEntry] add [OrderID] int
+    </Sql>
+
+    <!--********************[VoteAnswer]表中添加的字段***********************-->
+    <Sql>
+      alter table [VoteAnswer] add [ID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [VoteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [VoteEntryID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [AnswerText] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [AccountID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [IP] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswer] add [VoteDate] datetime
+    </Sql>
+
+    <!--********************[VoteAnswerStat]表中添加的字段***********************-->
+    <Sql>
+      alter table [VoteAnswerStat] add [ID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswerStat] add [VoteID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswerStat] add [VoteEntryID] nvarchar(40)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswerStat] add [VoteEntrySum] int
+    </Sql>
+    <Sql>
+      alter table [VoteAnswerStat] add [VoteEntryText] nvarchar(255)
+    </Sql>
+    <Sql>
+      alter table [VoteAnswerStat] add [OrderID] int
+    </Sql>
+
+  </Database>
+</Update>

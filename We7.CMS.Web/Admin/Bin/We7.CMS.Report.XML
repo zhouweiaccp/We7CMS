@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.Report</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.PVKeyCountView">
+            <summary>
+            统计键值对象
+            </summary>
+        </member>
+        <member name="T:We7.CMS.PageViewReportHelper">
+            <summary>
+            流量统计报表生成类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.PageViewReportHelper.GetKeyCountList(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            按键值获取统计数字列表
+            </summary>
+            <param name="keyName"></param>
+            <param name="keyValue"></param>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.PageViewReportHelper.GetStatisticsArticleCount">
+            <summary>
+            获取发表文章统计数据对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.PageViewReportHelper.GetStatisticsMonthsList(System.String,System.DateTime,System.DateTime,System.String,System.Boolean)">
+            <summary>
+            获取月访问统计
+            </summary>
+            <param name="channelID"></param>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <param name="orderKey"></param>
+            <param name="sort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.PageViewReportHelper.DinoComparer">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:We7.CMS.PublishCountView">
+            <summary>
+            发布量统计对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PublishCountView.Clicks">
+            <summary>
+            点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PublishCountView.ClickPercent">
+            <summary>
+            点击量百分比
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PublishCountView.AcceptCount">
+            <summary>
+            稿件采用（正式发布）数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PublishCountView.ChannelID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="T:We7.CMS.PublishReportHelper">
+            <summary>
+            文章（信息）发表报表生成类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.PublishReportHelper.GetPublishCountByAccount(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            获取某用户的发表数
+            </summary>
+            <param name="accountID"></param>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.PublishReportHelper.GePublishCountList(System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            获取发表数列表
+            </summary>
+            <param name="keyName"></param>
+            <param name="keyValue"></param>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <param name="filterString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.PublishReportHelper.AccountDataToList(System.Data.DataTable,System.Collections.Generic.List{We7.CMS.PublishCountView},System.Int32@,System.Int32@)">
+            <summary>
+            用户-数据赋值
+            </summary>
+            <param name="dt"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:We7.CMS.PublishReportHelper.DepartmentDataToList(System.Data.DataTable,System.Collections.Generic.List{We7.CMS.PublishCountView},System.Int32@,System.Int32@)">
+            <summary>
+            部门-数据赋值
+            </summary>
+            <param name="dt"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:We7.CMS.PublishReportHelper.ChannelDataToList(System.Data.DataTable,System.Collections.Generic.List{We7.CMS.PublishCountView},System.Int32@,System.Int32@,System.String)">
+            <summary>
+            栏目-数据赋值
+            </summary>
+            <param name="dt"></param>
+            <param name="list"></param>
+        </member>
+    </members>
+</doc>

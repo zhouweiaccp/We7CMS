@@ -1,0 +1,3116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.UI</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.WebControls.BaseControl">
+            <summary>
+            控件基类
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.BaseControl.ThemeRoot">
+            <summary>
+            风格样式根目录
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.BaseControl.UxParams">
+            <summary>
+            控件的扩展参数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写信息重现
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.OnDesigning">
+            <summary>
+            在设计时进行数据初始化
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToStr(System.Object)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToStr(System.Object,System.Int32)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToStr(System.Object,System.Int32,System.String)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <param name="tail">超过指定长度的结尾字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToDateStr(System.Object,System.String)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <param name="fmt">日期格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToDateStr(System.Object)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseControl.ToInt(System.Object)">
+            <summary>
+            将数据转化为字整数
+            </summary>
+            <param name="fieldValue">要转化的值</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseControl.ThemePath">
+            <summary>
+            当前模板的主题目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseControl.IsDesigning">
+            <summary>
+            是否使用例子数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseControl.CssClass">
+            <summary>
+            部件CssClass属性
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseControl.HtmlHelper">
+            <summary>
+            表单提交辅助类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ThinkmentDataControl.Assistant">
+            <summary>
+            当前Helper的数据访问对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ThinkmentDataControl.MultiDataSourceHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.CreateCriteria">
+            <summary>
+            生成列表查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.ProcessQueryParam(Thinkment.Data.Criteria)">
+            <summary>
+            处理查询字符串
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.ProcessOrCriteria(Thinkment.Data.Criteria,System.String,System.String)">
+            <summary>
+            处理一个查询组的字符串信息
+            </summary>
+            <param name="c"></param>
+            <param name="k"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.ConvertValue(System.String,System.String,System.String)">
+            <summary>
+            将字段转为值
+            </summary>
+            <param name="modelName"></param>
+            <param name="field"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.GetUrl(System.Object)">
+            <summary>
+            得到文章的URL
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.GetFirstImage(System.Object,System.String,System.String)">
+            <summary>
+            取得第一张图片
+            </summary>
+            <param name="json"></param>
+            <param name="type"></param>
+            <param name="defImg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.GetImage(System.Object,System.String)">
+            <summary>
+            取得某种类型的图片
+            </summary>
+            <param name="json"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.BaseWidgetList.GetIIC(System.Object)">
+            <summary>
+            取得图片信息集合
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.MarginTop10">
+            <summary>
+            上边距10像素
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.MarginLeft10">
+            <summary>
+            下边距10像素
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.MarginCss">
+            <summary>
+            附加的Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.Items">
+            <summary>
+            输出的查询数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.BaseWidgetList.Channel">
+            <summary>
+            当前栏目信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.RenderArguments">
+            <summary>
+            呈现参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Control">
+            <summary>
+            当前控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.IsFinished">
+            <summary>
+            是否已完成
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.IsError">
+            <summary>
+            是否出错
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Exception">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Params">
+            <summary>
+            扩展参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Request">
+            <summary>
+            Request
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Response">
+            <summary>
+            Response
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderArguments.Current">
+            <summary>
+            当前页面上下文
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.DCHelper.PickUp(System.String)">
+            <summary>
+            从指定控件中取得配置信息
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Controls.We7MenuControl">
+            <summary>
+            后台用新菜单控件（后台可折叠菜单，类似WP）
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.We7MenuControl.AllMenuHtml">
+            <summary>
+            返回菜单数据，包括js数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.We7MenuControl.GenerateMenuItem(We7.CMS.Common.MenuItem,System.String,System.Int32)">
+            <summary>
+            生成一级菜单字符串
+            </summary>
+            <param name="menu"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.We7MenuControl.GenerateSubMenuItem(System.Collections.Generic.List{We7.CMS.Common.MenuItem},System.String)">
+            <summary>
+            生成子菜单
+            </summary>
+            <param name="menus">主菜单下子菜单列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.We7MenuControl.GenerateMenuJS(System.Collections.Generic.List{We7.CMS.Common.MenuItem})">
+            <summary>
+            生成菜单初始化JS
+            </summary>
+            <param name="menus"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Controls.We7MenuControl.EntityID">
+            <summary>
+            菜单类别+
+            后台菜单-“System.Administration”
+            会员菜单-“System.User”
+            站群菜单- “Group.Administration”
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.We7MenuControl.CurrentMenuID">
+            <summary>
+            当前一级菜单项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.We7MenuControl.CurrentSubMenuID">
+            <summary>
+            当前子菜单项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.We7MenuControl.AllShowMemuItem">
+            <summary>
+            菜单树的所有数据，存储在HttpContext.Current.Items中
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.ProvinceCityCascade">
+            <summary>
+            ProvinceCityCascade 的摘要说明。
+            省市联动选择控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.ProvinceCityCascade.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将此控件呈现给指定的输出参数
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器</param>
+        </member>
+        <member name="M:We7.CMS.Controls.ProvinceCityCascade.GetCascadingInfo">
+            <summary>
+            从XML文件中读取省市县信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.ProvinceCityCascade.RaisePostDataChangedEvent">
+            <summary>
+            当由类实现时，用信号要求服务器控件对象通知 ASP.NET 应用程序该控件的状态已更改。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.ProvinceCityCascade.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            当由类实现时，为 ASP.NET 服务器控件处理回发数据。
+            </summary>
+            <param name="postDataKey">控件的主要标识符</param>
+            <param name="postCollection">所有传入名称值的集合</param>
+            <returns>如果服务器控件的状态在回发发生后更改，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.SaveTemplate(System.String)">
+            <summary>
+            保存模版
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.InitContent">
+            <summary>
+            初始化headContent,bodyContent
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.InitControls">
+            <summary>
+            初始化控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.GetUCName(System.String)">
+            <summary>
+            取得控件名称
+            </summary>
+            <param name="control">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.GetControlRelatePath(System.String)">
+            <summary>
+            取得控件与根目录的相对路径
+            </summary>
+            <param name="control">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.FormatHeadMeta(System.String)">
+            <summary>
+            格式化Html头部信息
+            </summary>
+            <param name="headContent">头部内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.AbstractAndRemoveMatchSections(System.String,System.Text.StringBuilder)">
+            <summary>
+            依据正则表达式字串，将原字符串中相符合规则的内容提取出来
+            并把相关内容从原符串中删除
+            </summary>
+            <param name="regexStr">正则表达式字串</param>
+            <param name="sourceStr">原字符串</param>
+            <returns>提取出的字符串</returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.OpenFile(System.String)">
+            <summary>
+            通过路径取得StreamReader
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.OpenFile(System.IO.Stream)">
+            <summary>
+            通过流取得StreamReader
+            </summary>
+            <param name="stream">文件流</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.OpenWriteFile(System.String)">
+            <summary>
+            通过路径取得StreamWriter
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.OpenWriteFile(System.IO.Stream)">
+            <summary>
+             通过流取得StreamWriter
+             </summary>
+             <param name="path">文件路径</param>
+             <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.CheckFile(System.String)">
+            <summary>
+            检测文件是否存在,如果不存在就创建文件
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.TemplateService.CheckFile(System.IO.FileInfo)">
+            <summary>
+            检测文件是否存在
+            </summary>
+            <param name="file">文件信息类</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.OriginalTemplate">
+            <summary>
+            原始模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.Controls">
+            <summary>
+            当前模板内容的所有控件信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.SubTemplates">
+            <summary>
+            子模板文件名称（不带扩展名）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.TemplateHtmlContent">
+            <summary>
+            模板内容(HTML标签部分)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.HeadContent">
+            <summary>
+            head内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.BodyContent">
+            <summary>
+            BODY内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.Folder">
+            <summary>
+            文件夹名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.We7TemplateStylePath">
+            <summary>
+            当前模版组相对根目录的样式表路径.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.TemplateService.We7TemplateGroup">
+            <summary>
+            模版组
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper">
+            <summary>
+            Widget操作
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetWidgetCollection(System.String)">
+            <summary>
+            根据配置文件路径 获取一个Widget大分类
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetDataControl(System.String)">
+            <summary>
+            根据文件路径取得部件信息
+            </summary>
+            <param name="filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetDataControlInfoByPath(System.String)">
+            <summary>
+            取得部件完整信息
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetDataControlPathFromPath(System.String)">
+            <summary>
+            取得部件的物理目录
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetControlName(System.String)">
+            <summary>
+            取得控件名称
+            </summary>
+            <param name="filePath">控件文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.CreateTestConfigFile(System.String)">
+            <summary>
+            测试序列化生成
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.CreateWidegetsIndex">
+            <summary>
+            创建部件索引
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.CreateWidgetConfig(System.Collections.Generic.List{We7.CMS.Common.DataControlInfo},System.String)">
+            <summary>
+            创建部件配置
+            </summary>
+            <param name="dcs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.GetControls">
+            <summary>
+            取得所有控件信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.LoadPluginContrls(System.Collections.Generic.List{We7.CMS.Common.DataControlInfo})">
+            <summary>
+            加载插件控件
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Helpers.WidgetHelper.LoadDataControls(System.Collections.Generic.List{We7.CMS.Common.DataControlInfo},System.String,System.String)">
+            <summary>
+            取得指定目录下的控件
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Controls.We7GenericContent">
+            <summary>
+            GenricContent
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Controls.We7GenericContent.Design">
+            <summary>
+            是否是设计模式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.TemplateList">
+            <summary>
+            模板集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.Floder">
+            <summary>
+            初始路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.BaseIcoPath">
+            <summary>
+            默认图片路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.DefaultTemplateName">
+            <summary>
+            模板模板名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.Templates">
+            <summary>
+            模板集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.TemplateList.DefaultTemplate">
+            <summary>
+            默认模板
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.Icon">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.File">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.Floder">
+            <summary>
+            文件夹
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.FullFilePath">
+            <summary>
+            文件完全路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.FullIconPath">
+            <summary>
+            图片完全路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Template.NotInherit">
+            <summary>
+            是否继承:flase表示继承
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.ExportCommand">
+            <summary>
+            添加数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ModelContainer.OnCommandSubmit(System.String,System.Object)">
+            <summary>
+            命令提交时执行的方法
+            </summary>
+            <param name="sender"></param>
+            <param name="cmd"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ModelContainer.InitModelData">
+            <summary>
+            初始化模型数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ModelContainer.DoCommand(System.Object,System.String,We7.Model.Core.PanelContext,System.Object)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+            <param name="model">模型信息</param>
+            <param name="state">附加数据</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ModelContainer.DoCommand(System.Object,System.String,System.Object)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+            <param name="state">附加数据</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ModelContainer.DoCommand(System.Object,System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="cmd">命令名称</param>
+        </member>
+        <member name="E:We7.CMS.WebControls.ModelContainer.OnCommand">
+            <summary>
+            执行的命令事件
+            </summary>
+        </member>
+        <member name="E:We7.CMS.WebControls.ModelContainer.OnPreCommand">
+            <summary>
+            执行命令之间的事件
+            </summary>
+        </member>
+        <member name="E:We7.CMS.WebControls.ModelContainer.OnCommandComplete">
+            <summary>
+            执行命令完成之后的事件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ModelContainer.ModelName">
+            <summary>
+            模型名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ModelContainer.PanelName">
+            <summary>
+            面板配置名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ModelContainer.UIHelper">
+            <summary>
+            UI处理对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ModelContainer.Info">
+            <summary>
+            模型信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ModelContainer.Panel">
+            <summary>
+            当前面板信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CommandContainer.InitModelData">
+            <summary>
+            初始化模型数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CommandContainer.OnButtonSubmit(System.Object,System.EventArgs)">
+            <summary>
+            按钮类控件执行方法
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.EditorContainer.UpdateFields(System.Data.DataRow)">
+            <summary>
+            用数据行更新模型数据
+            </summary>
+            <param name="data">模型数据</param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.EditorContainer.ProcessAllDataColumns(We7.Model.Core.PanelContext)">
+            <summary>
+            处理所有数据列
+            </summary>
+            <param name="ctx"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.EditorContainer.IsViewer">
+            <summary>
+            是否是浏览控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AutoEditor.InitContainer">
+            <summary>
+            初始化自定义容器
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.RenderChain">
+            <summary>
+            Html呈现数据链
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RenderChain.GetRenders">
+            <summary>
+            取得所有的数据呈现者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderChain.ConfigPath">
+            <summary>
+            配置文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RenderChain.Renders">
+            <summary>
+            取得所有的Html格式化器
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.DisplayType">
+            <summary>
+            页码显示类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.URLPager">
+            <summary>
+            翻页控件：使用URL传递页码
+            </summary>
+        </member>
+        <!-- 对于成员“P:We7.CMS.Controls.URLPager.Count”忽略有格式错误的 XML 注释 -->
+        <member name="P:We7.CMS.Controls.URLPager.Begin">
+            <summary>
+            本页显示：从第几条开始
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.URLPager.End">
+            <summary>
+            本页显示：到第几条结束
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.URLPager.ItemCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Controls.URLPager.MaxPages">
+            <summary>
+            总显示页数
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.PagerDesigner">
+            <summary>
+            Url分页控件可设计页类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.CommonTwoCascade">
+            <summary>
+            CommonTwoCascade 的摘要说明。
+            一级节点二级节点联动选择控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.CommonTwoCascade.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将此控件呈现给指定的输出参数
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器</param>
+        </member>
+        <member name="M:We7.CMS.Controls.CommonTwoCascade.GetCascadingInfo">
+            <summary>
+            从XML文件中读取一级节点二级节点信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.CommonTwoCascade.RaisePostDataChangedEvent">
+            <summary>
+            当由类实现时，用信号要求服务器控件对象通知 ASP.NET 应用程序该控件的状态已更改。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.CommonTwoCascade.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            当由类实现时，为 ASP.NET 服务器控件处理回发数据。
+            </summary>
+            <param name="postDataKey">控件的主要标识符</param>
+            <param name="postCollection">所有传入名称值的集合</param>
+            <returns>如果服务器控件的状态在回发发生后更改，则为 true；否则为 false。</returns>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.MarginTop10">
+            <summary>
+            上边距10像素
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.MarginLeft10">
+            <summary>
+            下边距10像素
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.MarginCss">
+            <summary>
+            附加的Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.ItemID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.Item">
+            <summary>
+            当前的记录数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetDetail.AttachmentsUrls">
+            <summary>
+            获取附件列表
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ListWebControl`1">
+            <summary>
+            列表类数据提供者抽象类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:We7.CMS.WebControls.BaseWebControl">
+            <summary>
+            前台用户控件基类其他控件均继承与此
+            注意：请保持此基类的清洁，需要用到的助手定义请在继承类里注册
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.IPager">
+            <summary>
+            分页接口
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.Disable">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.PageIndex">
+            <summary>
+            当前的页码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.PageCount">
+            <summary>
+            总共页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.PageSize">
+            <summary>
+            每一页显示的记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.StartItem">
+            <summary>
+            开始记录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.EndItem">
+            <summary>
+            分页结束记录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IPager.PageItemsCount">
+            <summary>
+            当前页面记录
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.GetOriginalControl">
+            <summary>
+            获取控件的原始字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ConstructFelds">
+            <summary>
+            构造列表数据字段数组，此过程在Initialize()过程中被自动调用
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ShowField(System.String)">
+            <summary>
+            是否显示字段
+            </summary>
+            <param name="key">显示的字段</param>
+            <returns>当前字符是否显示</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.Show(System.String)">
+            <summary>
+            判断是否显示字段
+            </summary>
+            <param name="key">字段名</param>
+            <returns>是否显示</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.SetAttribute">
+            <summary>
+            代码手工赋值控件属性值，此过程在Initialize()过程中被自动调用
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.OnLoad(System.EventArgs)">
+            <summary>
+            加载事件重写
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.Initialize">
+            <summary>
+            自定义控件初始化过程（已做过IsPostBack判断）
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.IncludeJavaScript(System.String[])">
+            <summary>
+             JS文件注册；可以引用多个文件，如：
+             IncludeJavaScript("jquery.bgiframe.js", "jquery.dimensions.js",
+             "jquery.jdMenu.js", "SlideMenuReady.js");
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.Get(System.String)">
+            <summary>
+            取得Action传回来的值
+            </summary>
+            <param name="key">关键字</param>
+            <returns>字段的数据值</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.Get``1(System.String)">
+            <summary>
+            取得Action传回来的值
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="key">字段名</param>
+            <returns>字段的数据值</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.CreateActionID">
+            <summary>
+            创建新的ActionID
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.GetAction``1">
+            <summary>
+            取得当前的Action
+            </summary>
+            <typeparam name="T">Action类型</typeparam>
+            <returns>Action对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.GetDataSourceData``1">
+            <summary>
+            取得数据源中的数据.
+            </summary>
+            <typeparam name="T">数据源类型</typeparam>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.AttributesJsonData">
+            <summary>
+            获取属性JSON字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写Render方法
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.FormatHtml(System.String)">
+            <summary>
+            格式化字符串
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToStr(System.Object)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToStr(System.Object,System.Int32)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToStr(System.Object,System.Int32,System.String)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <param name="tail">超过指定长度的结尾字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToDateStr(System.Object,System.String)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <param name="fmt">日期格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToDateStr(System.Object)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.ToInt(System.Object)">
+            <summary>
+            将数据转化为字整数
+            </summary>
+            <param name="fieldValue">要转化的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWebControl.GetDepartName(System.Object)">
+            <summary>
+            取得部门名称
+            </summary>
+            <param name="fieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.IsHtml">
+            <summary>
+            是否生成静态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.CreateHtml">
+            <summary>
+            是否是正在生成静态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.ColumnMode">
+            <summary>
+            模板子分类，如登录、注册、搜索等
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.TemplateHelper">
+            <summary>
+            模板业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.HelperFactory">
+            <summary>
+            业务助手工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.AccountHelper">
+            <summary>
+            用户管理业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.CDHelper">
+            <summary>
+            内容管理业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.ChannelHelper">
+            <summary>
+            栏目类业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.ShowFields">
+            <summary>
+            要显示的字段
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.OrderFields">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.Fields">
+            <summary>
+            列表数据字段数组（将显示的字段构造于此）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.AccountID">
+            <summary>
+            获取用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.IsSignin">
+            <summary>
+            检测用户是否登录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.MessageDisplay">
+            <summary>
+            是否显示消息(已经加了Display)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.TemplateGroup">
+            <summary>
+            模板组名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.HomeURL">
+            <summary>
+            首页Url地址：/home.html或/home.aspx
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.RelationValue">
+            <summary>
+            当前控件的关联值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.ActionID">
+            <summary>
+            当前的ActionID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.HtmlHelper">
+            <summary>
+            前台Html控件帮助类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.DisablePager">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.StartItem">
+            <summary>
+            分页开始的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.EndItem">
+            <summary>
+             分页结束的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.PageItemsCount">
+            <summary>
+            当前页面的记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.DataSourceID">
+            <summary>
+            数据源ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.Data">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.VisualDesign">
+            <summary>
+            可视化设计时
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWebControl.VHeadType">
+            <summary>
+            头部控件类型
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ListWebControl`1.GetListAction">
+            <summary>
+            取得列表的Action
+            </summary>
+            <returns>列表Action</returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListWebControl`1.RecordCount">
+            <summary>
+            记录的总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListWebControl`1.Items">
+            <summary>
+            返回列表记录
+            </summary>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.CombineStyle">
+            <summary>
+            合并样式表
+            </summary>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.DelFromPublishDoc(System.String,System.String)">
+            <summary>
+            从发布的文档中删除
+            </summary>
+            <param name="style"></param>
+            <param name="controlPath"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.UpdatePublishStyle(System.String,System.String)">
+            <summary>
+            更新发布的样式
+            </summary>
+            <param name="style"></param>
+            <param name="controlPath"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.UpdateStyleImage(System.String,System.String,System.String)">
+            <summary>
+            更新样式表图片地址
+            </summary>
+            <param name="cssTxt"></param>
+            <param name="styleFileName"></param>
+            <param name="controlPath"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.CssTxt(System.String,System.String)">
+            <summary>
+            Css文本
+            </summary>
+            <param name="style"></param>
+            <param name="controlPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.GetStyleFile(System.String,System.String)">
+            <summary>
+            获取样式表文件
+            </summary>
+            <param name="style"></param>
+            <param name="controlPath"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Styles(System.String)">
+            <summary>
+            样式表
+            </summary>
+            <param name="style"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.AddOrUpdateThemeFile(System.String)">
+            <summary>
+            添加或更新主题
+            </summary>
+            <param name="theme">主题名称</param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.RegisterCommonFile">
+            <summary>
+            注册公用文件
+            </summary>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Insert(System.String,System.Int32,System.String)">
+            <summary>
+            插入
+            </summary>
+            <param name="target"></param>
+            <param name="index"></param>
+            <param name="html"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Edit(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            修改节点
+            </summary>
+            <param name="id"></param>
+            <param name="attributes"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Insert(System.String,HtmlAgilityPack.HtmlNode,System.Int32)">
+            <summary>
+            插入
+            </summary>
+            <param name="containerId"></param>
+            <param name="node"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Delete(HtmlAgilityPack.HtmlNode)">
+            <summary>
+            删除
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Delete(System.String)">
+            <summary>
+            删除节点
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Move(System.String,HtmlAgilityPack.HtmlNode,System.Int32)">
+            <summary>
+            移动
+            </summary>
+            <param name="targetContainerId"></param>
+            <param name="node"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.CreateNode(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            创建一个新的节点
+            </summary>
+            <param name="tagPrix"></param>
+            <param name="tagName"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.CreateNode(System.String)">
+            <summary>
+            HTML只含有唯一父节点
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.GetElementById(System.String)">
+            <summary>
+            根据ID获取节点,如果是BODY则直接获取BODY
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.SelectSingleNode(System.String)">
+            <summary>
+            获取符合Xpath的第一个节点
+            </summary>
+            <param name="xpath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.GetDocument(System.String)">
+            <summary>
+            获取HtmlDocument
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.GetDocumentFromHtml(System.String)">
+            <summary>
+            获取文档对象
+            </summary>
+            <param name="html"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.SaveDraft(System.Boolean)">
+            <summary>
+            存草稿
+            </summary>
+            <param name="change"></param>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.Publish">
+            <summary>
+            发布
+            </summary>
+        </member>
+        <member name="M:VisualDesign.Module.VisualDesignFile.GetWidgets">
+            <summary>
+            获取部件
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.DesignFile">
+            <summary>
+            设计时模板物理路径
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.OriginalDocument">
+            <summary>
+            原始的文件Document
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.CurrentDocument">
+            <summary>
+            当前文件的Document
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.GroupTemplate">
+            <summary>
+            模板组
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.PublishStyle">
+            <summary>
+            发布样式表文件
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.PublicedDocument">
+            <summary>
+            发布之后的文档
+            </summary>
+        </member>
+        <member name="P:VisualDesign.Module.VisualDesignFile.PublicDocument">
+            <summary>
+            发布的文档
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.AdviceEditorProviderEx.AuditType">
+            <summary>
+            审核类型为上级部门，不显示在选择列表中
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.AdviceEditorProviderEx.AcceptType">
+            <summary>
+            受理类型不为空，则隐藏反馈类型选择
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceEditorProviderEx.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceEditorProviderEx.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.DetailUserControl`1">
+            <summary>
+            详细信息控件基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:We7.CMS.WebControls.FrontUserControl">
+            <summary>
+            用户控件基类
+            </summary>
+            <summary>
+            用户控件基类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToStr(System.Object)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToStr(System.Object,System.Int32)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToStr(System.Object,System.Int32,System.String)">
+            <summary>
+            将指定值转化为字符串
+            </summary>
+            <param name="fieldValue">字段值</param>
+            <param name="maxlength">值的最大长度</param>
+            <param name="tail">超过指定长度的结尾字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToDateStr(System.Object,System.String)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <param name="fmt">日期格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToDateStr(System.Object)">
+            <summary>
+            将时间数据按指定格式转化
+            </summary>
+            <param name="fieldValue">时间值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.ToInt(System.Object)">
+            <summary>
+            将数据转化为字整数
+            </summary>
+            <param name="fieldValue">要转化的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.IncludeJavaScript(System.Boolean,System.String[])">
+            <summary>
+            包含样式
+            </summary>
+            <param name="includeJquery">是否包含Jquery</param>
+            <param name="files"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.IncludeJavaScript(System.String[])">
+            <summary>
+            包含样式
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.FrontUserControl.LoadCompositeControl">
+            <summary>
+            加载组合控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FrontUserControl.Assistant">
+            <summary>
+            数据查询助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FrontUserControl.HtmlHelper">
+            <summary>
+            表单提交辅助类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FrontUserControl.DesignHelper">
+            <summary>
+            设计时辅助类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FrontUserControl.HelperFactory">
+            <summary>
+            业务工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FrontUserControl.CssClass">
+            <summary>
+            当前控件的Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DetailUserControl`1.Item">
+            <summary>
+            当前数据信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Services.VisualLayoutTemplate">
+            <summary>
+            网页布局模板服务类
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Module.VisualTemplate.Services.VisualLayoutTemplate.SystemTemplateConfigVirtualPath">
+            <summary>
+            系统模板虚拟路径
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.VisualLayoutTemplate.GetSystemTemplates">
+            <summary>
+            获取系统模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.WebControls.IRender">
+            <summary>
+            Html呈现格式化
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.IRender.Render(We7.CMS.WebControls.RenderChain,System.String@,We7.CMS.WebControls.RenderArguments)">
+            <summary>
+            数据呈现处理
+            </summary>
+            <param name="renders">数据呈现链</param>
+            <param name="content">进行处理的内容</param>
+            <param name="args">系统传入的参数</param>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.BaseControlHelper">
+            <summary>
+            控件基类的JSON序列化助手
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.Core.BaseControlHelper.DCIKEY">
+            <summary>
+            DataControlInfo的关键字
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.PickUp(System.String)">
+            <summary>
+            从指定控件中取得配置信息
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CreateDCPart(We7.CMS.WebControls.Core.DCInfo,System.String)">
+            <summary>
+            创建DcPart
+            </summary>
+            <param name="info"></param>
+            <param name="label"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.SortParam(We7.CMS.WebControls.Core.DCPartInfo)">
+            <summary>
+            按Weight排序
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetDataControlParameters(System.Collections.Generic.Dictionary{System.String,We7.CMS.WebControls.Core.ParameterAttribute})">
+            <summary>
+            通过属性名ParameterAttribute键值对获取DataControlParameter列表
+            </summary>
+            <param name="dictParams"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CopyDCPfromParam(System.String,We7.CMS.WebControls.Core.ParameterAttribute)">
+            <summary>
+            用ParameterAttribute复制一个DataControlParameter
+            </summary>
+            <param name="name">属性名</param>
+            <param name="pa"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.FilterParamAttrs(System.Object,System.String)">
+            <summary>
+            通过MetaData字段来筛选ParameterAttribute属性
+            </summary>
+            <param name="o">控件</param>
+            <param name="prefix">前缀</param>
+            <returns>属性名 ParameterAttribute 键值对</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetParamAttrs(System.Object,System.String,System.Collections.Generic.Dictionary{System.String,We7.CMS.WebControls.Core.ParameterAttribute}@)">
+            <summary>
+            获取对象上的ParameterAttribute集合
+            </summary>
+            <param name="o"></param>
+            <param name="PropName">字段/属性名称</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetAttribute``1(System.Reflection.MemberInfo)">
+            <summary>
+            反射获取元标记
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetAttributes``1(System.Reflection.MemberInfo)">
+            <summary>
+            反射获取元标记
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CreateThemeIndex">
+            <summary>
+            创建索引索引
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetThemes(System.String)">
+            <summary>
+            获取目录下所有的主题配置
+            </summary>
+            <param name="prefixPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.LoadThemes(We7.CMS.Module.VisualTemplate.Models.Themes,System.String,System.String)">
+            <summary>
+            取得指定目录下的主题
+            </summary>
+            <param name="dir">目录</param>
+            <param name="prefixPath">前置目录 /Widgets/Themes</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CreateWidegetsIndex">
+            <summary>
+            创建部件索引
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CreateWidgetConfig(System.Collections.Generic.List{We7.CMS.Common.DataControlInfo},System.String)">
+            <summary>
+            创建部件配置
+            </summary>
+            <param name="dcs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetControls(System.String)">
+            <summary>
+            获取Weidget目录下所有控件信息 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.LoadDataControls(System.Collections.Generic.List{We7.CMS.Common.DataControlInfo},System.String,System.String,System.String)">
+            <summary>
+            取得指定目录下的控件
+            </summary>
+            <param name="dir"></param>
+            <param name="prefixPath">前置目录 Weidget/We7Controls</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetDataControlInfo(System.String)">
+            <summary>
+            从控件上获取描述信息
+            </summary>
+            <param name="path"></param>
+            <param name="groupAttr">组描述信息</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.SortDataControl(We7.CMS.Common.DataControl,We7.CMS.Common.DataControl)">
+            <summary>
+            DataControl排序用
+            </summary>
+            <param name="obj1"></param>
+            <param name="obj2"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.IntegrationWidgetsAndControls">
+            <summary>
+            将模型、插件、控件信息整合在一起
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.CreateIntegrationIndexConfig">
+            <summary>
+            创建整合过后的索引文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.IsControl(System.String)">
+            <summary>
+            判定当前控件是不是控件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetIntegrationInfoByPath(System.String)">
+            <summary>
+            取得整合过后的控件信息
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetWidgetControlInfo(System.String)">
+            <summary>
+            取得单个部件组的
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.BaseControlHelper.GetDataControlsInfos">
+            <summary>
+            获取包括 部件/控件 的列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.BaseControlHelper.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.BaseControlHelper.DataControlHelper">
+            <summary>
+            用户控件业务对象
+            </summary>
+        </member>
+        <member name="F:We7.CMS.UI.Widget.WidgetPagedList.Pager">
+            <summary>
+            分页控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetPagedList.CssClass">
+            <summary>
+            自定义Css样式
+            </summary>
+        </member>
+        <member name="F:We7.CMS.UI.Widget.AdviceProvider.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="F:We7.CMS.UI.Widget.AdviceProvider.OwnerID">
+            <summary>
+            导航栏目
+            </summary>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetAccountName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="accountID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.IncludeJavaScript(System.String[])">
+            <summary>
+             JS文件注册；可以引用多个文件，如：
+             IncludeJavaScript("jquery.bgiframe.js", "jquery.dimensions.js",
+             "jquery.jdMenu.js", "SlideMenuReady.js");
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetUrl(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetModelName">
+            <summary>
+            取得当前反馈的模型名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.CreateListCriteria">
+            <summary>
+            创建列表查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetItems">
+            <summary>
+            要据查询条件取得反馈列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetItem">
+            <summary>
+            取得当前记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.AdviceProvider.GetAdviceID">
+            <summary>
+            报得反馈ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.ModelName">
+            <summary>
+            当前反馈模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.StartItem">
+            <summary>
+            分页开始的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.EndItem">
+            <summary>
+             分页结束的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.PageItemsCount">
+            <summary>
+            当前页面的记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.DisablePager">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.Items">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.Item">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.AdviceProvider.Html">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:We7.CMS.UI.Widget.WidgetAdviceQueryList.SecurityQuery">
+            <summary>
+            安全查询
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetAdviceQueryList.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ListUserControl`1">
+            <summary>
+            列表控件基类
+            </summary>
+            <typeparam name="T"></typeparam>
+            <summary>
+            列表控件分页信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:We7.CMS.WebControls.ListUserControl`1.CreateCriteria">
+            <summary>
+            创建查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ListUserControl`1.CreateOrders">
+            <summary>
+            创建排序列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListUserControl`1.DisablePager">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListUserControl`1.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListUserControl`1.PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.Disable">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.StartItem">
+            <summary>
+            分页开始的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.EndItem">
+            <summary>
+             分页结束的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Pager.PageItemsCount">
+            <summary>
+            当前页面的记录数
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.IDataSource">
+            <summary>
+            数据源控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.IDataSource.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.DescAttribute">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.RequiredAttribute">
+            <summary>
+            必选项
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.MessagePanelCtx">
+            <summary>
+            页面嵌入式提示框控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanelCtx.ShowMessage(System.String)">
+            <summary>
+            显示信息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanelCtx.ShowMessage(System.String,System.Boolean)">
+            <summary>
+            显示信息（是否清空前面信息）
+            </summary>
+            <param name="message"></param>
+            <param name="clearExistingMessages"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanelCtx.ShowError(System.String)">
+            <summary>
+            提示错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanelCtx.ShowError(System.String,System.Boolean)">
+            <summary>
+            提示错误（是否清空前面信息）
+            </summary>
+            <param name="message"></param>
+            <param name="clearExistingMessages"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanelCtx.Clear">
+            <summary>
+            清空
+            </summary>
+        </member>
+        <member name="F:We7.CMS.UI.Widget.WidgetAdviceList.Pager">
+            <summary>
+            分页器
+            </summary>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.WidgetAdviceList.GetItems">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.UI.Widget.WidgetAdviceList.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            页面加载
+            </summary>
+        </member>
+        <member name="P:We7.CMS.UI.Widget.WidgetAdviceList.AdviceTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Controls.We7ZonePlaceHolder">
+            <summary>
+            we7设计时Zone PlaceHolder
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Controls.We7ZonePlaceHolder.Design">
+            <summary>
+            是否是设计模式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.CreateID">
+            <summary>
+            声明创建ActionID的委托
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.WebControls.HtmlHelper">
+            <summary>
+            Html帮助类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.#ctor(System.String@,We7.CMS.WebControls.CreateID)">
+            <summary>
+            HtmlHelper构造函数
+            </summary>
+            <param name="actionID">当前的ActionID（引用类型的变量）</param>
+            <param name="creater">生成ActionID的委托</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.BeginForm">
+            <summary>
+            生成From开始标签
+            </summary>
+            <returns>返回Form对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.BeginForm(System.String)">
+            <summary>
+            生成From开始标签
+            </summary>
+            <param name="action">form的action</param>
+            <returns>返回Form对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.BeginForm(System.String,System.String)">
+            <summary>
+            生成From开始标签
+            </summary>
+            <param name="action">form的action</param>
+            <param name="id">form的id</param>
+            <returns>返回Form对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.BeginForm(System.String,System.String,System.String,System.String)">
+            <summary>
+            生成From开始标签
+            </summary>
+            <param name="action">form的action</param>
+            <param name="id">form的id</param>
+            <param name="method">form的method</param>
+            <returns>返回Form对象</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.EndForm">
+            <summary>
+            生成From结束的标签
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.HtmlHelper.CMForm">
+            <summary>
+            创建From标签的对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.CMForm.#ctor(System.String@,We7.CMS.WebControls.CreateID)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="actionID">当前的ActionID</param>
+            <param name="creater">ActionID创建委托</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.CMForm.#ctor(System.String@,We7.CMS.WebControls.CreateID,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="actionID">当前的ActionID</param>
+            <param name="creater">ActionID创建委托</param>
+            <param name="action">form的Action</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.CMForm.#ctor(System.String@,We7.CMS.WebControls.CreateID,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="actionID">当前的ActionID</param>
+            <param name="creater">ActionID创建委托</param>
+            <param name="action">form的Action</param>
+            <param name="id">form的ID</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.HtmlHelper.CMForm.#ctor(System.String@,We7.CMS.WebControls.CreateID,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="actionID">当前的ActionID</param>
+            <param name="creater">ActionID创建委托</param>
+            <param name="action">form的Action</param>
+            <param name="id">form的ID</param>
+            <param name="method">form的Mehtod</param>
+        </member>
+        <!-- 对于成员“M:We7.CMS.WebControls.HtmlHelper.CMForm.WriteEnd”忽略有格式错误的 XML 注释 -->
+        <member name="M:We7.CMS.WebControls.HtmlHelper.CMForm.Dispose">
+            <summary>
+            销毁对象时调用
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Controls.We7LayoutWarpHolder">
+            <summary>
+            包括布局自定义控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Controls.We7LayoutWarpHolder.FormatHtml(System.String)">
+            <summary>
+            格式化字符串
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Controls.We7LayoutWarpHolder.Design">
+            <summary>
+            是否是设计模式
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.BaseWidget.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写信息重现
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWidget.Wrapper">
+            <summary>
+            包装器路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWidget.NavigationUrl">
+            <summary>
+            more链接地址
+            </summary>        
+        </member>
+        <member name="P:We7.CMS.WebControls.BaseWidget.HeadTitle">
+            <summary>
+            头部标题
+            </summary>        
+        </member>
+        <member name="M:We7.CMS.WebControls.ListWidget`1.CreateCriteria">
+            <summary>
+            创建查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ListWidget`1.CreateOrders">
+            <summary>
+            创建排序列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListWidget`1.DisablePager">
+            <summary>
+            禁止分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListWidget`1.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListWidget`1.PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DetailWidget`1.Item">
+            <summary>
+            当前数据信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.RemoveWhitespace(System.String)">
+            <summary>
+            去除空白行
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.GetHeadContent(System.String)">
+            <summary>
+            获取HTML的head部分
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.ConvertDivTagToControl(System.String)">
+            <summary>
+            将DIV标签转换为服务器控件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.ConvertSubToDiv(System.String)">
+            <summary>
+            将子模板包装
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.ConvertControlToDiv(System.String)">
+            <summary>
+            将服务器控件包装
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.Convert2DesignPage(System.String,System.String)">
+            <summary>
+            将页面转换成设计时页面
+            </summary>
+            <param name="path">原文件路径</param>
+            <param name="designPath">设计时文件路径</param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.Convert2Page(System.String,System.String)">
+            <summary>
+            发布页面
+            </summary>
+            <param name="designPath"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.ConvertDivTag(System.String)">
+            <summary>
+            将包裹后的字符串更换为服务器控件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.GetAttributes(System.String)">
+            <summary>
+            根据服务端字符串获取属性
+            </summary>
+            <param name="controlString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.CreateUserControlWarp(System.String,System.String,System.String)">
+            <summary>
+            包装服务器控件
+            </summary>
+            <param name="type"></param>
+            <param name="data"></param>
+            <param name="usercontrol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.CommonHelper.CreateUserControl(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            生成服务端控件字符串
+            </summary>
+            <param name="tagPrefix">前缀</param>
+            <param name="tagName">名称</param>
+            <param name="id">控件Id</param>
+            <param name="attributes">属性</param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetType">
+            <summary>
+            部件类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetType.widget">
+            <summary>
+            部件
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetType.layout">
+            <summary>
+            布局
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetType.layoutColumn">
+            <summary>
+            布局列
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.ToString">
+            <summary>
+            返回控件字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.TargetId">
+            <summary>
+            所在列
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.Tag">
+            <summary>
+            注册的头
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.WidgetType">
+            <summary>
+            类型:是widget还是layout，layoutColumn
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.Params">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Temp.WidgetDesign.Items">
+            <summary>
+            子控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.Pager">
+            <summary>
+            分页控件（服务器类控件，参数使用Viewstate保存）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Utils.ToolHelper">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.ToolHelper.GetControrolType(System.String)">
+            <summary>
+            根据路径获取控件名称
+            </summary>
+            <param name="controlPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.ToolHelper.ConvertUC(System.String)">
+            <summary>
+            转换控件名称
+            </summary>
+            <param name="controlType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.AjaxResponse.ToJson">
+            <summary>
+            转换成JSON字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.AjaxResponse.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.AjaxResponse.Message">
+            <summary>
+            返回信息提示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.AjaxResponse.Data">
+            <summary>
+            返回的数据
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Utils.Base64Helper">
+            <summary>
+            Base64 (UTF-8) 编码/解码。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.Base64Helper.Decode(System.String)">
+            <summary>
+            解码。
+            </summary>
+            <param name="base64Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Utils.Base64Helper.Encode(System.String)">
+            <summary>
+            编码。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Services.WidgetService">
+            <summary>
+            WdigetService
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Services.WidgetService.GetSystemWidgetList">
+            <summary>
+            获取系统widgets
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Services.WidgetService.WidgetConfigPath">
+            <summary>
+            widget配置文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Controls.We7LayoutColumn.Design">
+            <summary>
+            是否是设计状态
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.MessagePanel">
+            <summary>
+            页面嵌入式提示框控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanel.ShowMessage(System.String)">
+            <summary>
+            显示信息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanel.ShowMessage(System.String,System.Boolean)">
+            <summary>
+            显示信息（是否清空前面信息）
+            </summary>
+            <param name="message"></param>
+            <param name="clearExistingMessages"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanel.ShowError(System.String)">
+            <summary>
+            提示错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanel.ShowError(System.String,System.Boolean)">
+            <summary>
+            提示错误（是否清空前面信息）
+            </summary>
+            <param name="message"></param>
+            <param name="clearExistingMessages"></param>
+        </member>
+        <member name="M:We7.CMS.Controls.MessagePanel.Clear">
+            <summary>
+            清空
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.CascadeControl">
+            <summary>
+            CascadeControl 的摘要说明。
+            省市县联动选择控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.CascadeControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将此控件呈现给指定的输出参数
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器</param>
+        </member>
+        <member name="M:We7.CMS.Controls.CascadeControl.GetCascadingInfo">
+            <summary>
+            从XML文件中读取省市县信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Controls.CascadeControl.RaisePostDataChangedEvent">
+            <summary>
+            当由类实现时，用信号要求服务器控件对象通知 ASP.NET 应用程序该控件的状态已更改。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Controls.CascadeControl.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            当由类实现时，为 ASP.NET 服务器控件处理回发数据。
+            </summary>
+            <param name="postDataKey">控件的主要标识符</param>
+            <param name="postCollection">所有传入名称值的集合</param>
+            <returns>如果服务器控件的状态在回发发生后更改，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DesignWrapperRender.AttributesJsonData(System.Web.UI.UserControl)">
+            <summary>
+            获取属性JSON字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DesignWrapperRender.FormatHtml(System.String)">
+            <summary>
+            格式化字符串
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.DesignWrapperRender.Design">
+            <summary>
+            是否为设计状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DesignWrapperRender.Action">
+            <summary>
+            是否是AJAX操作
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DesignWrapperRender.FileName">
+            <summary>
+            控件完全限定名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DesignWrapperRender.Group">
+            <summary>
+            模板组名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DesignWrapperRender.WidgetParameter">
+            <summary>
+            控件属性
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DesignWrapperRender.Base64Helper.Decode(System.String)">
+            <summary>
+            解码。
+            </summary>
+            <param name="base64Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DesignWrapperRender.Base64Helper.Encode(System.String)">
+            <summary>
+            编码。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.WebControls.BaseVisualControl">
+            <summary>
+            部件控件基类
+            功能：继承至BaseControl,用来扩展此基类的功能
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.ExprotData(System.Data.DataTable)">
+            <summary>
+            导出示例数据
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.GetRecords(We7.CMS.Module.VisualTemplate.ConvertEventHandler)">
+            <summary>
+            取得当前的数据记录，如果数据为空时可以根据转换委托来实现将公共数据转化为符合要求的数据
+            </summary>
+            <param name="convertCommonData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems``1(System.Collections.Generic.List{``0}@,System.Int32)">
+            <summary>
+            填充数据集
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="items"></param>
+            <param name="pageSize"></param>
+            <param name="recordCount"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems``1(System.Collections.Generic.List{``0}@,``0@,System.Int32)">
+            <summary>
+            填充数据集
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="items"></param>
+            <param name="item"></param>
+            <param name="pageSize"></param>
+            <param name="recordCount"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems``1(``0@,System.Int32)">
+            <summary>
+            填充数据集
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+            <param name="pageSize"></param>
+            <param name="recordCount"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems(System.Data.DataRowCollection@,System.Data.DataRow@,System.String,System.Int32)">
+            <summary>
+            取得内容模型的数据
+            </summary>
+            <param name="rows"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems(System.Data.DataRow@,System.String)">
+            <summary>
+            取得内容模型的数据
+            </summary>
+            <param name="rows"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.FillItems(System.Data.DataRowCollection@,System.String,System.Int32)">
+            <summary>
+            取得内容模型的数据
+            </summary>
+            <param name="rows"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.GetTagThumbnail(System.String)">
+            <summary>
+            取得缩略图
+            </summary>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.GetAttachment">
+            <summary>
+            取得路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.DesignHelper.OnConvertCommonData">
+            <summary>
+            从公共数据中格式化数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.DesignHelper.IsDesigning">
+            <summary>
+            是否是设计时
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Controls.HtmlDivControl">
+            <summary>
+            div标记类控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Controls.We7Layout.BuildData">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Module.VisualTemplate.Controls.We7Layout.FormatHtml(System.String)">
+            <summary>
+            格式化字符串
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Controls.We7Layout.Design">
+            <summary>
+            是否是设计状态
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.WidgetCollection">
+            <summary>
+            Widget分类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetCollection.Name">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetCollection.Label">
+            <summary>
+            中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetCollection.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetCollection.Groups">
+            <summary>
+            部件集合的集合
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.WidgetGroup">
+            <summary>
+            Widget分组
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetGroup.Name">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetGroup.Label">
+            <summary>
+            中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetGroup.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetGroup.Widgets">
+            <summary>
+            部件集合
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.Widget">
+            <summary>
+            widget
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.Name">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.Label">
+            <summary>
+            中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.File">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.DefaultType">
+            <summary>
+            默认样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Widget.Types">
+            <summary>
+            样式集合
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.WidgetType">
+            <summary>
+            Widget样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetType.Name">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetType.Label">
+            <summary>
+            中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetType.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetType.File">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.WidgetType.Control">
+            <summary>
+            控件类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Module.VisualTemplate.Models.Themes">
+            <summary>
+            主题分类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.Themes.item">
+            <summary>
+            主题集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.ThemesType.name">
+            <summary>
+            主题名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.ThemesType.img">
+            <summary>
+            主题图片路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Module.VisualTemplate.Models.ThemesType.label">
+            <summary>
+            主题显示名称
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ControlPager">
+            <summary>
+            控件分页器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PageSize">
+            <summary>
+            每一页显示的记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PageIndex">
+            <summary>
+            当前的页码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PageCount">
+            <summary>
+            总共页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.StartItem">
+            <summary>
+            分页开始的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.EndItem">
+            <summary>
+             分页结束的条目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PageItemsCount">
+            <summary>
+            当前页面的记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PrevPage">
+            <summary>
+            上一页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.BeforePages">
+            <summary>
+            前几页码集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.BehindPages">
+            <summary>
+            后几页码集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.NextPage">
+            <summary>
+            下一页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.RequestPageIndex">
+            <summary>
+            当前页号Request参数名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PagerDivClass">
+            <summary>
+            分页控件整体样式类名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PagerSpanClass">
+            <summary>
+            分页控件外包span样式类名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.VmTemplateFileName">
+            <summary>
+            分页样式模板文件名(/Widgets/Skin/vm/pager.vm)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ControlPager.PagedHtml">
+            <summary>
+            输出分页器html代码
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.ControlGroupDescriptionAttribute">
+            <summary>
+            控件组描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlGroupDescriptionAttribute.Label">
+            <summary>
+            标签 
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlGroupDescriptionAttribute.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlGroupDescriptionAttribute.Icon">
+            <summary>
+            ICON
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlGroupDescriptionAttribute.DefaultType">
+            <summary>
+            默认控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.ControlDescriptionAttribute">
+            <summary>
+            控件描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Desc">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ControlDescriptionAttribute.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.ParameterAttribute">
+            <summary>
+            控件字段属性
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Name">
+            <summary>
+            属性名字(应用在哪个属性上)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Data">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Weight">
+            <summary>
+            权重（排序用）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Required">
+            <summary>
+            是否必选项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Ignore">
+            <summary>
+            是否可忽略
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Length">
+            <summary>
+            字段长度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Maxnum">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.Minnum">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.DefaultValue">
+            <summary>
+            默认值 
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.ParameterAttribute.SupportCopy">
+            <summary>
+            支持样式复制
+            </summary>
+            
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.ChildrenAttribute">
+            <summary>
+            控件的字段内部属性/字段是否需要反射
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.ClearParameterAttribute">
+            <summary>
+            移除所有ParameterAttribute属性
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.Core.RemoveParameterAttribute">
+            <summary>
+            移除指定的ParameterAttribute属性
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.Core.RemoveParameterAttribute.#ctor(System.String)">
+            <summary>
+            移除指定的ParameterAttribute属性
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="P:We7.CMS.WebControls.Core.RemoveParameterAttribute.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+    </members>
+</doc>

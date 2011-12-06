@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TempateGroup name="We7" description="" created="2011/6/29 13:58:59" ver="V2.7.5.18296 最终版">
+  <Item name="站点首页" template="site.home.ascx" location="home" c_model="" layout="" tag="" type="site" description="" created="2011/6/29 13:59:14" updated="2011/6/29 13:59:14" isSub="False" c_modelText="" locationText="站点首页" />
+  <Item name="通用栏目页" template="channel.index.ascx" location="index" c_model="" layout="" tag="" type="channel" description="" created="2011/6/29 15:17:57" updated="2011/6/29 15:17:57" isSub="False" c_modelText="" locationText="通用栏目页" />
+  <Item name="通用搜索页" template="channel.search.ascx" location="search" c_model="" layout="" tag="" type="channel" description="" created="2011/6/29 15:18:16" updated="2011/6/29 15:18:16" isSub="False" c_modelText="" locationText="通用搜索页" />
+  <Item name="通用内容页" template="channel.detail.ascx" location="detail" c_model="" layout="" tag="" type="channel" description="" created="2011/6/29 16:17:31" updated="2011/6/29 16:17:31" isSub="False" c_modelText="" locationText="通用内容页" />
+  <Item name="站点找回密码" template="site.retrievepassword.ascx" location="retrievepassword" c_model="" layout="" tag="" type="site" description="" created="2011/6/29 23:16:26" updated="2011/6/29 23:16:26" isSub="False" c_modelText="" locationText="站点找回密码" />
+  <Item name="站点注册页" template="site.register.ascx" location="register" c_model="" layout="" tag="" type="site" description="" created="2011/6/29 23:21:31" updated="2011/6/29 23:21:31" isSub="False" c_modelText="" locationText="站点注册页" />
+</TempateGroup>

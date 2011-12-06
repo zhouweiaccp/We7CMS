@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2008 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * Text field dialog window.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta http-equiv="expires" content="0" />
+
+    <script src="../common/fck_dialog_common.js" type="text/javascript"></script>
+
+    <script src="/admin/cgi-bin/search.js" type="text/javascript"></script>
+
+    <script src="/admin/cgi-bin/base64.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+var dialog	= window.parent ;
+var oEditor = dialog.InnerDialogLoaded() ;
+
+var FCK			= oEditor.FCK ;
+var FCKLang		= oEditor.FCKLang ;
+var FCKConfig	= oEditor.FCKConfig ;
+var FCKRegexLib	= oEditor.FCKRegexLib ;
+var FCKTools	= oEditor.FCKTools ;
+
+// Gets the document DOM
+var oDOM = oEditor.FCK.EditorDocument ;
+var oActiveEl = dialog.Selection.GetSelectedElement() ;
+window.onload = function()
+{
+	// First of all, translate the dialog box texts
+	oEditor.FCKLanguageManager.TranslatePage(document) ;
+    var isOK=false;
+    try
+    {
+	    if ( oActiveEl && oActiveEl.tagName == 'DIV' && ( oActiveEl.className == 'wec' || oActiveEl.tag == 'wec' ) )
+	    {
+	          //var ct = oActiveEl.getAttribute("control");
+              var we=oActiveEl.childNodes[1].innerHTML;
+              we=we.toLocaleLowerCase();
+              if(oActiveEl.childNodes[1] && we.indexOf("wec:") !=-1)
+              {
+                  var tempFile=QueryStringFromUrl("file",top.location.search);
+                  var folder=QueryStringFromUrl("folder",top.location.search);
+                  ct=oActiveEl.childNodes[1].childNodes[0].getAttribute('control');
+                  var url= "/admin/DataControlUI/DataControlBuilder.aspx?file=" + ct+"&template=" + tempFile+"&folder="+folder;
+                  window.location=url;
+                  isOK=true;
+              }
+	    }
+	    if ( oActiveEl && oActiveEl.tagName == 'IMG' && ( oActiveEl.className == 'wec' || oActiveEl.tag == 'wec' ) )
+	    {
+	          //var ct = oActiveEl.getAttribute("controlName");         
+	          var ct = oActiveEl.getAttribute("filename");
+	          
+              if(ct)
+              {
+                  var tempFile=QueryStringFromUrl("file",top.location.search);
+                  var folder=QueryStringFromUrl("folder",top.location.search);
+                  var url= "/admin/DataControlUI/DataControlBuilder.aspx?file=" + ct+"&template=" + tempFile+"&folder="+folder;
+                  window.location=url;
+                  isOK=true;
+              }
+	    }
+	}
+	catch(e)
+	{
+	}
+	
+    if(!isOK)  alert("控件解析错误，请检查HTML源代码。");
+}
+
+    </script>
+
+</head>
+<body>
+    <p>
+        <h2 id="msg" style="display: none; color: #ff0000">
+        </h2>
+    </p>
+</body>
+</html>

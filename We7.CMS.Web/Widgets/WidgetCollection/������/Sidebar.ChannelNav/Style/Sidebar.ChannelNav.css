@@ -1,0 +1,66 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Sidebar.ChannelNav
+ * Style:Sidebar_ChannelNav
+ * Desc::
+ * Quot:
+*************************************************************/
+/******栏目分类**********/
+.Sidebar_ChannelNav .sidebar
+{
+    float: right;
+    width: 220px;
+}
+
+.Sidebar_ChannelNav .subnav li
+{
+    margin-top: 6px;
+}
+.Sidebar_ChannelNav .subnav li a
+{
+    height: 26px;
+    line-height: 26px;
+    background: url(../images/bg.gif) no-repeat;
+    width: 165px;
+    display: inline-block;
+    padding-left: 33px;
+    color: #333;
+}
+.Sidebar_ChannelNav .subnav li a:hover, .subnav li.class_on a
+{
+    background: url(../images/bg_hover.gif) no-repeat;
+    color: #ae541f;
+}
+
+.Sidebar_ChannelNav .subnav h3
+{
+    height: 32px;
+    line-height: 32px;
+    background: url(../images/back.gif) no-repeat left top;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Sidebar_ChannelNav .subnav ul
+{
+    padding: 4px 8px 10px 12px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.Sidebar_ChannelNav .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat -141px -66px;
+}
+/*************************************************************
+ * Command:End
+ * Control:Sidebar.ChannelNav
+ * Style:Sidebar_ChannelNav
+ * Desc::
+ * Quot:
+*************************************************************/

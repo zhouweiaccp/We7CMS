@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecommendStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecommendStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecommendStoreResult" type="tns:ArrayOfStoreModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStoreModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StoreModel" nillable="true" type="tns:StoreModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StoreModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreIntro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bulletin" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Face" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShopType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Clicks" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Original" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeRepair" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Income" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealNameValidate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmailValidate" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScopeOfBusiness" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GoodAtTechnology" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TechnicalLevel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sales" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRecommendProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecommendProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecommendProductResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductInfo" nillable="true" type="tns:ProductInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thumbnail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sales" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsRecommended" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OwnerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCategory" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Point" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerUName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionCms" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCharge" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductImg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductIntro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keyword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductEName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPassed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRecommendProductByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isCharge" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecommendProductByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecommendProductByTypeResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="productId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertOrdersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyPlugins">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyPluginsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyPluginsResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlugins">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPluginsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPluginsResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlugins">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPluginsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPluginsResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckSite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckSiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckSiteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegisteSite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisteSiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisteSiteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRegistedProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRegistedProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRegistedProductsResult" type="tns:ArrayOfProductInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadNotRegistedProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadNotRegistedProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadNotRegistedProductsResult" type="tns:ArrayOfOrderDetailModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrderDetailModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderDetailModel" nillable="true" type="tns:OrderDetailModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderDetailModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quatity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerUName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasScore" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegistBalance" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductDetailInfo" type="tns:ProductInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegisteProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDetailID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisteProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisteProductResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptPasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecommendStore" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecommendStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecommendProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecommendProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendProductByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecommendProductByType" />
+  </wsdl:message>
+  <wsdl:message name="GetRecommendProductByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecommendProductByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertOrders" />
+  </wsdl:message>
+  <wsdl:message name="InsertOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyPluginsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyPlugins" />
+  </wsdl:message>
+  <wsdl:message name="GetMyPluginsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyPluginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPluginsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlugins" />
+  </wsdl:message>
+  <wsdl:message name="GetPluginsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPluginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPluginsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlugins" />
+  </wsdl:message>
+  <wsdl:message name="QueryPluginsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPluginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckSiteSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckSite" />
+  </wsdl:message>
+  <wsdl:message name="CheckSiteSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisteSiteSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisteSite" />
+  </wsdl:message>
+  <wsdl:message name="RegisteSiteSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisteSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRegistedProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRegistedProducts" />
+  </wsdl:message>
+  <wsdl:message name="LoadRegistedProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRegistedProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadNotRegistedProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadNotRegistedProducts" />
+  </wsdl:message>
+  <wsdl:message name="LoadNotRegistedProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadNotRegistedProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisteProductSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisteProduct" />
+  </wsdl:message>
+  <wsdl:message name="RegisteProductSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisteProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:EncryptPassword" />
+  </wsdl:message>
+  <wsdl:message name="EncryptPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ShopServiceSoap">
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendStore">
+      <wsdl:input message="tns:GetRecommendStoreSoapIn" />
+      <wsdl:output message="tns:GetRecommendStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProduct">
+      <wsdl:input message="tns:GetRecommendProductSoapIn" />
+      <wsdl:output message="tns:GetRecommendProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProductByType">
+      <wsdl:input message="tns:GetRecommendProductByTypeSoapIn" />
+      <wsdl:output message="tns:GetRecommendProductByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrders">
+      <wsdl:input message="tns:InsertOrdersSoapIn" />
+      <wsdl:output message="tns:InsertOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlugins">
+      <wsdl:input message="tns:GetMyPluginsSoapIn" />
+      <wsdl:output message="tns:GetMyPluginsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlugins">
+      <wsdl:input message="tns:GetPluginsSoapIn" />
+      <wsdl:output message="tns:GetPluginsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlugins">
+      <wsdl:input message="tns:QueryPluginsSoapIn" />
+      <wsdl:output message="tns:QueryPluginsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSite">
+      <wsdl:input message="tns:CheckSiteSoapIn" />
+      <wsdl:output message="tns:CheckSiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisteSite">
+      <wsdl:input message="tns:RegisteSiteSoapIn" />
+      <wsdl:output message="tns:RegisteSiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRegistedProducts">
+      <wsdl:input message="tns:LoadRegistedProductsSoapIn" />
+      <wsdl:output message="tns:LoadRegistedProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadNotRegistedProducts">
+      <wsdl:input message="tns:LoadNotRegistedProductsSoapIn" />
+      <wsdl:output message="tns:LoadNotRegistedProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisteProduct">
+      <wsdl:input message="tns:RegisteProductSoapIn" />
+      <wsdl:output message="tns:RegisteProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPassword">
+      <wsdl:input message="tns:EncryptPasswordSoapIn" />
+      <wsdl:output message="tns:EncryptPasswordSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ShopServiceSoap" type="tns:ShopServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendStore">
+      <soap:operation soapAction="http://tempuri.org/GetRecommendStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProduct">
+      <soap:operation soapAction="http://tempuri.org/GetRecommendProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProductByType">
+      <soap:operation soapAction="http://tempuri.org/GetRecommendProductByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrders">
+      <soap:operation soapAction="http://tempuri.org/InsertOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlugins">
+      <soap:operation soapAction="http://tempuri.org/GetMyPlugins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlugins">
+      <soap:operation soapAction="http://tempuri.org/GetPlugins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlugins">
+      <soap:operation soapAction="http://tempuri.org/QueryPlugins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSite">
+      <soap:operation soapAction="http://tempuri.org/CheckSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisteSite">
+      <soap:operation soapAction="http://tempuri.org/RegisteSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRegistedProducts">
+      <soap:operation soapAction="http://tempuri.org/LoadRegistedProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadNotRegistedProducts">
+      <soap:operation soapAction="http://tempuri.org/LoadNotRegistedProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisteProduct">
+      <soap:operation soapAction="http://tempuri.org/RegisteProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPassword">
+      <soap:operation soapAction="http://tempuri.org/EncryptPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ShopServiceSoap12" type="tns:ShopServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendStore">
+      <soap12:operation soapAction="http://tempuri.org/GetRecommendStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProduct">
+      <soap12:operation soapAction="http://tempuri.org/GetRecommendProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProductByType">
+      <soap12:operation soapAction="http://tempuri.org/GetRecommendProductByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrders">
+      <soap12:operation soapAction="http://tempuri.org/InsertOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlugins">
+      <soap12:operation soapAction="http://tempuri.org/GetMyPlugins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlugins">
+      <soap12:operation soapAction="http://tempuri.org/GetPlugins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlugins">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlugins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSite">
+      <soap12:operation soapAction="http://tempuri.org/CheckSite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisteSite">
+      <soap12:operation soapAction="http://tempuri.org/RegisteSite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRegistedProducts">
+      <soap12:operation soapAction="http://tempuri.org/LoadRegistedProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadNotRegistedProducts">
+      <soap12:operation soapAction="http://tempuri.org/LoadNotRegistedProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisteProduct">
+      <soap12:operation soapAction="http://tempuri.org/RegisteProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptPassword">
+      <soap12:operation soapAction="http://tempuri.org/EncryptPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShopService">
+    <wsdl:port name="ShopServiceSoap" binding="tns:ShopServiceSoap">
+      <soap:address location="http://m.we7.cn/Plugins/ShopPlugin/ShopService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ShopServiceSoap12" binding="tns:ShopServiceSoap12">
+      <soap12:address location="http://m.we7.cn/Plugins/ShopPlugin/ShopService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AACF293-F3C4-4BBE-9227-FAEC14292A7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.CMS.UI</RootNamespace>
+    <AssemblyName>We7.CMS.UI</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\We7.CMS.UI.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\CascadeControl.cs" />
+    <Compile Include="Control\CommonTwoCascade.cs" />
+    <Compile Include="Control\HtmlDivControl.cs" />
+    <Compile Include="Control\MessagePanel.cs" />
+    <Compile Include="Control\MessagePanelCtx.cs" />
+    <Compile Include="Control\Pager.cs" />
+    <Compile Include="Control\ProvinceCityCascade.cs" />
+    <Compile Include="Control\URLPager.cs" />
+    <Compile Include="Control\We7MenuControl.cs" />
+    <Compile Include="Core\Attribute\ParameterAttribute.cs" />
+    <Compile Include="Core\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\BaseUserControl.Fomat.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\BaseUserControl.VisualTemplate.cs">
+    </Compile>
+    <Compile Include="Core\BaseWebControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\BaseWidget.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\DCHelper.cs" />
+    <Compile Include="Core\DesignHelper.cs" />
+    <Compile Include="Core\DetailUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\HtmlHelper.cs" />
+    <Compile Include="Core\IPager.cs" />
+    <Compile Include="Core\ListUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\ListUserControl.Pager.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\ListWebControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Render\DesignWrapperRender.cs" />
+    <Compile Include="Core\Render\IRender.cs" />
+    <Compile Include="Core\Render\RenderArguments.cs" />
+    <Compile Include="Core\Render\RenderChain.cs" />
+    <Compile Include="Core\Render\WrapperRender.cs" />
+    <Compile Include="ModelToWidget\AdviceEditorProviderEx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelToWidget\AutoEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelToWidget\CommandContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelToWidget\EditorContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelToWidget\ModelContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\Attribute\ParameterAttribute.cs" />
+    <Compile Include="Template\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\BaseControlHelper.cs" />
+    <Compile Include="Template\BaseVisualControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Pager\ControlPager.cs" />
+    <Compile Include="Template\ThinkmentDataControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\WidgetTemplateProcessorHelper.cs" />
+    <Compile Include="VisualTemplate\Controls\We7GenericContent.cs" />
+    <Compile Include="VisualTemplate\Controls\We7Layout.cs" />
+    <Compile Include="VisualTemplate\Controls\We7LayoutColumn.cs" />
+    <Compile Include="VisualTemplate\Controls\We7LayoutWarpHolder.cs" />
+    <Compile Include="VisualTemplate\Controls\We7ZonePlaceHolder.cs" />
+    <Compile Include="VisualTemplate\ExportCommand.cs" />
+    <Compile Include="VisualTemplate\Helpers\WidgetHelper.cs" />
+    <Compile Include="VisualTemplate\Models\AjaxResponse.cs" />
+    <Compile Include="VisualTemplate\Models\SettingFile.cs" />
+    <Compile Include="VisualTemplate\Models\Template.cs" />
+    <Compile Include="VisualTemplate\Models\Themes.cs" />
+    <Compile Include="VisualTemplate\Models\Widget.cs" />
+    <Compile Include="VisualTemplate\Models\WidgetDesign.cs" />
+    <Compile Include="VisualTemplate\Services\TemplateService.cs" />
+    <Compile Include="VisualTemplate\Services\VisualDesignFile.cs" />
+    <Compile Include="VisualTemplate\Services\VisualLayoutTemplate.cs" />
+    <Compile Include="VisualTemplate\Services\WidgetService.cs" />
+    <Compile Include="VisualTemplate\Utils\Base64Helper.cs" />
+    <Compile Include="VisualTemplate\Utils\CommonHelper.cs" />
+    <Compile Include="VisualTemplate\Utils\ToolHelper.cs" />
+    <Compile Include="Widget\AdviceProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\BaseWidgetList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetAdviceDetail.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetAdviceList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetAdviceQueryList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetDetail.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetPagedList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\CascadeControl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Utils\We7.CMS.Utils.csproj">
+      <Project>{F4C28516-9016-449B-B867-84FB5FC9B567}</Project>
+      <Name>We7.CMS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Model.Core\We7.Model.Core.csproj">
+      <Project>{1EC274E4-3A87-4065-A5B3-3275221FB187}</Project>
+      <Name>We7.Model.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Share\Thinkment.Data\Thinkment.Data.csproj">
+      <Project>{A665A5A2-2477-4B95-993D-F1772F91089D}</Project>
+      <Name>Thinkment.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Template\Render\" />
+    <Folder Include="VisualTemplate\Enum\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,58 @@
+﻿/*****************************************************************
+ * 搜索框控件风格
+ * 名称：SearchBar_Common
+ * 风格： 普通文字式
+ ******************************************************************/
+ul{WE:STYLE} 
+{
+	width: 395px;
+	font-size: 12px;
+	list-style: none;
+}
+{WE:STYLE}  li
+{
+	line-height: 25px;
+	margin-right: 5px;
+	margin-bottom: 6px;
+}
+
+{WE:STYLE}  img
+{
+	border-width: 0px;
+}
+
+{WE:STYLE}  .keyword span
+{
+	padding-right: 3px;
+}
+
+{WE:STYLE}  .keyword input
+{
+	width: 100px;
+	height: 24px;
+	padding: 1px;
+}
+
+{WE:STYLE}  .date span
+{
+	padding-right: 15px;
+}
+
+{WE:STYLE}  .date input
+{
+	width: 100px;
+	height: 24px;
+	padding: 1px;
+}
+
+{WE:STYLE}  .search div
+{
+}
+{WE:STYLE}  .search input
+{
+	width: 50px;
+	height: 24px;
+	cursor: hand;
+	margin-left: 40px;
+}
+

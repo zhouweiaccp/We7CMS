@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin>
+  <Directory>SiteGroupPlugin</Directory>
+  <Name>站群功能插件</Name>
+  <Author>thehim</Author>
+  <Version>V2.0</Version>
+  <Enable>false</Enable>
+  <Compatible>兼容至We7 V2.7</Compatible>
+  <Summary><![CDATA[
+    站群功能插件。
+    ]]></Summary>
+  <Description><![CDATA[
+    网站群子站参数配置，信息共享等功能插件。
+    ]]></Description>
+  <Deployment>
+    <Description><![CDATA[
+    点击右侧安装按钮直接进行安装。
+    ]]></Description>
+    <Install>
+      <Item>Install.xml</Item>
+    </Install>
+    <Update>
+      <Item>Update.xml</Item>
+    </Update>
+    <Unstall>
+      <Item>Uninstall.xml</Item>
+    </Unstall>
+  </Deployment>
+  <IsInstalled>true</IsInstalled>
+  <UpdateTime>0001/1/1 0:00:00</UpdateTime>
+  <IsLocal>1</IsLocal>
+</Plugin>

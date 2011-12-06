@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataControl name="信息发布列表信息控件" dir="UCSystemdotArticleList" desc="信息发布列表信息控件" model="" group="内容模型"  ctrtype="text">
+  <Parameter name="ModelName" title="内容模型"  type="KeyValueSelector" description="请选择对应的内容模型。" required="True" maximum="0" minimum="0" length="0" data="articletype" />
+  <Parameter name="UseColumn" title="是否按栏目查询" type="Boolean" description="是否按栏目查询" required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="BindColumnID" title="指定栏目" type="Channel" description="获取指定栏目下的文章。" required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="ShowAtHome" title="只显示置顶文章" type="Boolean" description="只显示置顶文章" required="False" maximum="0" minimum="0" length="0" defaultValue="0" />
+  <Parameter name="CssClass" title="样式" type="StyleSelector" description="每一种样式对应css文件中的相应名称" required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="PageSize" title="每页信息数" type="Number" description="每页列表数目。必须是整数，0为不限大小。" required="True" maximum="0" minimum="0" length="0" defaultValue="10" />
+  <Parameter name="DisablePager" title="禁止分页" type="Boolean" description="禁止对当前控件分页，PageSize表示前几条" required="True" maximum="0" minimum="0" length="0" defaultValue="" />
+  <Parameter name="Tag" title="标签" type="String" description="标签" required="False" maximum="0" minimum="0" length="0" defaultValue="" />
+  <Parameter name="QueryParam" title="自定义查询条件" type="String" description="根据内容模型自定义查询条件" required="False" maximum="0" minimum="0" length="0" defaultValue="" />
+  <Parameter name="EncodeQueryParam" title="取值时是否编码" type="Boolean" description="取值时是否编码" required="False" maximum="0" minimum="0" length="0" defaultValue="" />
+</DataControl>

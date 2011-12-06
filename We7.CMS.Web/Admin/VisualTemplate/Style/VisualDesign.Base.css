@@ -1,0 +1,226 @@
+﻿/************************************/
+.clear
+{
+	clear: both;
+}
+.ZoneEditorToolboxContainer
+{
+	width: 25%;
+	z-index: 100; /* overflow: auto; */
+	font-family: Arial,Verdana,Sans-serif;
+	font-size: 12px;
+	float: left;
+}
+.sfPageContainer
+{
+	width: 74%;
+	z-index: 100; /* overflow: auto; */
+	float: left;
+}
+.ZoneEditorToolboxContainer li
+{
+	padding-left: 30px;
+	
+}
+
+.ZoneEditorToolboxContainer li.widget:hover,
+.ZoneEditorToolboxContainer li.layoutitem:hover
+{
+	color:Yellow;
+	font-size:14px;
+	border:solid 1px #888;
+}
+ 
+.ZoneEditorToolboxContainer .widget,
+.ZoneEditorToolboxContainer .layoutitem
+{
+	cursor:move;
+	margin:5px 3px;
+}
+
+.ZoneEditorToolboxContainer .layoutitem
+{
+	height:40px;
+	padding-left: 0px!important;
+}
+
+.ZoneEditorToolboxContainer .layoutitem span
+{
+	display:block;
+	margin-bottom:10px;
+	margin-left:60px;
+	margin-top:-30px;
+	padding-bottom:20px;
+}
+
+.ui-sortable-placeholder
+{
+	border: 1px dotted black;
+	visibility: visible !important;
+	height: 50px !important;
+	background-color:#ff0;
+	list-style-type:none;
+	background-image:url(../images/drophere.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.ui-sortable-placeholder *
+{
+	visibility:hidden;
+}
+
+.RadDock
+{
+	border-width: 1px;
+}
+
+.RadDock > .RadDock-header
+{
+	margin:0 0 -5px;
+	padding-bottom: 4px;
+	padding-left: 0.2em;
+	background-image: url(  "../images/raddock-header.png" );
+	-moz-border-radius: 4px 4px 4px 4px;
+	border: 1px solid #E78F08;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	cursor:move;
+}
+.RadDock > .RadDock-header > .RadDock-command
+{
+	font-size: 9pt;
+}
+.RadDock > .RadDock-header > .RadDock-command > *
+{
+	padding-left: 10px;
+}
+
+.sfPageContainer .zeControlDock
+{
+	border: 0 none !important;
+	padding: 1px !important;
+	width: 100%!important;
+	display:table;
+}
+.zeControlDock
+{
+	margin-bottom: 1px;
+}
+.zeContentMode .RadDockZone ,.zeLayoutMode .RadDockZone 
+{
+	margin: 0px !important;
+}
+.zeContentMode .RadDockZone:hover,.zeContentMode .RadDockZone:focus,
+.zeLayoutMode .RadDockZone:hover, .zeLayoutMode .RadDockZone:focus
+{
+	border-color:#333333!important;
+}
+
+.zeContentMode .zeControlDock
+{
+	border: solid 1px #fff;
+}
+.zeContentMode .zeControlDock:hover
+{
+	border: dashed 1px red !important;
+	background-color: #ffffe6;
+}
+.zeContentMode .zeDockZoneEmpty,
+.zeLayoutMode .zeDockZoneEmpty
+{
+	margin-bottom:12px;
+	min-height:78px !important;
+	padding:7px;
+	border: 1px dashed #CCCCCC;
+}
+.zeContentMode .zeDockZoneEmpty
+{
+	background:url("../images/comment.png") no-repeat scroll 50% 25px #FFFFFF;
+}
+.zeLayoutMode .zeDockZoneEmpty
+{
+	background:url("../images/comment2.png") no-repeat scroll 50% 25px #FFDDDD;
+}
+
+/********模式切换**********/
+.zeContentMode .zeLayoutDock>.RadDock-header
+{
+	display: none;
+}
+.zeLayoutMode .zeControlDock
+{
+	background-color: Gray;
+}
+.zeLayoutMode .zeControlDock .RadDock-header
+{
+	display: none;
+}
+.zeLayoutMode .zeControlDock .RadDock-content *
+{
+	visibility: hidden;
+}
+
+.RadDock_Sitefinity .rdTable .rdTitleBar {
+border-width:1px;
+font-size:12px;
+height:40px;
+line-height:normal;
+margin-bottom:0;
+width:auto;
+cursor:move;
+}
+
+/****************遮罩********************/
+.maskDiv
+{
+	background:url("../images/ui-bg_flat_50_5c5c5c_40x100.png") repeat-x scroll 50% 50% #5C5C5C;
+	opacity:0.8;
+	z-index:999;
+}
+/***************占位符**********************/
+.placeholder
+{  border:dashed 1px gray;
+   min-height:20px;
+   background-color:#FFFF00;
+   background-repeat:no-repeat;
+   background-position:center center;
+   background-image:url("../images/drophere.png");
+}
+
+
+.apprence
+{
+	 z-index:300px;
+	 border:solid 1px blue;
+	 background-color:white;
+	 min-width:150px;
+	 min-height:100px;
+	
+}
+.apprence ul
+{
+	list-style-type:none;
+	padding-left:10px;
+
+}
+.apprence ul li
+{
+	margin-top:10px;
+	cursor:pointer;
+	color:Green;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+	border-width:1px;
+}
+.apprence ul li:hover
+{
+    border:dashed 1px blue;
+}
+.current
+{
+	border:solid 1px red;
+}

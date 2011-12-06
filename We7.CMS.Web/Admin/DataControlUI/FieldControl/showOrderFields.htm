@@ -1,0 +1,117 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>设置排序字段与权重</title>
+    <style>
+        body
+        {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            background-color: #F7F7F7;
+        }
+        th, td
+        {
+            font-size: 12px;
+            font-family: 宋体 Arial;
+        }
+        select,input
+        {
+        	font-size:12px;
+        }
+    </style>
+
+    <script type="text/javascript" src="/Admin/ajax/jquery/jquery1.2.6.pack.js"></script>
+
+</head>
+<body style="overflow: hidden">
+    <table width="100%" id="ct">
+    </table>
+    <table width="100%" id="fb" style="position:absolute; bottom:10px;">
+        <tr>
+            <td align="center"><button style="width:100px;" id="ok">确定</button><button id="cancel" style="width:100px;">取消</button></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        $(function(){
+            var o=window.dialogArguments;
+            var i=0;
+            var r;
+            var t=$("#ct")[0];
+            for(var a in o.items)
+            {
+                if(i%2==0)
+                {
+                    r=t.insertRow(-1);
+                }
+                var c=document.createElement("TD");
+                r.appendChild(c);
+                c.innerHTML=o.items[a]+"：";
+                c=document.createElement("TD");
+                r.appendChild(c);
+                c.innerHTML="<select id='"+a+"'><option value='NONE'>禁用</option><option value='Asc'>升序</option><option value='Desc'>降序</option></select><input style='width:30px;' title='排序权重' value='0' id='for"+a+"' />";
+                i++;
+            }
+            if(i%2!=0)
+            {
+                i=2-i%2;
+                for(var j=0;j<i;j++)
+                {
+                    c=document.createElement("TD");
+                    r.appendChild(c);
+                    c.innerHTML="&nbsp;"
+                    c=document.createElement("TD");
+                    r.appendChild(c);
+                    c.innerHTML="&nbsp;"
+                }
+            }
+            
+            for(var i=0;i<o.checkitem.length;i++)
+            {
+                $("#"+o.checkitem[i].k).val(o.checkitem[i].v);
+                $("#for"+o.checkitem[i].k).val(o.checkitem[i].o);
+            }
+        });
+       
+        $("#ok").bind("click",function()
+        {
+            var list=[];
+            $("SELECT[value!=NONE]").each(function(index,item){
+                var weighting=0;
+                try
+                {
+                    var weighting=parseInt($("INPUT[id=for"+item.id+"]").val());
+                    weighting=weighting==NaN?0:weighting;
+                }
+                catch(e)
+                {
+                }
+                list.push({f:item.id,o:$(item).val(),w:weighting});
+            });
+            for(var i=0;i<list.length-1;i++)
+            {
+                for(var j=i+1;j<list.length;j++)
+                {
+                    if(list[i].w<list[j].w)
+                    {
+                        var t=list[i];
+                        list[i]=list[j];
+                        list[j]=t;
+                    }   
+                }
+            }
+            var fields="";
+            for(var i=0;i<list.length;i++)
+            {
+                fields+=list[i].f+"|"+list[i].o+",";
+            }           
+            if(fields.length>0)
+                fields=fields.substr(0,fields.length-1);
+            window.returnValue=fields;
+            window.close();
+        });
+        $("#cancel").bind("click",function(){
+            window.close();
+        });
+    </script>
+</body>
+</html>

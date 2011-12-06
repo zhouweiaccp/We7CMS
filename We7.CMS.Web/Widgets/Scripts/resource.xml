@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--type=style代表通用样式；type=script代表脚本-->
+<resource>
+  <add name="jquerypack" src="/Widgets/Scripts/jquery.pack.js" type="script"/>
+  <add name="jquerypeex" src="/Widgets/Scripts/jquery.peex.js" type="script"/>
+  <add name="commonPlugin" src="/Widgets/Scripts/Plugins/Common.js" type="script"/>
+</resource>

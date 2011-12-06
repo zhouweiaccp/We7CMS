@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="System" label="系统" description="系统">
+  <group name="Advice" label="反馈类">
+    <widget name="AdviceEdit" label="反馈录入" defaulttype="">
+      <type name="AdviceEdit.CarModel" label="示例控件：车辆工程" />
+      <type name="AdviceEdit.CarModelSN" label="示例控件：车辆工程带有查询密码" />
+    </widget>
+  </group>
+  <group name="Article" label="文章类">
+    <widget name="ArticleList" label="文章列表" defaulttype="ArticleList.Common">
+      <type name="ArticleList.Blog" label="博客文章列表式" filePath="/We7Controls/AdviceList/Page/ArticleList.Blog" defualtValue="{}"/>
+      <type name="ArticleList.Common" label="普通列表控件" />
+      <type name="ArticleList.HomePlate" label="首页板块列表控件" />
+      <type name="ArticleList.Scroll" label="滚动列表展示" />
+      <type name="ArticleList.Search" label="搜索结果列表_仿百度" />
+      <type name="ArticleList.Toggleblog" label="可折叠式博客列表" />
+      <type name="ArticleList.TopNews" label="首页头条(可包含图片)" />
+    </widget>
+    <widget name="ArticleTree" label="文章树" defaulttype="ArticleTree.flat" filePath="">
+      <type name="ArticleTree.flat" label="桉树型模式显示" />
+    </widget>
+    <widget name="ArticleView" label="文章内容显示" defaulttype="ArticleView">
+      <type name="ArticleView" label="DIV自由布局" />
+      <type name="ArticleView.Notice" label="公告形式" />
+    </widget>
+  </group>
+  <group name="Channel" label="栏目类">
+    <widget name="ChannelBanner" label="栏目标题图显示" defaulttype="ChannelBanner.byname">
+      <type name="ChannelBanner.byname" label="以栏目标识作为图片名称" />
+    </widget>
+    <widget name="ChannelMenu" label="栏目菜单" defaulttype="ChannelMenu.flat">
+      <type name="ChannelMenu.flat" label="普通菜单" />
+      <type name="ChannelMenu.multiClassSlide" label="横向多级下拉菜单" />
+      <type name="ChannelMenu.multiColumn" label="多列菜单" />
+      <type name="ChannelMenu.ParentAndChild" label="父子菜单" />
+      <type name="ChannelMenu.popdown" label="下拉菜单" />
+      <type name="ChannelMenu.popup" label="弹出菜单" />
+      <type name="ChannelMenu.VerticalPop" label="竖菜单下拉菜单" />
+    </widget>
+  </group>
+  <group name="Comments" label="评论">
+    <widget name="CommentsAdd" label="评论添加控件" defaulttype="CommentsAdd.Common">
+      <type name="CommentsAdd.Common" label="简单发表_DIV布局" />
+    </widget>
+    <widget name="CommentsList" label="评论列表" defaulttype="CommentsList.Common">
+      <type name="CommentsList.Common" label="评论添加列表一体_DIV布局POST提交" />
+    </widget>
+  </group>
+  <group label="其他" name="Other">
+    <widget name="CompositeControl" label="组合控件" defaulttype="CompositeControl.Common">
+      <type name="CompositeControl.Common" label="组合控件" />
+    </widget>
+    <widget name="DataImport" label="数据导入控件" defaulttype="">
+      <type name="DataImport.Common" label="将其他数据库数据导入We7系统数据库" />
+    </widget>
+    <widget name="FlashChart" label="图表控件" defaulttype="">
+      <type name="FlashChart.Common" label="外部数据来源图表" />
+    </widget>
+    <widget name="HomePlate" label="首页板块" defaulttype="">
+      <type name="HomePlate.grid" label="多板块表格式排列" />
+    </widget>
+    <widget name="Links" label="友情链接" defaulttype="">
+      <type name="Links.Common" label="文字_div布局" />
+      <type name="Links.Dropdown" label="下拉式_div布局" />
+      <type name="Links.ImageText" label="图文_Table布局" />
+      <type name="Links.Picture" label="图片_Table布局" />
+    </widget>
+    <widget name="Login" label="登录控件" defaulttype="">
+      <type name="Login.Common" label="普通文字登录框" />
+      <type name="Login.Ex" label="新登陆控件" />
+      <type name="Login.rpf" label="普通文字登录框(特定版)" />
+    </widget>
+    <widget name="MapPath" label="当前位置显示" defaulttype="">
+      <type name="MapPath" label="简单文字模式" />
+    </widget>
+    <widget name="ModelEditor" label="模型容器简单样式" defaulttype="">
+      <type name="ModelEditor.Simple" label="模型容器简单样式" />
+    </widget>
+    <widget name="ModelRelation" label="模型关联列表" defaulttype="">
+      <type name="ModelRelation.Common" label="模型关联示例" />
+    </widget>
+    <widget name="ModelSearchBar" label="内容模型搜索条" defaulttype="">
+      <type name="ModelSearchBar.Custom" label="自定义模型搜索条" />
+      <type name="ModelSearchBar.product" label="模型搜索条(产品模型)" />
+    </widget>
+    <widget name="Pager" label="翻页控件" defaulttype="">
+      <type name="Pager.Block" label="方形按钮式_table布局" />
+      <type name="Pager.Simple" label="简单文字_table布局" />
+    </widget>
+    <widget name="PhotoGallery" label="多图片广告" defaulttype="">
+      <type name="PhotoGallery.Hover" label="图片广告鼠标悬浮替换格式" />
+      <type name="PhotoGallery.Transform" label="图片广告自动替换格式" />
+    </widget>
+    <widget name="PhotoList" label="图片列表" defaulttype="">
+      <type name="PhotoList.Common" label="缩略图矩阵_服务器控件构造" />
+      <type name="PhotoList.LightBox" label="缩略图弹出大照片_ajax效果" />
+      <type name="PhotoList.Scroll" label="滚动图片" />
+    </widget>
+    <widget name="PhotoSlides" label="图片幻灯片" defaulttype="">
+      <type name="PhotoSlides.FlashShow" label="flash翻转图片" />
+    </widget>
+    <widget name="QueryList" label="多条件搜索控件" defaulttype="">
+      <type name="QueryList.parameters" label="多查询条件结果" />
+      <type name="QueryList.product" label="多查询条件结果" />
+    </widget>
+    <widget name="Register" label="注册控件" defaulttype="">
+      <type name="Register.Mall" label="注册控件_商城版" />
+      <type name="Register.Simple" label="注册控件_简洁版" />
+    </widget>
+    <widget name="RetrievePassword" label="密码找回控件" defaulttype="">
+      <type name="RetrievePassword.Common" label="密码找回控件" />
+    </widget>
+    <widget name="RssList" label="RSS列表" defaulttype="">
+      <type name="RssList.Common" label="普通列表" />
+    </widget>
+    <widget name="SearchBar" label="站内搜索框" defaulttype="">
+      <type name="SearchBar" label="普通模糊搜索" />
+    </widget>
+    <widget name="ShopWindow" label="橱窗展示" defaulttype="">
+      <type name="ShopWindow.Orign" label="橱窗展示" />
+      <type name="ShopWindow.Simple" label="橱窗展示" />
+    </widget>
+    <widget name="SiteMap" label="站点地图" defaulttype="">
+      <type name="SiteMap.Simple" label="站点地图" />
+      <type name="SiteMap.Tree" label="站点地图（树状）" />
+    </widget>
+    <widget name="SiteTree" label="网站导航" defaulttype="">
+      <type name="SiteTree.Simple" label="站群地图树" />
+    </widget>
+    <widget name="Statistics" label="模型数据统计" defaulttype="">
+      <type name="Statistics.model" label="内容模型统计" />
+    </widget>
+    <widget name="TreeMenu" label="树形菜单" defaulttype="">
+      <type name="TreeMenu.Two" label="树形菜单（带状态）" />
+    </widget>
+    <widget name="Trigger" label="触发器" defaulttype="">
+      <type name="Trigger.AddProductToShoppingCart" label="测试触发事件" />
+    </widget>
+    <widget name="UserMenu" label="会员菜单" defaulttype="">
+      <type name="UserMenu.crumb" label="当前位置" />
+      <type name="UserMenu.flat" label="普通菜单" />
+      <type name="UserMenu.flat2" label="普通菜单" />
+      <type name="UserMenu.flat3" label="普通菜单(两级显示)" />
+      <type name="UserMenu.nocss" label="无样式菜单" />
+      <type name="UserMenu.popdown" label="下拉菜单" />
+    </widget>
+    <widget name="UserRegister" label="用户注册控件" defaulttype="">
+      <type name="UserRegister.Simple" label="用户注册" />
+    </widget>
+    <widget name="VisitorCounter" label="流量统计" defaulttype="">
+      <type name="VisitorCounter.Common" label="流量统计" />
+    </widget>
+    <widget name="ZJB" label="装甲兵定制控件" defaulttype="">
+      <type name="ZJB.XKList" label="带有学科方向的列表" />
+      <type name="ZJB.XKList2" label="带有学科方向的分页列表" />
+      <type name="ZJB.XKPagerList" label="带有学科方向的分页列表" />
+    </widget>
+    <widget name="Survey" label="投票控件" defaulttype="">
+      <type name="Survey.Common" label="投票" />
+      <type name="Survey.View" label="投票显示" />
+    </widget>
+  </group>
+</widgets>

@@ -1,0 +1,150 @@
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+line-height: 1.6em;
+margin: 0;
+padding: 0;
+background: #333;
+color: #265210;
+}
+
+div, h1, h2, h3, h4, h5, p, ul, li, form, fieldset, img, blockquote {
+margin: 0;
+padding: 0;
+border: none;
+}
+
+a {
+text-decoration: none;
+padding: 0;
+color: #3c65b7;
+border-bottom: 1px solid #5f88da;
+cursor: pointer;
+}
+
+h1 { font-size: 2em; }
+h1 a { 
+color: #264e12;
+text-decoration: none;
+border: none;
+}
+h1 a:hover {
+text-decoration: underline;
+}
+h2 { font-size: 1.2em; }
+
+.reason
+{
+	padding-left:30px;
+}
+.reason li
+{
+	font-size:16px!important;
+	margin:10px 5px;
+	list-style-type:circle;
+	color:Red;
+}
+
+.inputtext {
+background: #fff;
+border: 1px solid #aaa;
+padding: 4px;
+}
+textarea {
+background: #fff;
+border: 1px solid #aaa;
+padding: 3px;
+}
+select {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 1px;
+}
+/* -----------------------
+----- Homepage Beta -----
+------------------------ */
+
+body.pubbox_login{
+background: #444;
+margin: 0;
+padding: 0;
+line-height: 1.8em;
+}
+
+body.pubbox_login h1{
+padding: 20px 25px;
+text-align: left;
+}
+
+div.pubfooter {
+width: 100%;
+text-align: center;
+color: #777;
+background: #444;
+padding: 20px 0;
+}
+div.pubfooter a {
+color: #999;
+border-bottom: 1px solid #555;
+}
+div.pubfooter a:hover {
+color: #fff !important;
+border-bottom: 1px solid #bbb;
+}
+
+/* login */
+table.login {
+line-height: 2.2em;
+margin: 4em auto 2em auto !important;
+}
+table.login td {
+text-align: left;
+}
+table.login .inputtext {
+padding: 4px;
+width: 240px;
+font-size: 1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+margin-bottom: 3px;
+}
+
+
+/* -----------------------
+-------- Buttons --------
+------------------------ */
+
+.bprimarypub80 {
+background:url(../images/button_pub.gif) top left no-repeat;
+width: 85px;
+border: none;
+height: 23px;
+color: #000;
+font-size: 1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+vertical-align:middle;
+* padding-top:4px;
+cursor:pointer;
+}
+
+a.bprimarypub80 
+{
+	display:inline-block ;
+	text-align:center;
+	* padding-top:1px;
+	* margin-top:2px;
+}
+
+.Btn {
+	height:23px!important;
+	background: #f2f2f2; 
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+	margin-top:3px;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+	cursor:hand;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #777;
+}

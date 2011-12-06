@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>样式表归库</title>
+    <style type="text/css">
+        input, selectd
+        {
+            margin: 0;
+        }
+        body, td
+        {
+            font-size: 12px;
+        }
+        body
+        {
+            padding: 0;
+            margin: 0;
+            font-family: 宋体 Arial;
+            background-color: #F7F7F7;
+        }
+    </style>
+
+    <script type="text/javascript">
+    
+        function $(s){
+            return document.getElementById(s);
+        }
+        
+        function ok()
+        {
+            if($("s").checked)
+            {
+                var s=$('fn').value;
+                s=s.replace(/^\s*|\s*$/gi,"");
+                var n=$('kn').value;
+                n=n.replace(/^\s*|\s*$/gi,"");
+                if(s.length>0&&n.length>0)
+                {
+                    s=s+"|"+n;
+                    window.returnValue={t:1,v:s};
+                }
+                else
+                {
+                    alert("请输入样式名称与关键字");
+                    return;
+                }
+            }
+            else
+            {
+                window.returnValue={t:0,v:window.dialogArguments};
+            }
+            window.close();
+        }
+        
+
+        
+        window.onload=function(){
+            $('s').onclick=function(){
+                $('f').style.display="";
+            };
+            $('c').onclick=function(){
+                $('f').style.display='none';
+            };
+        };
+        
+    </script>
+
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td colspan="4">
+                <input checked="checked" type="radio" id="s" name="type" value="1" /><label for="s">另存为</label>
+            </td>
+        </tr>
+        <tr id="f">
+            <td>
+                名称：
+            </td>
+            <td>
+                <input id="fn" style="width: 70px; border: solid 1px #666666;" />
+            </td>
+            <td>
+                标识符：
+            </td>
+            <td>
+                <input id="kn" style="width: 70px; border: solid 1px #666666;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input id="c" type="radio" name="type" value="1" /><label for="c">覆盖</label>
+            </td>
+        </tr>
+    </table>
+    <table style="position:absolute; left:2px; bottom:2px;">
+        <tr>
+            <td colspan="4" align="left">
+                <button onclick="ok()">
+                    确定</button>
+                <button onclick="window.close()">
+                    取消</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

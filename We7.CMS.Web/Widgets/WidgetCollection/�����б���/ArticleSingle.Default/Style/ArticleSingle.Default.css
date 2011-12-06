@@ -1,0 +1,152 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ArticleSingle.Default
+ * Style:ArticleSingle_Default
+ * Desc::
+ * Quot:
+*************************************************************/
+/**************文章正文开始*****************/
+
+.ArticleSingle_Default .article_content {
+    border:1px solid #dddddd;
+    padding:30px; 
+	line-height: 180%
+}
+.ArticleSingle_Default .article_content .Content{
+ font-size: 10pt; line-height: 150%
+}
+
+.ArticleSingle_Default .article_content h1 {
+    color:#2782b9;
+    font-size:18px;
+    font-family:"微软雅黑";
+    text-align:center;
+    line-height:35px;
+}
+.ArticleSingle_Default .article_info {
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    background:url(../images/article_line.gif) repeat-x left center;
+    margin:26px 0px;
+}
+.ArticleSingle_Default .article_info a {
+    color:#333333;
+}
+.ArticleSingle_Default .article_info a:hover {
+    color:#cc0000;
+}
+.ArticleSingle_Default .article_content_list {
+    line-height:180%;
+    font-size:14px;
+    color:#212121;
+    word-wrap:break-word;
+    word-break:normal;
+}
+.ArticleSingle_Default .article_mood {
+    padding-bottom:20px;
+}
+.ArticleSingle_Default .artilcle_tool {
+    height:26px;
+    line-height:26px;
+    text-align:right;
+    background:#f2f2f2;
+    padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+    color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+    color:#cc0000;
+}
+.ArticleSingle_Default .article_page {
+    height:31px;
+    line-height:31px;
+    margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+    float:left;
+    margin-right:15px;
+    padding-left:10px;
+    background:url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(../images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+    color:#cc0000;
+}
+/***********相关信息****************/
+.ArticleSingle_Default .article_about h3 {
+    font-size:14px;
+    padding-left:20px;
+    height:31px;
+    line-height:31px;
+    border-bottom:1px solid #ddd;
+}
+.ArticleSingle_Default .article_about ul {
+    padding:10px;
+}
+.ArticleSingle_Default .article_about li {
+    height:22px;
+    line-height:22px;
+    background:url(../images/icon1.gif) no-repeat left center;
+    padding-left:10px;
+}
+.ArticleSingle_Default .article_about li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_about li a:hover {
+    color:#cc0000;
+}
+
+.ArticleSingle_Default .artilcle_tool {
+    height:26px;
+    line-height:26px;
+    text-align:right;
+    background:#f2f2f2;
+    padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+    color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+    color:#cc0000;
+}
+
+.ArticleSingle_Default .article_page {
+    height:31px;
+    line-height:31px;
+    margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+    float:left;
+    margin-right:15px;
+    padding-left:10px;
+    background:url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(../images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+    color:#cc0000;
+}
+
+
+.ArticleSingle_Default .mtop10 {
+    margin-top:10px;
+}
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleSingle.Default
+ * Style:ArticleSingle_Default
+ * Desc::
+ * Quot:
+*************************************************************/

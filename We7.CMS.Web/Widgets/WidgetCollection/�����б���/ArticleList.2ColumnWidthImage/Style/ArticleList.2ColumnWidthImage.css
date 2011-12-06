@@ -1,0 +1,143 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ArticleList.2ColumnWidthImage
+ * Style:ArticleList_2ColumnWidthImage
+ * Desc::ArticleList.2ColumnWidthImage部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/
+.ArticleList_2ColumnWidthImage {
+   font-size:12px;
+}
+.ArticleList_2ColumnWidthImage .area {
+    width:360px;
+    margin-top:10px;
+}
+.ArticleList_2ColumnWidthImage .area h3 {
+    height:30px;
+    line-height:30px;
+    background:url(../Images/back1.gif) no-repeat;
+    font-size:12px;
+    color:#fff;
+    position:relative; text-indent:20px;
+}
+.ArticleList_2ColumnWidthImage .area h3 span {
+    background:url(../Images/sidebar.gif) no-repeat left top;
+    display:inline-block;
+    padding-left:35px;
+}
+
+.ArticleList_2ColumnWidthImage  .area h3 em {
+    background:url(../Images/sidebar.gif) no-repeat right -33px;
+    padding-right:35px;
+    color:#fff;
+    display:inline-block;
+}
+.ArticleList_2ColumnWidthImage .area h3 em a {
+    color:#fff;
+}
+.ArticleList_2ColumnWidthImage .area h3 em a:hover {
+    color:#ffff00;
+}
+
+.ArticleList_2ColumnWidthImage .area h3 img {
+    position:absolute;
+    top:10px;
+    left:320px;
+}
+.ArticleList_2ColumnWidthImage .tv_pictrue li{
+    text-decoration:none;
+    }
+.ArticleList_2ColumnWidthImage .area ul.tv_pictrue {
+    height: 132px;
+    min-height: 133px;
+	border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+}
+.ArticleList_2ColumnWidthImage .area ul .tv_pictrue  span{
+     float:right; 
+}
+.ArticleList_2ColumnWidthImage .area ul {
+     background:url(../Images/area_back.gif) repeat-x scroll left top transparent;
+
+    height: auto !important;
+    padding: 10px 10px 0;
+}
+
+.ArticleList_2ColumnWidthImage .area  .tv_pictrue .tv_u_thumb_title{
+    font-size:12px; font-weight:bold;color:#cc0000;
+}
+.ArticleList_2ColumnWidthImage .area  .tv_pictrue .description{
+     line-height:23px;
+    }
+.ArticleList_2ColumnWidthImage .area ul.tv_text {
+    background: none repeat scroll 0 0 transparent;
+    height: 74px;
+    min-height: 74px;
+    padding: 10px 0 0 10px;
+	border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+}
+.ArticleList_2ColumnWidthImage .area .tv_text li {
+    height:23px;
+    line-height:23px;
+    padding-left:8px;
+    background:url(..//Images/icon3.gif) no-repeat left center;
+    color:#999999;
+    position:relative;
+}
+.ArticleList_2ColumnWidthImage .area .tv_u_thumb{
+    
+    margin-right:8px;
+    }
+.ArticleList_2ColumnWidthImage .area .tv_u_thumb img{
+    
+    padding:2px; border:1px solid #cfd8df;  float:left; margin-right:10px;
+    }
+
+.ArticleList_2ColumnWidthImage .area li a {
+    color:#313534;
+}
+.ArticleList_2ColumnWidthImage .area li a:hover {
+    color:#cc0000;
+}
+.ArticleList_2ColumnWidthImage .area li span.datetime{
+    position:absolute;
+    top:0px;
+    right:5px;
+}
+.ArticleList_2ColumnWidthImage .underline_area {
+    height:5px;
+    line-height:5px;
+    font-size:0px;
+    background:url(../Images/back.gif) no-repeat -141px -79px;
+}
+.ArticleList_2ColumnWidthImage .area_ad img {
+    border:1px solid #cfd8df;
+}
+.ArticleList_2ColumnWidthImage .clear{
+    clear:both; font-size:1px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.2ColumnWidthImage
+ * Style:ArticleList_2ColumnWidthImage
+ * Desc::ArticleList.2ColumnWidthImage部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/

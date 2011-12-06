@@ -1,0 +1,88 @@
+
+.widget-place {
+  width: 50%;
+}
+
+.widget-placeholder {
+  color: #000;
+  margin: 0.5em;
+}
+
+.widget {
+  margin: 0.5em;
+  border: #dfdfdf solid 1px;
+ background-color:#fff;
+ 
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+  .widget-header {
+   color: #464646;
+   font-weight:bold;
+    padding:0.3em 0.6em;
+    background: #dfdfdf url("../images/gray-grad.png") repeat-x left top;
+	text-shadow: #fff 0 1px 0;
+  }
+
+  .widget-editbox {
+    color: #000;
+    margin: 0.2em;
+    padding: 0.2em;
+    background-color: yellow;
+  }
+
+  .widget-content {
+    padding: 0.5em;
+    background-color:#fff;
+    margin-bottom:0.7em ;
+  }
+  
+.widget-header:hover .collapseImg {
+	/*background: transparent url(../images/menu-bits.gif) no-repeat scroll left -109px;*/
+	background:  url('../images/togglero.gif') center right no-repeat;
+}
+
+.widget-header:hover .extendImg {
+	/*background: transparent url(../images/menu-bits.gif) no-repeat scroll left -109px;*/
+	background:  url('../images/togglerc.gif') center right no-repeat;
+}
+
+.widget-header:hover .closeImg {
+	/*background: transparent url(../images/close.png) no-repeat;*/
+	background: url('../images/close.png') center right no-repeat;
+}
+
+.widget-header li.collapseImg,
+.widget-header li.extendImg
+ {
+	float: right;
+	list-style-type:none;
+	margin-top:-3px;
+	margin-right:0px;
+	clear:both;
+	display:inline;
+}
+
+* html .widget-header li.collapseImg,
+* html .widget-header li.extendImg,
+*+ html .widget-header li.collapseImg,
+*+ html .widget-header li.extendImg
+{
+		margin-top:-25px;
+}
+
+ .widget-header li.closeImg {
+	float: right;
+	display:inline;
+	list-style-type:none;
+	margin-top:-25px;
+	margin-right:22px;
+	clear:both;
+}
+
+ .widget-header
+ {
+ 	clear:both;
+ }

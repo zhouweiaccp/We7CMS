@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<provinces>
+  <province name="北京"/>
+  <province name="天津"/>
+  <province name="河北"/>
+  <province name="山西"/> 
+  <province name="辽宁"/>
+  <province name="吉林"/>
+  <province name="上海"/>
+  <province name="江苏"/>
+  <province name="浙江"/>
+  <province name="安徽"/>
+  <province name="福建"/>
+  <province name="江西"/>
+  <province name="山东"/>
+  <province name="河南"/>
+  <province name="湖北"/>
+  <province name="湖南"/>
+  <province name="广东"/>
+  <province name="广西"/>
+  <province name="海南"/>
+  <province name="重庆"/>
+  <province name="四川"/>
+  <province name="贵州"/>
+  <province name="云南"/>
+  <province name="西藏"/>
+  <province name="陕西"/>
+  <province name="甘肃"/>
+  <province name="青海"/>
+  <province name="宁夏"/>
+  <province name="新疆"/>
+  <province name="台湾" />
+  <province name="香港" />
+  <province name="内蒙古"/>
+  <province name="黑龙江"/>
+</provinces>

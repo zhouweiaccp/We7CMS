@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration >
+
+  <item name="新建用户通知" value="新建用户通知" visible="true" >
+    <EmailTitle>
+      已成功在${SiteName}为您创建账号${LoginName}
+    </EmailTitle>
+    <Emailcontent>
+      尊敬的用户${LoginName}:
+
+      您好!
+
+	  本站为您成功建立账户 ${LoginName}, 密码为：${Password} 。本站地址为:${SiteUrl}。
+
+	  您可以登录到会员中心使用相关服务，会员中心访问地址：
+
+	  ${SiteUrl}/user/index.aspx 。
+
+
+      ${SiteName}
+	  ${DateTime.Now}
+	  ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+
+  <item name="注册验证通知" value="注册验证通知" visible="true" >
+    <EmailTitle>
+      您在${SiteName}注册的账号${LoginName}需要进行验证
+    </EmailTitle>
+    <Emailcontent>
+      尊敬的用户${LoginName}:
+
+      您好!
+
+
+      感谢您在我们网站注册成为会员，故系统自动为你发送了这封邮件。请点击下面链接进行验证：
+${ValidateUrl} 。
+
+
+      ${SiteName}
+	  ${DateTime.Now}
+	  ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+
+  <item name="账号审核通过通知" value="账号审核通过通知" visible="true" >
+    <EmailTitle>
+      通知：您在${SiteName}申请加入${ContentModelName}的申请已经得到批准！
+    </EmailTitle>
+    <Emailcontent>
+      亲爱的${LoginName}:
+
+      您好!
+
+      您已在本站成功申请成为 ${ContentModelName} 会员, 经过审核，认为您符合条件；已经为您开通了 ${ContentModelName} 相关权限。
+
+	我们向 ${ContentModelName} 成员提供以下服务：
+
+	1、可以到 http://trac.we7.cn 发布bug，跟踪bug修改进度；
+
+	2、可以使用 SVN 直接下载同步最新源代码；
+
+	3、可以发布您开发的插件。
+
+	  您可以登录到会员中心使用相关服务，会员中心访问地址：
+
+	  ${SiteUrl}/user/index.aspx 。
+
+
+
+      感谢您使用${SiteName}的服务, 如果您需要了解更多${SiteName}相关的信息, 请登录我们的网站: ${SiteUrl}
+
+      希望您继续支持我们
+
+
+
+      ${SiteName}
+	  ${DateTime.Now}
+	  ${SiteUrl}
+		
+    </Emailcontent>
+  </item>
+
+   <item name="新用户申请通知" value="新用户申请通知管理员处理" visible="true" >
+    <EmailTitle>
+      您有新任务：${LoginName}申请成为${ContentModelName}
+    </EmailTitle>
+    <Emailcontent>
+      亲爱的管理员:
+
+      您好!
+
+      会员名为[${LoginName}]的用户申请成为开源小组成员，请登录后台处理。
+
+      直接点击进入处理页面：${HandleUrl} 
+
+
+      ${SiteName}
+	  ${DateTime.Now}
+	  ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+
+  <item name="用户邮件批量发送" value="用户邮件批量发送" visible="true" >
+    <EmailTitle>
+      来自${SiteName}的通知
+    </EmailTitle>
+    <Emailcontent>
+      尊敬的用户:
+
+      您好!
+
+      您已在本站成功注册账户 ${LoginName}, 本站地址为:${SiteUrl}。
+
+	  您可以登录到会员中心使用相关服务，会员中心访问地址：
+
+	  ${SiteUrl}/user/index.aspx 。
+
+
+
+      感谢您使用${SiteName}的服务, 如果您需要了解更多${SiteName}相关的信息, 请登录我们的网站: ${SiteUrl}
+
+      希望您继续支持我们
+
+
+      ${SiteName}
+	  ${DateTime.Now}
+	  ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+
+  <item name="付款成功通知" value="付款成功通知" visible="true" >
+    <EmailTitle>
+      您在${SiteName}购买的产品${ProductName}，已经付款成功！
+    </EmailTitle>
+    <Emailcontent>
+      亲爱的${LoginName}:
+
+      您好!
+
+      您在${SiteName}购买的产品${ProductName}，已经付款成功！付款金额：${PayMoney}
+
+      请您登录到会员中心授权或安装您的产品，会员中心访问地址：
+
+      ${SiteUrl}/user/index.aspx 。
+
+
+        ${SiteName}
+      ${DateTime.Now}
+      ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+  
+  <item name="密码找回通知" value="密码找回通知" visible="true" >
+    <EmailTitle>
+      您在${SiteName}找回密码需要进行验证
+    </EmailTitle>
+    <Emailcontent>
+      尊敬的用户${LoginName}:
+
+      您好!
+
+
+      您在我们网站申请找回密码，故系统自动为你发送了这封邮件。请点击下面链接设置您的密码：
+      ${ValidateUrl} 。
+
+
+      ${SiteName}
+      ${DateTime.Now}
+      ${SiteUrl}
+
+    </Emailcontent>
+  </item>
+</configuration>

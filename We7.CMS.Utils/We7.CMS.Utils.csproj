@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4C28516-9016-449B-B867-84FB5FC9B567}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.CMS</RootNamespace>
+    <AssemblyName>We7.CMS.Utils</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/We7.CMS.Utils/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\We7.CMS.Utils.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Solution Items\DLL\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MIMEParser, Version=2004.5.8.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\MIMEParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Encoding\EncodingInfo.cs" />
+    <Compile Include="Encoding\IdentifyEncoding.cs" />
+    <Compile Include="Event\ShareEvent.cs" />
+    <Compile Include="FrontBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\AdviceHelper.Mail.cs" />
+    <Compile Include="Helpers\AdviceTransferHelper.cs" />
+    <Compile Include="Helpers\CategoryHelper.cs" />
+    <Compile Include="Helpers\ChannelModuleHelper.cs" />
+    <Compile Include="Helpers\ClickRecordHelper.cs" />
+    <Compile Include="Helpers\LinkHelper.cs" />
+    <Compile Include="Helpers\MenuItemXmlHelper.cs" />
+    <Compile Include="Helpers\MultiDataSourceHelper.cs" />
+    <Compile Include="Helpers\FavoriteHelper.cs" />
+    <Compile Include="Helpers\TemplateStaticizeHelper.cs" />
+    <Compile Include="Helpers\TagsHelper.cs" />
+    <Compile Include="Helpers\ArticleIndexHelper.cs" />
+    <Compile Include="Helpers\DataControlHelper.cs" />
+    <Compile Include="Helpers\PointHelper.cs" />
+    <Compile Include="Helpers\IPSecurityHelper.cs" />
+    <Compile Include="Helpers\ProcessingHelper.cs" />
+    <Compile Include="Helpers\ProcessHistoryHelper.cs" />
+    <Compile Include="Helpers\AttachmentHelper.cs" />
+    <Compile Include="EncryptString.cs" />
+    <Compile Include="Helpers\KeywordHelper.cs" />
+    <Compile Include="Helpers\PageVisitorHelper.cs" />
+    <Compile Include="Helpers\MessageHelper.cs" />
+    <Compile Include="Helpers\TemplateHelper.cs" />
+    <Compile Include="Helpers\TemplateVersionHelper.cs" />
+    <Compile Include="Helpers\ViewStateHelper.cs" />
+    <Compile Include="Helpers\Import3rdDataHelper.cs" />
+    <Compile Include="Helpers\VoteHelper.cs" />
+    <Compile Include="Helpers\WidgetHelper.cs" />
+    <Compile Include="HTFormatter.cs" />
+    <Compile Include="Helpers\AdviceHelper.cs" />
+    <Compile Include="Helpers\AdviceReplyHelper.cs" />
+    <Compile Include="Helpers\AdviceTypeHelper.cs" />
+    <Compile Include="Helpers\ArticleHelper.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\SiteSettingHelper.cs" />
+    <Compile Include="BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helpers\ChannelHelper.cs" />
+    <Compile Include="DataControlUploader.cs" />
+    <Compile Include="Helpers\CommentsHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\StatisticsHelper.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Template.Reconstruct.cs" />
+    <Compile Include="TemplateCopies.cs" />
+    <Compile Include="TemplateMap.cs" />
+    <Compile Include="ThumbnailImages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\TemplateHelper.Obsolete.cs" />
+    <Compile Include="SearchEngine.cs" />
+    <Compile Include="TemplateProcessor.cs" />
+    <Compile Include="TemplateUploader.cs" />
+    <Compile Include="Templator.cs" />
+    <Compile Include="Uploader.cs" />
+    <Compile Include="UrlHelper.cs" />
+    <Compile Include="UserBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\ShopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Model.Core\We7.Model.Core.csproj">
+      <Project>{1EC274E4-3A87-4065-A5B3-3275221FB187}</Project>
+      <Name>We7.Model.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Share\Thinkment.Data\Thinkment.Data.csproj">
+      <Project>{A665A5A2-2477-4B95-993D-F1772F91089D}</Project>
+      <Name>Thinkment.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://m.we7.cn/Plugins/ShopPlugin/ShopService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ShopService\</RelPath>
+      <UpdateFromURL>http://m.we7.cn/Plugins/ShopPlugin/ShopService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>We7_CMS_Utils_ShopService_ShopService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ShopService\OrderDetailModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ShopService\ProductInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ShopService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ShopService\ShopService.disco" />
+    <None Include="Web References\ShopService\ShopService.wsdl" />
+    <None Include="Web References\ShopService\StoreModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

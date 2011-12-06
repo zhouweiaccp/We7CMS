@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="content.Master.cs" Inherits="We7.CMS.Web.User.DefaultMaster.content" %>
+
+<%@ Register Assembly="We7.CMS.UI" Namespace="We7.CMS.Controls" TagPrefix="WEC" %>
+
+<%@ Register Src="../Controls/UserMenu/Page/UserMenu.crumb.ascx" TagName="UserMenu"
+    TagPrefix="uc3" %>
+<%@ Register Src="../Controls/UserNav.HorizontalNew.ascx" TagName="UserNav" TagPrefix="uc4" %>
+<%@ Register Src="../Controls/UserNav.VerticalNew.ascx" TagName="UserNav" TagPrefix="uc5" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/user/style/main.css" media="screen" /1>
+    <link rel="stylesheet" type="text/css" href="/user/style/realCer_stylem.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/user/style/auntion.css" media="screen" />
+    <script type="text/javascript" src="/Scripts/jQuery/jquery-1.4.2.js"></script>
+    <asp:ContentPlaceHolder ID="MyHeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <div id="head">
+        <div id="logo">
+            <a alt="" href="/user/index.aspx">
+                <img alt="We7 CMS" src="/user/style/images/we7_logo_user.png"></a></div>
+        <div id="banner">
+        </div>
+    </div>
+    <div class="realCer">
+       
+        <uc4:UserNav ID="UserNav1" runat="server" />
+        <div class="realMain clearfix mt10">
+            <uc5:UserNav ID="UserNav2" runat="server" />
+            <p id="position" style="display:none">
+                <uc3:UserMenu ID="UserMenu3" runat="server" Separator=" > " />
+            </p>
+            <div >
+                <asp:ContentPlaceHolder ID="MyContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="toogle_panel">
+        </div>
+        <div id="foot">
+            <a href="/">网站首页</a> | <a href="http://www.westengine.com/about-us/">关于我们</a> |
+            <a class="link4" href="http://www.westengine.com/about-us/contact-us/">联系我们</a>
+            | <a class="link4" href="/other/site-map/">网站地图</a> | <a class="link4" href="http://www.westengine.com/we7-cms/">
+                产品首页</a>
+            <br>
+            (C)2011 西部动力（北京）科技有限公司 版权所有 Powered by We7 2.7, 京ICP备 050340009 号
+        </div>
+    </div>
+</body>
+</html>

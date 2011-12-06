@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS.Common' >
+    <!--数据库表修改-->
+
+    <Sql>
+      CREATE TABLE [Account] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AccountRole] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Advice] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceInfo] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceReply] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceReplyInfo] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceTransfer] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceAuth] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [AdviceType] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Article] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Tags] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Attachment] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+
+    <Sql>
+      CREATE TABLE [Channel] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+ 
+
+
+    <Sql>
+      CREATE TABLE [Comments] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+
+    <Sql>
+      CREATE TABLE [Department] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+
+    <Sql>
+      CREATE TABLE [ErrorCode] (
+      [ID] int primary key
+      )
+    </Sql>
+
+
+    <Sql>
+      CREATE TABLE [Link] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Log] (
+      [LogID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Menu] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+
+    <Sql>
+      CREATE TABLE [Message] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [PageVisitor] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [PageVisitorHistory] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Permission] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [RelatedArticle] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Role] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Statistics] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [StatisticsHistory] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [ArticleIndex] (
+      [ArticleID] nvarchar (50) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Favorite] (
+      [FavoriteID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Point] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [Category] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [ColumnModule] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [ChannelModuleMapping] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+  
+
+    <Sql>
+      CREATE TABLE [ClickRecords] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+    <Sql>
+      CREATE TABLE [Vote] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [VoteEntry] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [VoteAnswer] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+    <Sql>
+      CREATE TABLE [VoteAnswerStat] (
+      [ID] nvarchar (40) primary key
+      )
+    </Sql>
+
+
+  </Database>
+</Update>

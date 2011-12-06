@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06AA1969-D498-4DDB-BED9-12147AC05720}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.CMS.Web.User</RootNamespace>
+    <AssemblyName>We7.CMS.Web.User</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\We7.CMS.Web.User.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <HintPath>..\..\Solution Items\DLL\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountDetails.aspx.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountDetails.aspx.designer.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountEdit.aspx.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountEdit.aspx.designer.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Action\AddMessage.ashx.cs">
+      <DependentUpon>AddMessage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Action\SendMail.ashx.cs">
+      <DependentUpon>SendMail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax.asmx.cs">
+      <DependentUpon>Ajax.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ArticleProcess.aspx.cs">
+      <DependentUpon>ArticleProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticleProcess.aspx.designer.cs">
+      <DependentUpon>ArticleProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Account_Basic.ascx.cs">
+      <DependentUpon>Account_Basic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Account_Basic.ascx.designer.cs">
+      <DependentUpon>Account_Basic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Account_Extent.ascx.cs">
+      <DependentUpon>Account_Extent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Account_Extent.ascx.designer.cs">
+      <DependentUpon>Account_Extent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Account_Password.ascx.cs">
+      <DependentUpon>Account_Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Account_Password.ascx.designer.cs">
+      <DependentUpon>Account_Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractInfo.aspx.cs">
+      <DependentUpon>ContractInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractInfo.aspx.designer.cs">
+      <DependentUpon>ContractInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account_Password.aspx.cs">
+      <DependentUpon>Account_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account_Password.aspx.designer.cs">
+      <DependentUpon>Account_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailValidate.aspx.cs">
+      <DependentUpon>EmailValidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailValidate.aspx.designer.cs">
+      <DependentUpon>EmailValidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Account.aspx.cs">
+      <DependentUpon>User_Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Account.aspx.designer.cs">
+      <DependentUpon>User_Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPassword.aspx.cs">
+      <DependentUpon>GetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetPassword.aspx.designer.cs">
+      <DependentUpon>GetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultMaster\content.Master.cs">
+      <DependentUpon>content.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultMaster\content.Master.designer.cs">
+      <DependentUpon>content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultMaster\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultMaster\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FavoriteEdit.aspx.cs">
+      <DependentUpon>FavoriteEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FavoriteEdit.aspx.designer.cs">
+      <DependentUpon>FavoriteEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FavoriteList.aspx.cs">
+      <DependentUpon>FavoriteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FavoriteList.aspx.designer.cs">
+      <DependentUpon>FavoriteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelHandler.aspx.cs">
+      <DependentUpon>ModelHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelHandler.aspx.designer.cs">
+      <DependentUpon>ModelHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PointList.aspx.cs">
+      <DependentUpon>PointList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PointList.aspx.designer.cs">
+      <DependentUpon>PointList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostMessage.aspx.cs">
+      <DependentUpon>PostMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostMessage.aspx.designer.cs">
+      <DependentUpon>PostMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User_Account1.aspx.cs">
+      <DependentUpon>User_Account1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Account1.aspx.designer.cs">
+      <DependentUpon>User_Account1.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validate.aspx.cs">
+      <DependentUpon>Validate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validate.aspx.designer.cs">
+      <DependentUpon>Validate.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendValidateMail.aspx.cs">
+      <DependentUpon>SendValidateMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendValidateMail.aspx.designer.cs">
+      <DependentUpon>SendValidateMail.aspx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Action\AddMessage.ashx" />
+    <Content Include="Ajax.asmx" />
+    <Content Include="Controls\UserNav.HorizontalNew.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserNav.VerticalNew.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\Login\DataControl.xml" />
+    <Content Include="Controls\Login\Page\Login.Common.ascx" />
+    <Content Include="Controls\Login\Page\Login.Common.jpg" />
+    <Content Include="Controls\Login\Page\Login.Ex.ascx" />
+    <Content Include="Controls\Login\Page\Login.rpf.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\Login\Page\Login.rpf.jpg" />
+    <Content Include="Controls\Login\Style\Login.Common_one.风格一.css" />
+    <Content Include="Controls\RetrievePassword.Common.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserMenu\DataControl.xml" />
+    <Content Include="Controls\UserMenu\Page\images\arrow.gif" />
+    <Content Include="Controls\UserMenu\Page\images\arrow_over.gif" />
+    <Content Include="Controls\UserMenu\Page\images\blank.gif" />
+    <Content Include="Controls\UserMenu\Page\images\blanka.gif" />
+    <Content Include="Controls\UserMenu\Page\images\blank_over.gif" />
+    <Content Include="Controls\UserMenu\Page\images\blank_overa.gif" />
+    <Content Include="Controls\UserMenu\Page\images\greybackground.JPG" />
+    <Content Include="Controls\UserMenu\Page\images\img08.gif" />
+    <Content Include="Controls\UserMenu\Page\images\nav_001.gif" />
+    <Content Include="Controls\UserMenu\Page\images\nav_002.gif" />
+    <Content Include="Controls\UserMenu\Page\images\redbackground.JPG" />
+    <Content Include="Controls\UserMenu\Page\js\jquery.bgiframe.js" />
+    <Content Include="Controls\UserMenu\Page\js\jquery.dimensions.js" />
+    <Content Include="Controls\UserMenu\Page\js\jquery.jdMenu.js" />
+    <Content Include="Controls\UserMenu\Page\js\SlideMenuReady.js" />
+    <Content Include="Controls\UserMenu\Page\js\stuHover.js" />
+    <Content Include="Controls\UserMenu\Page\UserMenu.crumb.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserMenu\Page\UserMenu.crumb.jpg" />
+    <Content Include="Controls\UserMenu\Page\UserMenu.flat.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserMenu\Page\UserMenu.flat.jpg" />
+    <Content Include="Controls\UserMenu\Page\UserMenu.flat2.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserMenu\Page\UserMenu.flat3.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserMenu\Page\UserMenu.nocss.ascx" />
+    <Content Include="Controls\UserMenu\Page\UserMenu.popdown.ascx" />
+    <Content Include="Controls\UserMenu\Page\UserMenu.popdown.jpg" />
+    <Content Include="Controls\UserMenu\Style\UserMenu.flat_Common.正规式.css" />
+    <Content Include="Controls\UserMenu\Style\UserMenu.popdown_Common.正规式.css" />
+    <Content Include="Controls\UserNav.Horizontal.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\UserNav.Vertical.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ContractInfo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Account_Password.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="EmailValidate.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="PhotoUpload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="style\auntion.css" />
+    <Content Include="style\images\abc_07.png" />
+    <Content Include="style\images\abc_08.png" />
+    <Content Include="style\images\abc_09.png" />
+    <Content Include="style\images\all_bg2.jpg" />
+    <Content Include="style\images\anli.png" />
+    <Content Include="style\images\area_bg.png" />
+    <Content Include="style\images\bank0.png" />
+    <Content Include="style\images\bank1.png" />
+    <Content Include="style\images\box_le.gif" />
+    <Content Include="style\images\b_wb.png" />
+    <Content Include="style\images\cleft.gif" />
+    <Content Include="style\images\close.gif" />
+    <Content Include="style\images\close1.gif" />
+    <Content Include="style\images\close2.gif" />
+    <Content Include="style\images\cright.gif" />
+    <Content Include="style\images\custom.png" />
+    <Content Include="style\images\cyzf.gif" />
+    <Content Include="style\images\datePicker.gif" />
+    <Content Include="style\images\dobg.gif" />
+    <Content Include="style\images\dp_tit.jpg" />
+    <Content Include="style\images\dp_tit1.png" />
+    <Content Include="style\images\email0.png" />
+    <Content Include="style\images\email1.png" />
+    <Content Include="style\images\emotion_happy.png" />
+    <Content Include="style\images\emotion_smile.png" />
+    <Content Include="style\images\emotion_unhappy.png" />
+    <Content Include="style\images\erz0.png" />
+    <Content Include="style\images\erz1.png" />
+    <Content Include="style\images\face_big.gif" />
+    <Content Include="style\images\fad.gif" />
+    <Content Include="style\images\fb2a.gif" />
+    <Content Include="style\images\fb2b.gif" />
+    <Content Include="style\images\fb2c.gif" />
+    <Content Include="style\images\header_bg.gif" />
+    <Content Include="style\images\help.png" />
+    <Content Include="style\images\high.png" />
+    <Content Include="style\images\hmm.jpg" />
+    <Content Include="style\images\h_bg.png" />
+    <Content Include="style\images\index.gif" />
+    <Content Include="style\images\inimg.gif" />
+    <Content Include="style\images\inimg.png" />
+    <Content Include="style\images\jy_b.png" />
+    <Content Include="style\images\jy_m.png" />
+    <Content Include="style\images\listsbg.gif" />
+    <Content Include="style\images\login_box1.png" />
+    <Content Include="style\images\logo_le.gif" />
+    <Content Include="style\images\low.png" />
+    <Content Include="style\images\map_inx.gif" />
+    <Content Include="style\images\menuTit.png" />
+    <Content Include="style\images\multip.png" />
+    <Content Include="style\images\m_acc.png" />
+    <Content Include="style\images\m_alert.png" />
+    <Content Include="style\images\m_err.png" />
+    <Content Include="style\images\navbg.gif" />
+    <Content Include="style\images\navTit.png" />
+    <Content Include="style\images\nav_select.png" />
+    <Content Include="style\images\new_idea.gif" />
+    <Content Include="style\images\pic.gif" />
+    <Content Include="style\images\pic.png" />
+    <Content Include="style\images\pic04.gif" />
+    <Content Include="style\images\pic2.gif" />
+    <Content Include="style\images\png-0402.png" />
+    <Content Include="style\images\png-0403.png" />
+    <Content Include="style\images\png-0404.png" />
+    <Content Include="style\images\png-0406.png" />
+    <Content Include="style\images\png-0407.png" />
+    <Content Include="style\images\rwlistbg.gif" />
+    <Content Include="style\images\scroll_bg.png" />
+    <Content Include="style\images\sell_post_mode.png" />
+    <Content Include="style\images\shop_heart_up.png" />
+    <Content Include="style\images\shop_h_bg.png" />
+    <Content Include="style\images\shop_thumb-up.png" />
+    <Content Include="style\images\shop_trophy.png" />
+    <Content Include="style\images\smallPic.png" />
+    <Content Include="style\images\smallPic1.png" />
+    <Content Include="style\images\sp_bg.png" />
+    <Content Include="style\images\stars.png" />
+    <Content Include="style\images\T1Y3RWXeRIXXXXXXXX-398-460.png" />
+    <Content Include="style\images\tlbg.gif" />
+    <Content Include="style\images\trz0.png" />
+    <Content Include="style\images\trz1.png" />
+    <Content Include="style\images\we7_logo_user.png" />
+    <Content Include="style\images\work_box_content.gif" />
+    <Content Include="style\images\work_box_small.gif" />
+    <Content Include="style\images\work_h4.gif" />
+    <Content Include="style\images\write_max.gif" />
+    <Content Include="style\images\zbbg02.gif" />
+    <Content Include="style\realCer_stylem.css" />
+    <Content Include="UserInfo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="User_Account.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="GetPassword.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Register.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DefaultMaster\content.Master">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountDetails.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="AccountEdit.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ArticleProcess.aspx">
+    </Content>
+    <Content Include="Controls\Account_Basic.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\Account_Extent.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\Account_Password.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DefaultMaster\Main.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="FavoriteEdit.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="FavoriteList.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="index.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Login.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Logout.aspx" />
+    <Content Include="message.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModelHandler.aspx" />
+    <Content Include="PointList.aspx" />
+    <Content Include="PostMessage.aspx">
+    </Content>
+    <Content Include="style\images\bg_memberfoot.jpg" />
+    <Content Include="style\images\bg_memberhead.jpg" />
+    <Content Include="style\images\leftdot.gif" />
+    <Content Include="style\images\memberhead_bg.jpg" />
+    <Content Include="style\images\member_bg.jpg" />
+    <Content Include="style\images\member_bg_1.gif" />
+    <Content Include="style\images\userbutton3.gif" />
+    <Content Include="style\images\usersubmit.gif" />
+    <Content Include="style\main.css" />
+    <Content Include="style\table.css" />
+    <Content Include="User_Account1.aspx" />
+    <Content Include="Validate.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SendValidateMail.aspx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.UI\We7.CMS.UI.csproj">
+      <Project>{8AACF293-F3C4-4BBE-9227-FAEC14292A7A}</Project>
+      <Name>We7.CMS.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Utils\We7.CMS.Utils.csproj">
+      <Project>{F4C28516-9016-449B-B867-84FB5FC9B567}</Project>
+      <Name>We7.CMS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.WebControls\We7.CMS.WebControls.csproj">
+      <Project>{62257C1E-B4F9-48C0-A3CC-D783C1A59169}</Project>
+      <Name>We7.CMS.WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Model.Core\We7.Model.Core.csproj">
+      <Project>{1EC274E4-3A87-4065-A5B3-3275221FB187}</Project>
+      <Name>We7.Model.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Share\Thinkment.Data\Thinkment.Data.csproj">
+      <Project>{A665A5A2-2477-4B95-993D-F1772F91089D}</Project>
+      <Name>Thinkment.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Admin\We7.CMS.Web.Admin.csproj">
+      <Project>{6C5BBA37-982A-4D90-829D-CCD0E35C6144}</Project>
+      <Name>We7.CMS.Web.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelUI\We7.Model.UI.csproj">
+      <Project>{AEC92C9C-BB07-4527-B45F-48D6EDBF0539}</Project>
+      <Name>We7.Model.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Action\SendMail.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\Login\CS\LoginAction.ashx" />
+    <None Include="style\images\dobg.psd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

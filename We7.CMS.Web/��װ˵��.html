@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>We7 安装说明</title>
+    <link rel="stylesheet" href="install/css/install.css" type="text/css" />
+</head>
+<body>
+    <h1 id="logo" style="text-align: center; font-size: 32px; font-weight: bold">
+        We7 CMS 2.8版
+    </h1>
+    <p style="text-align: center">
+        网站(群)建设与管理平台</p>
+    <h1>
+        开发者的话</h1>
+    <p>
+        “We7 对我们来说是一个具有特殊意义的项目。大家都能为 We7 添砖加瓦，因此作为其中的成员我们十分自豪。开发者和贡献者为 We7 奉献了大量的时间，我们都在致力于让
+        We7 更加优秀。现在，感谢您也参与其中。”</p>
+    <p style="text-align: right;">
+        — We7开发小组</p>
+    <h1>
+        We7 快速安装法</h1>
+    <ol>
+        <li>将 We7 压缩包解压至一个空文件夹。</li>
+        <li>上传整个 We7 文件夹至服务器。请确保该We7文件夹为独立站点的根目录（We7暂不支持虚拟目录）。</li>
+        <li>如果是本地运行，请到IIS中新建站点，并将站点路径指定到上面的We7文件夹，并为Network Service账户设置对We7文件夹的写权限。</li>
+        <li>在浏览器中访问<span class="file"><a href="admin/">/admin/</a></span>，如果系统没有建立数据库，点击进入安装向导。</li>
+        <li>按照向导的提示，对想用的数据库进行设置，We7 会自动建立数据库表。如果您希望创建一个全新的数据库，请删除 config文件夹下db.config。要是依然不知道怎么操作，请前往<a
+            href="http://help.We7.cn">帮助中心</a>、<a href="http://qa.we7.cn">问答中心</a>寻求解决方法。</li>
+        <li><strong>请记住你自己设置的管理员账号及密码，用于后台登录。安装最后完成后，安装脚本会带您前往<a href="admin/sigin.aspx">登录页面</a>。</strong></li>
+        <li>第一次登录，会要求填写资料，选择或下载模板组，完成后网站前后台就都有内容可以浏览。</li>
+    </ol>
+    <h1>
+        升级</h1>
+    <p>
+        在升级之前，请确保备份数据文件夹（_data/_skins）以及被您修改过的配置文件，例如<code>config、Models下的文件</code>。</p>
+    <h2>
+        从旧版本升级至 We7 CMS 2.8 的步骤：</h2>
+    <ol>
+        <li>用管理员账户登录到后台，点击右下角“升级”。</li>
+        <li>上传新版更新包 <a href="http://www.westengine.com/download/" target="_blank" title="点击打开下载地址">We7.CMS.Upgrade.zip </a>文件</li>
+        <li>勾选备份 “升级前备份”（请勿选择 “清除掉旧文件” ）,点击"开始更新"</li>
+        <li>更新完毕后点击“下一步”，重建数据库结构（该功能会保留您目前的数据及结构）</li>
+        <li>更新完毕后，运行根目录下“clear.bat”清除已经废弃、不再使用的文件和目录结构。（如果您已经对其中某些项进行更改，请根据clear.bat中内容进行手动整合，clear.bat查看内容方法：选中-右键-用记事本打开）</li>
+        <li>大功告成，就这么简单！</li>
+    </ol>
+    <h1>
+        在线资源</h1>
+    <p>
+        若您遇上文档中未有提及的情况，请首先参考我们为您准备的丰富 We7 在线资源：</p>
+    <dl>
+        <dt><a href="http://help.we7.cn/">We7帮助中心 </a></dt>
+        <dd>
+            采用微软MSDN的方式，全文搜索，无限级文档组织，包含文档中心、控件宝典、视频教程等，为大家提供全方位的自助服务；</dd>
+        <dt><a href="http://www.westengine.com/download//">We7下载中心</a></dt>
+        <dd>
+            官方主站下载中心：按级别为会员提供文档、安装包、源码等的下载服务；</dd>
+        <dt><a href="http://trac.We7.cn/">We7 Bug提交中心 </a></dt>
+        <dd>
+            开源小组成员可以随时发布发现的bug、希望优化的功能、建议等，并可在线跟踪问题解决进度，并与程序员进行直接沟通；</dd>
+        <dt><a href="http://bbs.We7.cn/">We7 支持论坛</a></dt>
+        <dd>
+            如果感到束手无策，请将问题提交至 We7 技术论坛，它有大量的热心的用户和良好的社区氛围。无论求助还是助人，在这里您应该确保自己的问题和答案均准确细致。</dd>
+        <dt><a href="http://www.westengine.com/we7-cms/support/">We7 QQ群</a></dt>
+        <dd>
+            同样，We7 也有即时的QQ群用于 We7 用户交流以及部分技术支持。详细关于QQ群的信息，参看《<a href="http://www.westengine.com/we7-cms/support/">We7开源社区支持系统</a>》。</dd>
+    </dl>
+    <h1>
+        系统需求</h1>
+    <ul>
+        <li><strong>IIS6.0</strong>或更高版本的 webserver 支持。</li>
+        <li><strong>2.0</strong> 版本的 .net framework 支持。</li>
+        <li>... 给 <a href="http://We7.cn/">http://we7.cn</a> 做一个链接。</li>
+    </ul>
+    <h1>
+        从其它平台转换至 We7</h1>
+    <p>
+        We7 支持从众多平台导入数据，所以您首先应该按照上面的方法安装 We7。</p>
+    <h1>
+        最后</h1>
+    <ul>
+        <li>对 We7 有任何建议、想法、评论或发现 Bug，请加入<a href="http://bbs.We7.cn">支持论坛</a>。</li>
+        <li>We7 准备了完善的插件 API 接口方便您进行扩展开发。作为开发人员，如果你有兴趣了解并加以利用，请参阅帮助中心<a href="http://help.we7.cn/library/50.html">的插件开发文档</a>。请尽量不要更改核心代码。</li>
+    </ul>
+    <h1>
+        分享精神</h1>
+    <p>
+        We7 We7 没有数百万的市场运作资金，也没有名人赞助。不过我们有更棒的支持，那就是您！如果您喜欢 We7，请将它介绍给自己的朋友，或者帮助他人安装一个 We7，又或者写一篇赞扬我们的文章。</p>
+</body>
+</html>

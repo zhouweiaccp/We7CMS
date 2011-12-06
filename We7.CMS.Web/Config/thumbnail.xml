@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <item  name="拇指头像：48*48" value="small"/>
+  <item  name="列表方块：100*100"  value="middle" />
+  <item  name="wap图片：200*200"  value="wap" />
+  <item  name="产品缩略图：150*150" value="product"/>
+  <item  name="首页翻转：226*165" value="flash" />
+  <item name="专题图：250*200" value="class"/>
+  <item name="首页图片：120*90" value="sytp"/>
+</configuration>

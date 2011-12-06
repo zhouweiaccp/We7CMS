@@ -1,0 +1,36 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.CurrentLocation
+ * Style:ChannelMenu_CurrentLocation
+ * Desc:ChannelMenu.CurrentLocation部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/
+.ChannelMenu_CurrentLocation .sitepath{
+	height:32px;
+	line-height:32px;
+	background:url(../images/730.gif) no-repeat;
+	padding-left:32px;
+}
+.ChannelMenu_CurrentLocation .sitepath em, .sitepath_allweb em {
+	padding:0px 5px;
+}
+.ChannelMenu_CurrentLocation .sitepath a, .sitepath_allweb a {
+	color:#000;
+}
+.ChannelMenu_CurrentLocation .sitepath a:hover, .sitepath_allweb a:hover {
+	color:#cc0000;
+}
+.ChannelMenu_CurrentLocation .r_navigation {
+	height:23px;
+	line-height:23px;
+}
+.ChannelMenu_CurrentLocation .sitepath_allweb {
+	background:url(../images/back.gif) no-repeat left -490px;
+}
+ /*************************************************************
+ * Command:End
+ * Control:ChannelMenu.CurrentLocation
+ * Style:ChannelMenu_CurrentLocation
+ * Desc:ChannelMenu.CurrentLocation部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/

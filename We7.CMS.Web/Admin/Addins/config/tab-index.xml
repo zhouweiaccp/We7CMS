@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <item name="文章信息" value="0" visible="true" unit="" information="Article" basictag="Article_option">
+    <tag name="Article_option" value="基本信息" control="~/Admin/controls/Article_option.ascx" />
+    <tag name="Article_image" value="缩略图" control="~/Admin/controls/Article_image.ascx" />
+    <tag name="Article_tag" value="标签" control="~/Admin/controls/Article_tag.ascx" />
+    <tag name="Article_file" value="附件" control="~/Admin/controls/Article_file.ascx" />
+    <tag name="Article_wap" value="wap" control="~/Admin/controls/Article_wap.ascx" />
+    <tag name="Article_relates" value="相关文章" control="~/Admin/controls/Article_relates.ascx" />
+    <tag name="Article_ipStrategy" value="IP策略" control="~/Admin/controls/StrategySet.ascx" />
+  </item>
+</configuration>

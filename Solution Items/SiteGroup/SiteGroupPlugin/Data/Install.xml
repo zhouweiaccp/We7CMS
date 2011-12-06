@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS' >
+    <Sql>
+      Delete from [Menu] where [ID]='{00000000-0000-0005-0001-000000000000}'
+    </Sql>
+    <Sql>
+      Delete from [Menu] where [ID]='{00000000-0000-0013-0009-000000000000}'
+    </Sql>
+
+    <Sql>
+      insert into [Menu]([ID],[ParentID],[SequenceIndex],[NameText],[Title],[Href],[Type],[EntityID])
+      values('{00000000-0000-0005-0001-000000000000}','{00000000-0000-0013-0000-000000000000}',8,'共享参数配置','共享参数配置','/Plugins/SiteGroupPlugin/UI/InfoSharing/InfoSharingConfig.aspx',99,'System.Administration')
+    </Sql>
+
+    <Sql>
+      insert into [Menu]([ID],[ParentID],[SequenceIndex],[NameText],[Title],[Href],[Type],[EntityID])
+      values('{00000000-0000-0013-0009-000000000000}','{00000000-0000-0013-0000-000000000000}',9,'站群参数设置','站群参数设置','/Plugins/SiteGroupPlugin/UI/GroupConfiguration.aspx',99,'System.Administration')
+    </Sql>
+
+    <!--IDClient数据库表修改-->
+    <Sql>
+      CREATE TABLE [DeliveryBill] (
+      [ID] nvarchar (50) primary key
+      )
+    </Sql>
+    <Sql>
+      CREATE TABLE [ShareData] (
+      [ID] nvarchar (50) primary key
+      )
+    </Sql>
+  </Database>
+</Update>

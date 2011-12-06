@@ -1,0 +1,65 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Recommand.Newest
+ * Style:Recommand_Newest
+ * Desc::
+ * Quot:
+*************************************************************/
+.Recommand_Newest .month_tip h3
+{
+    height: 32px;
+    line-height: 32px;
+    background: url(../images/back1.gif) no-repeat;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Recommand_Newest .month_up ul, .month_tip ul
+{
+    padding: 4px 8px 0px 12px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.Recommand_Newest .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat -141px -66px;
+}
+.Recommand_Newest .month_tip li
+{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    background: url(../images/icon1.gif) no-repeat left center;
+}
+.Recommand_Newest .month_up li a
+{
+    color: #313534;
+}
+.Recommand_Newest .month_tip li a:hover, .month_up li a:hover
+{
+    color: #cc0000;
+}
+.Recommand_Newest .month_tip ul
+{
+    background: url(../images/back.gif) no-repeat -975px -250px;
+}
+.Recommand_Newest .month_tip li
+{
+    padding-left: 15px;
+    background: none;
+    height: 25px;
+    line-height: 25px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:Recommand.Newest
+ * Style:Recommand_Newest
+ * Desc::
+ * Quot:
+*************************************************************/

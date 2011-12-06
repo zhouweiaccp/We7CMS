@@ -1,0 +1,4 @@
+﻿<?xml version="1.0"?>
+<layoutTemplates>
+  <item name="Column2-1" label="Column2-1" path="~/admin/VisualTemplate/LayoutColumn/Column2-1.ascx"></item>
+</layoutTemplates>

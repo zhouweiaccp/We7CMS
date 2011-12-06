@@ -1,0 +1,89 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ArticleList.Default
+ * Style:ArticleList_Default
+ * Desc::ArticleList.Default部件的样式
+ * Quot:
+*************************************************************/
+.ArticleList_Default .area {
+	width:360px;
+	margin-top:10px;
+}
+.ArticleList_Default .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(../images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.ArticleList_Default .area h3 span {
+	background:url(../images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.ArticleList_Default .area h3 em {
+	background:url(../images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.ArticleList_Default .area h3 em a {
+	color:#fff;
+}
+.ArticleList_Default .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.ArticleList_Default .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.ArticleList_Default .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(../images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.ArticleList_Default .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(../images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.ArticleList_Default .area li a {
+	color:#313534;
+}
+.ArticleList_Default .area li a:hover {
+	color:#cc0000;
+}
+.ArticleList_Default .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.ArticleList_Default .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(../images/back.gif) no-repeat -141px -79px;
+}
+.ArticleList_Default .area_ad img {
+	border:1px solid #cfd8df;
+}
+ /*************************************************************
+ * Command:End
+ * Control:ArticleList.Default
+ * Style:ArticleList_Default
+ * Desc::ArticleList.Default部件的样式
+ * Quot:
+*************************************************************/

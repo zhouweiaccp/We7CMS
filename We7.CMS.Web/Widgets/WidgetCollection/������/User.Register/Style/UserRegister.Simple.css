@@ -1,0 +1,93 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:UserRegister.Simple
+ * Style:UserRegister_Simple
+ * Desc::
+ * Quot:
+*************************************************************/
+.UserRegister_Simple .table_reg
+{
+	border-bottom: 1px solid #BFF1FF;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px auto;
+	padding: 6px 30px;
+	text-align: left;
+	width: 98%;
+}
+.UserRegister_Simple th, .UserRegister_Simple td
+{
+	color: #333333;
+	font-family: "宋体" ,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+.UserRegister_Simple th
+{
+	font-weight: normal;
+	padding-right: 5px;
+	text-align: right;
+}
+.UserRegister_Simple .table_reg caption
+{
+	border-bottom: 1px solid #8DA7C4;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px auto 0;
+	padding: 6px 30px;
+	text-align: left;
+}
+.UserRegister_Simple .input_focus,.UserRegister_Simple .input_blur
+{
+	border: 1px solid #DCDCDC;
+	height: 18px;
+	line-height: 18px;
+	padding-left: 2px;
+}
+.UserRegister_Simple input, .UserRegister_Simple textarea, .UserRegister_Simple select, .UserRegister_Simple button,.UserRegister_Simple file
+{
+	font-size: 12px;
+	padding-left: 2px;
+}
+.UserRegister_Simple input,.UserRegister_Simple select,.UserRegister_Simple textarea,.UserRegister_Simple .textarea_style
+{
+	border: 1px solid #DCDCDC;
+	font-family: "宋体";
+}
+.UserRegister_Simple input,.UserRegister_Simple textarea,.UserRegister_Simple select,.UserRegister_Simple button,.UserRegister_Simple file
+{
+	font-size: 12px;
+}
+.UserRegister_Simple .button_style
+{
+	border: 1px solid #9CC9E0;
+	color: #077AC7;
+	cursor: pointer;
+	height: 21px;
+	padding: 1px 4px;
+	text-align: center;
+}
+.UserRegister_Simple input,.UserRegister_Simple textarea,.UserRegister_Simple select,.UserRegister_Simple button,.UserRegister_Simple file
+{
+	font-size: 12px;
+	padding-left: 2px;
+}
+.UserRegister_Simple .table_reg td
+{
+	padding: 8px 5px;
+}
+.UserRegister_Simple td
+{
+	line-height: 200%;
+	text-align: left;
+}
+.UserRegister_Simple td,.UserRegister_Simple th
+{
+	font-size: 12px;
+}
+/*************************************************************
+ * Command:End
+ * Control:UserRegister.Simple
+ * Style:UserRegister_Simple
+ * Desc::
+ * Quot:
+*************************************************************/

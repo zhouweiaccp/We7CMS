@@ -1,0 +1,3606 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.WebControls</name>
+    </assembly>
+    <members>
+        <member name="P:We7.CMS.WebControls.SearchBar.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SearchBar.PanelName">
+            <summary>
+            面板名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SearchBar.Items">
+            <summary>
+            控件集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SearchBar.CurrentPage">
+            <summary>
+            是否是当前页
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.RssDataProvider">
+            <summary>
+            RSS数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RssDataProvider.ProcessRSSItem(System.String)">
+            <summary>
+            将RSS列表加载到Article对象列表中
+            </summary>
+            <param name="rssURL"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.RssDataProvider.Articles">
+            <summary>
+            文章列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RssDataProvider.RssUrl">
+            <summary>
+            rss地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RssDataProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.LinksProvider">
+            <summary>
+            友情链接控件数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.LinksProvider.OnLoad(System.EventArgs)">
+            <summary>
+            初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.LinksProvider.Links">
+            <summary>
+            友情链接列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LinksProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LinksProvider.Tag">
+            <summary>
+            标签参数（默认为""）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LinksProvider.DefaultLink">
+            <summary>
+            默认链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LinksProvider.ColumnCount">
+            <summary>
+            列数
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ArticleNewsUpdatesProvider">
+            <summary>
+            文章最新动态
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.ArticleNewsUpdatesProvider.PageSize">
+            <summary>
+            取的文章总条数
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.ArticleNewsUpdatesProvider.HotSize">
+            <summary>
+            最热的文章条数
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.ArticleNewsUpdatesProvider.NewestDays">
+            <summary>
+            最新的天数定义（显示小图标）
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.ArticleNewsUpdatesProvider.DateFormat">
+            <summary>
+            时间显示格式
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.CreateHotQuery">
+            <summary>
+            最热查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.GetHotArticles">
+            <summary>
+            获取最热的文章列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.CreateNewestCriteria(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            最新查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.GetNewestArticles(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            获取最新的文章列表
+            </summary>
+            <param name="listHots">要排除的最热查询</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.FormatArticlesData(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            格式化列表中的数据
+            </summary>
+            <param name="list">文章列表</param>        
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.IsNewsArticle(We7.CMS.Common.Article)">
+            <summary>
+            判断某篇文章是否满足最新文章的定义
+            </summary>
+            <param name="article"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.QueryArtilcesByCriteria(Thinkment.Data.Criteria,System.Collections.Generic.List{Thinkment.Data.Order},System.Int32,System.Int32,System.String[])">
+            <summary>
+            根据查询类获取文章列表（分页）
+            </summary>
+            <param name="query">查询类</param>
+            <param name="from">第几条开始</param>
+            <param name="count">获取条数</param>
+            <param name="fields">string[]字段列表，null为全部</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleNewsUpdatesProvider.QueryArtilcesByCriteria(Thinkment.Data.Criteria)">
+            <summary>
+            根据查询类获得文章数量
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.AttachmentHelper">
+            <summary>
+            附件业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.Assistant">
+            <summary>
+            当前Helper的数据访问对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.TitleMaxLength">
+            <summary>
+            标题显示最大长度（默认30个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.Tag">
+            <summary>
+            文章标签参数（默认为""）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.NewestSize">
+            <summary>
+            等于 PageSize - HotSize
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.HotRecordCount">
+            <summary>
+            最热记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.NewsRecordCount">
+            <summary>
+            最新记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.HotArticles">
+            <summary>
+            最热文章列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleNewsUpdatesProvider.NewsArticles">
+            <summary>
+            最新文章列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TaobaoSlides.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.UserMenuProvider">
+            <summary>
+            会员菜单数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.UserMenuProvider.GetMenuTree">
+            <summary>
+            菜单树的所有数据，存储在session中
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.UserMenuProvider.GetMenuTreeByType(System.Int32)">
+            <summary>
+            根据用户菜单类型返回数据
+            </summary>
+            <param name="menuType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.UserMenuProvider.GetSubMenuList(System.Collections.Generic.List{We7.CMS.Common.MenuItem},System.String)">
+            <summary>
+            获取会员子菜单列表
+            </summary>
+            <param name="myMenus">菜单树</param>
+            <param name="parentID">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.MenuHelper">
+            <summary>
+            菜单助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.MaxTreeClass">
+            <summary>
+            最大菜单层数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.Level">
+            <summary>
+            分级
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.Menus">
+            <summary>
+            菜单列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.ActiveMenuID">
+            <summary>
+            当前菜单ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.ActiveMenu">
+            <summary>
+            当前一级菜单
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.CurrentMenuID">
+            <summary>
+            当前一级菜单项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.ActiveSubMenu">
+            <summary>
+            当前二级菜单
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.CurrentSubMenuID">
+            <summary>
+            当前子菜单项ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserMenuProvider.RootID">
+            <summary>
+            根菜单
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShopWindowJson.HelperFactory">
+            <summary>
+            业务助手工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShopWindow.HelperFactory">
+            <summary>
+            业务助手工厂
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.CreateListCriteria">
+            <summary>
+            创建列表查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.CreateOrderArray">
+            <summary>
+            创建信息排序数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.GetItems">
+            <summary>
+            要据查询条件取得反馈列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.GetItem">
+            <summary>
+            取得当前记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.GetAdviceID">
+            <summary>
+            报得反馈ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProvider.GetModelName">
+            <summary>
+            取得当前反馈的模型名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.IsShow">
+            <summary>
+            是否处理
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.ModelName">
+            <summary>
+            当前反馈的模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.OwnerID">
+            <summary>
+            导航栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.Items">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProvider.Item">
+            <summary>
+            取得当前记录的信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.FlashChartProvider">
+            <summary>
+            FlashChar数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.FlashChartProvider.RenderChart">
+            <summary>
+            展示控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.FlashChartProvider.DataFile">
+            <summary>
+            数据源的路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FlashChartProvider.Width">
+            <summary>
+            控件的宽度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FlashChartProvider.Interval">
+            <summary>
+            刷新的时间间隔
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.FlashChartProvider.Height">
+            <summary>
+            控件的高度
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetUrl(System.Object)">
+            <summary>
+            按ID取得详细页的Url
+            </summary>
+            <param name="id">条目ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetUrl(System.Object,System.Object)">
+            <summary>
+            按ID取得详细页的Url
+            </summary>
+            <param name="id">条目ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetFirstImage(System.Object,System.String,System.String)">
+            <summary>
+            取得第一张图片
+            </summary>
+            <param name="json"></param>
+            <param name="type"></param>
+            <param name="defImg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetImage(System.Object,System.String)">
+            <summary>
+            取得某种类型的图片
+            </summary>
+            <param name="json"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetImage(System.Object)">
+            <summary>
+            取得某种类型的图片
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetIIC(System.Object)">
+            <summary>
+            取得图片信息集合
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.GetCat(System.String)">
+            <summary>
+            通过取得类型的名称
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbModelProvider.ConvertObjectToDataTable(System.Object,System.String)">
+            <summary>
+            将数据转化为数据表
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.ModelName">
+            <summary>
+            模型参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.DateFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.ThumbnailTag">
+            <summary>
+            缩略图类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.MaxLength">
+             <summary>
+            最大长度
+             </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.ChannelMap">
+            <summary>
+            栏目映射关系
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.Item">
+            <summary>
+            单行数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbModelProvider.Items">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentTreeProvider.InitDepartments(We7.CMS.Common.PF.Department)">
+            <summary>
+            当前栏目层级关系
+            </summary>
+            <param name="currentDepartment"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentTreeProvider.BindTree">
+            <summary>
+            绑定树
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentTreeProvider.GetHref(System.String,System.String)">
+            <summary>
+            得到转向url
+            </summary>
+            <param name="departmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.Url">
+            <summary>
+            导航Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.AccountHelper">
+            <summary>
+            权限业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.CurrentDepartment">
+            <summary>
+            获取当前部门对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.ParentID">
+            <summary>
+            上级部门ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.ShowParentName">
+            <summary>
+            显示父部门
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.TitleMaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentTreeProvider.ShowToolTip">
+            <summary>
+            鼠标提示
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ShowCategoryProvider.FormatChannelsData(System.Collections.Generic.List{We7.CMS.WebControls.ShowCategoryModel})">
+            <summary>
+            格式化栏目数据
+            </summary>
+            <param name="list">栏目列表</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ShowCategoryProvider.BindData">
+            <summary>
+            绑定数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ShowCategoryProvider.GetProvider">
+            <summary>
+            取得查询实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.CssClass">
+            <summary>
+            css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.LevelOneMax">
+            <summary>
+            一级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.LevelTwoMax">
+            <summary>
+            二级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.LevelThreeMax">
+            <summary>
+            三级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.Display">
+            <summary>
+            一级类别默认是否显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.TitleMaxLength">
+            <summary>
+            类别最大显示字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.ParentID">
+            <summary>
+            父栏目编号        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.DataSourceType">
+            <summary>
+            数据源类型        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.DataSourceName">
+            <summary>
+            数据源名称        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.ChannelName">
+            <summary>
+            显示名称(字段名或者xml属性名)        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.ChannelID">
+            <summary>
+            显示值(字段名或者xml属性名)        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.ParentIDName">
+            <summary>
+            父类别名(字段名)        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.FullUrl">
+            <summary>
+            链接地址(字段名或者xml属性名)    
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.TitleImage">
+            <summary>
+            图片地址(字段名或者xml属性名)    
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.JsonData">
+            <summary>
+            json数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShowCategoryProvider.lsResult">
+            <summary>
+            集合数据
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.PhotoGallery">
+            <summary>
+            图片展示数据提供着
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ArticleDataProvider">
+            <summary>
+            文章类控件数据提供者
+            </summary>
+            <summary>
+            文章数据提供类属性集合
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetThisArticle">
+            <summary>
+            取得当前的文章
+            </summary>
+            <returns>文章实体</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetArticleListFromDB">
+            <summary>
+            取得数据列表
+            </summary>
+            <returns>文章列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.FormatArticlesData(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            格式化列表中的数据
+            </summary>
+            <param name="list">文章列表</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetTimeNote(System.TimeSpan)">
+            <summary>
+            获取时间的相对描述（5小时以前、三天以前、……）
+            </summary>
+            <param name="ts">时间间隔</param>
+            <returns>格式化后的时间间隔</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetIcon(System.Int32)">
+            <summary>
+            获取文章状态的对应图标
+            </summary>
+            <param name="state">文章状态</param>
+            <returns>文章状态对应的图片</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetThumbnail(System.String)">
+            <summary>
+            取得缩略图
+            </summary>
+            <param name="id">文章ID</param>
+            <returns>缩略图地址</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetImage(System.String)">
+            <summary>
+            取得图片
+            </summary>
+            <param name="id">文章ID</param>
+            <returns>图片地址</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.BuildAttributeString(System.String)">
+            <summary>
+            绑定其它信息
+            </summary>
+            <param name="attributeName">属性名称</param>
+            <returns>格式化后的数据</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.OnLoad(System.EventArgs)">
+            <summary>
+            初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetUrl(System.String)">
+            <summary>
+            取得文章标题
+            </summary>
+            <param name="id">文章ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.GetUrl(System.Object)">
+            <summary>
+            取得文章标题
+            </summary>
+            <param name="id">文章ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.SubTitle(System.String,System.Int32)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="title">要截取的文字</param>
+            <param name="maxlength">最大长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleDataProvider.SubTitle(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="title">要截取的文字</param>
+            <param name="maxlenght">最大长度</param>
+            <param name="ext">扩展字符</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.AttachmentHelper">
+            <summary>
+            附件业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ArticleIndexHelper">
+            <summary>
+            文章索引业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ChannelID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.AllowPager">
+            <summary>
+            是否允许分页（默认不允许）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.TitleMaxLength">
+            <summary>
+            标题显示最大长度（默认30个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.Tag">
+            <summary>
+            文章标签参数（默认为""）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.SummaryMaxLength">
+            <summary>
+            摘要显示的最大长度（默认200个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowAtHome">
+            <summary>
+            是否显示置顶文章（默认不显示）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.DateFormat">
+            <summary>
+            日期显示格式（不填为“十五分钟前”样式，可以填写“yyyy-MM-dd”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowToolTip">
+            <summary>
+            鼠标置于链接之上显示完整的标题（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowBySecurityLevel">
+            <summary>
+            是否按栏目权限级别进行文章显示（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.AttachmentNum">
+            <summary>
+            显示附件数量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.AttachmentProtect">
+            <summary>
+            附件保护：仅登录用户可以下载
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.CanDownload">
+            <summary>
+            是否可下载
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowIcon">
+            <summary>
+            是否显示文章小图标（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowSubArticle">
+            <summary>
+            是否显示子栏目文章（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.NoLink">
+            <summary>
+            是否只需显示内容，不需要进入详细页链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ShowChannel">
+            <summary>
+            是否显示文章所在栏目（默认不，显示则设置为类似于“[{0}]”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ChannelHasLink">
+            <summary>
+            频道是否有链接（默认否）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.YearFiltrate">
+            <summary>
+            是否显示年份筛选热链（0为不显示年度，填写需要列举的年度数）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.InformationType">
+            <summary>
+            内容信息类型（默认为文章信息）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.LinkTarget">
+            <summary>
+            新页面的打开模式（默认弹出新窗口）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.IsImage">
+            <summary>
+            是否是图片文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.PagerDiv">
+            <summary>
+            分页控件所处节点对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ThumbnailTag">
+            <summary>
+            缩略图标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.OwnerID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.IsAllInfomation">
+            <summary>
+            是否查询所有(文章和内容模型)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.KeyWord">
+            <summary>
+            通过Url获取查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ColumnCount">
+            <summary>
+            显示多少列
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ContentMaxLength">
+            <summary>
+            内容最大长度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ThisArticle">
+            <summary>
+            当前的文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ThisChannel">
+            <summary>
+            当前栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.Articles">
+            <summary>
+            文章列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.Attachments">
+            <summary>
+            当前文章的附件列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.CurrentChannel">
+            <summary>
+            当前栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ChannelName">
+            <summary>
+            栏目名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ChannelUrl">
+            <summary>
+            当前栏目的Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleDataProvider.ChannelMap">
+            <summary>
+            上下文中的栏目集合
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.PhotoGallery.OnLoad(System.EventArgs)">
+            <summary>
+            初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.PhotoGallery.GetBigPhoto(System.String)">
+            <summary>
+            取得大图路径
+            </summary>
+            <param name="urlSource">大图的路径字符串</param>
+            <returns>大图地址</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.PhotoGallery.GetSmallPhoto(System.String)">
+            <summary>
+            取得小图路径
+            </summary>
+            <param name="urlSource">大图的路径字符串</param>
+            <returns>小图地址</returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.ThumbnailTagSmall">
+            <summary>
+            获取或者设置小缩略图路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.ThumbnailTagBig">
+            <summary>
+            获得或设置大缩略图路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.AttachmentList">
+            <summary>
+            获得或设置图片文章的泛型列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.ThisArticleBigPhoto">
+            <summary>
+            获取当前文章的大缩略图路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.ThisArticleSmallPhoto">
+            <summary>
+            获取当前文章的小缩略图路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PhotoGallery.ArticlesCount">
+            <summary>
+            获取或设置文章显示的条数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CategoryMapProvider.FormartUrl(System.String)">
+            <summary>
+            格式化url
+            </summary>
+            <param name="departID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.Keyword">
+            <summary>
+            类别关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.MaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.ColumnCount">
+            <summary>
+            显示列数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryMapProvider.CacheKey">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ArticleModelProvider">
+            <summary>
+            这个类主要用于文章模型数据的查询
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.LoadArticle">
+            <summary>
+            加载单条记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.LoadArticles">
+            <summary>
+            加载数据集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.GetArticleListFromDB">
+            <summary>
+            取得数据列表
+            </summary>
+            <returns>文章列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.GetIcon(System.Int32)">
+            <summary>
+            获取文章状态的对应图标
+            </summary>
+            <param name="state">文章状态</param>
+            <returns>文章状态对应的图片</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.GetTimeNote(System.TimeSpan)">
+            <summary>
+            获取时间的相对描述（5小时以前、三天以前、……）
+            </summary>
+            <param name="ts">时间间隔</param>
+            <returns>格式化后的时间间隔</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.SubTitle(System.String,System.Int32)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="title">要截取的文字</param>
+            <param name="maxlength">最大长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelProvider.SubTitle(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="title">要截取的文字</param>
+            <param name="maxlenght">最大长度</param>
+            <param name="ext">扩展字符</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.UseModel">
+            <summary>
+            是否使用模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.AllowPager">
+            <summary>
+            是否允许分页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.TitleMaxLength">
+            <summary>
+            标题最大长度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.SummaryMaxLength">
+            <summary>
+            摘要显示的最大长度（默认200个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ShowAtHome">
+            <summary>
+            是否显示置顶文章（默认不显示）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.DateFormat">
+            <summary>
+            日期显示格式（不填为“十五分钟前”样式，可以填写“yyyy-MM-dd”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ThumbnailTag">
+            <summary>
+            缩略图标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.IsImage">
+            <summary>
+            是否是图片文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ShowSubArticle">
+            <summary>
+            是否显示子栏目文章（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ChannelHasLink">
+            <summary>
+            频道是否有链接（默认否）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ShowChannel">
+            <summary>
+            是否显示文章所在栏目（默认不，显示则设置为类似于“[{0}]”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.LinkTarget">
+            <summary>
+            新页面的打开模式（默认弹出新窗口）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.NoLink">
+            <summary>
+            是否只需显示内容，不需要进入详细页链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.KeyWord">
+            <summary>
+            通过Url获取查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ChannelMap">
+            <summary>
+            栏目映射关系
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.ArticleIndexHelper">
+            <summary>
+            文章索引业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.Item">
+            <summary>
+            当前记录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelProvider.Items">
+            <summary>
+            当前的数据集记录
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ArticleTreeProvider">
+            <summary>
+            文章树型结构数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeProvider.BuildMapPathLinkHtml(System.String)">
+            <summary>
+            构造多级文章当前位置超链接
+            </summary>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeProvider.GetArticleListFromDB">
+            <summary>
+            取得数据列表
+            </summary>
+            <returns>文章列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeProvider.FormatArticlesData(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            格式化列表中的数据
+            </summary>
+            <param name="list">文章列表</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeProvider.GetParentArticlePath">
+            <summary>
+            获取父文章路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.Articles">
+            <summary>
+            文章列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.ParentArticlePath">
+            <summary>
+            父文章层级路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.ThisChannel">
+            <summary>
+            当前栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.OwnerID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.TitleMaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.ShowToolTip">
+            <summary>
+            鼠标提示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.OrderFields">
+            <summary>
+            客户已选择的排序字段项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.NoChildsDisplay">
+            <summary>
+            子栏目显示：子栏目为空时，显示上级
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeProvider.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.QueryAjax">
+            <summary>
+            评论数据处理对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryAjax.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryAjax.AccountHelper">
+            <summary>
+            帐户对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleModelRelationProvider.GetUrl(We7.CMS.Common.Article)">
+            <summary>
+            取得当前记录的Url
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelRelationProvider.RelationKey">
+            <summary>
+            映射字段
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelRelationProvider.PageSize">
+            <summary>
+            每一页条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelRelationProvider.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelRelationProvider.RelationCtr">
+            <summary>
+            关联控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleModelRelationProvider.RelationValue">
+            <summary>
+            映射值
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.bttnRetrieve_Onclick(System.Object,System.EventArgs)">
+            <summary>
+            第一步：找回密码，发送邮件
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.btnChangePWD_Onclick(System.Object,System.EventArgs)">
+            <summary>
+            第三步：修改密码
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.GetCheckResult">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.ChangePnlVisible(System.Int32,System.String)">
+            <summary>
+            更改pannel显示
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.CheckValidateCode">
+            <summary>
+            检测验证码是否有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.GetMailHelper">
+            <summary>
+            邮件配置信息
+            </summary>
+            <param name="adviceType"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RetrievePasswordProvider.SendMailOfRetrieveTradePWD(System.String)">
+            <summary>
+            发送更改验证通知
+            </summary>
+            <param name="accountId"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.RetrievePasswordProvider.IsHtml">
+            <summary>
+            是否需要静态化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RetrievePasswordProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CategoryTreeProvider.InitCategorys(We7.CMS.Common.Category)">
+            <summary>
+            当前栏目层级关系
+            </summary>
+            <param name="currentCategory"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.CategoryTreeProvider.BindTree">
+            <summary>
+            绑定树
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CategoryTreeProvider.GetHref(System.String,System.String,System.Boolean)">
+            <summary>
+            得到转向url
+            </summary>
+            <param name="CategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.CategoryHelper">
+            <summary>
+            部门类业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.CurrentCategory">
+            <summary>
+            获取当前部门对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.Keyword">
+            <summary>
+            类别关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.ParentID">
+            <summary>
+            上级部门ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.ShowParentName">
+            <summary>
+            显示父部门
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.TitleMaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CategoryTreeProvider.ShowToolTip">
+            <summary>
+            鼠标提示
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentMapProvider.CreateDepartmentList(System.Collections.Generic.List{We7.CMS.Common.PF.Department})">
+            <summary>
+            得到所有层级的Department
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentMapProvider.GetLevelCount">
+            <summary>
+            得到当前层级显示个数(如果为0则显示全部)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartmentMapProvider.FormartUrl(System.String)">
+            <summary>
+            格式化url
+            </summary>
+            <param name="departID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.CssClass">
+            <summary>
+            样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.AppendQueryKey">
+            <summary>
+            附加查询信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.MaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.ColumnCount">
+            <summary>
+            显示列数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.LevelTwoMax">
+            <summary>
+            二级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.LevelThreeMax">
+            <summary>
+            三级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.LevelFourMax">
+            <summary>
+            四级最多显示个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.ParentID">
+            <summary>
+            父栏目编号        
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentMapProvider.Items">
+            <summary>
+            取得带所有层级关系数据的Department
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShopWindowProvider.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShopWindowProvider.ChannelID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ShopWindowProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ChannelDataProvider">
+            <summary>
+            栏目类控件数据提供者
+            </summary>
+            <summary>
+            栏目数据提供类属性集合
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.ChannelDataProvider.channelFlag">
+            <summary>
+            区别多级栏目和普通栏目(前者false;后者true)
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetThisChannel">
+            <summary>
+            获取当前栏目对象
+            </summary>
+            <returns>当前栏目</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetChannels">
+            <summary>
+            获取子栏目列表
+            </summary>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetParentIDByLevel(System.String)">
+            <summary>
+            根据栏目级别获取父栏目ID
+            </summary>
+            <param name="level">栏目级别</param>
+            <returns>上级栏目ID</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetChannelTree">
+            <summary>
+            取得栏目树列表对象
+            </summary>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetSubChannels(System.String,System.Int32)">
+            <summary>
+            取得子栏目列表
+            </summary>
+            <param name="channelID">栏目ID</param>
+            <param name="maxClass">最大级别数</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.FormatChannelsData(System.Collections.Generic.List{We7.CMS.Common.Channel})">
+            <summary>
+            格式化栏目数据
+            </summary>
+            <param name="list">栏目列表</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetChannelName(System.String)">
+            <summary>
+            根据栏目层数取得栏目Url名称
+            </summary>
+            <param name="level">栏目等级</param>
+            <returns>栏目名称</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetBannerByName">
+            <summary>
+            根据栏目名称取Banner
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelDataProvider.GetSubChannel(System.String,System.Collections.Generic.List{We7.CMS.Common.Channel})">
+            <summary>
+            取得指定栏目ID下的子栏目
+            </summary>
+            <param name="id">指定栏目ID</param>
+            <param name="list">栏目列表</param>
+            <returns>指定ID下的子栏目</returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.IncludeAllSons">
+            <summary>
+            是否包含所有子栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ChannelHelper">
+            <summary>
+            栏目类业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ChannelID">
+            <summary>
+            当前的栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ParentID">
+            <summary>
+            上级栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.DisplayParentChannel">
+            <summary>
+            如果本级栏目不存在子栏目是否本级栏目结构
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.Level">
+            <summary>
+            分级
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.OrderIndex">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ImageMenu">
+            <summary>
+            图片菜单
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ImageFormat">
+            <summary>
+            图片格式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.TitleMaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ShowToolTip">
+            <summary>
+            鼠标提示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.OrderFields">
+            <summary>
+            客户已选择的排序字段项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.MaxTreeClass">
+            <summary>
+            最大菜单层数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.NoChildsDisplay">
+            <summary>
+            子栏目附属品
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.MultiColumn">
+            <summary>
+            多列菜单个数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.ThisChannel">
+            <summary>
+            当前栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelDataProvider.Channels">
+            <summary>
+            栏目列表
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.IShowCategoryProvider">
+            <summary>
+            商城类别导航数据接口
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.XmlShowCategoryProvider">
+            <summary>
+            用于从xml取得数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.XmlShowCategoryProvider.GetThreeLevelData(System.String)">
+            <summary>
+            xml获取三层数据
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.XmlShowCategoryProvider.DataSourceName">
+            <summary>
+            设置xml文件路径
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.DbShowCategoryProvider">
+            <summary>
+            用于从db取得数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DbShowCategoryProvider.GetThreeLevelData(System.String)">
+            <summary>
+            DB获取三层数据
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbShowCategoryProvider.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbShowCategoryProvider.ArticleHelper">
+            <summary>
+            文章业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbShowCategoryProvider.Assistant">
+            <summary>
+            数据访问对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DbShowCategoryProvider.TableName">
+            <summary>
+            db数据库表名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceEditorProvider.HelperFactory">
+            <summary>
+            业务助手工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceEditorProvider.AdviceHelper">
+            <summary>
+            用户管理业务助手
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProviderEx.GetItems">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProviderEx.CreateListCriteria">
+            <summary>
+            创建查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProviderEx.CreateOrders">
+            <summary>
+            创建Order集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProviderEx.GetUrl(System.String)">
+            <summary>
+            根据ID取得Url
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.OwnerID">
+            <summary>
+            导航栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.SecurityQuery">
+            <summary>
+            安全查询
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProviderEx.Items">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.DepartmentProvider.RelationCtrID">
+            <summary>
+            关联的控件ID
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.DepartUtil.GetDepartIds(System.String)">
+            <summary>
+            从Config/Departs.xml取得部门ID值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuAjax.GetThisChannel">
+            <summary>
+            获取当前栏目对象
+            </summary>
+            <returns>当前栏目</returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuAjax.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuAjax.AccountHelper">
+            <summary>
+            权限业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuAjax.ChannelHelper">
+            <summary>
+            栏目业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuAjax.AccountID">
+            <summary>
+            当前用户ID
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.CommentsProvider">
+            <summary>
+            评论属性
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.CommentsProvider.GetListAction">
+            <summary>
+            取得评论Action
+            </summary>
+            <returns>评论Action</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.CommentsProvider.ValidateControl">
+            <summary>
+            验证当前控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.CommentsHelper">
+            <summary>
+            评论业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ArticleHelper">
+            <summary>
+            文章类业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ArticleIDByRedirect">
+            <summary>
+            通过导航取得文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ChannelID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.BindColumnID">
+            <summary>
+            绑定栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ISValidate">
+            <summary>
+            是否验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ISSiginSelect">
+            <summary>
+            是否需要登陆
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.SelectValidate">
+            <summary>
+            选择验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.NameSelect">
+            <summary>
+            是否显示名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.LoginName">
+            <summary>
+            登陆名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ChannelName">
+            <summary>
+            栏目名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.SiginSelect">
+            <summary>
+            登陆选择
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.IsShowCount">
+            <summary>
+            是否显示记录条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ShowCount">
+            <summary>
+            是否显示记录条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.ChannelUrl">
+            <summary>
+            栏目Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.CommentsCount">
+            <summary>
+            评论的条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.CommentsProvider.Rule">
+            <summary>
+            评论声明
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ArticleTreeGetAction">
+            <summary>
+            文章树节点加载
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeGetAction.GetInitArticleTreeRoot">
+            <summary>
+            根节点初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeGetAction.GetArticleChildrenJasonString(System.String,System.Collections.Generic.List{We7.CMS.Common.Article},System.Int32)">
+            <summary>
+            节点展开获取子列表
+            </summary>
+            <param name="parentID"></param>
+            <param name="paths"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeGetAction.GetArticleListFromDB(System.String)">
+            <summary>
+            取得数据列表
+            </summary>
+            <returns>文章列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ArticleTreeGetAction.GetParentArticlePath">
+            <summary>
+            获取父文章路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeGetAction.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeGetAction.ChannelHelper">
+            <summary>
+            栏目类业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeGetAction.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ArticleTreeGetAction.OwnerID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.VisiteCountProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.VisiteCountProvider.PageVisitorHelper">
+            <summary>
+            页面访问业务对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.SiteID">
+            <summary>
+            上级根目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.ShowChildren">
+            <summary>
+            是否显示子站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.TreeCss">
+            <summary>
+            树的Css
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.RootCss">
+            <summary>
+            根节点Css
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.NodeCss">
+            <summary>
+            节点Css
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.LeafCss">
+            <summary>
+            叶子节点Css
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.RootText">
+            <summary>
+            根目录的文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteTreeProvider.Target">
+            <summary>
+            网页打开的目标
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ChannelArticlesProvider">
+            <summary>
+            栏目及下属文章数据提供类属性集合
+            </summary>
+            <summary>
+            栏目及下属文章数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetArticleList(We7.CMS.Common.Channel)">
+            <summary>
+            取得数据列表
+            </summary>
+            <returns>文章列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.FormatArticlesData(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            格式化列表中的数据
+            </summary>
+            <param name="list">文章列表</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetTimeNote(System.TimeSpan)">
+            <summary>
+            获取时间的相对描述（5小时以前、三天以前、……）
+            </summary>
+            <param name="ts">时间间隔</param>
+            <returns>格式化后的时间间隔</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetIcon(System.Int32)">
+            <summary>
+            获取文章状态的对应图标
+            </summary>
+            <param name="state">文章状态</param>
+            <returns>文章状态对应的图片</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetAttachmentName(System.String,System.String)">
+            <summary>
+            取得附件名称
+            </summary>
+            <param name="id">文章ID</param>
+            <param name="type">附件类型</param>
+            <returns>附件名称</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetThumbnail(System.String)">
+            <summary>
+            取得缩略图
+            </summary>
+            <param name="id">文章ID</param>
+            <returns>缩略图地址</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.GetImage(System.String)">
+            <summary>
+            取得图片
+            </summary>
+            <param name="id">文章ID</param>
+            <returns>图片地址</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.ChannelArticlesProvider.LoadArticlesOfChannels">
+            <summary>
+            取得栏目及其下属文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleTitleMaxLength">
+            <summary>
+            文章标题显示最大长度（默认30个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.HotTag">
+            <summary>
+            热点文章标签参数（默认为""）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleTag">
+            <summary>
+            文章列表标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.SummaryMaxLength">
+            <summary>
+            摘要显示的最大长度（默认200个字符）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ShowAtHome">
+            <summary>
+            是否显示置顶文章（默认不显示）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.DateFormat">
+            <summary>
+            日期显示格式（不填为“十五分钟前”样式，可以填写“yyyy-MM-dd”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.AttachmentOneType">
+            <summary>
+            文章附件一显示类型（“.doc,.pdf,.txt”，不填写则为不显示附件一）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.AttachmentTwoType">
+            <summary>
+            文章附件二显示类型（“.doc,.pdf,.txt”，不填写则为不显示附件二）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ShowToolTip">
+            <summary>
+            鼠标置于链接之上显示完整的标题（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ShowIcon">
+            <summary>
+            是否显示文章小图标（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ShowSubArticle">
+            <summary>
+            是否显示子栏目文章（默认不）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.NoLink">
+            <summary>
+            是否只需显示内容，不需要进入详细页链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ShowChannel">
+            <summary>
+            是否显示文章所在栏目（默认不，显示则设置为类似于“[{0}]”格式）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ChannelHasLink">
+            <summary>
+            频道是否有链接（默认否）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.LinkTarget">
+            <summary>
+            新页面的打开模式（默认弹出新窗口）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.IsImage">
+            <summary>
+            是否是图片文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ThumbnailTag">
+            <summary>
+            缩略图标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.AttachmentOneName">
+            <summary>
+            附件1名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.AttachmentTwoName">
+            <summary>
+            附件2名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ColumnCount">
+            <summary>
+            显示多少列
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleShowFields">
+            <summary>
+            文章显示字段
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleOrderFields">
+            <summary>
+            文章排序字段
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.AttachmentHelper">
+            <summary>
+            附件业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ChannelArticlesProvider.ArticleIndexHelper">
+            <summary>
+            文章索引业务助手
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.LoginProviderEx">
+            <summary>
+            重新构建了登陆控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.LoginProviderEx.Authenticate">
+            <summary>
+            验证用户
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProviderEx.IsHtml">
+            <summary>
+            是否需要静态化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProviderEx.IsCustomerReturnUrl">
+            <summary>
+            是否使用之定义返回Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProviderEx.CustomerReturnUrl">
+            <summary>
+            自定义的返回Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProviderEx.ReturnUrl">
+            <summary>
+            转向的Url
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.LoginProvider">
+            <summary>
+            登陆数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.LoginProvider.OnLoad(System.EventArgs)">
+            <summary>
+            数据初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.IsHtml">
+            <summary>
+            是否需要静态化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.ISValidate">
+            <summary>
+            是否验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.IsCustomerReturnUrl">
+            <summary>
+            是否使用之定义返回Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.CustomerReturnUrl">
+            <summary>
+            自定义的返回Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.SelectValidate">
+            <summary>
+            选择验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.AccountName">
+            <summary>
+            当前登录用户账号用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.DepartmentName">
+            <summary>
+            获取当前登录用户的部门
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.LoginNameDisplay">
+            <summary>
+            登录后信息显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.LoginInputDisplay">
+            <summary>
+            登录框显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginProvider.ReturnUrl">
+            <summary>
+            转向的Url
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.QueryList">
+            <summary>
+            查询控件继承控件基类
+            </summary>
+        </member>
+        <member name="F:We7.CMS.WebControls.QueryList.list">
+            <summary>
+            控件页面要展示的列表实例
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.QueryList.FormatArticlesData(System.Collections.Generic.List{We7.CMS.Common.Article})">
+            <summary>
+            格式化列表中的数据
+            </summary>
+            <param name="list">文章列表</param>
+        </member>
+        <member name="M:We7.CMS.WebControls.QueryList.GetUrl(System.Object)">
+            <summary>
+            按ID取得详细页的Url
+            </summary>
+            <param name="id">条目ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.QueryList.GetUrl(System.Object,System.Object)">
+            <summary>
+            按ID取得详细页的Url
+            </summary>
+            <param name="id">条目ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.ThumbnailTag">
+            <summary>
+            缩略图类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.MaxLength">
+             <summary>
+            最大长度
+             </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.ChannelMap">
+            <summary>
+            栏目映射关系
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.Items">
+            <summary>
+            显示的文章集合
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.ArticleHelper">
+            <summary>
+            获得文章帮助类的事例
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.QueryList.BindColumnID">
+            <summary>
+            控件绑定ID
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProvider.GetItems">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProvider.CreateListCriteria">
+            <summary>
+            创建查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProvider.CreateOrders">
+            <summary>
+            创建Order集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceQueryProvider.GetUrl(System.String)">
+            <summary>
+            根据ID取得Url
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.IsShow">
+            <summary>
+            是否公开
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.OwnerID">
+            <summary>
+            导航栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.SecurityQuery">
+            <summary>
+            安全查询
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceQueryProvider.Items">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.UCHelper.GetDepartName(System.Object)">
+            <summary>
+            根据部门ID取得部门名称
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.UCHelper.GetCatName(System.Object)">
+            <summary>
+            取得类别关键字
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.WebControls.AccountEx.SearchCategory">
+            <summary>
+            $codebehindclassname$ 的摘要说明
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.CreateListCriteria">
+            <summary>
+            创建列表查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.CreateOrderArray">
+            <summary>
+            创建信息排序数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.GetItems">
+            <summary>
+            要据查询条件取得反馈列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.GetItem">
+            <summary>
+            取得当前记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.GetAdviceID">
+            <summary>
+            报得反馈ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AdviceProviderEx.GetModelName">
+            <summary>
+            取得当前反馈的模型名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.IsShow">
+            <summary>
+            是否处理
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.ModelName">
+            <summary>
+            当前反馈的模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.QueryKey">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.AdviceTypeID">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.OwnerID">
+            <summary>
+            导航栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.Items">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AdviceProviderEx.Item">
+            <summary>
+            取得当前记录的信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.SiteMapTreeProvider.BindTree">
+            <summary>
+            绑定树
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.SiteMapTreeProvider.InitNode(We7.CMS.Common.Channel,System.Web.UI.WebControls.TreeNode)">
+            <summary>
+            初始化节点方法
+            </summary>
+            <param name="ch"></param>
+            <param name="node"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.SiteMapTreeProvider.CurrentChannel">
+            <summary>
+            获取当前栏目对象
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.AddCommentAction">
+            <summary>
+            评论数据处理对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.Execute">
+            <summary>
+            执行当前操作
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.Authenticate">
+            <summary>
+            验证用户
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.SubmitComment">
+            <summary>
+            添加评论
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.HasIllegalContent(System.String)">
+            <summary>
+            查看是否有非法评论
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.CheckValidateCode">
+            <summary>
+            检测验证码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.AddCommentAction.CheckLogin">
+            <summary>
+            检测是否登陆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.Name">
+            <summary>
+            登陆名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.IsLogin">
+            <summary>
+            是否需要登陆
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.IsAnony">
+            <summary>
+            是否允许匿名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ValidateCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ArticleID">
+            <summary>
+            评论的文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ChannelName">
+            <summary>
+            评论的栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ArticleIDByRedirect">
+            <summary>
+            转向的ArticleID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.CurrentAccount">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.IsSignin">
+            <summary>
+            是否需要登陆
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ISValidate">
+            <summary>
+            是否需要验证码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.AddCommentAction.ISSiginSelect">
+            <summary>
+            是否登陆
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.ListCommentAction">
+            <summary>
+            取得数据列表
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.ListCommentAction.Execute">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListCommentAction.ArticleIDByRedirect">
+            <summary>
+            ArticleID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListCommentAction.ArticleID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListCommentAction.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.ListCommentAction.StartIndexs">
+            <summary>
+            开始页
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.WDWebService">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.Ping">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.PingAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.PingAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetServerTime">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetServerTimeAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetServerTimeAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWDSiteConfigInfo">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWDSiteConfigInfoAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWDSiteConfigInfoAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSite(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSiteAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSiteAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSiteTree(System.String,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSiteTreeAsync(System.String,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSiteTreeAsync(System.String,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSites">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSitesAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetWebSitesAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetSiteSMUrl(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetSiteSMUrlAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.GetSiteSMUrlAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.WD.WDWebService.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.PingCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetServerTimeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetWDSiteConfigInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetWebSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetWebSiteTreeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetWebSitesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.WebControls.WD.WDWebService.GetSiteSMUrlCompleted">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.SiteConfigInfo">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.WDWebUrl">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SiteGroupEnabled">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.CompanyID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.CompanyName">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.CompangDescription">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.RootUrl">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.WebGroupSericeKey">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.WebGroupServiceUrl">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.InformationServiceUrl">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.AdministratorID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.AdministratorKey">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.IsPasswordHashed">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoUrl">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoServername">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoUsername">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoPassword">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoDomain">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.SsoWdID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.SiteConfigInfo.ADUrl">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.WebSite">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.ID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.ParentID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.ServiceID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Index">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Description">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Created">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Updated">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.State">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.InitLock">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Maximum">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Used">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Overdue">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.CpuID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.HdID">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.WebsitePath">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.EnumState">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Alias">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.FullPath">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Url">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Children">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Name">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.Port">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.ZoneName">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.SiteIP">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.WebSite.SiteIisID">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.SiteStates">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Starting">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Started">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Stopping">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Stopped">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Pasuing">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Pasued">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Continuing">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Separating">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Separated">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:We7.CMS.WebControls.WD.SiteStates.UnResponse">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.PingCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.PingCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.PingCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetServerTimeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetServerTimeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetServerTimeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWDSiteConfigInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWDSiteConfigInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetWDSiteConfigInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetWebSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSiteTreeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSiteTreeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetWebSiteTreeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSitesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetWebSitesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetWebSitesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetSiteSMUrlCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.WebControls.WD.GetSiteSMUrlCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.WebControls.WD.GetSiteSMUrlCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.WebControls.GuideSubjectListProvider.FormartUrl(System.String)">
+            <summary>
+            格式化url
+            </summary>
+            <param name="departID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.KeyWord">
+            <summary>
+            父类别编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.MaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.CssClass">
+            <summary>
+            Css样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.ColumnCount">
+            <summary>
+            显示列数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.GuideSubjectListProvider.CacheKey">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.IsHtml">
+            <summary>
+            是否需要静态化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.EmailValidate">
+            <summary>
+            是否进行邮箱验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.UseModel">
+            <summary>
+            是否使用内容模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.ShowProtocol">
+            <summary>
+            是否显示注册协议
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.ModelName">
+            <summary>
+            内容模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.CssClass">
+            <summary>
+            控件样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.AccountID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.UserRegisterProvider.Protocol">
+            <summary>
+            协议
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.InitChannels(We7.CMS.Common.Channel)">
+            <summary>
+            当前栏目层级关系
+            </summary>
+            <param name="currentChannel"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.GetChannels">
+            <summary>
+            获取子栏目列表
+            </summary>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.GetParentIDByLevel(System.String)">
+            <summary>
+            根据栏目级别获取父栏目ID
+            </summary>
+            <param name="level">栏目级别</param>
+            <returns>上级栏目ID</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.FormatChannelsData(System.Collections.Generic.List{We7.CMS.Common.Channel})">
+            <summary>
+            格式化栏目数据
+            </summary>
+            <param name="list">栏目列表</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.GetChannelName(System.String)">
+            <summary>
+            根据栏目层数取得栏目Url名称
+            </summary>
+            <param name="level">栏目等级</param>
+            <returns>栏目名称</returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.TreeMenuTwoProvider.BindTree">
+            <summary>
+            绑定树
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.CurrentChannel">
+            <summary>
+            获取当前栏目对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.ChannelID">
+            <summary>
+            当前的栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.ParentID">
+            <summary>
+            上级栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.ShowParentName">
+            <summary>
+            显示父栏目
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.Level">
+            <summary>
+            分级
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.TitleMaxLength">
+            <summary>
+            标题最大字数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.TreeMenuTwoProvider.ShowToolTip">
+            <summary>
+            鼠标提示
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.LoginAction">
+            <summary>
+            登录数据处理类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.LoginAction.Authenticate">
+            <summary>
+            验证用户
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.LoginAction.CheckValidateCode">
+            <summary>
+            检测验证码
+            </summary>
+            <returns>验证码是否正确</returns>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.IsSignin">
+            <summary>
+            是否登陆
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.ValidateCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.CurrentAccount">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.ISValidate">
+            <summary>
+            是否需要验证码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.ReturnUrl">
+            <summary>
+            转向URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.LoginAction.Action">
+            <summary>
+            当前动作
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.RegisterProvider">
+            <summary>
+            注册数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.ProcessRequest">
+            <summary>
+            处理请求
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.ucEditor_OnSuccess(System.Object,System.EventArgs)">
+            <summary>
+            申请成为开源小组成员完成
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.bttnRegisgerGroup_Click(System.Object,System.EventArgs)">
+            <summary>
+            申请成为开源小组成员
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.ProcessTransfer(System.String)">
+            <summary>
+            处理跳转
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.CheckUserName">
+            <summary>
+            检测用户名是否有效
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.CheckEmail">
+            <summary>
+            检测邮箱是否有效
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.CheckPWD">
+            <summary>
+            检测密码是否有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.CheckRePWD">
+            <summary>
+            检测确认密码是否有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.CheckValidateCode">
+            <summary>
+            检测验证码是否有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.WebControls.RegisterProvider.bttnRegister_Onclick(System.Object,System.EventArgs)">
+            <summary>
+            注册
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.RegisterProvider.IsHtml">
+            <summary>
+            是否需要静态化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RegisterProvider.CssClass">
+            <summary>
+            本控件应用样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RegisterProvider.DefaultRole">
+            <summary>
+            注册用户默认角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.RegisterProvider.IsMallUser">
+            <summary>
+            是否是商城用户
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.PagerProvider">
+            <summary>
+            分页数据提供者
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.PagerProvider.OnLoad(System.EventArgs)">
+            <summary>
+            数据初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.WebControls.PagerProvider.InitPager">
+            <summary>
+            初始化分页控件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.WebControls.PagerProvider.Load(We7.CMS.WebControls.IPager)">
+            <summary>
+            加载数据
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.RelatedID">
+            <summary>
+            相关控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.RecordCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.PageSize">
+            <summary>
+            每一页的显示条数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.Start">
+            <summary>
+            开始页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.End">
+            <summary>
+            结束页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.Previous">
+            <summary>
+            上一页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.Next">
+            <summary>
+            下一页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.FixedLength">
+            <summary>
+            固定显示数字记录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.BeginNumber">
+            <summary>
+            开始页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.LastNumber">
+            <summary>
+            结束页
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.ShowGo">
+            <summary>
+            是否显示GO
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.ShowNav">
+            <summary>
+            是否显示下拉框
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.ShowMessage">
+            <summary>
+            是否显示记录信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.ShowNumNav">
+            <summary>
+            是否显示数字导航
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.CssClass">
+            <summary>
+            Css
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.Fixed">
+            <summary>
+            是否固定显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.StartLabel">
+            <summary>
+            首页的显示文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.PreLabel">
+            <summary>
+            上一页显示文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.NextLabel">
+            <summary>
+            下一页显示文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.EndLabel">
+            <summary>
+            尾页显示文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.DisplayGO">
+            <summary>
+            显示GO
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.DisplayNav">
+            <summary>
+            显示Nav
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.DisplayMessage">
+            <summary>
+            显示Message
+            </summary>
+        </member>
+        <member name="P:We7.CMS.WebControls.PagerProvider.DisplayNumNav">
+            <summary>
+            显示NumNav
+            </summary>
+        </member>
+        <member name="T:We7.CMS.WebControls.AccountEx.Validate">
+            <summary>
+            $codebehindclassname$ 的摘要说明
+            </summary>
+        </member>
+    </members>
+</doc>

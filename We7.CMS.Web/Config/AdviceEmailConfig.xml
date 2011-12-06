@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration >
+  <item name="受理通知" value="Accept" visible="true" >
+    <EmailTitle>
+      用户反馈：{EmailTitle}－等待您的受理！
+    </EmailTitle>
+    <EmailContent>
+      {priority}
+
+      尊敬的办理人：
+
+      您好！
+      您收到这封通知邮件，是因为您有一份反馈信息需要及时进行受理（转交给相应部门进行办理）
+
+      反馈标题为：{title}
+
+      直接点击进入处理页面：{HandleUrl}
+
+      {must}
+
+      {DateTime}
+      {SiteFullName}
+      {SiteUrl}
+      
+    </EmailContent>
+  </item>
+  <item name="办理通知" value="HandleNotify" visible="true" >
+    <EmailTitle>
+      您有{EmailTitle}条新用户反馈
+    </EmailTitle>
+    <EmailContent>
+      尊敬的用户:
+
+      您好!
+
+      这是以一封办理通知邮件，您有新的反馈需要办理，内容如下：
+
+      {EmailContent}
+
+      直接点击进入处理页面：{HandleUrl}
+
+      {DateTime}
+      {SiteFullName}
+      {SiteUrl}
+    </EmailContent>
+  </item>
+  <item name="办理" value="Handle" visible="true" >
+    <EmailTitle>
+      您有新反馈需要办理 {EmailTitle}
+    </EmailTitle>
+    <EmailContent>
+      =========================================================
+      注意事项：1、请不要改动邮件标题，直接回复即可；
+      2、请将回复内容填写到最上面的空白位置。
+
+      尊敬的用户:
+
+      您好!
+
+      这是以一封办理通知邮件，您有新的反馈需要办理，反馈内容如下：
+
+      {EmailContent}
+
+      ---------------------------------------------------------------------
+      您可以按上面的操作直接回复邮件即可办理，也可进入下面页面进行办理：
+      {HandleUrl}
+
+      {DateTime}
+      {SiteFullName}
+      {SiteUrl}
+
+    </EmailContent>
+  </item>
+  <item name="回复用户" value="ReplyUser" visible="true" >
+    <EmailTitle>
+      来自{SiteTitle}：您的反馈“{AdviceTitle}”有消息了
+    </EmailTitle>
+    <EmailContent>
+      尊敬的{UserName}先生/女士：
+
+      您好！
+
+      我们于{DateTime}接收到您的反馈信息（{Title}），有关部门已做出处理，现答复如下：
+
+      {EmailContent}
+
+      感谢您的参与！
+
+      希望您继续支持我们。
+
+      {DateTime}
+      {SiteFullName}
+      {SiteUrl}
+    </EmailContent>
+  </item>
+</configuration>

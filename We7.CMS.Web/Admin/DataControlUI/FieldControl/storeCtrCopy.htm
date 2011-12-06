@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>控件归库</title>
+    <style type="text/css">
+        input, selectd
+        {
+            margin: 0;
+        }
+        body, td
+        {
+            font-size: 12px;
+        }
+        body
+        {
+            padding: 0;
+            margin: 0;
+            font-family: 宋体 Arial;
+            background-color: #F7F7F7;
+        }
+        dl, dd
+        {
+            padding: 0;
+            margin: 0;
+            line-height: 150%;
+            font-size: 12px;
+        }
+        dd
+        {
+            float: left;
+        }
+        dl
+        {
+            width: 100%;
+        }
+        .label
+        {
+            text-align: right;
+        }
+        #desc
+        {
+            width: 204px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function ok()
+        {
+            if(document.getElementById("s").checked)
+            {
+                var jgpattern =/^[A-Za-z0-9]+$/; 
+                var ckey = document.getElementById("key").value; 
+                if(!jgpattern.test(ckey)){ 
+                    alert("标识符命名不合法！标识符只能由字母A~Z与数字0~9组成。"); 
+                    document.getElementById("key").focus();
+                    return ; 
+                } 
+                window.returnValue={t:1,v:{name:document.getElementById("name").value,key:document.getElementById("key").value,desc:document.getElementById("desc").value}};
+            }
+            else
+            {
+                window.returnValue={t:0,v:window.dialogArguments};
+            }
+            window.close();
+        }
+        
+        function hide(id)
+        {
+            document.getElementById(id).style.display='none';
+        }
+        
+        function show(id)
+        {
+            document.getElementById(id).style.display='';
+        }
+        
+    </script>
+
+</head>
+<body>
+    <dl>
+        <dd>
+            <input checked="checked" onclick="show('in')" type="radio" id="s" name="type"
+                value="1" style="width: 20px;" />&nbsp;
+        </dd>
+        <dd>
+            <label for="s">
+                存为新控件</label>
+        </dd>
+        <dd>
+            <input id="c" onclick="hide('in')" type="radio" name="type" value="1" style="width: 20px;" />&nbsp;
+        </dd>
+        <dd>
+            <label for="c">
+                覆盖</label>
+        </dd>
+    </dl>
+    <div id="in">
+        <dl>
+            <dd class="label">
+                名称：
+            </dd>
+            <dd>
+                <input id="name" />
+            </dd>
+            <dd class="label">
+                &nbsp;&nbsp;标识符：
+            </dd>
+            <dd>
+                <input id="key" />
+            </dd>
+        </dl>
+        <dl>
+            <dd class="label">
+                描述：</dd>
+            <dd>
+                <textarea id="desc" cols="40" rows="4"></textarea>
+            </dd>
+        </dl>
+    </div>
+    <dl>
+        <dd>
+            &nbsp;<input type="button" onclick="ok()" value="确定" /><input type="button" onclick="window.close()"
+                value="取消" /></dd>
+    </dl>
+</body>
+</html>

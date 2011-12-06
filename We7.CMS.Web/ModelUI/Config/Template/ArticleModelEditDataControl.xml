@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="文章录入" dir="UCSystemdotAdviceEdit" desc="反馈信息录入类控件集合" model="" group="内容模型" ctrtype="placeholder">
+  <Parameter name="ModelName" title="内容模型"  type="KeyValueSelector" description="请选择对应的内容模型。" required="True" maximum="0" minimum="0" length="0" data="articletype" />
+  <Parameter name="CssClass" title="样式" type="StyleSelector" description="每一种样式对应css文件中的相应名称" required="False" maximum="0" minimum="0" length="0" />
+</DataControl>

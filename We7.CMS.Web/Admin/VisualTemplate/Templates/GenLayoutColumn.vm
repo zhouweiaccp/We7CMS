@@ -1,0 +1,31 @@
+﻿<div style="width: 100%;" controlid="${controlId}"
+    class="RadDock  zeLayoutDock">
+    <div class="RadDock-header">
+    <em>${layoutName}</em>
+    <div class="RadDock-command"><a href="#">编辑</a><a href="javascript:DeleteWdiget('${controlId}');">删除</a></div>
+    </div>
+    <div class="RadDock-content">
+     
+   <div runat="server" class="sf_cols">
+    <div runat="server" style="float: left; width: 33%; margin: 0; " class="sf_colsOut">
+        <div runat="server" style="padding: 0; " class="sf_colsIn">
+            
+        </div>
+    </div>
+    <div runat="server"  style="float: left; width: 34%; margin: 0; " class="sf_colsOut">
+        <div runat="server"  style="margin-left: 12px; padding: 0; " class="sf_colsIn">
+            
+        </div>
+    </div>
+    <div runat="server"  style="float: left; width: 33%; margin: 0; " class="sf_colsOut">
+        <div runat="server"  style="margin-left: 12px; padding: 0; " class="sf_colsIn">
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <input type="hidden" name="${controlId}_ClientState" id="${controlId}_ClientState"
+        autocomplete="off" value='${controlData}'>
+</div>

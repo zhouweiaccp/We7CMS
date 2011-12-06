@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="We7.CMS.Web.Admin.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebEngine2007_CD_Web_Admin_PluginService_PluginInfomation" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1978/Admin/Plugin/PluginInfomation.asmx</Value>
+    </Setting>
+    <Setting Name="We7_CMS_Web_Admin_ShopService_ShopService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:50115/Plugins/ShopPlugin/ShopService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

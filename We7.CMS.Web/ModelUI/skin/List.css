@@ -1,0 +1,39 @@
+.ulList
+{
+	padding: 30px 20px;
+}
+.ulList ul li
+{
+	list-style: none;
+	float: left;
+	padding: 10px 30px;
+}
+.ulList ul li div
+{
+	padding: 5px 0;
+}
+.ulList ul li div.title
+{
+	text-decoration: none;
+	text-align: center;
+	white-space:nowrap;
+	overflow:hidden;
+	word-wrap:normal;padding-left:5px;padding-right:5px;
+}
+.ulList ul li div.title a
+{
+	text-decoration: none;
+}
+.ulList ul li div.img
+{
+	border:1px solid grey;
+	padding-left:5px;
+	padding-right:5px;
+}
+.ulList ul li div.actionbar img,.ulList ul li div.actionbar input
+{
+	cursor: pointer;
+	float: right;
+	margin-right: 3px;
+}
+.ulList ul li div.actionbar{border:1px solid grey; padding-left:8px;padding-right:2px;}

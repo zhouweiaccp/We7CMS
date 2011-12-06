@@ -1,0 +1,3177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.Model.UI</name>
+    </assembly>
+    <members>
+        <member name="F:We7.Model.UI.Upgrade.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Upgrade.bttnUpgrade">
+            <summary>
+            bttnUpgrade 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Upgrade.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Upgrade.ArticleHelper">
+            <summary>
+            文章业务对象
+            </summary>
+        </member>
+        <member name="F:CModel.Container.system.CascadeEditor.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.CascadeEditor.bttnSave">
+            <summary>
+            bttnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.CascadeEditor.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:CModel.Container.system.CascadeEditor.CreateItem(We7.Model.Core.We7Control)">
+            <summary>
+            创建行控件
+            </summary>
+            <param name="field">字段信息</param>
+            <returns>行控件</returns>
+        </member>
+        <member name="T:We7.Model.UI.Converter.DepartmentConvert">
+            <summary>
+            部门转化
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.We7FieldControl.IsDirExists(System.String)">
+            <summary>
+            当前目录存在否,如果没有就创建
+            </summary>
+            <param name="dirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.We7FieldControl.DeleteFile(System.String)">
+            <summary>
+            删除指定文件
+            </summary>
+            <param name="dirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.We7FieldControl.QueryBySql(System.String)">
+            <summary>
+            使用Sql语句查询数据
+            </summary>
+            <param name="sql">Thinkment.Data格式的SQL语句</param>
+            <returns>数据值</returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.We7FieldControl.GetRelationValue(System.String)">
+            <summary>
+            取得同一界面中的关联值
+            </summary>
+            <param name="ctrID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.UI.Controls.We7FieldControl.ArticleID">
+            <summary>
+            当前文章ID
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.We7FieldControl.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.We7FieldControl.ArticleHelper">
+            <summary>
+            文章业务对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.We7FieldControl.Assistant">
+            <summary>
+            数据访问对象
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Text.ltlText">
+            <summary>
+            ltlText 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.SelectInput.TxtInput">
+            <summary>
+            TxtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.SelectInput.DrPListSelect">
+            <summary>
+            DrPListSelect 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.SelectInput.MatchupNode">
+            <summary>
+            JS用, 这个更多选项对应XML里的节点名
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.SelectInput.DialogPath">
+            <summary>
+            JS用,弹出对话框的路径
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.InitOriginalImagePath">
+            <summary>
+            初始化原图
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.GetAllThumbnailConfigs">
+            <summary>
+            加载所有规格列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.SetThumbnail(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            生成小图
+            </summary>
+            <param name="pathabsolute"></param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.GetThumbnailConfigsByNmame(System.String)">
+            <summary>
+            找出缩略图对应尺寸
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.UploadAndCreateThumbnails(System.String)">
+            <summary>
+            上传原图
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.GenerateThumbImage(System.String,System.String,System.String)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="originalFilePath"></param>
+            <param name="ext"></param>
+            <param name="sn"></param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.GenarateHandTypeThumbImage(System.String,System.String)">
+            <summary>
+            手工裁切模式生成缩略图
+            </summary>
+            <param name="originalFilePath"></param>
+            <param name="thumbFilePath"></param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.AddWatermarkToImage(System.String,System.String)">
+            <summary>
+            加水印
+            </summary>
+            <param name="thumbnailFile"></param>
+            <param name="originalFilePath"></param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.GetImgEditNmae(System.String)">
+            <summary>
+            取图片原名
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.page.UploadThumbnail.BindImgList">
+            <summary>
+            绑定指定目录下的文件到ReptImgList
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.LinkButtonlocalHost">
+            <summary>
+            LinkButtonlocalHost 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.SizesDropDownList">
+            <summary>
+            SizesDropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.CutTypeDropDownList">
+            <summary>
+            CutTypeDropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.AddWatermarkCheckbox">
+            <summary>
+            AddWatermarkCheckbox 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.GenerateButton">
+            <summary>
+            GenerateButton 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.localHostPaneUpload">
+            <summary>
+            localHostPaneUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.ImageFileUpload">
+            <summary>
+            ImageFileUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.UploadImage">
+            <summary>
+            UploadImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.ImagesRepeater">
+            <summary>
+            ImagesRepeater 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.UploadThumbnail.imgBackground">
+            <summary>
+            imgBackground 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.page.UploadThumbnail.ImageConfig">
+            <summary>
+            水印参数
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.page.UploadThumbnail.AppPath">
+            <summary>
+            所处应用的虚拟路径
+            </summary>
+            
+        </member>
+        <member name="T:We7.Model.UI.Controls.system.page.UploadThumbnail.ImageDetail">
+            <summary>
+            图片信息类
+            </summary>
+        </member>
+        <member name="F:CModel.Controls.system.Editor.fckEditor">
+            <summary>
+            fckEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ConstCheckBox.chklEnum">
+            <summary>
+            chklEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Controls.page.RelationSelectEx.Params">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Navigation.hlPublish">
+            <summary>
+            hlPublish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Navigation.HyperLink1">
+            <summary>
+            HyperLink1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Container.system.Viewer.CreateItem(We7.Model.Core.We7Control)">
+            <summary>
+            创建行控件
+            </summary>
+            <param name="field">字段信息</param>
+            <returns>行控件</returns>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.Viewer.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.plNavigation">
+            <summary>
+            plNavigation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phNavigation">
+            <summary>
+            phNavigation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.plEditor">
+            <summary>
+            plEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phEditor">
+            <summary>
+            phEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.plList">
+            <summary>
+            plList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phCondition">
+            <summary>
+            phCondition 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phList">
+            <summary>
+            phList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phCommand">
+            <summary>
+            phCommand 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.MultiPanel.phPager">
+            <summary>
+            phPager 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Data.BaseDataProvider.CreateDataSet(We7.Model.Core.ModelInfo)">
+            <summary>
+            根据模型信息创建数据集
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.BaseDataProvider.GetModelDataXml(We7.Model.Core.PanelContext,System.String,System.String@,System.String@)">
+            <summary>
+            取得模型的XML
+            </summary>
+            <param name="data">模型数据</param>
+            <returns>Xml字符串</returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.BaseDataProvider.CheckFieldData(We7.Model.Core.QueryField)">
+            <summary>
+            检测字段数据
+            </summary>
+            <param name="qf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.BaseDataProvider.DoBranches(We7.Model.Core.QueryField,Thinkment.Data.Criteria)">
+            <summary>
+            处理分支
+            </summary>
+            <param name="qf">字段数据</param>
+            <param name="c">查询条件</param>
+            <returns>是否继续执行</returns>
+        </member>
+        <member name="F:We7.CMS.UI.Controls.TextInput.txtInput">
+            <summary>
+            txtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.SimpleList.dataKey">
+            <summary>
+            当前主键字段
+            </summary>
+        </member>
+        <member name="M:CModel.Container.system.SimpleList.GetDataKeys">
+            <summary>
+            取得所选中行的主键值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:CModel.Container.system.SimpleList.gvList">
+            <summary>
+            gvList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field1Lable">
+            <summary>
+            Field1Lable 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field1DropDownList">
+            <summary>
+            Field1DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field2Label">
+            <summary>
+            Field2Label 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field2DropDownList">
+            <summary>
+            Field2DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field3Label">
+            <summary>
+            Field3Label 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.ThreeCascade.Field3DropDownList">
+            <summary>
+            Field3DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.InitControl">
+            <summary>
+            初始化控件
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.InitField">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.InitLable">
+            <summary>
+            初始化标签
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.BindXmlData">
+            <summary>
+            绑定数据(xml)
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.BindDbData">
+            <summary>
+            绑定数据(db)
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.BindDbState">
+            <summary>
+            绑定控件状态
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.GetValue">
+            <summary>
+            返回控件值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.ThreeCascade.GetProvider">
+            <summary>
+            取得查询实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.XMLSelect.DdlXml">
+            <summary>
+            DdlXml 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.XMLSelect.phValidate">
+            <summary>
+            phValidate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Select.ddlEnum">
+            <summary>
+            ddlEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.DateTime.txtInput">
+            <summary>
+            txtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ConstRadionButton.rblEnum">
+            <summary>
+            rblEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.CheckBox.chklEnum">
+            <summary>
+            chklEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.fuImage">
+            <summary>
+            fuImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.bttnUpload">
+            <summary>
+            bttnUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.bttnOrigin">
+            <summary>
+            bttnOrigin 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.bttnThumbnail">
+            <summary>
+            bttnThumbnail 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.ltlMsg">
+            <summary>
+            ltlMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.ddlThumbType">
+            <summary>
+            ddlThumbType 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.txtWidth">
+            <summary>
+            txtWidth 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.txtHeight">
+            <summary>
+            txtHeight 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.imgThumb">
+            <summary>
+            imgThumb 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUpload.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.SimpleEditorPanel.plEditor">
+            <summary>
+            plEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.SimpleEditorPanel.phNavigation">
+            <summary>
+            phNavigation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.SimpleEditorPanel.phEditor">
+            <summary>
+            phEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.SimpleEditorPanel.phCondition">
+            <summary>
+            phCondition 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.InitControl">
+            <summary>
+            初始化控件
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.InitField">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.InitLable">
+            <summary>
+            初始化标签
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.BindXmlData">
+            <summary>
+            绑定数据(xml)
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.BindDbData">
+            <summary>
+            绑定控件数据(db)
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.BindDbState">
+            <summary>
+            绑定控件状态(db)
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.GetValue">
+            <summary>
+            返回控件值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.we7.DoubleCascade.GetProvider">
+            <summary>
+            取得查询实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.DoubleCascade.Field1Lable">
+            <summary>
+            Field1Lable 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.DoubleCascade.Field1DropDownList">
+            <summary>
+            Field1DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.DoubleCascade.Field2Label">
+            <summary>
+            Field2Label 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.DoubleCascade.Field2DropDownList">
+            <summary>
+            Field2DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.morselect.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.page.morselect.ChbList">
+            <summary>
+            ChbList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.page.morselect.Clientid">
+             <summary>
+            JS要用到给父窗口控件赋值
+             </summary>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.fuImage">
+            <summary>
+            fuImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.bttnUpload">
+            <summary>
+            bttnUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.bttnOrigin">
+            <summary>
+            bttnOrigin 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.bttnThumbnail">
+            <summary>
+            bttnThumbnail 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.ltlMsg">
+            <summary>
+            ltlMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.ddlThumbType">
+            <summary>
+            ddlThumbType 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.txtWidth">
+            <summary>
+            txtWidth 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.txtHeight">
+            <summary>
+            txtHeight 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.imgThumb">
+            <summary>
+            imgThumb 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.GetAllThumbnailConfigs">
+            <summary>
+            加载所有规格列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadExNew.ConfigPath">
+            <summary>
+            xml文件路径
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.SimpleAttachment.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.SimpleAttachment.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.SimpleAttachment.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.SimpleAttachment.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.SimpleAttachment.fuImage">
+            <summary>
+            fuImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.SimpleAttachment.bttnUpload">
+            <summary>
+            bttnUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.SimpleAttachment.ltlMsg">
+            <summary>
+            ltlMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer2.MenuTabLabel">
+            <summary>
+            MenuTabLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer2.ModelLabel">
+            <summary>
+            ModelLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer2.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer2.bttnSave">
+            <summary>
+            bttnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer2.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Viewer.MenuTabLabel">
+            <summary>
+            MenuTabLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Viewer.ModelLabel">
+            <summary>
+            ModelLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Viewer.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Viewer.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Viewer.bttnNew">
+            <summary>
+            bttnNew 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.Viewer.CreateItem(We7.Model.Core.We7Control)">
+            <summary>
+            创建行控件
+            </summary>
+            <param name="field">字段信息</param>
+            <returns>行控件</returns>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.Viewer.BuildNavString">
+            <summary>
+            构建标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnDelSel">
+            <summary>
+            bttnDelSel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnExamine">
+            <summary>
+            bttnExamine 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnShare">
+            <summary>
+            bttnShare 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnSetTop">
+            <summary>
+            bttnSetTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnPublishShared">
+            <summary>
+            bttnPublishShared 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimpleCommand.bttnGetShared">
+            <summary>
+            bttnGetShared 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Command.BaseCommand.Do(We7.Model.Core.PanelContext)">
+            <summary>
+            执行的命令
+            </summary>
+            <param name="data">模型参数</param>
+            <returns>执行命令得到的结果</returns>
+        </member>
+        <member name="P:We7.Model.UI.Command.BaseCommand.HelperFactory">
+            <summary>
+            业务工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Command.BaseCommand.ArticleHelper">
+            <summary>
+            栏目业务工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Command.BaseCommand.ChannelHelper">
+            <summary>
+            栏目业务工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Command.BaseCommand.AccountID">
+            <summary>
+            获取用户ID
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Thumbnail.txtPath">
+            <summary>
+            txtPath 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.RelationSelect.ddlEnum">
+            <summary>
+            ddlEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.RelationSelect.LinkButton1">
+            <summary>
+            LinkButton1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.RelationSelect.LinkButton2">
+            <summary>
+            LinkButton2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.RelationSelect.newID">
+            <summary>
+            newID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ModelToAdviceLable.ltlText">
+            <summary>
+            ltlText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ModelToAdviceLable.lblValue">
+            <summary>
+            lblValue control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ModelToAdviceLable.HelperFactory">
+            <summary>
+            业务助手工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ModelToAdviceLable.AdviceTypeHelper">
+            <summary>
+            反馈类别助手
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ModelToAdviceLable.AdviceHelper">
+            <summary>
+            反馈助手
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.We7Pager.Pager">
+            <summary>
+            Pager 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.SimpleEditor.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.SimpleEditor.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.SimpleEditor.CreateItem(We7.Model.Core.We7Control)">
+            <summary>
+            创建行控件
+            </summary>
+            <param name="field">字段信息</param>
+            <returns>行控件</returns>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Password.txtInput">
+            <summary>
+            txtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Image.img">
+            <summary>
+            img 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ChildrenTableHorizontal.btnToggle">
+            <summary>
+            btnToggle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ChildrenTableHorizontal.divCt">
+            <summary>
+            divCt control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.ChildrenTableHorizontal.hfPanelVisible">
+            <summary>
+            hfPanelVisible control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTableHorizontal.GetValue">
+            <summary>
+            供内容模型程序调用，取得模型值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTableHorizontal.BindList">
+            <summary>
+            绑定列表
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTableHorizontal.FindControl(System.String)">
+            <summary>
+            查找子控件
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTableHorizontal.FindControl(System.String,System.Web.UI.Control)">
+            <summary>
+            递归查找控件
+            </summary>
+            <param name="name"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTableHorizontal.UIHelper">
+            <summary>
+            UI处理对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTableHorizontal.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTableHorizontal.EditorContext">
+            <summary>
+            编辑面板上下文
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTableHorizontal.ListContext">
+            <summary>
+            列表面板上下文
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.GetAllThumbnailConfigs">
+            <summary>
+            加载所有规格列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.fuImage">
+            <summary>
+            fuImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.bttnUpload">
+            <summary>
+            bttnUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.bttnOrigin">
+            <summary>
+            bttnOrigin 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.bttnThumbnail">
+            <summary>
+            bttnThumbnail 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.ltlMsg">
+            <summary>
+            ltlMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.ddlThumbType">
+            <summary>
+            ddlThumbType 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.txtWidth">
+            <summary>
+            txtWidth 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.txtHeight">
+            <summary>
+            txtHeight 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx2.imgThumb">
+            <summary>
+            imgThumb 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer.MenuTabLabel">
+            <summary>
+            MenuTabLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer.ModelLabel">
+            <summary>
+            ModelLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer.UxLayout">
+            <summary>
+            UxLayout 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutViewer.bttnSave">
+            <summary>
+            bttnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.UxLayoutViewer.BuildNavString">
+            <summary>
+            构建标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:CModel.Container.system.SimpleCondition.tblQuery">
+            <summary>
+            tblQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.SimpleCondition.trQuery">
+            <summary>
+            trQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.SimpleCondition.bttnQuery">
+            <summary>
+            bttnQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.DateTimeLabel.ltlText">
+            <summary>
+            ltlText 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:CModel.Controls.system.Attachment.AttachUploadButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            上传附件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CModel.Controls.system.Attachment.BindDataList">
+            <summary>
+            绑定指定目录下的文件到ReptImgList
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:CModel.Controls.system.Attachment.BtnDel_Click(System.Object,System.Web.UI.WebControls.RepeaterCommandEventArgs)">
+            <summary>
+            删除一个已经上传的文件
+            </summary>
+            <param name="source"></param>-
+            <param name="e"></param>
+        </member>
+        <member name="F:CModel.Controls.system.Attachment.AttachUpload">
+            <summary>
+            AttachUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Controls.system.Attachment.AttachUploadButton">
+            <summary>
+            AttachUploadButton 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Controls.system.Attachment.ReptImgList">
+            <summary>
+            ReptImgList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Controls.system.Attachment.TxtPath">
+            <summary>
+            TxtPath 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:CModel.Controls.system.Attachment.DialogPath">
+            <summary>
+            文章附件目录相对路径
+            </summary>
+        </member>
+        <member name="T:We7.Model.UI.Controls.cs.ICascadeDataProvider">
+            <summary>
+            联动数据据接口
+            </summary>
+        </member>
+        <member name="T:We7.Model.UI.Controls.cs.XmlCascadeDataProvider">
+            <summary>
+            用于从xml取得联动数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.cs.XmlCascadeDataProvider.SetNodesName(System.String)">
+            <summary>
+            设置节点名配置
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.cs.XmlCascadeDataProvider.SetAttributesName(System.String)">
+            <summary>
+            设置属性名配置
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.XmlCascadeDataProvider.XmlPath">
+            <summary>
+            设置xml文件路径
+            </summary>
+        </member>
+        <member name="T:We7.Model.UI.Controls.cs.DbCascadeDataProvider">
+            <summary>
+            用于从xml取得联动数据
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.ArticleHelper">
+            <summary>
+            文章业务对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Assistant">
+            <summary>
+            数据访问对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.TableName">
+            <summary>
+            db数据库表名
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field1TextMapping">
+            <summary>
+            一级控件文本对应数据库字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field1ValueMapping">
+            <summary>
+            一级控件值对应数据库字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field2TextMapping">
+            <summary>
+            二级控件文本对应数据库字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field2ValueMapping">
+            <summary>
+            二级控件值对应数据库字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field3TextMapping">
+            <summary>
+            三级控件文本对应数据库字段
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.cs.DbCascadeDataProvider.Field3ValueMapping">
+            <summary>
+            三级控件值对应数据库字段
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.EditorPanel.plEditor">
+            <summary>
+            plEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.EditorPanel.phNavigation">
+            <summary>
+            phNavigation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.EditorPanel.phEditor">
+            <summary>
+            phEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.EditorPanel.phCondition">
+            <summary>
+            phCondition 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Panel.system.EditorPanel.IsViewer">
+            <summary>
+            是否是浏览控件
+            </summary>
+        </member>
+        <member name="F:CModel.Controls.we7.ChannelSelect.ddlChannel">
+            <summary>
+            ddlChannel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Controls.we7.ChannelSelect.rfChannel">
+            <summary>
+            rfChannel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.UserIdToNameLable.ltlText">
+            <summary>
+            ltlText 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Controls.system.TextArea.txtInput">
+            <summary>
+            txtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.MultiUploadify.pageValues">
+            <summary>
+            pageValues 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.AttachmentUpload.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.AttachmentUpload.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.AttachmentUpload.fuImage">
+            <summary>
+            fuImage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.AttachmentUpload.bttnUpload">
+            <summary>
+            bttnUpload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.page.AttachmentUpload.ltlMsg">
+            <summary>
+            ltlMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.AttachmentUpload.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.AttachmentUpload.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.Editor.CreateItem(We7.Model.Core.We7Control)">
+            <summary>
+            创建行控件
+            </summary>
+            <param name="control">字段信息</param>
+            <returns>行控件</returns>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.Editor.BuildNavString">
+            <summary>
+            构建标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.MenuTabLabel">
+            <summary>
+            MenuTabLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.editMode">
+            <summary>
+            editMode 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.ModelLabel">
+            <summary>
+            ModelLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.trBtn">
+            <summary>
+            trBtn 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.bttnSave">
+            <summary>
+            bttnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Editor.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Container.we7.Editor.BackUrl">
+            <summary>
+            返回地址
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.plList">
+            <summary>
+            plList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phNavigation">
+            <summary>
+            phNavigation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.msg">
+            <summary>
+            msg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phMode">
+            <summary>
+            phMode 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phCommand">
+            <summary>
+            phCommand 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phCondition">
+            <summary>
+            phCondition 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phList">
+            <summary>
+            phList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Panel.system.ListPanel.phPager">
+            <summary>
+            phPager 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Panel.system.ListPanel.InitPanel">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Panel.system.ListPanel.BtnBackInit">
+            <summary>
+            返回按钮初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Panel.system.ListPanel.ModeInit">
+            <summary>
+            列表模式初始化
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Panel.system.ListPanel.DoPreCommand(System.Object,We7.Model.Core.ModelEventArgs)">
+            <summary>
+            执行命令前，在这里进行multirow多行值传递
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:We7.Model.UI.Converter.ProcessStateConvert">
+            <summary>
+            类别转化
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.RadioButton.rblEnum">
+            <summary>
+            rblEnum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Number.txtInput">
+            <summary>
+            txtInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Number.rvInput">
+            <summary>
+            rvInput 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.DicLabel.ltlText">
+            <summary>
+            ltlText 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.tblQuery">
+            <summary>
+            tblQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.trQuery">
+            <summary>
+            trQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.bttnQuery">
+            <summary>
+            bttnQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.errMsg">
+            <summary>
+            errMsg 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.StateLiteral">
+            <summary>
+            StateLiteral 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Condition.IncludeSubLiteral">
+            <summary>
+            IncludeSubLiteral 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:We7.Model.UI.Container.we7.Condition.CurrentState">
+            <summary>
+            当前过滤条件，文章状态：启用|禁用|审核
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.GUID.hfValue">
+            <summary>
+            hfValue 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.SimpleImage.UploadFile">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Web.Admin.ContentModel.Controls.Page.SimpleImage.GetFileFolder">
+            <summary>
+            创建文件路径
+            </summary>
+            <param name="ext">文件扩展名</param>
+            <returns>文件的绝地路径</returns>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.fuImage">
+            <summary>
+            fuImage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.ddlGType">
+            <summary>
+            ddlGType control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.ddlGSize">
+            <summary>
+            ddlGSize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.fuThumbnail">
+            <summary>
+            fuThumbnail control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.bttnOrign">
+            <summary>
+            bttnOrign control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.bttnThumbnail">
+            <summary>
+            bttnThumbnail control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:We7.CMS.Web.Admin.ContentModel.Controls.Page.ImageUploadEx.bttnBoth">
+            <summary>
+            bttnBoth control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.QueryAjax.ProcessXml2LevelCascade">
+            <summary>
+            xml的二级数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.QueryAjax.ProcessXml3LevelCascade">
+            <summary>
+            xml的三级数据
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.QueryAjax.GetDoubleCascadeField2">
+            <summary>
+            联动控件加载二级菜单数据
+            </summary>
+            <param name="field2TextMapping">二级菜单文本字段</param>
+            <param name="field2ValueMapping">二级菜单值字段</param>
+            <param name="table">查询表名</param>
+            <param name="field1ValueMapping">一级菜单值字段</param>
+            <param name="field1">一级菜单当前选中的值</param>
+        </member>
+        <member name="M:We7.Model.UI.Controls.page.QueryAjax.GetThreeCascadeField3">
+            <summary>
+            联动控件加载三级菜单数据
+            </summary>
+            <param name="field2TextMapping">二级菜单文本字段</param>
+            <param name="field2ValueMapping">二级菜单值字段</param>
+            <param name="table">查询表名</param>
+            <param name="field1ValueMapping">一级菜单值字段</param>
+            <param name="field1">一级菜单当前选中的值</param>
+        </member>
+        <member name="P:We7.Model.UI.Controls.page.QueryAjax.Params">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.page.QueryAjax.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.page.QueryAjax.ArticleHelper">
+            <summary>
+            文章业务对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.page.QueryAjax.Assistant">
+            <summary>
+            数据访问对象
+            </summary>
+        </member>
+        <member name="T:We7.Model.UI.Controls.system.page.ThumbnailServer">
+            <summary>
+            $codebehindclassname$ 的摘要说明
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.cs.FileHelp.IsDirExists(System.String)">
+            <summary>
+            当前目录存在否,如果没有就创建
+            </summary>
+            <param name="dirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.cs.FileHelp.DeleteFile(System.String)">
+            <summary>
+            删除指定文件
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.cs.FileHelp.GetFileName(System.String)">
+            <summary>
+            取文件名
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutEditor.MenuTabLabel">
+            <summary>
+            MenuTabLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutEditor.ModelLabel">
+            <summary>
+            ModelLabel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutEditor.rpEditor">
+            <summary>
+            rpEditor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutEditor.bttnSave">
+            <summary>
+            bttnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.UxLayoutEditor.bttnEdit">
+            <summary>
+            bttnEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.UxLayoutEditor.BuildNavString">
+            <summary>
+            构建标签项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.Model.UI.Converter.StateConvert">
+            <summary>
+            类别转化
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.CategoryDoubleCascade.Field1DropDownList">
+            <summary>
+            Field1DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.CategoryDoubleCascade.Field2Hidden">
+            <summary>
+            Field2Label 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.CategoryDoubleCascade.Field2DropDownList">
+            <summary>
+            Field2DropDownList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimplenNavigation.lnkPublish">
+            <summary>
+            lnkPublish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.system.SimplenNavigation.lnkList">
+            <summary>
+            lnkList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:CModel.Container.system.SimplePager.Pager">
+            <summary>
+            Pager 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Converter.FormatTags.Format(System.String)">
+            <summary>
+            格式化标签，使其变为 <a href=''>标签</a> 形式
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.IP.lblIP">
+            <summary>
+            txtPath 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Thumbnail.TxtPath">
+            <summary>
+            TxtPath 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Controls.system.Thumbnail.ImagesLiteralList">
+            <summary>
+            ImagesLiteralList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.Thumbnail.BindImgList">
+            <summary>
+            绑定指定目录下的文件到ReptImgList
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.Thumbnail.DialogPath">
+            <summary>
+            文章附件目录相对路径
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.TagsLiteral">
+            <summary>
+            TagsLiteral 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.RemoveTagLi">
+            <summary>
+            RemoveTagLi 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkNewArticle">
+            <summary>
+            lnkNewArticle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkPubLish">
+            <summary>
+            lnkPubLish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkStopPubLish">
+            <summary>
+            lnkStopPubLish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkSubmitAudit">
+            <summary>
+            lnkSubmitAudit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.MoveToSpan">
+            <summary>
+            MoveToSpan 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.MoveToHyperLink">
+            <summary>
+            MoveToHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkMoveTo">
+            <summary>
+            lnkMoveTo 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.hfMoveTo">
+            <summary>
+            hfMoveTo 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.LinkToSpan">
+            <summary>
+            LinkToSpan 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.HyperLinkCreateRefer">
+            <summary>
+            HyperLinkCreateRefer 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkLinkTo">
+            <summary>
+            lnkLinkTo 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.hfLinkTo">
+            <summary>
+            hfLinkTo 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkSetTop">
+            <summary>
+            lnkSetTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkCancelTop">
+            <summary>
+            lnkCancelTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkAddTag">
+            <summary>
+            lnkAddTag 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.hfTag">
+            <summary>
+            hfTag 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkPublishShared">
+            <summary>
+            lnkPublishShared 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkReciveShared">
+            <summary>
+            lnkReciveShared 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkDelSel">
+            <summary>
+            lnkDelSel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkRefresh">
+            <summary>
+            lnkRefresh 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.Command.lnkSort">
+            <summary>
+            lnkSort 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Data.ArticleDataProvider.DoBranches(We7.Model.Core.QueryField,Thinkment.Data.Criteria)">
+            <summary>
+            处理分支
+            </summary>
+            <param name="qf">字段数据</param>
+            <param name="c">Criteria</param>
+            <returns>是否继续执行</returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.ArticleDataProvider.CheckModelData(We7.Model.Core.PanelContext)">
+            <summary>
+            检测模型数据是否正确
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="F:We7.Model.UI.Controls.we7.Attachment.txtPath">
+            <summary>
+            txtPath 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.RemoveTagLi">
+            <summary>
+            RemoveTagLi 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkNewArticle">
+            <summary>
+            lnkNewArticle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkPubLish">
+            <summary>
+            lnkPubLish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkStopPubLish">
+            <summary>
+            lnkStopPubLish 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkSubmitAudit">
+            <summary>
+            lnkSubmitAudit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.QuoteSpan">
+            <summary>
+            QuoteSpan 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.QuoteHyperLink">
+            <summary>
+            QuoteHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.Span2">
+            <summary>
+            Span2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.AddTopicHyperLink">
+            <summary>
+            AddTopicHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.MoveToSpan">
+            <summary>
+            MoveToSpan 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.MoveToHyperLink">
+            <summary>
+            MoveToHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.HyperLinkCreateRefer">
+            <summary>
+            HyperLinkCreateRefer 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkSetTop">
+            <summary>
+            lnkSetTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkCancelTop">
+            <summary>
+            lnkCancelTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.ShareHyperLink">
+            <summary>
+            ShareHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.GetShareHyperLink">
+            <summary>
+            GetShareHyperLink 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkDelSel">
+            <summary>
+            lnkDelSel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.MultiCommand.lnkRefresh">
+            <summary>
+            lnkRefresh 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:We7.Model.UI.Converter.ChannelConvert">
+            <summary>
+            类别转化
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTable.GetValue">
+            <summary>
+            供内容模型程序调用，取得模型值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTable.BindList">
+            <summary>
+            绑定列表
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTable.FindControl(System.String)">
+            <summary>
+            查找子控件
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Controls.system.ChildrenTable.FindControl(System.String,System.Web.UI.Control)">
+            <summary>
+            递归查找控件
+            </summary>
+            <param name="name"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTable.UIHelper">
+            <summary>
+            UI处理对象
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTable.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTable.EditorContext">
+            <summary>
+            编辑面板上下文
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Controls.system.ChildrenTable.ListContext">
+            <summary>
+            列表面板上下文
+            </summary>
+        </member>
+        <member name="T:We7.Model.UI.Converter.CategoryConvert">
+            <summary>
+            类别转化
+            </summary>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.List.dataKey">
+            <summary>
+            当前主键字段
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.List.InitUlList(We7.Model.Core.ListResult)">
+            <summary>
+            显示列图模式
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.List.GetLinkUrl(System.Data.DataRow,System.Web.UI.HtmlControls.HtmlAnchor)">
+            <summary>
+            获取链接地址
+            </summary>
+            <param name="dr"></param>
+            <param name="a"></param>
+        </member>
+        <member name="M:We7.Model.UI.Container.we7.List.GetDataKeys">
+            <summary>
+            取得所选中行的主键值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.List.gvList">
+            <summary>
+            gvList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.List.ulList">
+            <summary>
+            ulList 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.List.DelBtn">
+            <summary>
+            DelBtn 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:We7.Model.UI.Container.we7.List.delID">
+            <summary>
+            delID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.CreateTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            添加表
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.UpdateTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            更新表
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.DeleteTable(We7.Model.Core.ModelInfo)">
+            <summary>
+            删除表
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.GetDataRow(System.String,System.String)">
+            <summary>
+            根据Sql条件查询数据行
+            </summary>
+            <param name="table">条件sql</param>
+            <param name="sqlCondition">Condition</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.Count(System.String,System.String)">
+            <summary>
+            Get Count
+            </summary>
+            <param name="table">Table Name </param>
+            <param name="sqlCondition"> Condition </param>
+            <returns>Count</returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.Query(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            对当前数据进行查询
+            </summary>
+            <param name="table">数据表</param>
+            <param name="sqlCondition">查询条件</param>
+            <param name="start">记录开始序号</param>
+            <param name="querycount">查询条数</param>
+            <param name="orders">排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.CreateModelTables">
+            <summary>
+            创建所有的文章模型表
+            </summary>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.GetDbType(We7.Model.Core.We7DataColumn)">
+            <summary>
+            取得数据类型
+            </summary>
+            <param name="dc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.GetSqlFormat(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            取得Sql格式化语式
+            </summary>
+            <param name="table">表名</param>
+            <param name="sqlwhere">查询条件</param>
+            <param name="orders">排序</param>
+            <param name="startindex">开始记录序号</param>
+            <param name="itemcount">查询记录条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.ExecuteSql(System.String)">
+            <summary>
+            执行语句
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.Query(System.String)">
+            <summary>
+            执行查询
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.Model.UI.Data.DataBaseHelper.Get(System.String)">
+            <summary>
+            取得单个数据
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.Model.UI.Data.DataBaseHelper.HelperFactory">
+            <summary>
+            业务工厂
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Data.DataBaseHelper.ArticleHelper">
+            <summary>
+            文章业务助手
+            </summary>
+        </member>
+        <member name="P:We7.Model.UI.Data.DataBaseHelper.Assistant">
+            <summary>
+            数据助手
+            </summary>
+        </member>
+    </members>
+</doc>

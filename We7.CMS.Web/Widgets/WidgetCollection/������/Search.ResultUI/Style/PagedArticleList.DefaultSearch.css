@@ -1,0 +1,128 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:PagedArticleList.DefaultSearch
+ * Style:PagedArticleList_DefaultSearch
+ * Desc:PagedArticleList.DefaultSearch部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/
+.PagedArticleList_DefaultSearch .article_list
+{
+}
+
+.PagedArticleList_DefaultSearch .article_list h3{
+    background: url(../images/back2.gif) no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+.PagedArticleList_DefaultSearch .article_list h3 span
+{
+    background: url(../images/sidebar.gif) no-repeat left top;
+    display: inline-block;
+    padding-left: 37px;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em
+{
+    background: url(../images/sidebar.gif) no-repeat right -33px;
+    padding-right: 37px;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em a
+{
+    color: #ffff00;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em a:hover
+{
+    color: #fff;
+}
+.PagedArticleList_DefaultSearch .article_list ul
+{
+    padding: 10px 10px 10px 10px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.PagedArticleList_DefaultSearch .article_list li
+{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    background: url(../images/line.gif) repeat-x left bottom;
+}
+.PagedArticleList_DefaultSearch .article_list li span.datetime
+{
+    float: right;
+    padding-right: 5px;
+}
+.PagedArticleList_DefaultSearch .article_list li a
+{
+    color: #333;
+    padding-left: 20px;
+    background: url(../images/icon4.gif) no-repeat left -29px;
+}
+.PagedArticleList_DefaultSearch .article_list li a:hover {
+    background: url(../images/icon4.gif) no-repeat scroll left 1px transparent;
+    color: #AE541F;
+}
+.PagedArticleList_DefaultSearch .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat left -269px;
+}
+.PagedArticleList_DefaultSearch .clear
+{
+    clear: both;
+}
+.PagedArticleList_DefaultSearch .clear:after
+{
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.PagedArticleList_DefaultSearch .page_css, .class_page
+{
+    text-align: center;
+    padding: 5px 0;
+}
+.PagedArticleList_DefaultSearch .page_css a, .class_page a
+{
+    display: inline-block;
+    border: 1px solid #a8c1ce;
+    padding: 3px 8px;
+    color: #4a89a9;
+    line-height: 100%;
+}
+.PagedArticleList_DefaultSearch .page_css a:hover, .class_page a:hover
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_DefaultSearch .page_css b a, .class_page b a
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_DefaultSearch .page_line
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+/*************************************************************
+ * Command:End
+ * Control:PagedArticleList.DefaultSearch
+ * Style:PagedArticleList_DefaultSearch
+ * Desc:PagedArticleList.DefaultSearch部件的样式
+ * Quot:site.home|site.welcome
+*************************************************************/
+
+
+
+
+

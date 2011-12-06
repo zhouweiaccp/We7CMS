@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="noindex, nofollow" name="robots" />
+	<script src="../common/fck_dialog_common.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+var dialog	= window.parent ;
+var oEditor = dialog.InnerDialogLoaded() ;
+
+window.onload = function()
+{
+	// First of all, translate the dialog box texts
+	oEditor.FCKLanguageManager.TranslatePage(document) ;
+
+    
+    var win=window.top;
+    var txt=win.getHeaderText();
+	GetE('txtHeader').value =txt ;
+	
+	dialog.SetOkButton( true ) ;
+//	SelectField( 'txtHeader' ) ;
+}
+
+function Ok()
+{
+	var win=window.top;
+    win.setHeaderText(GetE('txtHeader').value);
+	return true ;
+}
+	</script>
+</head>
+<body >
+<div id="divInfo"  >
+	<table width="100%" style="height: 100%">
+		<tr>
+			<td align="center">
+				<span style="font-size:14px;font-weight:bold" >编辑模板的HEAD信息。这部分的内容，在应用模板的时候，添加到HTML页面的HEAD部分。</span>
+			</td>
+        </tr>
+        <tr>
+			<td align="center" valign="top" >
+				<textarea id="txtHeader" rows="20"  cols="100" style="font-size:14px;width:600px;height:300px"  ></textarea>
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

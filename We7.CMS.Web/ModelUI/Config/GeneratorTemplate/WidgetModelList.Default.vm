@@ -1,0 +1,34 @@
+﻿#set ($pre='###')
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.CMS.UI.Widget.WidgetList" %>
+<div class="<%=CssClass %> <%=MarginCss %>">
+    <h3>
+        <span><em>
+            <%=Channel.Name %></em></span><a title="更多" target="_blank" href="<%=Channel.FullUrl %>">
+                <img align="absmiddle" alt="更多" src="<%=ThemePath %>/images/more.gif"></a></h3>
+    <ul>
+        <% foreach (DataRow Item in Items)
+           { %>
+        <li>
+			<a target="_self" href="<%=GetUrl(Item["ID"]) %>">
+				#foreach($item in $columns)
+					<%=Item["$item.Name"] %>&nbsp;
+				#end
+			</a>
+			<span class="datetime"><%=ToDateStr(Item["Updated"],DateFormat) %></span></li>
+        <%} %>
+    </ul>
+    <div class="underline_area">
+    </div>
+</div>
+<script type="text/C#" runat="server">
+    [ControlDescription(Desc = "$model.Label列表部件", Author = "系统生成")]
+    string MetaData;
+
+    public override string ModelName
+    {
+        get
+        {
+            return "$model.ModelName";
+        }
+    }
+</script>

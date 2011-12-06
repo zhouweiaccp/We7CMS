@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="反馈查询列表" dir="AdviceQueryList" desc="反馈查询列表" model="" group="内容模型" ctrtype="text">
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="AdviceTypeID" title="反馈模型"  type="KeyValueSelector" description="请选择一个反馈模型。"
+       required="False" maximum="0" minimum="0" length="0" data="advice" />
+  <Parameter name="SecurityQuery" title="保密查询"  type="Boolean" description="保密查询。"
+   required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="OwnerID" title="导航栏目"  type="Channel" description="获取指定栏目下的文章。"
+     required="False" maximum="0" minimum="0" length="0" />
+</DataControl>

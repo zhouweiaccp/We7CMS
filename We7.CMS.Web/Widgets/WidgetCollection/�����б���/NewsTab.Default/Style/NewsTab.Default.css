@@ -1,0 +1,43 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:NewsTab.Default
+ * Style:NewsTab_Default
+ * Desc::
+ * Quot:
+*************************************************************/
+/************新闻Tab选项卡*****************/
+.NewsTab_Default .floatLeft{
+    width:360px;
+    height:220px;
+}
+.NewsTab_Default .n4Tab{clear:both; }
+.NewsTab_Default .n4Tab .TabTitle{text-align:center;}
+.NewsTab_Default .n4Tab .TabTitle ul{margin:0; padding:0;}
+.NewsTab_Default .TabTitle li{
+	float:left;
+	height:29px;
+	line-height:29px; padding-right:8px;
+	cursor:pointer;
+	color:#49494b;
+	text-align:center;
+}
+.NewsTab_Default .n4Tab .TabTitle .normal{ color:#333; text-decoration:none; }
+.NewsTab_Default .n4Tab .TabTitle .normal a{ color:#333; text-decoration:none;}
+.NewsTab_Default .n4Tab .TabTitle .active{width:87px; background:url(../images/image_48.jpg) no-repeat; color:#060; font-weight:bold; }
+.NewsTab_Default .n4Tab .TabTitle .active a{ color:#fff; font-weight:bold; text-decoration:none;}
+.NewsTab_Default .TabContent {clear:both; margin:0 auto; padding:0px; border:solid 1px #ccc;}
+.NewsTab_Default .TabContent li{list-style:none;line-height:26px; margin-left:5px; padding-left:5px;background:url(../images/image_51.jpg) 1px 50% no-repeat;}
+.NewsTab_Default .TabContent a{ color:#000; text-decoration:none;display:inline;}
+.NewsTab_Default .TabContent a:hover{ color:#666; text-decoration:none; display: inline;}
+.NewsTab_Default .TabContent .n4tabclear{ clear:both; font-size:1px;}
+.NewsTab_Default .TabTitle{background:url(../images/image_47.jpg) left no-repeat; height:29px;line-height:29px; padding-left:30px;}
+.NewsTab_Default .none {display:none;}
+.NewsTab_Default .n4Tab .TabTitle .clear{ clear:both; font-size:1px;}
+.NewsTab_Default .datetime{color:#999; padding-right:5px;}
+/*************************************************************
+ * Command:End
+ * Control:NewsTab.Default
+ * Style:NewsTab_Default
+ * Desc::
+ * Quot:
+*************************************************************/

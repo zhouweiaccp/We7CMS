@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <item name="a" text="批准">
+    <![CDATA[
+      批准发布。
+    ]]>
+  </item>
+  <item name="b" text="通过">
+    <![CDATA[
+      审核通过。
+    ]]>
+  </item>
+  <item name="c" text="重新审核">
+    <![CDATA[
+      这个稿子有点问题，重新审一下吧。
+    ]]>
+  </item>
+</Config>
+

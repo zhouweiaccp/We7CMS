@@ -1,0 +1,4896 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.Common</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.Common.TemplateGroup">
+            <summary>
+            模板组实体类（已过期，兼容2.1以前版本）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.TemplateGroup.Item">
+            <summary>
+            模板组具体项
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DataControl">
+            <summary>
+            数据控件类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.IJsonResult">
+            <summary>
+            返回Json类据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.#ctor">
+            <summary>
+            数据控件类构造函数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.FromFile(System.String,System.String)">
+            <summary>
+            获取目录(注意:这个方法对新控件无效)
+            </summary>
+            <param name="root"></param>
+            <param name="fn"></param>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取XML信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.ToJson">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControl.LoadStyles">
+            <summary>
+            加载指定目录下的Css样式
+            </summary>
+            <param name="styledir"></param>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Parameters">
+            <summary>
+            数据控件参数类对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Files">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Version">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.BasePath">
+            <summary>
+            原地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.DeepLoad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Remark">
+            <summary>
+            详细介绍
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.DemoUrl">
+            <summary>
+            缩略图 图片地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Control">
+            <summary>
+            控件的物理文件名称,不含后辍名.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Type">
+            <summary>
+            控件的物理文件名称,不含后辍名.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.CtrDir">
+            <summary>
+            控件的标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.Styles">
+            <summary>
+            控件的样式文件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.GroupLabel">
+            <summary>
+            组标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.GroupDesc">
+            <summary>
+            组描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.GroupIcon">
+            <summary>
+            组ICON
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControl.GroupDefaultType">
+            <summary>
+            组默认控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.AdviceToWhichDepartment">
+            <summary>
+            转交办理部门枚举
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.ProcessAction">
+            <summary>
+            审核动作
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessAction.Next">
+            <summary>
+            送审
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessAction.Previous">
+            <summary>
+            退回
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessAction.Restart">
+            <summary>
+            退回初稿
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessAction.SubmitSite">
+            <summary>
+            提交站间审核
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ResourceFile">
+            <summary>
+            资源文件，用于控件或模板
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.ResourceFile.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.ResourceFile.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取XML信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.ResourceFile.ToJson">
+            <summary>
+            输出为Json格式文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.ResourceFile.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ResourceFile.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.DataControlType.System">
+            <summary>
+            系统控件
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.DataControlType.Plugin">
+            <summary>
+            插件中的控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DataControlInfo">
+            <summary>
+            数据控件信息类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.ToJson">
+            <summary>
+            转化为Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.Load(System.String)">
+            <summary>
+            加载控件信息
+            </summary>
+            <param name="ctrdir">控件的根目录(物理路径)</param>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.FromXml(System.Xml.XmlElement)">
+            <summary>
+            从Xml中加载数据
+            </summary>
+            <param name="xe"></param>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.LoadControl(System.String)">
+            <summary>
+            加载控件信息
+            </summary>
+            <param name="ctrdir"></param>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.GetDemoUrl(System.String,System.String,System.String)">
+            <summary>
+            获取数据控件展示图片地址
+            </summary>
+            <param name="ctrDir"></param>
+            <param name="ctrName"></param>
+            <param name="demoUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.GetRelateivePath(System.String)">
+            <summary>
+            取得控件的相对路径("以/开头")
+            </summary>
+            <param name="fullPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.AppendNodeList(System.Xml.XmlNode,System.Xml.XmlNodeList)">
+            <summary>
+            向一个节点中添加所有数据
+            </summary>
+            <param name="parentnode"></param>
+            <param name="children"></param>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.LoadInfo(System.String)">
+            <summary>
+            加载控件信息
+            </summary>
+            <param name="ctrPath">控件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlInfo.LoadInfo(System.String,System.String)">
+            <summary>
+            加载控件信息
+            </summary>
+            <param name="ctrPath">控件路径</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Controls">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Directory">
+            <summary>
+            控件目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Default">
+            <summary>
+            默认的控件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Model">
+            <summary>
+            当前控件的模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.CtrType">
+            <summary>
+            当前模型控件的类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Path">
+            <summary>
+            控件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.Group">
+            <summary>
+            控件所属分组
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.DefaultControl">
+            <summary>
+            默认控件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.GroupLabel">
+            <summary>
+            组标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.GroupDesc">
+            <summary>
+            组描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.GroupIcon">
+            <summary>
+            组ICON
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlInfo.GroupDefaultType">
+            <summary>
+            组默认控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ArticleIndex">
+            <summary>
+            文章检索类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleIndex.ArticleID">
+            <summary>
+            检索的内容的ID（包括文章ID，产品ID等）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleIndex.Operation">
+            <summary>
+            对检索内容的操作（添加，删除，更新操作）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleIndex.IsLock">
+            <summary>
+            是否上锁,0-上锁，1-解锁
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.AdviceParticipateMode">
+            <summary>
+            反馈参与形式
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceParticipateMode.Mail">
+            <summary>
+            邮件参与
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceParticipateMode.SMS">
+            <summary>
+            短信通知
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceParticipateMode.All">
+            <summary>
+            邮件参与和短信通知
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceParticipateMode.None">
+            <summary>
+            都不参与
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Article">
+            <summary>
+            文章信息类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ProcessObject">
+            <summary>
+            流转对象基类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.ProcessState">
+            <summary>
+            审批进程，0：草稿，1-3：一审~三审，8：站间审核
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.ProcessDirection">
+            <summary>
+            流转来源方向，退回？交？
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.ProcessSiteID">
+            <summary>
+            拥有处置权限的站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.FlowXml">
+            <summary>
+            存放文章流转历史数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.Source">
+            <summary>
+            文章来源
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessObject.ShareSource">
+            <summary>
+            共享来源，本站的的不显示
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Article.#ctor">
+            <summary>
+            构建Article对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Article.GenerateArticleUrl(System.Int64,System.DateTime,System.String)">
+            <summary>
+            按照变量生成文章URL
+            </summary>
+            <param name="sn"></param>
+            <param name="create"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Article.GenerateArticleUrl(System.Int64,System.DateTime,System.String,System.String)">
+            <summary>
+            按照变量生成文章URL
+            </summary>
+            <param name="sn"></param>
+            <param name="create"></param>
+            <param name="id"></param>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Article.GetTagThumbnail(System.String)">
+            <summary>
+            获取标签图片名称
+            </summary>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Article.GetImageName(System.String,System.String)">
+            <summary>
+            获取图片名称
+            </summary>
+            <param name="thumbnailName"></param>
+            <param name="imgType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Article.GetFullUrlWithChannel(System.String)">
+            <summary>
+            获取文章的完整url，前台调用请使用此属性，而不是FullUrl
+            </summary>
+            <param name="channelUrl">所属栏目url</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys1">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys2">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys3">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys4">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ListKeys5">
+            <summary>
+            存放modelXml数据（不包含结构）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.VideoCode">
+            <summary>
+            存放视频代码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.KeyWord">
+            <summary>
+            SEO 优化文章标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.DescriptionKey">
+            <summary>
+            SEOul优化文章简介
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.UptoTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ChannelFullUrl">
+            <summary>
+            栏目地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ChannelName">
+            <summary>
+            栏目名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.CommentCount">
+            <summary>
+            评论总数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ModelXml">
+            <summary>
+            存放扩展信息XML数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FromRowID">
+            <summary>
+            共享来源ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FromSiteUrl">
+            <summary>
+            共享来源文章地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Overdue">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.AllowComments">
+            <summary>
+            1—为允许评论；0—为不允许评论
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ParentID">
+            <summary>
+            文章父ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Summary">
+            <summary>
+            摘要：来自Description，Content
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Author">
+            <summary>
+            文章作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Content">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Created">
+            <summary>
+            文章创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.State">
+            <summary>
+            启用与禁用：1—启用；0—禁用（停用）；2—审核中；3—过期；4—回收站
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.OwnerID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.AccountID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.LinkUrl">
+            <summary>
+            连接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.TimeNote">
+            <summary>
+            时间节点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.AuditText">
+            <summary>
+            状态转化名称字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.IsImage">
+            <summary>
+            是否有缩略图
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.IsShow">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.SubTitle">
+            <summary>
+            副标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Thumbnail">
+            <summary>
+            缩略图存放地址（小缩略图）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FullUrl">
+            <summary>
+            通过ID生成的url，如e6b4ed25_263c_4dc6_81f8_f7e06c214099.shtml或1008.html
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ContentType">
+            <summary>
+            参考TypeOfArticle枚举
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.IsLinkArticle">
+            <summary>
+            是否引用类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.TypeText">
+            <summary>
+            文章类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ModelConfig">
+            <summary>
+            模型配置
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ModelSchema">
+            <summary>
+            模型数据架构
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.PrivacyLevel">
+            <summary>
+            保密级别0,公开;0|公开,1|内部,2|秘密,3|机密,4|绝密
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.TypeIcon">
+            <summary>
+            不同类型图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.ContentUrl">
+            <summary>
+            内容URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Clicks">
+            <summary>
+            点击数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FullTitle">
+            <summary>
+            完整的标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Url">
+            <summary>
+            失生前端可用的Url;
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.WapImage">
+            <summary>
+            大缩略图
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.OriginalImage">
+            <summary>
+            文章原始图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.TagThumbnail">
+            <summary>
+            根据标签tag属性取得对应缩略图
+            如，Thumbnail["wap"] 为 mysource_wap.jpg
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.RelatedArticles">
+            <summary>
+            相关文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FullChannelPath">
+            <summary>
+            所属栏目的全路径名称显示：如，/新闻/图片新闻
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.SourceID">
+            <summary>
+            引用/wap类型的原文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.SN">
+            <summary>
+            文章流水号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.IPStrategy">
+            <summary>
+            IP策略
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.AttachmentUrlPath">
+            <summary>
+            文章附件所在路径：如 /_data/2010/02/25/64a55027_062d_4f78_8c51_aeb6500fdacb/
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Attachments">
+            <summary>
+            当前文章的附件列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.SiteName">
+            <summary>
+            本篇文章所属站点；（用于站群搜索结果）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.SiteUrl">
+            <summary>
+            本篇文章所属站点URL；（用于站群搜索结果）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FontWeight">
+            <summary>
+            字体重度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.FontStyle">
+            <summary>
+            字体样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.DayClicks">
+            <summary>
+            日点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.YesterdayClicks">
+            <summary>
+            昨日点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.WeekClicks">
+            <summary>
+            周点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.MonthClicks">
+            <summary>
+            月点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.QuarterClicks">
+            <summary>
+            季点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.YearClicks">
+            <summary>
+            年点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Article.Item(System.String)">
+            <summary>
+            访问模型中的信息
+            </summary>
+            <param name="name">字段名</param>
+            <returns>模型数据</returns>
+        </member>
+        <member name="T:We7.CMS.Common.RelatedArticle">
+            <summary>
+            相关文章类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RelatedArticle.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RelatedArticle.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RelatedArticle.RelatedID">
+            <summary>
+            关联文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RelatedArticle.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RelatedArticle.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.StatisticsArticle">
+            <summary>
+            文章统计类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.TotalArticles">
+            <summary>
+            总文章数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.TotalComments">
+            <summary>
+            总评论数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.MonthArticles">
+            <summary>
+            本月发表文章数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.MonthComments">
+            <summary>
+            //本月评论
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.WeekArticles">
+            <summary>
+            本周文章数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.StatisticsArticle.WeekComments">
+            <summary>
+            本周评论
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ThumbnailConfig">
+            <summary>
+            缩略图配置信息类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ThumbnailConfig.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ThumbnailConfig.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ThumbnailConfig.Tag">
+            <summary>
+            标签-标识，用于文件名的构造
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.TagsGroup">
+            <summary>
+            系统标签类，包含一组标签
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.TagsGroup.FromFile(System.String,System.String)">
+            <summary>
+            获取模板组路径
+            </summary>
+            <param name="path"></param>
+            <param name="fn"></param>
+        </member>
+        <member name="M:We7.CMS.Common.TagsGroup.ToFile(System.String,System.String)">
+            <summary>
+            模板组保存路径
+            </summary>
+            <param name="path"></param>
+            <param name="fn"></param>
+        </member>
+        <member name="P:We7.CMS.Common.TagsGroup.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TagsGroup.BasePath">
+            <summary>
+            继承路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TagsGroup.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceQuery">
+            <summary>
+            反馈模型查询类，作为查询时的参数传递
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.NotState">
+            <summary>
+            除这个办理状态之外的信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.NotEnumState">
+            <summary>
+            除这个状态之外的信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.EnumState">
+            <summary>
+            反馈信息状态集
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.MustHandle">
+            <summary>
+            必须办理
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.AccountID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.IsShow">
+            <summary>
+            是否显示： 0 、不显示； 1、 显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.AdviceTypeID">
+            <summary>
+            所属模型ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.State">
+            <summary>
+            反馈状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Title">
+            <summary>
+            反馈标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.SN">
+            <summary>
+            反馈流水号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.MyQueryPwd">
+            <summary>
+            查询密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.StartCreated">
+            <summary>
+            起始创建日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.EndCreated">
+            <summary>
+            终止创建日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.AdviceInfoType">
+            <summary>
+            反馈信息类别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Email">
+            <summary>
+            用户email;
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Phone">
+            <summary>
+            用户电话
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Fax">
+            <summary>
+            用户传真号码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Address">
+            <summary>
+            用户住址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.Content">
+             <summary>
+            反馈内容
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceQuery.AdviceTag">
+            <summary>
+            反馈标签
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.VoteAnswerStat">
+            <summary>
+            用户投票统计
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.VoteID">
+            <summary>
+            投票ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.VoteEntryText">
+            <summary>
+            投票选项文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.VoteEntryID">
+            <summary>
+            投票选项ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.VoteEntrySum">
+            <summary>
+            投票数量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.OrderID">
+            <summary>
+            排序用ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswerStat.VoteEntrySumPercent">
+            <summary>
+            投票数量百分比
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PageVisitor">
+            <summary>
+            功能：页面访问用户统计实体 theheim 2007-11-08
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.TypeCode">
+            <summary>
+            类别：0为登录统计，1为文章统计
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.VisitDate">
+            <summary>
+            访问时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.LogoutDate">
+            <summary>
+            退出时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.VisitorIP">
+            <summary>
+            访问者IP
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Url">
+            <summary>
+            入口页面
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.HttpReferer">
+            <summary>
+            来源应用网址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.SearchEngine">
+            <summary>
+            搜索引擎
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Keyword">
+            <summary>
+            搜索引擎关键词
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Clicks">
+            <summary>
+            点击数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.OnlineTime">
+            <summary>
+            在线时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Platform">
+            <summary>
+            操作系统
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Browser">
+            <summary>
+            浏览器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Screen">
+            <summary>
+            屏幕分辨率
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Province">
+            <summary>
+            省份
+            </summary>
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.PageView">
+            <summary>
+            浏览页数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PageVisitor.FromSite">
+            <summary>
+            来源主域名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.TotalPageView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.TotalVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.YearVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.MonthVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.DayVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.YestodayVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.AverageDayVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.YearPageview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.MonthPageview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.DayPageview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.YestodayPageview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.AverageDayPageview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.OnlineVisitors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.StartDate">
+            <summary>
+            起始时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VisiteCount.CreateDate">
+            <summary>
+            当前数据创建时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.FileItem">
+            <summary>
+            文件信息类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.FileItem.#ctor">
+            <summary>
+            文件信息类构造函数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.FullName">
+            <summary>
+            完整名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.IsDirectory">
+            <summary>
+            是否显示目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.Icon">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.FileItem.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DirectoryDiscover">
+            <summary>
+            目录侦测类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DirectoryDiscover.#ctor">
+            <summary>
+            目录检查
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DirectoryDiscover.GetIcon(System.String)">
+            <summary>
+            根据类型获取图片
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DirectoryDiscover.Process">
+            <summary>
+            开始检索……
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.OnlyFolder">
+            <summary>
+            是否只是文件夹
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.PathName">
+            <summary>
+            路径名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.Items">
+            <summary>
+            文件信息集合对象
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.BasePath">
+            <summary>
+            原始路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.Filter">
+            <summary>
+            过滤器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.FolderFilter">
+            <summary>
+            文件夹过滤器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.FolderUrl">
+            <summary>
+            文件夹路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.FileUrl">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DirectoryDiscover.AutoCreate">
+            <summary>
+            是否自动创建
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ProcessHistory">
+            <summary>
+            审批历史记录项
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.ProcessHistory.GetProcessingText(System.String)">
+            <summary>
+            状态转换为描述
+            </summary>
+            <param name="layno"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ObjectID">
+            <summary>
+            当前栏目、文章或反馈的ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.FromProcessState">
+            <summary>
+            当前审批进程层数，等于上一环节
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ProcessDirection">
+            <summary>
+            审核方向/动作
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ToProcessState">
+            <summary>
+            下一审批环节层级
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.TargetSites">
+            <summary>
+            跨站审核目标站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ProcessAccountID">
+            <summary>
+            操作用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ApproveTitle">
+            <summary>
+            签字项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ApproveName">
+            <summary>
+            签字人名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.UpdateDate">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ProcessText">
+            <summary>
+            下一环节审核文字描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ProcessingText">
+            <summary>
+            当前环节文字描述，等于上一步骤的任务
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.CurLayerNOToChannel">
+            <summary>
+            权限级别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ProcessDirectionText">
+            <summary>
+            操作方向字符转换
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.SiteName">
+            <summary>
+            当前审批环节起点站点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.SiteID">
+            <summary>
+            当前审批环节起点站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.SiteApiUrl">
+            <summary>
+            当前审批环节起点站点应用接口地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ChannelID">
+            <summary>
+            文章所属栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ChannelName">
+            <summary>
+            文章所属栏目名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ProcessHistory.ItemNum">
+            <summary>
+            步骤序号
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.AdviceState">
+            <summary>
+            反馈状态
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceState.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceState.WaitAccept">
+            <summary>
+            待受理
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceState.WaitHandle">
+            <summary>
+            待办理
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceState.Checking">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.AdviceState.Finished">
+            <summary>
+            办结
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Statistics">
+            <summary>
+            访问统计类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Statistics.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.VisitorID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.ChannelID">
+            <summary>
+            栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.ArticleName">
+            <summary>
+            文章名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.VisitDate">
+            <summary>
+            访问时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.Url">
+            <summary>
+            地址信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.VisitorIP">
+            <summary>
+            用户IP
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.TimeNote">
+            <summary>
+            节点时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Statistics.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.StatisticsHistory">
+            <summary>
+            访问统计历史类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.StatisticsHistory.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.MasterPageMode">
+            <summary>
+            母版类型：本页采用哪一种母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MasterPageMode.None">
+            <summary>
+            没有母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MasterPageMode.FullMenu">
+            <summary>
+            全菜单母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MasterPageMode.NoMenu">
+            <summary>
+            无菜单母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MasterPageMode.User">
+            <summary>
+            用户或会员专用母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MasterPageMode.Diy">
+            <summary>
+            自定义
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.MenuItemXml">
+            <summary>
+            文章信息类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Lable">
+            <summary>
+            显示文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.NodeName">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Parent">
+            <summary>
+            父类别编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Oldid">
+            <summary>
+            旧编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Oldparent">
+            <summary>
+            旧父类别编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.MatchParameter">
+            <summary>
+            是否匹配参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Link">
+            <summary>
+            是否带链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItemXml.Group">
+            <summary>
+            分组 0：系统菜单 1：自定义
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Vote">
+            <summary>
+            投票
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.Title">
+            <summary>
+            投票标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.OptionType">
+            <summary>
+            选项类型
+            1 单选
+            2 多选
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.AddDate">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.EndDate">
+            <summary>
+            截止时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.VotePeoples">
+            <summary>
+            投票人数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.IsCanRepeat">
+            <summary>
+            是否可重复投
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.OptionTypeString">
+            <summary>
+            选项类型 文字表示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.ListVoteEntrys">
+            <summary>
+            投票选项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Vote.ListVoteAnswerStats">
+            <summary>
+            投票答案统计
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.TypeOfChannel">
+            <summary>
+            栏目类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.NormalChannel">
+            <summary>
+            原创型栏目
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.QuoteChannel">
+            <summary>
+            引用型栏目
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.ShareChannel">
+            <summary>
+            共享栏目
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.ReturnChannel">
+            <summary>
+            跳转型栏目
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.RssOriginal">
+            <summary>
+            Rss源
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfChannel.BlankChannel">
+            <summary>
+            空节点栏目
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ErrorCode">
+            <summary>
+            错误代码类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.ErrorCode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.Level">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.HelpLink">
+            <summary>
+            帮助链接
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ErrorCode.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ShortMessage">
+            <summary>
+            短信对象表（短信发送历史记录）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.AccountID">
+            <summary>
+            发送人ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.AccountName">
+            <summary>
+            发送人
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.Receivers">
+            <summary>
+            接收人
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.ReceiverID">
+            <summary>
+            接收人ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.Subject">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ShortMessage.Description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Draft">
+            <summary>
+            草稿箱
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.NewMessage">
+            <summary>
+            新消息
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Inbox">
+            <summary>
+            收件箱中已读
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Outbox">
+            <summary>
+            发件箱存档
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Failure">
+            <summary>
+            手机短信发送失败
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Success">
+            <summary>
+            手机短信发送成功
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.AllSMS">
+            <summary>
+            所有短信
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.MessageState.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Comments">
+            <summary>
+            评论类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Comments.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.ID">
+            <summary>
+            评论ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.ArticleID">
+            <summary>
+            所属文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.Author">
+            <summary>
+            评论作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.Created">
+            <summary>
+            评论时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.Updated">
+            <summary>
+            评论更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.State">
+            <summary>
+            评论状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.Index">
+            <summary>
+            评论索引
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.TimeNote">
+            <summary>
+            时间节点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.AccountID">
+            <summary>
+            用户ＩＤ
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.AuditText">
+            <summary>
+            状态转化字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.ArticleTitle">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Comments.ArticleName">
+            <summary>
+            文章名字
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Attachment">
+            <summary>
+            附件类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.FileSizeText">
+            <summary>
+            文件大小格式化显示，如2.5M
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.Description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.UploadDate">
+            <summary>
+            上传日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.DownloadTimes">
+            <summary>
+            下载次数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.EnumState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.ImgPath">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Attachment.DownloadUrl">
+            <summary>
+            附件下载地址
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.TemplateVersion">
+            <summary>
+            模版版本
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.KeyWordGroup">
+            <summary>
+            关键字组（用于关键字过滤）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.KeyWordGroup.Item">
+            <summary>
+            关键字项
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Processing">
+            <summary>
+            审批中信息实体类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ItemNum">
+            <summary>
+            对应流转历史记录的编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ObjectID">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessTotalLayer">
+            <summary>
+            审核总级数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessEndAction">
+            <summary>
+            审核结束后动作
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CurLayerNO">
+            <summary>
+            当前审核进程级数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessDirection">
+            <summary>
+            办理方向
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessAccountID">
+            <summary>
+            办理用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ApproveTitle">
+            <summary>
+            签字项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ApproveName">
+            <summary>
+            签字人名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.UpdateDate">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessState">
+            <summary>
+            当前审核状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessText">
+            <summary>
+            当前审批状态文本描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ProcessDirectionText">
+            <summary>
+            审批方向文本描述：退回？交？
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CurLayerNOToChannel">
+            <summary>
+            当前栏目审批级别关键词描述：Channel.FirstAudit 来源于 CurLayerNO=1
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CurLayerNOToAdvice">
+            <summary>
+            当前反馈审批级别关键词描述：Advice.FirstAudit 来源于 CurLayerNO=1
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.SourceSiteID">
+            <summary>
+            文章起草站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.SourceSiteName">
+            <summary>
+            起草站点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.PreviousSiteID">
+            <summary>
+            前一级站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.FromOtherSite">
+            <summary>
+            是否来自其他站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.TargetSites">
+            <summary>
+            跨站审核目标站点
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.TargetSiteID">
+            <summary>
+            跨站审批目标站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CurrentSiteName">
+            <summary>
+            当前站点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.CurrentSiteID">
+            <summary>
+            当前站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.ArticleState">
+            <summary>
+            文章状态，对不同站点权限进行了判断
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Processing.AdviceState">
+            <summary>
+            反馈状态
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.SystemInformation">
+            <summary>
+            系统参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.IsPasswordHashed">
+            <summary>
+            管理员密码是否加密
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.IsAddLog">
+            <summary>
+            是否开启日志记录功能
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.IsAuditComment">
+            <summary>
+            评论是否审核后发布
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.EnableLoginAuhenCode">
+            <summary>
+            登录是否验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.ArticleUrlGenerator">
+            <summary>
+            文章URL样式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.SiteSkinsBasePath">
+            <summary>
+            站点皮肤根目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.EnableSiteSkins">
+            <summary>
+            启用皮肤功能文件夹
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.TemplateBasePath">
+            <summary>
+            模板根目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.TemplateGroupBasePath">
+            <summary>
+            模板组根目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.DescriptionPageMeta">
+            <summary>
+             页面描述(description)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.KeywordPageMeta">
+            <summary>
+            页面关键词(keyword)
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.CMSTheme">
+            <summary>
+            后台风格主题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.ArticleSourceDefault">
+            <summary>
+            文章来源默认值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.AdministratorID">
+            <summary>
+            相当于产生AccountID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.ADUrl">
+            <summary>
+            站群广告管理站点地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.DefaultCompanyRole">
+            <summary>
+            设置企业会员默认角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.DefaultPersonRole">
+            <summary>
+            设置个人会员默认角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.EnableCache">
+            <summary>
+            是否开启缓存
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SystemInformation.CacheTimeSpan">
+            <summary>
+            缓存更新时间间隔（秒）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.CDException">
+            <summary>
+            CD库错误信息类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.ArticleAttachment">
+            <summary>
+            文章附件类型枚举
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleAttachment.ArticlePhoto">
+            <summary>
+            图片组类型，用于前台显示
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.VoteAnswer">
+            <summary>
+            投票答案
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.VoteID">
+            <summary>
+            投票ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.VoteEntryID">
+            <summary>
+            投票选项ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.AnswerText">
+            <summary>
+            投票答案
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.AccountID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.IP">
+            <summary>
+            用户IP
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteAnswer.VoteDate">
+            <summary>
+            投票时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Category">
+            <summary>
+            类别信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.ParentID">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.KeyWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.Options">
+            <summary>
+            配置信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.IntOption">
+            <summary>
+            整数的配置信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.Index">
+            <summary>
+            索引号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Category.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.ID">
+            <summary>
+            日志ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.Content">
+            <summary>
+            操作描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.UserID">
+            <summary>
+            操作用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.Page">
+            <summary>
+            操作页面
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.Created">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Log.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.ArticleStates">
+            <summary>
+            文章状态
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.Stopped">
+            <summary>
+            已停用
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.Started">
+            <summary>
+            已启用
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.Checking">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.Overdued">
+            <summary>
+            已过期
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.Recycled">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ArticleStates.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Tags">
+            <summary>
+            标签类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Tags.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Tags.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取XML信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.Tags.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Tags.Identifier">
+            <summary>
+            标识符
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Tags.Frequency">
+            <summary>
+            频率
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Tags.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Tags.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.RssChannel">
+            <summary>
+            订阅栏目
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.RssChannel.ttl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.GetXml">
+            <summary>
+            获取XML信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            装实体转化为xml
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.FromXml(System.Xml.XmlElement)">
+            <summary>
+            装xml转化为实体类
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.CreateItemElement(System.Xml.XmlDocument,System.Xml.XmlElement)">
+            <summary>
+            生成Item
+            </summary>
+            <param name="doc"></param>
+            <param name="xe"></param>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.CreateElement(System.Xml.XmlDocument,System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+            生成Channel中的文件
+            </summary>
+            <param name="doc"></param>
+            <param name="xe"></param>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.getValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            获取节点值
+            </summary>
+            <param name="xe"></param>
+            <param name="filed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.RssChannel.getItemValues(System.Xml.XmlElement)">
+            <summary>
+            这个是返回RssItem的集合
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.Description">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.LastBuildDate">
+            <summary>
+            最后构造时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssChannel.Rssitem">
+            <summary>
+            订阅信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.JsonResult">
+            <summary>
+            用于返回Json数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.JsonResult.ToJson">
+            <summary>
+            返回的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.JsonResult.Success">
+            <summary>
+            返回数据是否成功
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.JsonResult.Data">
+            <summary>
+            返回的数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.JsonResult.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DescriptionAttribute">
+            <summary>
+            用于描述的属性类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Link">
+            <summary>
+            友情链接表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.ID">
+            <summary>
+            链接ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.Url">
+            <summary>
+            url地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.Thumbnail">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Link.Created">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceType">
+            <summary>
+            反馈模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.Title">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ModelXml">
+            <summary>
+            存放扩展信息XML数据类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ModelXmlName">
+            <summary>
+            数据类型名字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.AccountID">
+            <summary>
+            模型创建人
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.EnumState">
+            <summary>
+            模式状态（直接办理、转交办理、上报办理）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ToWhichDepartment">
+            <summary>
+            转交到办理部门过滤，提供以下一组部门供选择：1、同级部门、2、下级部门；3、所有部门；
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.FlowSeries">
+            <summary>
+            上报审核级数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ProcessEnd">
+            <summary>
+            审核完毕动作：0-审结，进入禁用；1-审结后直接启用；2-送跨站审核
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.FlowInnerDepart">
+            <summary>
+            是否在部门内审核  0 否 ；1 是
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.MailMode">
+            <summary>
+            邮件参与形式
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.UseSystemMail">
+            <summary>
+            是否使用默认邮件地址 0 默认； 1 专用
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.MailSMTPServer">
+            <summary>
+            邮件SMTP服务器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.POPServer">
+            <summary>
+            POP服务器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.MailUser">
+            <summary>
+            邮箱用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.MailPassword">
+            <summary>
+            邮箱密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.SMSUser">
+            <summary>
+            短信通知者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.RemindDays">
+            <summary>
+            过时自动催办
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.MailAddress">
+            <summary>
+            此类型绑定邮箱
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ParticipateMode">
+            <summary>
+            参与形式：0 是邮件参与；1 是短信通知
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ModelName">
+             <summary>
+            模型名称
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.StateText">
+            <summary>
+            模式状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceType.ToWhichDepartmentText">
+            <summary>
+            转交部门
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.ProcessStates">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.Unaudit">
+            <summary>
+            草稿
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.WaitAccept">
+            <summary>
+            受理
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.WaitHandle">
+            <summary>
+            待办理
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.FirstAudit">
+            <summary>
+            一审
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.SecondAudit">
+            <summary>
+            二审
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.ThirdAudit">
+            <summary>
+            三审
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.SiteAudit">
+            <summary>
+            站间审核
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.EndAudit">
+            <summary>
+            审毕，办结
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.Finished">
+            <summary>
+            办结
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessStates.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.RssItem">
+            <summary>
+            RSS项
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.RssItem.CreateElement(System.Xml.XmlDocument,System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+            生成Channel中的文件
+            </summary>
+            <param name="doc"></param>
+            <param name="xe"></param>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.Creator">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.PubDate">
+            <summary>
+            发布日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RssItem.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.RemoteChannel">
+            <summary>
+            远程站点栏目信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.NodeLevel">
+            <summary>
+            节点级别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.ParentNodeLevel">
+            <summary>
+            父节点级别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.EnumState">
+            <summary>
+            状态位
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.ProcessLayerNO">
+            <summary>
+            审批级别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.ParentID">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Index">
+            <summary>
+            序列
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.FullPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.RemoteChannel.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Channel">
+            <summary>
+            栏目信息类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Channel.#ctor">
+            <summary>
+            栏目类构造函数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Channel.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Channel.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取XML数据信息
+            </summary>
+            <param name="xe"></param>
+        </member>
+        <member name="M:We7.CMS.Common.Channel.BuildLinkHtml(System.String)">
+            <summary>
+            生成多级栏目链接
+            </summary>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Channel.CompareTo(We7.CMS.Common.Channel)">
+            <summary>
+            对栏目排序
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Alias">
+            <summary>
+            栏目别名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ParentID">
+            <summary>
+            父级栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Name">
+            <summary>
+            栏目标题，对外显示名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.FullPath">
+            <summary>
+            显示全路径，如：/新闻/图片新闻
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.DetailTemplate">
+            <summary>
+            详细页模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.TemplateName">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.StateText">
+            <summary>
+            状态转化字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.SecurityLevel">
+            <summary>
+            安全级别
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.SecurityLevelText">
+            <summary>
+            安全级别转化字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ReferenceID">
+            <summary>
+            参考信息ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.TemplateText">
+            <summary>
+            模板信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.DetailTemplateText">
+            <summary>
+            详细模板信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.DefaultContentID">
+            <summary>
+            默认详细内容ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ChannelFolder">
+            <summary>
+            栏目文件夹
+            </summary>
+        </member>
+        <!-- 对于成员“P:We7.CMS.Common.Channel.TitleImage”忽略有格式错误的 XML 注释 -->
+        <member name="P:We7.CMS.Common.Channel.Process">
+            <summary>
+            是否走审批流程：1-审批，其他-不审批
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Type">
+            <summary>
+            栏目类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.IPStrategy">
+            <summary>
+            IP策略
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.TypeText">
+            <summary>
+            栏目类型转化字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ChannelName">
+            <summary>
+            频道唯一名称，用于URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.RefAreaID">
+            <summary>
+            栏目来源
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.IsComment">
+            <summary>
+            是否评论
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.IsOldFullUrl">
+            <summary>
+            是否返回原来的FullUrl
+            默认我false 
+            修改WJZ 2010年8月3日
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ModelName">
+            <summary>
+            内容模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.IsCommentText">
+            <summary>
+            是否评论转化字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.FullUrl">
+            <summary>
+            thehim 2009-2-26日修改：
+            1、FullUrl 为原本栏目的channelname的组合
+            2、增加属性 RealUrl 来解决跳转问题，前台菜单控件请使用RealUrl
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.RealUrl">
+            <summary>
+            增加属性 RealUrl 来解决跳转问题，前台菜单控件请使用RealUrl
+            1、如是跳转型，返回 ReturnUrl;
+            2、如不是，返回 FullUrl
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.FullFolderPath">
+            <summary>
+            完整的栏目文件地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ReturnUrl">
+            <summary>
+            跳转地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.KeyWord">
+            <summary>
+            SEO优化关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.DescriptionKey">
+            <summary>
+            SEO优化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ArticlesCount">
+            <summary>
+            统计该栏目下的文章数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.EnumState">
+            <summary>
+            栏目状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ProcessLayerNO">
+            <summary>
+            审核步骤：1、2、3类，字符串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ProcessLayerNOText">
+            <summary>
+            审核级数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ProcessEnd">
+            <summary>
+            审核完毕动作：0-审结，进入禁用；1-审结后直接启用；2-送跨站审核
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.ListUrl">
+            <summary>
+            栏目列表页URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.SearchUrl">
+            <summary>
+            栏目搜索页URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Title">
+             <summary>
+            显示标题（临时属性）
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.MenuIsSelected">
+            <summary>
+            本栏目是否被选中（用于判断菜单状态）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.HaveSon">
+            <summary>
+            是否有子栏目（用于生成菜单状态）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.SubChannels">
+            <summary>
+            子栏目列表（用于生成菜单树）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Channel.Articles">
+            <summary>
+            下属文章列表（排在前面的部分）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.SkinInfo">
+            <summary>
+            模板组皮肤信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.#ctor">
+            <summary>
+            模板组皮肤信息实体对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.FromFile(System.String,System.String)">
+            <summary>
+            获取模板组对象
+            </summary>
+            <param name="path"></param>
+            <param name="fn"></param>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.ToFile(System.String,System.String)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="path"></param>
+            <param name="fn"></param>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            输出模板组信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.FromXml(System.Xml.XmlElement)">
+            <summary>
+            输出模板组信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.Name">
+            <summary>
+            模板组名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.BasePath">
+            <summary>
+            原始路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.FileName">
+            <summary>
+            模板组皮肤名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.Ver">
+            <summary>
+            模板组版本
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.Description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.Items">
+            <summary>
+            模板组皮肤信息集合对象
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.SkinInfo.SkinItem">
+            <summary>
+            模板组皮肤扩展项
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.SkinItem.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            输出模板组项信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.SkinInfo.SkinItem.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取模板组项信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Location">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.C_Model">
+            <summary>
+            内容模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Layout">
+            <summary>
+            布局描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Template">
+            <summary>
+            模板文件名称（.ascx）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.TemplateText">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.IsSubTemplate">
+            <summary>
+            是否是子模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Created">
+            <summary>
+            当前模板组项创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.Updated">
+            <summary>
+            当前模板组项更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.C_ModelText">
+            <summary>
+            模型Text
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.SkinInfo.SkinItem.LocationText">
+            <summary>
+            位置Text
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DataControlGroup">
+            <summary>
+            控件组信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.MailMode">
+            <summary>
+            邮件参与类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MailMode.MailNotify">
+            <summary>
+            新反馈邮件通知受理人
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MailMode.HandleByMail">
+             <summary>
+            以邮件形式直接转交办理人
+             </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.MailMode.MailHyperLink">
+            <summary>
+            邮件通知办理人，带链接进入后台办理
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Template">
+            <summary>
+            模板页对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Template.#ctor">
+            <summary>
+            模板实体对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Template.VerifyUpdated(System.String)">
+            <summary>
+            验证模版文件是否已被外部编辑器编辑
+            </summary>
+            <param name="fn">模版文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.Template.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.BasePath">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.IsSubTemplate">
+            <summary>
+            是否是子模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.IsCode">
+            <summary>
+            是否代码编辑
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.IsMasterPage">
+            <summary>
+            是否母版
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.TemplateType">
+            <summary>
+            模板类型。普通模板 1、子模板 0、母版 9
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.IsVisualTemplate">
+            <summary>
+            是否为可视化模板
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.TemplateTypeText">
+            <summary>
+            模板类型文本状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.DefaultBindText">
+            <summary>
+            默认绑定列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.EditFileFullPath">
+            <summary>
+            正在编辑的实际文件全名：指副本文件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.FilePath">
+            <summary>
+            正本模板文件路径，如/_skins/mydefault/home.ascx
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.SkinFolder">
+            <summary>
+            所属栏目组
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Template.IsNew">
+            <summary>
+            是否新建
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.TemplateBindConfig">
+            <summary>
+            模板绑定配置类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Handler">
+             <summary>
+            处理者
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.HandlerName">
+            <summary>
+            处理者中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Mode">
+            <summary>
+            子分类，模式：登录？注册？主页？
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.ModeText">
+            <summary>
+            模式名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Model">
+            <summary>
+            内容模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.ModelText">
+            <summary>
+            内容模型中文名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Description">
+            <summary>
+            中文描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.TemplateBindConfig.Enough">
+            <summary>
+            信息是否足够
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.TemplateType.Common">
+            <summary>
+            普通模板
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.TemplateType.Sub">
+            <summary>
+            子模板
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.TemplateType.MasterPage">
+            <summary>
+            母版
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.TemplateType.HaveBinded">
+            <summary>
+            已指定为默认模板
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.TemplateType.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.TypeOfArticle">
+            <summary>
+            文章类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfArticle.NormalArticle">
+            <summary>
+            原创型文章
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfArticle.LinkArticle">
+            <summary>
+            引用文章
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfArticle.ShareArticle">
+            <summary>
+            共享文章
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfArticle.WapArticle">
+            <summary>
+            WAP文章
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceReplyInfo">
+            <summary>
+            反馈回复信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.AdviceID">
+            <summary>
+            反馈ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.UserID">
+            <summary>
+            处理的用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.Title">
+            <summary>
+            处理的标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReplyInfo.MailBody">
+            <summary>
+            邮件内容
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceReply">
+            <summary>
+            反馈回复信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.MailFile">
+            <summary>
+            本地邮件文件名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.AdviceID">
+            <summary>
+            咨询投诉编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.UserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.Title">
+            <summary>
+            回复标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.MailBody">
+            <summary>
+            备份回复邮件内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.EnumState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.Comment">
+            <summary>
+            客户满意度评价
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.Suggest">
+            <summary>
+            反馈意见
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.UserEmail">
+            <summary>
+            回复邮件接收地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceReply.FormEmail">
+            <summary>
+            发送邮件地址
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.DataControlParameter">
+            <summary>
+            数据控件参数类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlParameter.#ctor">
+            <summary>
+            数据控件参数类构造函数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlParameter.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            保存XML信息
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlParameter.FromXml(System.Xml.XmlElement)">
+            <summary>
+            获取XML信息
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.DataControlParameter.ToJson">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Maximum">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Minium">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Description">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Required">
+            <summary>
+            是否是必须的
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Weight">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.DataControlParameter.Ignore">
+            <summary>
+            忽略
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ArticleQuery">
+            <summary>
+            文章查询类，作为查询时的参数传递
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.AccountID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ChannelID">
+            <summary>
+            所属栏目ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ChannelFullUrl">
+            <summary>
+            所属栏目Url地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ExcludeThisChannel">
+            <summary>
+            是否排除当前所设Channel
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.KeyWord">
+            <summary>
+            关键词
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.BeginDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ArticleType">
+            <summary>
+            文章类型：文本、图片等
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.State">
+            <summary>
+            文章状态：启用、禁用
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.IncludeAllSons">
+            <summary>
+            是否包含子栏目（所有下级子栏目）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.IncludeAdministrable">
+            <summary>
+            是否包含拥有文章管理权限的列表，Channel.Articles
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.EnumState">
+            <summary>
+            状态位
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.OrderKeys">
+            <summary>
+            排序字段请按“Created|Asc,Clicks|Desc”模式传入
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.IsShowHome">
+            <summary>
+            是否在首页显示，1则在首页显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.Tag">
+            <summary>
+            过滤标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.Overdue">
+            <summary>
+            是否验证过期时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ArticleID">
+            <summary>
+            内容模型关链外键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.IsImage">
+            <summary>
+            是否为图片类文章
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ListKeys">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ListKeys2">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.UseModel">
+            <summary>
+            按模型查询
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ArticleQuery.ArticleParentID">
+            <summary>
+            文章父ID
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.ProcessEnding">
+            <summary>
+            终审后下一步操作动作
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessEnding.Stop">
+            <summary>
+            进入禁用
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessEnding.Start">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.ProcessEnding.SubmitSite">
+            <summary>
+            送跨站审核
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.ClickRecords">
+            <summary>
+            点击量的日记录汇总类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.ClickRecords.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ClickRecords.ObjectType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ClickRecords.ObjectID">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ClickRecords.VisitDate">
+            <summary>
+            访问日期
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.ClickRecords.Clicks">
+            <summary>
+            某一日期的流量统计
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.VoteEntry">
+            <summary>
+            投票选项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteEntry.VoteID">
+            <summary>
+            投票ID号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteEntry.EntryText">
+            <summary>
+            选项内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.VoteEntry.OrderID">
+            <summary>
+            排序用ID
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceInfo">
+            <summary>
+            反馈信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.AdviceInfo.CreateDataSet(System.String)">
+            <summary>
+            创建内容模型数据集
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.AdviceInfo.CreateDataSet">
+            <summary>
+            创建内容模型数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.AdviceInfo.GetDataSet">
+            <summary>
+            取得文章的内容模型数据集
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.SN">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.TypeID">
+            <summary>
+            反馈类型ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.IsShow">
+            <summary>
+            是否前台显示
+            0：前台不显示,1:前台显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.IsShowText">
+            <summary>
+            显示状态文本
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.State">
+            <summary>
+            处理状态
+            0：未处理，1：不处理，2：已受理，处理中，3：已受理，办理中，9：已办结
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.StateText">
+            <summary>
+            处理状态文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Priority">
+            <summary>
+            办理优先级
+            0：可办可不办，1：必办，2：催办
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.PriorityText">
+            <summary>
+            优先级状态文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.IsRead">
+            <summary>
+            已读
+            0:未读,1:已读
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.IsReadText">
+            <summary>
+            已读状态文字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Public">
+            <summary>
+            公开状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.PublicText">
+            <summary>
+            公开状态文字描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.IsTop">
+            <summary>
+            置顶
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.MyQueryPwd">
+            <summary>
+            查询密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Display1">
+            <summary>
+            查询关键字1
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Display2">
+            <summary>
+            查询关键字2
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Display3">
+            <summary>
+            查询关键字3
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.ModelXml">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.ModelConfig">
+            <summary>
+            模型配置
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.ModelSchema">
+            <summary>
+            模型定义文件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Item(System.String)">
+            <summary>
+            获取模型数据
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.SchemaPath">
+            <summary>
+            Schema路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.DayClicks">
+            <summary>
+            日点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.YesterdayClicks">
+            <summary>
+            昨日点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.WeekClicks">
+            <summary>
+            周点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.MonthClicks">
+            <summary>
+            月点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.QuarterClicks">
+            <summary>
+            季点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.YearClicks">
+            <summary>
+            年点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.Clicks">
+            <summary>
+            点击量
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.RelationID">
+            <summary>
+            关联信息编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceInfo.RelationModelName">
+            <summary>
+            关联内容模型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceTransfer">
+            <summary>
+            反馈转移
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.AdviceID">
+            <summary>
+            反馈ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.Advice">
+            <summary>
+            反馈信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.FromTypeID">
+            <summary>
+            转移来源
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.ToTypeID">
+            <summary>
+            转移方向
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.UserID">
+            <summary>
+            处理用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.Suggest">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.State">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceTransfer.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceAuth">
+            <summary>
+            反馈授权
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceAuth.AuthID">
+            <summary>
+            授权实体ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceAuth.AuthType">
+            <summary>
+            授权类型
+            0：用户,1:角色,2:部门
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceAuth.AdviceTypeID">
+            <summary>
+            反馈类型ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceAuth.Function">
+            <summary>
+            功能
+            1：查看，2：管理，3：受理，4：办理
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Advice">
+            <summary>
+            反馈信息
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Advice.id">
+             <summary>
+            反馈信息表
+             </summary>
+        </member>
+        <member name="M:We7.CMS.Common.Advice.CreateDataSet(System.String)">
+            <summary>
+            创建内容模型数据集
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Advice.CreateDataSet">
+            <summary>
+            创建内容模型数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.Advice.GetDataSet">
+            <summary>
+            取得文章的内容模型数据集
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ToOtherHandleUserID">
+             <summary>
+            转交办理人
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.AdviceInfoType">
+            <summary>
+            反馈信息类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ToHandleTime">
+            <summary>
+            转交办理时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.State">
+            <summary>
+            状态信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.StateText">
+            <summary>
+            反馈状态描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.OwnID">
+            <summary>
+            栏目唯一标示符
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.TypeID">
+            <summary>
+            类别编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.TypeTitle">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.UserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Email">
+            <summary>
+            回复邮件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ReplyDepID">
+            <summary>
+            反馈部门唯一标示符
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.IsShow">
+            <summary>
+            反馈信息是否公开显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.SN">
+            <summary>
+            反馈信息流水号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.SnString">
+            <summary>
+            流水号信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.LinkUrl">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.TimeNote">
+            <summary>
+            时间记录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ReplyTime">
+            <summary>
+            回复时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ReplyMan">
+            <summary>
+            冗余
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ReplyDept">
+            <summary>
+            冗余
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.FullTitle">
+            <summary>
+            反馈信息完整标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.FullUrl">
+            <summary>
+            反馈信息链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ModelXml">
+            <summary>
+            存放扩展信息XML数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.MyQueryPwd">
+            <summary>
+            个性查询密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.MustHandle">
+            <summary>
+             默认“0”为可不办，“1”为必办, “2”为催办。
+             如果状态为催办，那必定也是必办的。所以，必办条件为 >=1
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.MustHandleText">
+            <summary>
+            办理状态显示图片信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.EnumState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ProcessText">
+            <summary>
+            反馈信息审核信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ToHandleTimeText">
+            <summary>
+            转交办理时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.AlertNote">
+            <summary>
+            是否提醒标识
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Display1">
+            <summary>
+            冗余字段1——用于前台列表显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Display2">
+            <summary>
+            冗余字段1——用于前台列表显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Display3">
+            <summary>
+            冗余字段1——用于前台列表显示
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ModelConfig">
+            <summary>
+            模型配置
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.ModelSchema">
+            <summary>
+            模型数据架构
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Item(System.String)">
+            <summary>
+            获取模型数据
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.SchemaPath">
+            <summary>
+            Schema路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Phone">
+            <summary>
+            用户电话
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Fax">
+            <summary>
+            用户传真号码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.Address">
+            <summary>
+            用户住址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.AdviceTag">
+            <summary>
+            反馈标签
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Advice.IsRead">
+            <summary>
+            是否显示未读标记
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.AdviceRate">
+            <summary>
+            反馈统计
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.NotAdminMustHandleCount">
+            <summary>
+            办理人所办理的状态为必须办理的信息数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.AdviceTypeID">
+            <summary>
+            反馈模型ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.AdviceTypeTitle">
+            <summary>
+            反馈模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.AdviceCount">
+             <summary>
+            总件数
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.HandleNumber">
+            <summary>
+            应处理数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.NoHandleNumber">
+            <summary>
+            不需处理数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.HandleCount">
+            <summary>
+            总处理数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.NoAdminHandleCount">
+            <summary>
+            办理人处理数（非管理员办理的处理数）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.NoHandleCount">
+            <summary>
+            总共未处理数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.HandleRate">
+            <summary>
+            解决率，办理率
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.AdviceRate.AdviceInfoType">
+            <summary>
+            反馈信息类型
+            </summary>
+        </member>
+    </members>
+</doc>

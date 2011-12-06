@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" desc="文章模型" label="文章模型" type="article">
+	<dataSet>
+		<dataTable name="ArticleModel">
+			<dataColumn label="ID" name="ID" dataType="String" expression="" maxlength="40" direction="InputOutput" mapping="ID" system="true" />
+			<dataColumn label="用户ID" name="AccountID" dataType="String"  maxlength="40" expression="" direction="Output" system="true" />
+			<dataColumn label="栏目ID" name="OwnerID" dataType="String"  maxlength="40" expression="" direction="Output" mapping="OwnerID" />
+			<dataColumn label="来源" name="Source" dataType="String" expression=""  maxlength="50" direction="InputOutput" mapping="Source" system="true" />
+			<dataColumn label="文章类型" name="ContentType" dataType="Int32" expression="" direction="Output" mapping="ContentType" system="true" />
+			<dataColumn label="引用Url" name="ContentUrl" dataType="String"  maxlength="255" expression="" direction="Output" mapping="ContentUrl" system="true" />
+			<dataColumn label="状态" name="State" dataType="Int32" expression="" direction="Output" mapping="State" default="1" system="true" list="true" />
+			<dataColumn label="排序" name="Index" dataType="Int32" expression="" direction="Output" mapping="SequenceIndex" default="999" system="true" />
+			<dataColumn label="置顶" name="IsShow" dataType="Int32" expression="" direction="Output" mapping="IsShow" system="true" list="true" />
+			<dataColumn label="标签" name="Tags" dataType="String" expression="" maxlength="255" direction="Output" system="true" list="true" />
+			<dataColumn label="更新时间" name="Updated" dataType="DateTime" expression="" direction="InputOutput" default="Now" system="true" />
+			<dataColumn label="创建时间" name="Created" dataType="DateTime" expression="" direction="Output" mapping="Created" default="Now" system="true" />
+			<dataColumn label="审批当前进程" name="ProcessState"  maxlength="50" dataType="String" expression="" direction="Output" system="true" />
+			<dataColumn label="流转来源方向" name="ProcessDirection"  maxlength="50" dataType="String" expression="" direction="Output" system="true" />
+			<dataColumn label="拥有处置权限的站点ID" name="ProcessSiteID" maxlength="40"  dataType="String" expression="" direction="Output" system="true" />
+			<dataColumn label="栏目路径" name="FullPath" maxlength="254"  dataType="String" expression="" direction="Output" system="true" />
+			<dataColumn label="点击量" name="Clicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="日点击量" name="DayClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="昨日点击量" name="YesterdayClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="周点击量" name="WeekClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="月点击量" name="MonthClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="季点击量" name="QuarterClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<dataColumn label="年点击量" name="YearClicks" dataType="Int32" expression="" direction="Input" mapping="" system="true" list="true" />
+			<!--下面是返回字段-->
+			<!--
+      <dataColumn label="置顶(辅助列表)" name="IsShowText" dataType="String" expression="get(IsShowText)" direction="ReturnValue" width="100" system="true" />
+      <dataColumn label="标题" name="Title" dataType="String" expression="get(Title)" direction="ReturnValue" />
+      <dataColumn label="标签(辅助列表)" name="TagsShow" dataType="String" expression="formatTag(Tags)" direction="ReturnValue" width="100"/>
+      <dataColumn label="栏目Url(辅助列表)" name="ChannelFullUrl" dataType="String" expression="get(ChannelFullUrl)" direction="ReturnValue" width="100" />
+      <dataColumn label="栏目名称(辅助列表)" name="ChannelName" dataType="String" expression="get(ChannelName)" direction="ReturnValue" width="100" />
+      <dataColumn label="状态(辅助列表)" name="StateText" dataType="String" expression="get(AuditText)" direction="ReturnValue" width="100" />
+      <dataColumn label="更新时间(辅助列表)" name="UpdatedText" dataType="String" expression="get(UpdatedText)" direction="ReturnValue" width="100" />
+      -->
+		</dataTable>
+	</dataSet>
+	<layout>
+		<panel name="edit" label="后台录入面板">
+			<edit path="we7.Editor" visible="true">
+				<group index="0" name="默认" next="0" enable="true">
+					<control label="ID" name="ID" type="GUID" required="false" visible="false"/>
+					<control label="栏目" name="OwnerID" type="We7.ChannelSelect" required="false" visible="true" />
+				</group>
+			</edit>
+			<condition visible="false" path="we7.Condition">
+				<control id="ID" label="ID" name="ID" type="Request" required="false" visible="false" />
+			</condition>
+			<context>
+				<dataKey>ID</dataKey>
+			</context>
+		</panel>
+		<panel name="list" label="后台列表面板">
+			<list visible="true" path="we7.List">
+				<group index="0" name="传统列表" enable="true">
+					<column name="Manage" label="管理" width="100" type="action" align="Center" index="2" visible="true" mapping="">
+						<param name="cmd" value="view()|edit()|delete" />
+						<param name="cmdText" value="查看|编辑|删除" />
+					</column>
+				</group>
+				<group name="矩阵行列" index="1" next="0" enable="false">
+					<column name="" label="标题"  width="120" type="link" align="NotSet" index="1" visible="true" isThumb="false" />
+					<column name="" label="图片" width="120" type="thumb" align="NotSet" index="2" visible="true" isThumb="true" />
+					<column name="Manage" label="管理" width="120" height="15" type="action" align="Center" index="3" visible="true" isThumb="false" mapping="" expr="" convert="">
+						<param name="cmd" value="view()|edit()|delete" />
+						<param name="cmdText" value="查看|编辑|删除" />
+					</column>
+				</group>
+			</list>
+			<pager visible="true" path="we7.Pager" />
+			<condition visible="true" path="we7.Condition">
+			</condition>
+			<command visible="true" path="we7.Command" />
+			<context>
+				<pageSize>10</pageSize>
+				<dataKey>ID</dataKey>
+				<orders>Index,IsShow Desc,Updated Desc,ID Desc</orders>
+			</context>
+		</panel>
+		<panel name="multi" label="会员中心显示面板">
+			<edit path="System.CascadeEditor" visible="true">
+				<group index="0" name="默认" next="0" enable="true">
+					<control id="ID" name="ID" label="ID" type="GUID" required="true" visible="false" />
+				</group>
+			</edit>
+			<list path="we7.List" visible="true">
+				<group name="传统列表" index="0" next="0" enable="true">
+					<column name="Manage" label="管理" width="100" type="action" align="Center" index="2" visible="true" isThumb="false" isLink="false" mapping="">
+						<param name="cmd" value="view()|edit()|delete" />
+						<param name="cmdText" value="查看|编辑|删除" />
+					</column>
+				</group>
+				<group name="矩阵行列" index="1" next="0" enable="false">
+					<column name="" label="标题" width="120" type="link" align="NotSet" index="1" visible="true" isThumb="false" isLink="false" />
+					<column name="" label="图片" width="120" type="thumb" align="NotSet" index="2" visible="true" isThumb="true" isLink="false" />
+					<column name="Manage" label="管理" width="120" height="15" type="action" align="Center" index="3" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="">
+						<param name="cmd" value="view()|edit()|delete" />
+						<param name="cmdText" value="查看|编辑|删除" />
+					</column>
+				</group>
+			</list>
+			<pager path="System.SimplePager" visible="true" />
+			<condition path="System.SimpleCondition" visible="true">
+				<control id="OwnerID" name="OwnerID" label="栏目ID" type="Request" required="false" visible="false">
+					<param name="param" value="oid" />
+				</control>
+			</condition>
+			<command path="System.SimpleCommand" visible="true" />
+			<navigation path="System.SimplenNavigation" visible="true" />
+			<context>
+				<dataKey>ID</dataKey>
+				<pageSize>10</pageSize>
+				<orders>Index,IsShow Desc,Updated Desc,ID Desc</orders>
+			</context>
+		</panel>
+	</layout>
+</ModelInfo>

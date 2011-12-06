@@ -1,0 +1,14 @@
+﻿ html{filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+        #resourceFrame
+        {cursor: pointer; position: relative;width: 420px;height: 420px; border: 1px solid #ccc;overflow: hidden;background-color:#bbb}
+        #drop{border: 1px solid #ccc;width: 120px;height: 120px;cursor: pointer;position: absolute;top: 100px; left: 100px;overflow: hidden;}
+        #drop_image
+        {cursor:pointer;position: absolute;}
+        #father
+        {border: 1px solid red;width: 50px;height: 10px;position: relative;}
+        #bar
+        {width: 211px;height: 18px;background-image: url("../../../images/track.gif");background-repeat: no-repeat;position: relative;}
+        .child
+        {width: 11px;height: 16px;background-image: url("../../../images/grip(11 16).gif");background-repeat: no-repeat;left: 0;top: 0;position: absolute;left: 100px;}
+        .smallbig{ cursor:pointer;}
+        li{ list-style:none;}

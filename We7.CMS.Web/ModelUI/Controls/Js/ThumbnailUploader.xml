@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Uploader>
+  <Item name="Simple" src="/ModelUI/Controls/page/SimpleImage.aspx" height="360" width="400"></Item>
+  <Item name="Thumbnail" src="/ModelUI/Controls/page/ImageUploadEx2.aspx" height="410" width="500"></Item>
+  <Item name="Multi" src="/ModelUI/Controls/page/ImageUploadEx.aspx" height="410" width="500"></Item>
+</Uploader>

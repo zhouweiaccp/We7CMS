@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>部件另存为</title>
+    <style type="text/css">
+        fieldset{
+            padding-left:20px;
+        }
+        fieldset legend{
+            font-size:14px;
+            font-weight:bold;
+        }
+        div.line{
+            line-height:32px;
+            height:32px;
+        }
+        input, selectd
+        {
+            margin: 0;
+        }
+        body, td
+        {
+            font-size: 12px;
+        }
+        body
+        {
+            padding: 0;
+            margin: 0;
+            font-family: 宋体 Arial;
+            background-color: #F7F7F7;
+        }        
+        .label
+        {
+            font-family:Verdana;
+            text-align: right;
+            
+        }
+        #name
+        {
+            width: 260px;
+        }
+    </style>
+    <script type="text/javascript">
+        function ok() {
+            //var jgpattern = /^[A-Za-z0-9]+$/;
+            //var jgpattern = /^[^\/\\<>\*\?\:"\|]+$/;
+            var jgpattern = /^[a-zA-z]+[\.a-zA-Z0-9]+\w+$/;
+            var filename = document.getElementById("name").value;
+            if (!filename) {
+                alert("请输入控件名称！");
+                return;
+            }
+            if (!jgpattern.exec(filename)) {
+                alert("控件名不能包含._之外的特殊符号,且不能以数字开头或用.结尾。");
+                document.getElementById("name").focus();
+                return;
+            }
+            window.returnValue = { name: filename };
+
+            window.close();
+        }        
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>存为新部件</legend>
+        <div class="line">
+            <label class="label">
+                部件名称：
+            </label>
+            <input id="name" type="text" />
+            <label class="label">.ascx
+            </label>
+        </div>        
+        <div class="line">
+            <input type="button" onclick="ok()" value="确定" />
+            <input type="button" onclick="window.close()" value="取消" />
+        </div>
+    </fieldset>
+</body>
+</html>

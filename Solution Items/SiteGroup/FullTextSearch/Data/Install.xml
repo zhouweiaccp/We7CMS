@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS' >
+    <Sql>
+      Delete from [Menu] where [ID]='{00000000-0011-0020-0012-000000000000}'
+    </Sql>
+    <Sql>
+        insert into [Menu]([ID],[ParentID],[SequenceIndex],[NameText],[Title],[Href],[Type],[EntityID])
+        values('{00000000-0011-0020-0012-000000000000}','{00000000-0000-0013-0000-000000000000}',10,'站群检索设置','搜索服务设置','/Plugins/FullTextSearch/UI/index.aspx',99,'System.Administration')
+    </Sql>
+  </Database>
+</Update>

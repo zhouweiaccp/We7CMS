@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoadServerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pluginType" type="tns:PluginType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="PluginType">
+        <s:restriction base="s:string">
+          <s:enumeration value="PLUGIN" />
+          <s:enumeration value="CONSTROL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoadServerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadServerInfoResult" type="tns:ArrayOfRemotePluginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRemotePluginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RemotePluginInfo" nillable="true" type="tns:RemotePluginInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RemotePluginInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:PluginInfo" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PluginInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PluginType" type="tns:PluginType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Directory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enable" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsInstalled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Summary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultPage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pages" type="tns:ArrayOfUrlItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="Controls" type="tns:ArrayOfUrlItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="Deployment" type="tns:Deployment" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thumbnail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Snapshot" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Compatible" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSpecial" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Clicks" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocal" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUrlItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UrlItem" nillable="true" type="tns:UrlItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UrlItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Deployment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Install" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Update" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unstall" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Introduction" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadRemotePluginInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pluginName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pluginType" type="tns:PluginType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRemotePluginInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRemotePluginInfoResult" type="tns:RemotePluginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTempFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pluginName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pluginType" type="tns:PluginType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTempFileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddDownLoads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pluginName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pluginType" type="tns:PluginType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDownLoadsResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadServerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadServerInfo" />
+  </wsdl:message>
+  <wsdl:message name="LoadServerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadServerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRemotePluginInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRemotePluginInfo" />
+  </wsdl:message>
+  <wsdl:message name="LoadRemotePluginInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRemotePluginInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckTempFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckTempFile" />
+  </wsdl:message>
+  <wsdl:message name="CheckTempFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckTempFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDownLoadsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDownLoads" />
+  </wsdl:message>
+  <wsdl:message name="AddDownLoadsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDownLoadsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PluginInfomationSoap">
+    <wsdl:operation name="LoadServerInfo">
+      <wsdl:input message="tns:LoadServerInfoSoapIn" />
+      <wsdl:output message="tns:LoadServerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRemotePluginInfo">
+      <wsdl:input message="tns:LoadRemotePluginInfoSoapIn" />
+      <wsdl:output message="tns:LoadRemotePluginInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTempFile">
+      <wsdl:input message="tns:CheckTempFileSoapIn" />
+      <wsdl:output message="tns:CheckTempFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDownLoads">
+      <wsdl:input message="tns:AddDownLoadsSoapIn" />
+      <wsdl:output message="tns:AddDownLoadsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PluginInfomationSoap" type="tns:PluginInfomationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadServerInfo">
+      <soap:operation soapAction="http://tempuri.org/LoadServerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRemotePluginInfo">
+      <soap:operation soapAction="http://tempuri.org/LoadRemotePluginInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTempFile">
+      <soap:operation soapAction="http://tempuri.org/CheckTempFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDownLoads">
+      <soap:operation soapAction="http://tempuri.org/AddDownLoads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PluginInfomationSoap12" type="tns:PluginInfomationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadServerInfo">
+      <soap12:operation soapAction="http://tempuri.org/LoadServerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRemotePluginInfo">
+      <soap12:operation soapAction="http://tempuri.org/LoadRemotePluginInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTempFile">
+      <soap12:operation soapAction="http://tempuri.org/CheckTempFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDownLoads">
+      <soap12:operation soapAction="http://tempuri.org/AddDownLoads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PluginInfomation">
+    <wsdl:port name="PluginInfomationSoap" binding="tns:PluginInfomationSoap">
+      <soap:address location="http://localhost:1978/Admin/Plugin/PluginInfomation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PluginInfomationSoap12" binding="tns:PluginInfomationSoap12">
+      <soap12:address location="http://localhost:1978/Admin/Plugin/PluginInfomation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

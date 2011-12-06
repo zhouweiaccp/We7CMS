@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item url="/contactus/" template="channel_content.ascx" />
+  <item url="/companynews/lastestnews/detail" template="Comment.ascx" />
+  <item url="/service/optional/" template="channel_content.ascx" />
+  <item url="/service/normal/" template="channel_content.ascx" />
+  <item url="/service/enterprise/" template="channel_content.ascx" />
+  <item url="/service/basic/" template="channel_content.ascx" />
+  <item url="/service/custombuilt/" template="channel_content.ascx" />
+  <item url="/service/free/" template="channel_content.ascx" />
+  <item url="/service/implementary/" template="channel_content.ascx" />
+  <item url="/productinfo/" template="channel_photo.ascx" />
+  <item url="/sbzl/tjsb/" template="ReportData.ascx" />
+  <item url="/sbzl/" template="ReportList.ascx" />
+  <item url="/sbzl/detail" template="ReportDetail.ascx" />
+  <item url="/ycsjfw/" template="Remote.ascx" />
+</items>

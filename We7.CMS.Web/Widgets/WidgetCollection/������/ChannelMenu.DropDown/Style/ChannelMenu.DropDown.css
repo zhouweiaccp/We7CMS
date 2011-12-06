@@ -1,0 +1,133 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.DropDown
+ * Style:ChannelMenu_DropDown
+ * Desc::
+ * Quot:
+*************************************************************/
+/*****************************************************************
+ * 下拉横向菜单控件风格
+ * 名称：横向菜单
+ ******************************************************************/
+.ChannelMenu_DropDown #nav
+{
+    z-index: 100;
+    position: relative;
+    background:url(../Images/nav_bg2.gif) repeat scroll 0 0 transparent;
+    height: 73px;
+}
+
+.ChannelMenu_DropDown #nav ul
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; 
+}
+.ChannelMenu_DropDown #nav #product
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; color:#FFF; font-weight:bold; display:block;
+}
+.ChannelMenu_DropDown #nav .active{background:url(../images/navnbg1.gif) no-repeat; width:97px; height:53px; color:#fff; display:block;}
+.ChannelMenu_DropDown .nav_on a:hover
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; 
+	color:#000; font-weight:bold;
+	background:url(../images/navnbg1.gif) no-repeat; width:97px; height:53px; 
+}
+.ChannelMenu_DropDown .nav a:hover
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; 
+	color:#000; font-weight:bold;
+	background:url(../images/navnbg1.gif) no-repeat; width:97px; height:53px; 
+}
+.ChannelMenu_DropDown #nav li
+{
+    float: left;
+    margin: 0px; 
+    cursor: pointer;
+    list-style: none; padding-left:5px;  width:97px;  text-align:center;
+}
+.ChannelMenu_DropDown #nav ul li span
+{
+   line-height:35px;
+}
+.ChannelMenu_DropDown #nav ul li img
+{
+   line-height:35px; margin-top:10px;
+}
+.ChannelMenu_DropDown #nav .sonall
+{
+    z-index: 200;
+    position: absolute;
+    top: 38px;
+    padding-right: 12px;
+}
+.ChannelMenu_DropDown .son0
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son1
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son2
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son3
+{
+    margin-left: -252px;
+    width: 440px;
+}
+.ChannelMenu_DropDown .son4
+{
+	margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son5
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son6
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son7
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son8
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son9
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son10
+{
+    margin-left: -420px;
+    width: 580px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.DropDown
+ * Style:ChannelMenu_DropDown
+ * Desc::
+ * Quot:
+*************************************************************/

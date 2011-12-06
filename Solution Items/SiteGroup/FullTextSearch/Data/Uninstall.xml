@@ -1,0 +1,8 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS' >
+    <Sql>
+      Delete from [Menu] where [ID]='{00000000-0011-0020-0012-000000000000}'
+    </Sql>
+  </Database>
+</Update>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--请依次填入您所定的内容信息类型，以及模型文件路径与名称-->
+<configuration>
+  <!--请注意，value值从0到20是系统内定义，请选择20以后的定义，请仿照展会信息；请慎重修改0-3之间信息 -->
+  <item name="文章信息" value="0" visible="true" unit="" information="article" />
+  <item name="产品信息" value="1" visible="true" unit="" information="product"/>
+  <item name="招聘信息" value="2" visible="true" unit="" information="recruite"/>
+  <item name="求职信息" value="3" visible="true" unit="" information="apply"/>
+  <item name="展会信息" value="21" visible="true" unit="" information="exhibition"  modelpath="ExhibitionInfo.xml"/>
+  <item name="样本下载" value="22" visible="true" unit="" information="swatch" modelpath="Swatch.xml"/>
+  <item name="资源下载" value="23" visible="true" unit="" information="resource"  modelpath="Resource.xml"/>
+</configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Tags>
+  <Item words="头条" type="通用类" />
+  <Item words="热点" type="通用类" />
+  <Item words="推荐" type="通用类" />
+  <Item words="图片" type="通用类" />
+  <Item words="首页" type="通用类" />
+  <Item words="频道首页" type="通用类" />
+  <Item words="精选" type="通用类" />
+  <Item words="排行榜" type="通用类" />
+  <Item words="视频" type="通用类" />
+  <Item words="最热" type="通用类" />
+  <Item words="火爆" type="通用类" />
+  <Item words="组1" type="其它类" />
+  <Item words="组2" type="其它类" />
+  <Item words="组3" type="其它类" />
+  <Item words="组3" type="其它类" />
+  <Item words="组4" type="其它类" />
+  <Item words="产品" type="商业类" />
+  <Item words="招聘" type="商业类" />
+  <Item words="首页翻转图片" type="通用类" />
+  
+</Tags>

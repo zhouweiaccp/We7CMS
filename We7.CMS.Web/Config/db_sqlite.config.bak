@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<BaseConfigInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DBConnectionString>Data Source={$App}\App_data\DB\We7_CMS_DB.db;</DBConnectionString>
+  <DBDriver>Thinkment.Data.SQLiteDriver</DBDriver>
+  <DBType>SQLite</DBType>
+</BaseConfigInfo>

@@ -1,0 +1,134 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Login.Default
+ * Style:Login_Default
+ * Desc::
+ * Quot:
+*************************************************************/
+/*****会员登录*********/
+.Login_Default .user h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(../Images/back1.gif) no-repeat left top;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Login_Default .user_info
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+    background: #fff;
+}
+.Login_Default .user_login ul
+{
+    padding: 5px;
+}
+.Login_Default .user_login li
+{
+    height: 27px;
+    line-height: 27px;
+    margin: 2px 0px;
+}
+.Login_Default .loginedinfo li
+{
+    height: 21px;
+    line-height: 21px;
+}
+.Login_Default .user_login li.reg_user
+{
+    height: 27px;
+    line-height: 27px;
+    padding: 3px 0px 6px 0px;
+}
+.Login_Default .user_login li.save
+{
+    padding-left: 45px;
+}
+.Login_Default .user_login li.reg
+{
+    padding-top: 5px;
+    background: url(../images/min_line.gif) no-repeat center top;
+    text-align: center;
+}
+.Login_Default .user_login li.reg a
+{
+    color: #333;
+    text-decoration: underline;
+}
+.Login_Default .user_login li.reg a:hover
+{
+    color: #f87608;
+    text-decoration: underline;
+}
+.Login_Default .user_login li.save a
+{
+    padding-left: 10px;
+}
+
+.Login_Default .user_login li.save input
+{
+    margin-right: 5px;
+}
+.Login_Default .user_login li input.inputtext
+{
+    background: url(../images/back.gif) no-repeat left -64px;
+    border: none;
+    width: 133px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.Login_Default .user_login li input#validationCode2
+{
+    width: 58px !important;
+    background: url(../images/back.gif) no-repeat -708px -65px;
+    font-size: 11px;
+    font-family: Arial;
+}
+.Login_Default .user_login li select
+{
+    width: 138px;
+}
+.Login_Default .user_login li img
+{
+    margin-left: 5px;
+}
+
+.Login_Default .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat -141px -66px;
+}
+
+.Login_Default .user_login li.reg_user {
+	position:relative;
+}
+.Login_Default .user_login li input.user_login_submit {
+	width:66px;
+	height:22px;
+	background:url(../images/back.gif) no-repeat -72px -38px;
+	overflow:hidden;
+	border:none;
+	position:absolute;
+	top:7px;
+	left:20px;
+	cursor: pointer;
+}
+.Login_Default .user_login li input.user_login_submit {top:5px;left:45px;}
+/*************************************************************
+ * Command:End
+ * Control:Login.Default
+ * Style:Login_Default
+ * Desc::
+ * Quot:
+*************************************************************/

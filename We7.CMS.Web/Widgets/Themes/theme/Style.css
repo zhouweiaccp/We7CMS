@@ -1,0 +1,66 @@
+﻿/*************************************************************
+ * name:theme
+ * img:/widgets/Themes/theme/face.jpg
+ * label:风格样式三
+*************************************************************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, table, th, td {
+	margin:0;
+	padding:0;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style:normal;
+}
+ul, li {
+	list-style-type:none;
+}
+img {
+	border:none;
+}
+input, textarea, select {
+	font-family:inherit;
+	font-weight:inherit;
+	vertical-align:middle;
+
+}
+input,select{
+    vertical-align:middle;
+    height:18px;
+    line-height:18px;
+} 
+body {
+	background: #fff;
+	color: #333;
+	font: 12px '宋体', Arial, Helvetica, sans-serif;
+}
+a {
+	color: #345292;
+	text-decoration:none;
+	cursor: pointer;
+}
+a:hover {
+	color: #cc0000;
+	text-decoration:none;
+}
+
+/************网站顶部定义**************/
+
+.headerV27 {
+    background: url("images/top.gif") repeat-x scroll left -29px transparent;
+}
+.wrapper {
+	width:960px;
+	margin: 0px auto;
+	padding:0px;
+}
+
+.mtop10 {
+	margin-top:10px;
+}
+
+.Tag_list {
+    background: url("images/back.gif") no-repeat scroll left -736px transparent;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    position: relative;
+}

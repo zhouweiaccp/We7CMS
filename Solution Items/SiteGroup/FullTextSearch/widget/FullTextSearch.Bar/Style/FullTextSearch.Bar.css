@@ -1,0 +1,134 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:FullTextSearch.Bar
+ * Style:FullTextSearch_Bar
+ * Desc:常规式
+ * Quot:
+*************************************************************/
+.FullTextSearch_Bar ul
+{
+	width: 395px;
+	font-size: 12px;
+	list-style: none;
+}
+.FullTextSearch_Bar li
+{
+	line-height: 25px;
+	margin-right: 5px;
+	margin-bottom: 6px;
+}
+
+.FullTextSearch_Bar img
+{
+	border-width: 0px;
+}
+
+.FullTextSearch_Bar .keyword span
+{
+	padding-right: 3px;
+}
+
+.FullTextSearch_Bar .keyword input
+{
+	width: 100px;
+	height: 24px;
+	padding: 1px;
+}
+
+.FullTextSearch_Bar .date span
+{
+	padding-right: 15px;
+}
+
+.FullTextSearch_Bar .date input
+{
+	width: 100px;
+	height: 24px;
+	padding: 1px;
+}
+
+.FullTextSearch_Bar .search div
+{
+}
+.FullTextSearch_Bar .search input
+{
+	width: 50px;
+	height: 24px;
+	cursor: hand;
+	margin-left: 40px;
+}
+/*************************************************************
+ * Command:End
+ * Control:FullTextSearch.Bar
+ * Style:FullTextSearch_Bar
+ * Desc:常规式
+ * Quot:
+*************************************************************/
+
+/*************************************************************
+ * Command:Start
+ * Control:FullTextSearch.Bar
+ * Style:FullTextSearch_BarImage
+ * Desc:图片式
+ * Quot:
+*************************************************************/
+.FullTextSearch_BarImage ul  {
+display:inline;
+font-size:12px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+width:360px;
+}
+.FullTextSearch_BarImage  li {
+display:block;
+float:left;
+line-height:25px;
+margin-right:6px;
+}
+.FullTextSearch_BarImage  img {
+border-width:0;
+}
+.FullTextSearch_BarImage  .keyword {
+}
+.FullTextSearch_BarImage input.keyword {
+-moz-background-clip:inherit;
+-moz-background-inline-policy:inherit;
+-moz-background-origin:inherit;
+background:inherit inherit inherit inherit inherit;
+border:1px solid #FFFFFF;
+height:12px;
+margin-top:4px;
+padding:1px;
+width:220px;
+}
+.FullTextSearch_BarImage  .date {
+}
+.FullTextSearch_BarImage  .date input {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FAFAFA none repeat scroll 0 0;
+border:1px solid #CCCCCC;
+height:20px;
+padding:1px;
+width:100px;
+}
+.FullTextSearch_BarImage  .search {
+}
+.FullTextSearch_BarImage  .search input {
+background-color:Transparent;
+background-image:url(/_skins/westengine/images/search.gif);
+border-width:0;
+height:22px;
+margin-left:17px;
+width:70px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:FullTextSearch.Bar
+ * Style:FullTextSearch_BarImage
+ * Desc:图片式
+ * Quot:
+*************************************************************/

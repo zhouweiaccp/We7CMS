@@ -1,0 +1,3027 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.Accounts</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.Common.Enum.OwnerRank">
+            <summary>
+            用户或角色类别
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.OwnerRank.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.OwnerRank.Normal">
+            <summary>
+            普通用户
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.OwnerRank.Group">
+            <summary>
+            站群通行证或角色
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.OwnerRank.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.Department">
+            <summary>
+            部门实体类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PF.Department.#ctor">
+            <summary>
+            类属性
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.FromSiteID">
+            <summary>
+            来源站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.FullName">
+            <summary>
+            单位全称（包括所属父级单位）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.ParentID">
+            <summary>
+            父级单位ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Children">
+            <summary>
+            子部门列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Address">
+            <summary>
+            单位地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Email">
+            <summary>
+            工作邮箱
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.SiteUrl">
+            <summary>
+            部门站点URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.MapScript">
+            <summary>
+            地图位置标记代码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Number">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Department.Text">
+            <summary>
+            详细职能描述
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.PostService.Add(System.String,System.String)">
+            <summary>
+            添加需要提交的名和值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.PostService.Post">
+            <summary>
+            以输出Html方式POST
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.AccountLocalHelper">
+            <summary>
+            角色管理
+            </summary>
+            <summary>
+            用户权限方法集（本地存储）；
+            包括用户、部门、角色、权限；
+            </summary>
+            <summary>
+            部门业务类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRoles(System.String,We7.CMS.Common.Enum.OwnerRank,System.String)">
+            <summary>
+            获取一组角色
+            </summary>
+            <param name="type">角色的类型，管理员、普通用户等</param>
+            <param name="key">角色名称搜索</param>
+            <returns>角色数组</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRoleCount(System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <summary>
+            获取一个类型的角色数目
+            </summary>
+            <param name="type">角色的类型</param>
+            <returns>角色数目</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRoles(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取一组角色
+            </summary>
+            <param name="from">记录开始值</param>
+            <param name="count">返回的记录数</param>
+            <returns>角色列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRole(System.String)">
+            <summary>
+            通过角色ID获取一个角色
+            </summary>
+            <param name="roleID">角色ID</param>
+            <returns>角色对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRoleBytitle(System.String)">
+            <summary>
+            通过角色名称获取一个角色
+            </summary>
+            <param name="title">角色名字</param>
+            <returns>角色对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.AddRole(We7.CMS.Common.PF.Role)">
+            <summary>
+            添加一个角色
+            </summary>
+            <param name="roleID">指定的角色ID</param>
+            <param name="name">角色名称</param>
+            <param name="desc">角色描述</param>
+            <param name="type">角色类型</param>
+            <returns>一个角色信息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateRole(We7.CMS.Common.PF.Role)">
+            <summary>
+            更新一个角色
+            </summary>
+            <param name="id">角色ID</param>
+            <param name="name">角色名称</param>
+            <param name="desc">角色描述</param>
+            <param name="type">角色类型</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeleteRole(System.String)">
+            <summary>
+            删除角色（同时删除权限）
+            </summary>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.AssignAccountRole(System.String,System.String)">
+            <summary>
+            新建一个角色和用户关系的对象
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UnassignAccountRole(System.String,System.String)">
+            <summary>
+            删除一个用户的角色关联
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeleteAccountRole(System.String)">
+            <summary>
+            删除用户角色关联表记录
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountRoles(System.String)">
+            <summary>
+            通过用户ID查找此用户的用户加入的角色
+            </summary>
+            <param name="accountID">用户ID</param>
+            <returns>用户角色关联对象组</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateAccountRoles(System.String,System.String[])">
+            <summary>
+            通过用户ID插入一组用户角色关联对象
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="roles">角色对象组</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetRolesOfAccount(System.String)">
+            <summary>
+            获取用户的角色与用户集合
+            </summary>
+            <param name="accountID">用户ID</param>
+            <returns>角色与用户集合</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountsOfRole(System.String)">
+            <summary>
+            获取属于某一角色的用户集合（ID）
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountsOfRole(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取属于某一角色的用户集合（ID）
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="from">开始位置</param>
+            <param name="count">总共返回的条数</param>
+            <returns>一组用户角色关联对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountCountOfRole(System.String)">
+            <summary>
+            获取属于某一角色的用户总数
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissionContents(System.String,System.String)">
+            <summary>
+            获取用户所具有的所有权限内容列表（包含了所属角色的权限列表）
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="objectID">菜单ID或栏目ID</param>
+            <returns>权限列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissionContents(System.String,System.String,System.String)">
+            <summary>
+            某一所有者对对象具有的操作权限内容列表
+            </summary>
+            <param name="ownerType">用户？角色？</param>
+            <param name="ownerID">所有者</param>
+            <param name="objectID">栏目或对象</param>
+            <returns>权限内容列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissionOwners(System.Int32,System.String)">
+            <summary>
+            获得所有者列表
+            </summary>
+            <param name="typeID">所有者类型</param>
+            <param name="objectID">栏目ID或反馈类型ID</param>
+            <returns>所有者列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissions(System.Int32,System.String,System.String)">
+            <summary>
+            获取用户或角色权限
+            </summary>
+            <param name="ownerType">所有者类型</param>
+            <param name="ownerID">用户ID</param>
+            <param name="objectID">菜单ID或栏目ID</param>
+            <returns>权限列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissions(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            获取权限集：一组所有者，对一组权限类型的权限列表
+            </summary>
+            <param name="allOwners">所有者列表</param>
+            <param name="levels">权限内容列表</param>
+            <returns>权限集</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetPermissions(System.String,System.String)">
+            <summary>
+             获取权限集：授权对象+授权内容
+            </summary>
+            <param name="objectID">授权对象</param>
+            <param name="content">授权内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.AddPermission(System.Int32,System.String,System.String,System.String[])">
+            <summary>
+            添加一个权限记录
+            </summary>
+            <param name="ownerType">所有者类型</param>
+            <param name="ownerID">用户ID</param>
+            <param name="objectID">菜单ID或栏目ID</param>
+            <param name="contents">权限列表</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeletePermission(System.Int32,System.String,System.String,System.String[])">
+            <summary>
+            删除一个权限记录
+            </summary>
+            <param name="ownerType">类型所属类型：0—帐户；1—角色</param>
+            <param name="ownerID">用户ID或角色ID</param>
+            <param name="objectID">对象ID</param>
+            <param name="content">具体权限</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeletePermission(System.Int32,System.String,System.String)">
+            <summary>
+            删除一组权限记录
+            </summary>
+            <param name="ownerType">用户?角色？</param>
+            <param name="ownerID">所有者ID</param>
+            <param name="objectID">栏目ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetObjectsByPermission(System.String,System.String)">
+            <summary>
+            获取当前用户拥有权限permission的栏目ID列表
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="permission">权限名，如“Channel.Article”</param>
+            <returns>栏目ID列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetObjectID(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+             通过权限获取一组栏目（或其他对象）
+            </summary>
+            <param name="ownerIDs">角色或用户ID</param>
+            <param name="level">权限等级集合</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetObjectID(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            通过条件获取一组栏目（或其他对象）
+            </summary>
+            <param name="ownerIDs">角色或用户ID集合</param>
+            <param name="levels">权限等级集合</param>
+            <returns>栏目列表</returns>
+        </member>
+        <member name="F:We7.CMS.Accounts.AccountLocalHelper.AccountSessionKey">
+            <summary>
+            权限的Session关键字
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.AddAccount(We7.CMS.Common.PF.Account)">
+            <summary>
+            添加一个用户
+            </summary>
+            <param name="act">用户对象</param>
+            <returns>用户对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.ExistUserName(System.String)">
+            <summary>
+            判断会员登录名称是否已经存在
+            </summary>
+            <param name="userName">会员登录名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.ExistEmail(System.String)">
+            <summary>
+            判断会员邮箱地址是否已经存在
+            </summary>
+            <param name="email">会员邮箱地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountByLoginName(System.String)">
+            <summary>
+            通过登录名获取一个用户
+            </summary>
+            <param name="loginName">登录名</param>
+            <returns>用户对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccount(System.String,System.String[])">
+            <summary>
+            获取一个用户
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="fields">返回的字段集合</param>
+            <returns>用户对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountByEmail(System.String)">
+            <summary>
+            根据用户邮箱获取用户信息
+            </summary>
+            <param name="email">E-mail</param>
+            <returns>用户信息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeleteAccont(System.String)">
+            <summary>
+            删除帐户（同时删除权限以及联盟和邮箱帐号等）
+            </summary>
+            <param name="accountID">用户ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeleteAccont(Thinkment.Data.IConnection,System.String)">
+            <summary>
+            删除帐户（同时删除权限以及联盟和邮箱帐号等）
+            </summary>
+            <param name="ic">连接</param>
+            <param name="accountID">用户ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdatePassword(We7.CMS.Common.PF.Account,System.String)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="account">用户对象</param>
+            <param name="newPassword">新密码</param>
+            <returns>修改过后的密码</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateUserPassword(We7.CMS.Common.PF.Account)">
+            <summary>
+            将用户密码明码改为加密码
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateAccount(We7.CMS.Common.PF.Account,System.String[])">
+            <summary>
+            更新用户
+            </summary>
+            <param name="act">用户对象</param>
+            <param name="fields">需要更新的字段集合</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.InitAllUserRole">
+            <summary>
+            初始化用户角色，每个用户都赋予系统角色：注册用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccounts(System.String,System.String,System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <summary>
+            根据条件获取一组用户
+            </summary>
+            <param name="departmentID">部门ID</param>
+            <param name="selectName">登陆名</param>
+            <param name="state">用户状态</param>
+            <returns>一组用户信息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountList(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据用户ID列表,查询用户信息
+            </summary>
+            <param name="ownerIds">用户ID列表</param>
+            <returns>用户信息列表</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAccountIDSByLoginName(System.String)">
+            <summary>
+            通过登录名获取用户用户名
+            </summary>
+            <param name="username">用户名</param>
+            <returns>登陆名</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="name">登录名</param>
+            <param name="password">密码</param>
+            <returns>成败消息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.SignOut">
+            <summary>
+            退出
+            </summary>
+            <returns>成败消息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.IsValidPassword(We7.CMS.Common.PF.Account,System.String)">
+            <summary>
+            验证密码是否正确
+            </summary>
+            <param name="account">用户对象</param>
+            <param name="password">密码</param>
+            <returns>密码正确返回true，错误返回false</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAuthenticatedAccount">
+            <summary>
+            获取当前登录账户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.QueryAccountCountByQuery(We7.CMS.Accounts.AccountQuery)">
+            <summary>
+            根据查询类获得用户数量
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.QueryAccountsByQuery(We7.CMS.Accounts.AccountQuery,System.Int32,System.Int32,System.String[])">
+            <summary>
+            按照查询类提供的条件查询用户
+            </summary>
+            <param name="query"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserAdded(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发用户已添加事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserUpdated(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发用户已更新事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserUpgraded(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发用户已升级事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserUpdated(We7.CMS.Common.PF.Account,System.String)">
+            <summary>
+            触发用户已更新事件 wjz 2010年7月23
+            </summary>
+            <param name="account"></param>
+            <param name="repassword"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserDeleted(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发用户已删除事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnPasswordUpdated(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发密码已修改事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserLogined(We7.CMS.Common.PF.Account)">
+            <summary>
+            触发用户登录事件
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.OnUserSignOut">
+            <summary>
+            触发用户退出事件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.AddDepartment(We7.CMS.Common.PF.Department)">
+            <summary>
+            添加一个部门信息
+            </summary>
+            <param name="dpt">一个部门信息</param>
+            <returns>返回这个部门的信息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.DeleteDepartment(System.String)">
+            <summary>
+            删除一个部门信息
+            </summary>
+            <param name="departmentID">部门ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartmentByName(System.String)">
+            <summary>
+            根据部门名称查询部门ID
+            </summary>
+            <param name="name">部门名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartment(System.String,System.String[])">
+            <summary>
+            获取一个部门信息
+            </summary>
+            <param name="departmentID">部门ID</param>
+            <param name="fields">返回的字段集合</param>
+            <returns>一个部门信息</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartments(System.String,System.String,System.String,System.String[])">
+            <summary>
+            获取一个部门下的所有相关部门
+            </summary>
+            <param name="parentID">父部门ID</param>
+            <param name="selectName">查询的部门名称</param>
+            <param name="fields">返回的字段集合</param>
+            <returns>一个部门对象</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetAllDepartment(System.String,System.Int32,System.Int32)">
+            <summary>
+            取得所有的部门信息
+            </summary>
+            <param name="begin">开始记录</param>
+            <param name="count">记录条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.QueryAllCount(System.String)">
+            <summary>
+            查询所有部门记录条数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateDepartment(We7.CMS.Common.PF.Department,System.String[])">
+            <summary>
+            更新一个部门信息
+            </summary>
+            <param name="dpt">部门对象</param>
+            <param name="fields">更新的字段集合</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.UpdateDepartmentFullName(System.String)">
+            <param name="departmentID">部门ID</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartmentFullPath(System.String)">
+            <summary>
+            更新部门url
+            </summary>
+            <param name="departmentId">部门ID</param>
+            <returns>部门url</returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartmentTree(System.String,System.String)">
+            <summary>
+            取得未格式化的Departments
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetOrderDepartments(System.String,System.String)">
+            <summary>
+            取得未格式化的Departments带排序
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountLocalHelper.GetDepartmentTreeWithFormat(System.String,System.String)">
+            <summary>
+            取得格式化的Departments
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountLocalHelper.context">
+            <summary>
+            当前的http上下文
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountLocalHelper.HelperFactory">
+            <summary>
+            业务对象工厂
+            </summary>
+        </member>
+        <member name="E:We7.CMS.Accounts.AccountLocalHelper.UserUpdatedByPwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.TypeOfMenu">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfMenu.NormalMenu">
+            <summary>
+            普通菜单
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfMenu.TopMenu">
+            <summary>
+            顶部一级菜单
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfMenu.GroupMenu">
+            <summary>
+            分组类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfMenu.ReferenceMenu">
+            <summary>
+            引用类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.Role">
+            <summary>
+            角色对象类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PF.Role.#ctor">
+            <summary>
+            类属性
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.FromSiteID">
+            <summary>
+            来源站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.Description">
+            <summary>
+            角色备注
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.Created">
+            <summary>
+            角色创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.State">
+            <summary>
+            角色状态：启用、禁用
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.StateText">
+            <summary>
+            角色状态描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.RoleType">
+            <summary>
+            角色类别： 0- 管理员角色 ；1-普通用户角色；
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.TypeText">
+            <summary>
+            角色类别描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.GroupRole">
+            <summary>
+            站群角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Role.IsGroupRole">
+            <summary>
+            是否站群角色
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.Account">
+            <summary>
+            用户基本信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PF.Account.#ctor">
+            <summary>
+            类属性
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ID">
+            <summary>
+            信息主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.FromSiteID">
+            <summary>
+            来源站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.DepartmentID">
+            <summary>
+            外键部门ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Department">
+            <summary>
+            缓存冗余字段：Department -> Name
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.LoginName">
+            <summary>
+            会员登录名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Password">
+            <summary>
+            用户登录密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.FirstName">
+            <summary>
+            备用名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.MiddleName">
+            <summary>
+            备用名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.UserType">
+            <summary>
+            用户类别：0—管理员；1—普通用户
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.TypeText">
+            <summary>
+            用户类别显示内容转化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.LastName">
+            <summary>
+            会员姓名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Email">
+            <summary>
+            会员邮箱地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.QQ">
+            <summary>
+            QQ号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Index">
+            <summary>
+            会员序号
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.State">
+            <summary>
+            会员状态：0-禁用，1-启用，2-保留
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.EmailValidate">
+            <summary>
+            Email验证
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Created">
+            <summary>
+            信息创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.CreatedNoteTime">
+            <summary>
+            格式化后的注册时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Description">
+            <summary>
+            信息描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.StateText">
+            <summary>
+            状态显示内容转化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Home">
+            <summary>
+            通行证ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.PasswordHashed">
+            <summary>
+            密码加密
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.IsPasswordHashed">
+            <summary>
+            设置加密
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Overdue">
+             <summary>
+            会员过期时间
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Updated">
+             <summary>
+            信息更新时间 
+             </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.UserModelName">
+            <summary>
+            用户模型名称，如：个人会员，企业会员
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ModelXml">
+            <summary>
+            用户模型数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ModelConfig">
+            <summary>
+            模型配置
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ModelSchema">
+            <summary>
+            模型数据架构
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Point">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Prestige">
+            <summary>
+            威望
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Money">
+            <summary>
+            金钱
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.PublishCount">
+            <summary>
+            发表信息总数
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Photo">
+            <summary>
+            头像信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.ModelState">
+            <summary>
+            模型状态：分为 0-未设置，1-在申请，2-通过
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.Account.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoHelper.ComputeHashString(System.String)">
+            <summary>
+            复合 Hash：string --> byte[] --> hashed byte[] --> base64 string
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoHelper.ToBase64String(System.Byte[])">
+            <summary>
+            //System.Convert.ToBase64String
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoHelper.ConvertStringToByteArray(System.String)">
+            <summary>
+            //Encoding.UTF8.GetBytes(s)
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoHelper.ByteArrayToHexString(System.Byte[])">
+            <summary>
+            字节数组转换为十六进制字符串
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoHelper.HexStringToByteArray(System.String)">
+            <summary>
+            十六进制字符串转换为字节数组
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="F:We7.CMS.Accounts.CryptoService.sKey">
+            <summary>
+            加密的密钥
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Accounts.CryptoService.bIV">
+            <summary>
+            加密向量
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoService.Encrypt(System.String)">
+            <summary>
+            将明文加密，返回密文
+            </summary>
+            <param name="Data">要加密的字串</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoService.Encrypt(System.Byte[],System.Byte[]@)">
+            <summary>
+            将明文加密，返回密文
+            </summary>
+            <param name="toEncrypt">明文</param>
+            <param name="encrypted">密文</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoService.EncryptToString(System.String)">
+            <summary>
+            将明文加密，返回 Base64 字符串
+            </summary>
+            <param name="Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.CryptoService.Decrypt(System.Byte[],System.String@)">
+            <summary>
+            将密文解密，返回明文
+            </summary>
+            <param name="Data">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="T:We7.CMS.Accounts.MenuHelper">
+             <summary>
+            后台菜单提取判断处理模块
+             </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuTree(System.String)">
+            <summary>
+            获取菜单树
+            </summary>
+            <param name="pid">父菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuTree(System.String,System.String)">
+            <summary>
+            获取菜单树
+            </summary>
+            <param name="pid">父菜单</param>
+            <param name="type">类型：0-系统菜单；1-会员菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.UpdatePermissionStateOfMenuTree(System.Collections.Generic.List{We7.CMS.Common.MenuItem}@,System.Collections.Generic.List{System.String})">
+            <summary>
+            UpdatePermissionStateOfMenuTree
+            </summary>
+            <param name="mytree"></param>
+            <param name="menuIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMyMenuList">
+            <summary>
+            取得当前用户的Menu列表值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMyMenuList(We7.CMS.Common.Enum.OwnerRank)">
+            <summary>
+            GetMyMenuList
+            </summary>
+            <param name="rank"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMyMenuList(System.String)">
+            <summary>
+            取得当前用户的Menu列表
+            </summary>
+            <param name="rank">类别</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenus(System.String,System.Int32,System.String)">
+            <summary>
+            递归：获取父节点下的菜单树
+            </summary>
+            <param name="parentID">父节点</param>
+            <param name="recursive">递归级数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenus(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+             递归：获取父节点下的菜单树
+            </summary>
+            <param name="parentID">父节点</param>
+            <param name="recursive">递归级数</param>
+            <param name="entityID">分类：系统菜单？会员菜单？</param>
+            <param name="inludeHide">是否包括隐藏菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenus">
+            <summary>
+            取出Menu表的全部数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenusByCriteria(Thinkment.Data.Criteria)">
+            <summary>
+            根据条件得到Menu
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuIDListByAccount(System.String)">
+            <summary>
+            根据用户accountID取得菜单ID列表，
+            </summary>
+            <param name="accountID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuIDListByAccount(System.String,System.String)">
+            <summary>
+            根据用户accountID取得菜单ID列表，
+            </summary>
+            <param name="accountID"></param>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.MergeList(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            去重后合并字符串列表
+            </summary>
+            <param name="sourceList"></param>
+            <param name="newList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMemberMenu(System.String,System.Int32,System.Int32)">
+            <summary>
+            取得会员菜单
+            </summary>
+            <param name="orderKey">排序字段</param>
+            <param name="start">开始条目</param>
+            <param name="end">条目数</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuCount">
+            <summary>
+            取得菜单数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetParentName(System.String)">
+            <summary>
+            取得上级名称
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuItem(System.String)">
+            <summary>
+            取得菜单信息
+            </summary>
+            <param name="id">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuItemByTitle(System.String)">
+            <summary>
+            通过名称取得菜单信息
+            </summary>
+            <param name="title">菜单名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.UpdateMenuItem(We7.CMS.Common.MenuItem)">
+            <summary>
+            更新菜单信息
+            </summary>
+            <param name="menuItem">菜单信息</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.UpdateMenuItem(System.String,System.Int32)">
+            <summary>
+            更新菜单类型
+            </summary>
+            <param name="id">菜单Id</param>
+            <param name="type">菜单类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.DeleteMenuItem(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.DeleteMenuItem(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="id">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.ExistMenuItem(System.String,System.String)">
+            <summary>
+            检测菜单是否存在
+            </summary>
+            <param name="menuName">菜单名</param>
+            <param name="id">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetLastIndex(System.String)">
+            <summary>
+            取得索引号
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuItemByParentID(System.String)">
+            <summary>
+            通过上级ID取得所有子菜单
+            </summary>
+            <param name="parentID">上级ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetLastMenuItem(System.String)">
+            <summary>
+            取得最后一个菜单信息
+            </summary>
+            <param name="parentID">上级菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.ExsitMenuID(System.String)">
+            <summary>
+            ID号是否有效
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuID(System.String)">
+            <summary>
+            根据最后菜单ID取得菜单ID
+            </summary>
+            <param name="lastMenuID">菜单ID最后几位</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetSecondMenuID(System.String)">
+            <summary>
+            取得第二段菜单ID
+            </summary>
+            <param name="lastMenuID">最后一段菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.AddAdivcieMenu(System.String,System.String,System.String)">
+            <summary>
+            添加反馈菜单信息
+            </summary>
+            <param name="name"></param>
+            <param name="informationType"></param>
+            <param name="menuID"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.AddMenu(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            AddMenu
+            </summary>
+            <param name="name"></param>
+            <param name="url"></param>
+            <param name="index"></param>
+            <param name="nameText"></param>
+            <param name="parentID"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.AddMenu(System.String,System.String,System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            AddMenu
+            </summary>
+            <param name="firstName"></param>
+            <param name="secondName"></param>
+            <param name="url"></param>
+            <param name="index"></param>
+            <param name="nameText"></param>
+            <param name="fileName"></param>
+            <param name="group"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.AddMenu(System.String,System.String,System.Int32)">
+            <summary>
+            AddMenu
+            </summary>
+            <param name="name"></param>
+            <param name="informationType"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetChineseSpell(System.String)">
+            <summary>
+            汉字字符串转成拼音
+            </summary>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.getSpell(System.String)">
+            <summary>
+            单个汉字转拼音
+            </summary>
+            <param name="cnChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuCountByType(System.Int32,System.String)">
+            <summary>
+            根据类型统计菜单数
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuList(System.Int32,System.String,System.String)">
+            <summary>
+            查询菜单列表
+            </summary>
+            <param name="type">菜单类型</param>
+            <param name="searcherKey">搜索关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateContentMenu(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            创建内容模型菜单
+            </summary>
+            <param name="mianNameText"></param>
+            <param name="mainTitle"></param>
+            <param name="maingroup"></param>
+            <param name="mainIndex"></param>
+            <param name="mainIconName"></param>
+            <param name="firstNameText"></param>
+            <param name="firstTitle"></param>
+            <param name="firstUrl"></param>
+            <param name="firstIndex"></param>
+            <param name="secondNameText"></param>
+            <param name="secondTitle"></param>
+            <param name="secondUrl"></param>
+            <param name="secondIndex"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateModelMenu(System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            创建栏目菜单
+            </summary>
+            <param name="parentID"></param>
+            <param name="menuIndex"></param>
+            <param name="firstNameText"></param>
+            <param name="firstTitle"></param>
+            <param name="firstUrl"></param>
+            <param name="firstIndex"></param>
+            <param name="secondNameText"></param>
+            <param name="secondTitle"></param>
+            <param name="secondUrl"></param>
+            <param name="secondIndex"></param>
+            <param name="entityID"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateModelMenu(System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            创建栏目菜单
+            </summary>
+            <param name="parentID"></param>
+            <param name="menuIndex"></param>
+            <param name="firstNameText"></param>
+            <param name="firstTitle"></param>
+            <param name="firstUrl"></param>
+            <param name="firstIndex"></param>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateMainMenu(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建或更新主菜单
+            </summary>
+            <param name="mianNameText"></param>
+            <param name="mainTitle"></param>
+            <param name="maingroup"></param>
+            <param name="mainIndex"></param>
+            <param name="mainIconName"></param>
+            <param name="url"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateMainMenu_User(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            创建或更新会员主菜单
+            </summary>
+            <param name="mianNameText"></param>
+            <param name="mainTitle"></param>
+            <param name="maingroup"></param>
+            <param name="mainIndex"></param>
+            <param name="mainIconName"></param>
+            <param name="url"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateSubMenu(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            更新或创建子菜单
+            </summary>
+            <param name="nameText"></param>
+            <param name="title"></param>
+            <param name="url"></param>
+            <param name="index"></param>
+            <param name="parentID"></param>
+            <param name="id"></param>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.CreateSubMenu_User(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            更新或创建会员子菜单
+            </summary>
+            <param name="nameText"></param>
+            <param name="title"></param>
+            <param name="url"></param>
+            <param name="index"></param>
+            <param name="parentID"></param>
+            <param name="id"></param>
+            <param name="entityID"></param>
+            <param name="menuType"></param>
+            <param name="referenceID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.ExistMenuItem(System.String)">
+            <summary>
+            当前菜单是否存在
+            </summary>
+            <param name="menuName">菜单名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.ExistMenuItemByType(System.String,System.String)">
+            <summary>
+            当前菜单是否存在
+            </summary>
+            <param name="menuName">菜单名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetMenuItemByID(System.String)">
+            <summary>
+            取得菜单信息
+            </summary>
+            <param name="id">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.MenuIDInList(System.String,System.Collections.Generic.List{We7.CMS.Common.MenuItem})">
+            <summary>
+            判断某一菜单ID是否存在于菜单树中
+            </summary>
+            <param name="menuID"></param>
+            <param name="menus">菜单树列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.URLHavePermission(System.Web.HttpContext,We7.CMS.Common.Enum.OwnerRank)">
+            <summary>
+            判断当前URL是否在可访问列表中;使用HttpContext缓存
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.MenuHelper.GetEntityPermissions(System.String)">
+            <summary>
+            从menu表中获取权限定义项目，如Channel.Article
+            </summary>
+            <param name="EntityID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Accounts.MenuHelper.AllMenuData">
+            <summary>
+            全部菜单列表数据
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.MenuHelper.Recursives">
+            <summary>
+            菜单最大级数
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.MenuHelper.Finder">
+            <summary>
+            查找类
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PointAction.PointIn">
+            <summary>
+            收入积分
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PointAction.PointOut">
+            <summary>
+            积分支出
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PointAction.ExchangeMoney">
+            <summary>
+            积分换币
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PointAction.Transfer">
+            <summary>
+            转账
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.NonWorkingDays">
+            <summary>
+            非工作日处理类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.ExceptionDays">
+            <summary>
+            时间区域（工作或非工作连续区域）
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.Authentication">
+            <summary>
+            安全验证类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.GetCryptoService">
+            <summary>
+            取得加密服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.CreateAppToken(We7.CMS.Accounts.SSORequest)">
+            <summary>
+            创建各分站发往认证中心的 Token
+            </summary>
+            <param name="ssoRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.ValidateAppToken(We7.CMS.Accounts.SSORequest)">
+            <summary>
+            验证从各分站发送过来的 Token
+            </summary>
+            <param name="ssoRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.CreateEACToken(We7.CMS.Accounts.SSORequest)">
+            <summary>
+            创建认证中心发往各分站的 Token
+            </summary>
+            <param name="ssoRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.ValidateEACToken(We7.CMS.Accounts.SSORequest)">
+            <summary>
+            验证从认证中心发送过来的 Token
+            </summary>
+            <param name="ssoRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.Post(We7.CMS.Accounts.SSORequest,System.String)">
+            <summary>
+            发送Token信息到验证服务器或子站
+            </summary>
+            <param name="ssoRequest"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.Authentication.PostChains(We7.CMS.Accounts.SSORequest)">
+            <summary>
+            按需要进行验证的Url进行验证
+            </summary>
+            <param name="ssoRequest"></param>
+        </member>
+        <member name="T:We7.CMS.Keys">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Keys.QRYSTR_PAGEINDEX">
+            <summary>
+            页码关键字
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Keys.SESSION_COOKIETEST">
+            <summary>
+            Session关键字
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Keys.OwnerAccount">
+            <summary>
+            默认访问者
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Keys.OwnerRole">
+            <summary>
+            默认角色
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.AccountMails">
+            <summary>
+            账户处理相关邮件通知操作
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.SendMailOfRegister(We7.CMS.Common.PF.Account,System.String,System.String)">
+            <summary>
+            新注册用户通知本人
+            </summary>
+            <param name="accountId"></param>
+            <param name="password"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.SendMailOfPassNotify(We7.CMS.Common.PF.Account,System.String,System.String)">
+            <summary>
+            账号审核通过通知
+            </summary>
+            <param name="accountId"></param>
+            <param name="modelName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.SendMailOfValidate(We7.CMS.Common.PF.Account,System.String)">
+            <summary>
+            注册验证通知
+            </summary>
+            <param name="accountId"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.SendMailOfHandle(We7.CMS.Common.PF.Account,System.String)">
+            <summary>
+            新用户申请通知
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.SendMailOfSuccessPay(We7.CMS.Common.PF.Account,System.String,System.Decimal)">
+            <summary>
+            用户付款成功通知
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.AccountMails.GetMailHelper">
+            <summary>
+            邮件配置信息
+            </summary>
+            <param name="adviceType"></param>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.TypeOfPasswordHashed">
+            <summary>
+            加密类型 
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfPasswordHashed.noneEncrypt">
+            <summary>
+            没有加密，明码存放。
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfPasswordHashed.webEncrypt">
+            <summary>
+            主站加密方式
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.Enum.TypeOfPasswordHashed.bbsEncrypt">
+            <summary>
+            论坛加密方式
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.MenuItem">
+            <summary>
+            系统菜单项，同时用于标识可访问功能项
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Group">
+            <summary>
+            编组组号，如0-3
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.IconHover">
+            <summary>
+            菜单图标：鼠标滑过图片
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.ParentID">
+            <summary>
+            父菜单ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Type">
+            <summary>
+            0 - 系统菜单，1 - 用户自定义菜单，2 - 系统菜单隐藏
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Index">
+            <summary>
+            序列
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Items">
+            <summary>
+            子菜单列表
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Href">
+            <summary>
+            可访问URL
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.EntityID">
+            <summary>
+            权限类别标示符
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.PageLocation">
+            <summary>
+            不含参数的URL路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.QueryKey">
+            <summary>
+            URL参数部分
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.PermissionState">
+            <summary>
+            用于权限树
+            checked-子节点拥有全部权限；
+            undetermined-子节点拥有部分权限
+            unchecked-没有权限
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.MenuType">
+            <summary>
+            菜单类型（0：普通菜单,1:顶部一级菜单,2:分组类型,3:引用类型）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.MenuItem.ReferenceID">
+             <summary>
+            引用的菜单ID 
+             </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.AccountRole">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PF.AccountRole.#ctor">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.Updated">
+            <summary>
+            信息更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.Created">
+            <summary>
+            信息创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.AccountID">
+            <summary>
+            外键用户ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.RoleID">
+            <summary>
+            外键角色ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.AccountRole.RoleTitle">
+            <summary>
+            角色名字
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Permission">
+            <summary>
+            授权信息实体类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.Created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.Updated">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <!-- 对于成员“P:We7.CMS.Common.Permission.OwnerID”忽略有格式错误的 XML 注释 -->
+        <member name="P:We7.CMS.Common.Permission.OwnerType">
+            <summary>
+            所属类型：0—帐户；1—角色
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.ObjectID">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.Content">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.Permission.Url">
+            <summary>
+            栏目Url或菜单Url
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.SSORequest.GetRequest(System.Web.HttpContext)">
+            <summary>
+            获取当前页面上的SSORequest对象
+            </summary>
+            <param name="CurrentPage"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.SiteID">
+            <summary>
+            各独立站点标识ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.TimeStamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.AppUrl">
+            <summary>
+            各独立站点的访问地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.Authenticator">
+            <summary>
+            各独立站点的 Token
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.UserName">
+            <summary>
+            账号名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.AccountID">
+            <summary>
+            账号ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.Action">
+            <summary>
+            操作：signin,signout,authenticate
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.FromUrls">
+            <summary>
+            代表已经验证过的Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.SSORequest.ToUrls">
+            <summary>
+            代表将要验证的Url
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PF.IDToken">
+            <summary>
+            站群通行证令牌信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.PassportID">
+            <summary>
+            护照ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.ProviderSiteID">
+            <summary>
+            所提供的站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.ProviderSiteTitle">
+            <summary>
+            所提供的站点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.LoginSiteID">
+            <summary>
+            注册的站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.LoginSiteTitle">
+            <summary>
+            注册的站点名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.ReturnUrl">
+            <summary>
+            站点跳转地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.Action">
+            <summary>
+            所操作的动作
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PF.IDToken.ExistList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:We7.CMS.AccountFactory">
+            <summary>
+            账户类工厂
+            </summary>
+        </member>
+        <member name="M:We7.CMS.AccountFactory.CreateInstance">
+            <summary>
+            接口实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AccountWebService">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.hello">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.helloAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.helloAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddAccount(We7.CMS.Common.PF.Account)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddAccountAsync(We7.CMS.Common.PF.Account)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddAccountAsync(We7.CMS.Common.PF.Account,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistEmail(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistEmailAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistEmailAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistUserName(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistUserNameAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.ExistUserNameAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccont(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccontAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccontAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccount(We7.CMS.Common.PF.Account,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountAsync(We7.CMS.Common.PF.Account,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountAsync(We7.CMS.Common.PF.Account,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccount(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountAsync(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountAsync(System.String,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByLoginName(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByLoginNameAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByLoginNameAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByEmail(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByEmailAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountByEmailAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccounts(System.String,System.String,System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsAsync(System.String,System.String,System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsAsync(System.String,System.String,System.String,We7.CMS.Common.Enum.OwnerRank,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountList(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountListAsync(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountListAsync(System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountList(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountList1Async(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountList1Async(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountByCriteria(Thinkment.Data.Criteria)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountByCriteriaAsync(Thinkment.Data.Criteria)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountByCriteriaAsync(Thinkment.Data.Criteria,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountCountByQuery(We7.CMS.Accounts.AccountQuery)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountCountByQueryAsync(We7.CMS.Accounts.AccountQuery)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountCountByQueryAsync(We7.CMS.Accounts.AccountQuery,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountsByQuery(We7.CMS.Accounts.AccountQuery,System.Int32,System.Int32,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountsByQueryAsync(We7.CMS.Accounts.AccountQuery,System.Int32,System.Int32,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.QueryAccountsByQueryAsync(We7.CMS.Accounts.AccountQuery,System.Int32,System.Int32,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.Login(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.LoginAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.LoginAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.SignOut">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.SignOutAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.SignOutAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.IsValidPassword(We7.CMS.Common.PF.Account,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.IsValidPasswordAsync(We7.CMS.Common.PF.Account,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.IsValidPasswordAsync(We7.CMS.Common.PF.Account,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdatePassword(We7.CMS.Common.PF.Account,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdatePasswordAsync(We7.CMS.Common.PF.Account,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdatePasswordAsync(We7.CMS.Common.PF.Account,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAuthenticatedAccount">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAuthenticatedAccountAsync">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAuthenticatedAccountAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddRole(We7.CMS.Common.PF.Role)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddRoleAsync(We7.CMS.Common.PF.Role)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddRoleAsync(We7.CMS.Common.PF.Role,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateRole(We7.CMS.Common.PF.Role)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateRoleAsync(We7.CMS.Common.PF.Role)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateRoleAsync(We7.CMS.Common.PF.Role,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountRoles(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountRolesAsync(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountRolesAsync(System.String,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AssignAccountRole(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AssignAccountRoleAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AssignAccountRoleAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleBytitle(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleBytitleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleBytitleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleCount(System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleCountAsync(System.String,We7.CMS.Common.Enum.OwnerRank)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoleCountAsync(System.String,We7.CMS.Common.Enum.OwnerRank,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoles(System.String,System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRolesAsync(System.String,System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRolesAsync(System.String,System.Int32,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoles(System.String,We7.CMS.Common.Enum.OwnerRank,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoles1Async(System.String,We7.CMS.Common.Enum.OwnerRank,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRoles1Async(System.String,We7.CMS.Common.Enum.OwnerRank,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccountRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccountRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteAccountRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRolesOfAccount(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRolesOfAccountAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetRolesOfAccountAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRole(System.String,System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRole1Async(System.String,System.Int32,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRole1Async(System.String,System.Int32,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountOfRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountOfRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountOfRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddDepartment(We7.CMS.Common.PF.Department)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddDepartmentAsync(We7.CMS.Common.PF.Department)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.AddDepartmentAsync(We7.CMS.Common.PF.Department,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteDepartment(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteDepartmentAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.DeleteDepartmentAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateDepartment(We7.CMS.Common.PF.Department,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateDepartmentAsync(We7.CMS.Common.PF.Department,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.UpdateDepartmentAsync(We7.CMS.Common.PF.Department,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartment(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentAsync(System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentAsync(System.String,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartments(System.String,System.String,System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentsAsync(System.String,System.String,System.String,System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentsAsync(System.String,System.String,System.String,System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetOrderDepartments(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetOrderDepartmentsAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetOrderDepartmentsAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeWithFormat(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeWithFormatAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeWithFormatAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTree(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:We7.CMS.Accounts.WD.AccountWebService.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.helloCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.AddAccountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.ExistEmailCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.ExistUserNameCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.DeleteAccontCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountByLoginNameCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountByEmailCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountListCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountList1Completed">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountByCriteriaCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.QueryAccountCountByQueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.QueryAccountsByQueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.LoginCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.SignOutCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.IsValidPasswordCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.UpdatePasswordCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAuthenticatedAccountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.AddRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.DeleteRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.UpdateRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.UpdateAccountRolesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.AssignAccountRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRoleBytitleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRoleCountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRolesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRoles1Completed">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.DeleteAccountRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetRolesOfAccountCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountsOfRole1Completed">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetAccountCountOfRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.AddDepartmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.DeleteDepartmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.UpdateDepartmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetOrderDepartmentsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeWithFormatCompleted">
+            <remarks/>
+        </member>
+        <member name="E:We7.CMS.Accounts.WD.AccountWebService.GetDepartmentTreeCompleted">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.helloCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddAccountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddAccountCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.AddAccountCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.ExistEmailCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.ExistEmailCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.ExistEmailCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.ExistUserNameCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.ExistUserNameCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.ExistUserNameCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.DeleteAccontCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdateAccountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountByLoginNameCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountByLoginNameCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountByLoginNameCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountByEmailCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountByEmailCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountByEmailCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountListCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountList1CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountList1CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountList1CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCountByCriteriaCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCountByCriteriaCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountCountByCriteriaCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.QueryAccountCountByQueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.QueryAccountCountByQueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.QueryAccountCountByQueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.QueryAccountsByQueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.QueryAccountsByQueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.QueryAccountsByQueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.LoginCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.LoginCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.LoginCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.SignOutCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.SignOutCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.SignOutCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.IsValidPasswordCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.IsValidPasswordCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.IsValidPasswordCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdatePasswordCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdatePasswordCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.UpdatePasswordCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAuthenticatedAccountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAuthenticatedAccountCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAuthenticatedAccountCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.AddRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.DeleteRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdateRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdateAccountRolesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AssignAccountRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AssignAccountRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.AssignAccountRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleBytitleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleBytitleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRoleBytitleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleCountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoleCountCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRoleCountCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRolesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRolesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRolesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoles1CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRoles1CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRoles1CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.DeleteAccountRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRolesOfAccountCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetRolesOfAccountCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetRolesOfAccountCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsOfRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsOfRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountsOfRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsOfRole1CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountsOfRole1CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountsOfRole1CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCountOfRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetAccountCountOfRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetAccountCountOfRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddDepartmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.AddDepartmentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.AddDepartmentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.DeleteDepartmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.UpdateDepartmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetDepartmentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetDepartmentsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetOrderDepartmentsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetOrderDepartmentsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetOrderDepartmentsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentTreeWithFormatCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentTreeWithFormatCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetDepartmentTreeWithFormatCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentTreeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.WD.GetDepartmentTreeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:We7.CMS.Accounts.WD.GetDepartmentTreeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:We7.CMS.Accounts.AccountRemoteHelper">
+            <summary>
+            调用远程服务器数据
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.CookieSupportType">
+            <summary>
+            Cookie类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.Security">
+            <summary>
+            设置与获取用户验证票信息
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.Encrypt(System.String)">
+            <summary>
+            密码加密
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.MD5(System.String,System.Boolean)">
+            <summary>
+            BBS论坛MD5加密字符串处理
+            </summary>
+            <param name="Half">加密是16位还是32位；如果为true为16位</param>
+            <param name="Input">待加密码字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.BbsEncrypt(System.String)">
+            <summary>
+            BBS密码加密方式
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.ResetPassword(We7.CMS.Common.PF.Account)">
+            <summary>
+            初始化密码
+            </summary>
+            <param name="current_account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.RandomPassword">
+            <summary>
+            随机取一个密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.AjaxAuthenticate(System.String,System.Boolean)">
+            <summary>
+            Ajax进行数据验证
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="persist">是否把用户信息保存在Cookie中</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.SetTicket(System.String,System.Boolean)">
+            <summary>
+            设置验证票证
+            </summary>
+            <param name="accountID">用户ID</param>
+            <param name="persist">是否持久保存</param>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.SignOut">
+            <summary>
+            退出登录
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.SetAccountID(System.String)">
+            <summary>
+            设定当前用户ID到session或cookie
+            </summary>
+            <param name="accountID"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.SetAccountID(System.String,System.Boolean)">
+            <summary>
+            设定当前用户ID到session或cookie
+            </summary>
+            <param name="accountID"></param>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.IsAuthenticated">
+            <summary>
+            form验证是否通过
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.AreCookiesAllowed">
+            <summary>
+            浏览器是否支持Cookies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.HasBeenTestedForCookies">
+            <summary>
+            检测Cookie是否可用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.StartCookieTest">
+            <summary>
+            开始Cookie检测
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Accounts.Security.FinishCookieTest">
+            <summary>
+            Cookie检测后的动作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Accounts.Security.Context">
+            <summary>
+            上下文
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.Security.CurrentAccountID">
+            <summary>
+            当前用户ID
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Accounts.AccountWebService">
+            <summary>
+            insall 的摘要说明
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.KeyWord">
+            <summary>
+            搜索关键词
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.SiteID">
+            <summary>
+            所属站点ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.DepartmentID">
+            <summary>
+            所属部门ID
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.UserType">
+            <summary>
+            类型：管理员-0？会员-1？
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.Email">
+            <summary>
+            邮件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.ModelName">
+            <summary>
+            用户模型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.State">
+            <summary>
+            状态：0-禁用，1-启用，2-保留，100-所有
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.EmailValidate">
+            <summary>
+            Email验证:0-待验证；1-验证通过；100-全部
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.ModelState">
+            <summary>
+            模型状态：分为 0-未设置，1-在申请，2-通过,100-全部
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Accounts.AccountQuery.OrderKeys">
+            <summary>
+            排序字段请按“Created|Asc,Clicks|Desc”模式传入
+            </summary>
+        </member>
+    </members>
+</doc>

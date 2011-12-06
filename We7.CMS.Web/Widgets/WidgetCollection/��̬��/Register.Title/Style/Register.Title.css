@@ -1,0 +1,21 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Register.Title
+ * Style:Register_Title
+ * Desc:目前没有
+ * Quot:site.register
+*************************************************************/
+
+.Register_Title h3{
+    background: url("../images/back2.gif") no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:Register.Title
+ * Style:Register_Title
+ * Desc:目前没有
+ * Quot:site.register
+*************************************************************/

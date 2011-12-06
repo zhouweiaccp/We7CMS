@@ -1,0 +1,1055 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.Install</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.Install.DBMigrator">
+            <summary>
+            数据库迁移动作集
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.DBMigrator.DoMigrate(System.String,We7.CMS.Config.BaseConfigInfo,We7.CMS.Config.BaseConfigInfo,System.Collections.Generic.List{System.String})">
+            <summary>
+            执行数据迁移
+            </summary>
+            <param name="xmlPath">数据结构映射XML文件存放路径（需要确保两个库的结构相同）</param>
+            <param name="oldConfig">源数据库</param>
+            <param name="newConfig">目标数据库</param>
+        </member>
+        <member name="M:We7.CMS.Install.DBMigrator.BackupBaseConfig(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            备份数据库配置文件
+            </summary>
+            <param name="bci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.DBMigrator.GetUpdateObjects(System.String,Thinkment.Data.IConnection,Thinkment.Data.IConnection,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取可以更新的数据库表，条件：筛选XML表，在两个库中都存在
+            </summary>
+            <param name="file"></param>
+            <param name="newConn"></param>
+            <param name="oldConn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Install.DBMigrator.MigrateObject`1">
+            <summary>
+            这是负责进行数据转换的辅助类型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:We7.CMS.Install.upgrade_db">
+            <summary>
+            setup4 的摘要说明. 
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Install.SetupPage">
+            <summary>
+            SetupPage 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.SetupPage.checkDataFilePath">
+            <summary>
+            检查数据文件夹，不存在则自动创建
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.SetupPage.GetAssemblyVersion">
+            <summary>
+            获得Assembly版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.SetupPage.GetAssemblyProductName">
+            <summary>
+            获得Assembly产品名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.SetupPage.GetAssemblyCopyright">
+            <summary>
+            获得Assembly产品版权
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.upgrade_db.CreateDataLogPath">
+            <summary>
+            确保_Data目录存在
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginStatisticCollection">
+            <summary>
+            插件统计集合
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PluginStatisticCollection.Contains(System.String)">
+            <summary>
+            查看是否包含相应插件
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Common.PluginStatisticCollection.SaveXML(System.String)">
+            <summary>
+            保存数据到XML
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:We7.CMS.Common.PluginStatisticCollection.LoadXML(System.String)">
+            <summary>
+            从XML文件中加载数据
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:We7.CMS.Common.PluginStatisticCollection.LoadXML(System.Xml.XmlDocument)">
+            <summary>
+            从XML中加载数据
+            </summary>
+            <param name="doc"></param>
+        </member>
+        <member name="M:We7.CMS.Common.PluginStatisticCollection.ToXml">
+            <summary>
+            从对象中生成XMLDocument文档
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Common.PluginStatistic">
+            <summary>
+            插件统计数据
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Web.Install.Plugin.PluginCommandHandler">
+            <summary>
+            $codebehindclassname$ 的摘要说明
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginMessage">
+            <summary>
+            插件安装管理界面类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.InstallTitle">
+            <summary>
+            安装界面的标题
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.InstallSummary">
+            <summary>
+            安装界面的简介
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.InstallInfo">
+            <summary>
+            安装界面的简介
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.UploadSuccess">
+            <summary>
+            上传成功
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.UploadError">
+            <summary>
+            上传错误
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.PluginLabel">
+            <summary>
+            安装的类型
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginMessage.PluginPath">
+            <summary>
+            插件路径
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginInfoCollection">
+            <summary>
+            插件集合
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:We7.CMS.Common.PluginInfoCollection.CreateInstance(We7.CMS.Common.PluginType)">
+            <summary>
+            插件配置信息集合的实例
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PluginInfoCollection.Load">
+            <summary>
+            加载每一个插件中的配置文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PluginInfoCollection.Remove(System.String)">
+            <summary>
+            从插件中移除指定目录下的内容
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="T:PluginManager">
+            <summary>
+            Plugin 管理器 
+            装载插件对象，并初始化插件对象的事件等
+            </summary>
+        </member>
+        <member name="M:PluginManager.LoadPlugins">
+            <summary>
+            装载插件，并实例化插件对象
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.CreateDbDriver(System.String)">
+            <summary>
+            根据数据库类型创建驱动对象
+            </summary>
+            <param name="dbType">类型字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.CheckConnection(We7.CMS.Config.BaseConfigInfo,System.String@)">
+            <summary>
+            检查数据库连接是否正常
+            </summary>
+            <param name="bci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.CreateDatabase(We7.CMS.Config.BaseConfigInfo,System.Exception@)">
+            <summary>
+            新建数据库
+            </summary>
+            <param name="server"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.GenerateConnectionString(System.String,We7.CMS.Install.DatabaseInfo)">
+            <summary>
+            生成数据库连接串
+            </summary>
+            <param name="selectDbType"></param>
+            <param name="dbi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.GetDatabaseInfo(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            从连接串解析获取数据库信息
+            </summary>
+            <param name="bci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.ExcuteSQL(We7.CMS.Config.BaseConfigInfo,System.String)">
+            <summary>
+            执行SQL，进行数据库初始化
+            </summary>
+            <param name="connectionString"></param>
+            <param name="updateFile"></param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.ExcuteSQLGroup(We7.CMS.Config.BaseConfigInfo,System.Collections.Generic.List{System.String})">
+            <summary>
+            执行install/SQL所有文件：指定文件名
+            </summary>
+            <param name="bci"></param>
+            <param name="files"></param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.ExcuteSQLGroup(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            执行install/SQL所有文件
+            </summary>
+            <param name="bci"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.GetRemoteWebString(System.String,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+            获取指定远程网页内容
+            </summary>
+            <param name='strUrl'>所要查找的远程网页地址</param>
+            <param name='timeout'>超时时长设置，一般设置为8000</param>
+            <param name='enterType'>是否输出换行符，0不输出，1输出文本框换行</param>
+            <param name='EnCodeType'>编码方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.DownloadFileFromUrl(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="URL">要下载文件网址</param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.VersionLater(System.String,System.String)">
+            <summary>
+            判断后面的版本号是否比前面的更大
+            </summary>
+            <param name="oldversion"></param>
+            <param name="newversion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.BackupOldFiles(System.String,System.String)">
+            <summary>
+            升级前备份旧系统文件
+            </summary>
+            <param name="rootPath">系统根目录</param>
+            <param name="backupPath">备份目录</param>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.ClearOldFiles(System.String)">
+            <summary>
+            升级后清理旧系统文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.Installer.CreateModelTables">
+            <summary>
+            创建所有的模型表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.ApplicationHelper">
+            <summary>
+            We7网站应用操作
+            </summary>
+        </member>
+        <member name="M:We7.CMS.ApplicationHelper.ResetApplication">
+            <summary>
+            重启网站
+            </summary>
+        </member>
+        <member name="M:We7.CMS.ApplicationHelper.LoadHelperFactory">
+            <summary>
+            重启应用程序
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginJsonResult">
+            <summary>
+            执行Plugin命令过程中返回的结果
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginType">
+            <summary>
+            插件类型
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PluginType.PLUGIN">
+            <summary>
+            插件
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Common.PluginType.RESOURCE">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Install.DatabaseInfo">
+            <summary>
+            数据库连接信息类
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.Server">
+            <summary>
+            服务器
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.Database">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.User">
+            <summary>
+            登录用户
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.DBFile">
+            <summary>
+            文件数据的数据库文件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Install.DatabaseInfo.CreateDB">
+            <summary>
+            是否创建数据库
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginAction">
+            <summary>
+            当前执行操作
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.NULL">
+            <summary>
+            无操作
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.INSTALL">
+            <summary>
+            安装
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.UPDATE">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.UNSTALL">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.DELETE">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.REMOTEINSTALL">
+            <summary>
+            远程安装
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Plugin.PluginAction.REMOTEUPDATE">
+            <summary>
+            远程更新
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginHelper">
+            <summary>
+            插件的帮助文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.#ctor(We7.CMS.Common.PluginType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pluginType">插件类型</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.ExtractZipFile(System.IO.Stream,System.String)">
+            <summary>
+            解压ZIP文件
+            </summary>
+            <param name="stream">解压的数据流</param>
+            <param name="directory">解压目录</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.ExtractZipFile(System.Byte[],System.String)">
+            <summary>
+            解压ZIP文件
+            </summary>
+            <param name="buffer">解压的字节流</param>
+            <param name="directory">解压的目录</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.DownLoad(System.String[])">
+            <summary>
+            下载插件．先压缩，再生成字节流
+            </summary>
+            <param name="dir">下载目录</param>
+            <returns>下载的字节流</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.CopyDirectory(System.String,System.String)">
+            <summary>
+            复制目录
+            </summary>
+            <param name="source">源目录</param>
+            <param name="target">目标目录</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.LoadServerInfo">
+            <summary>
+            加载远程服务器中的插件信息。如果数据量大的情况下，就不能把数据保存在内存中了。
+            </summary>
+            <returns>远程插件信息列表</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.AddClicks(System.String)">
+            <summary>
+            增加插件的下载数
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.isInstalled(System.String)">
+            <summary>
+            检测本地是否已经安装相关插件
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <returns>是否安装</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.RunCommand(System.String,System.String,System.String)">
+            <summary>
+            运行客户端传来的命令
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <param name="cmd">执行的命令</param>
+            <param name="action">当前动作</param>
+            <returns>执行命令的结果信息</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.RunCommand(System.String,System.String,System.String,System.String)">
+            <summary>
+            运行客户端传来的命令(资源平台使用)
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <param name="cmd">执行的命令</param>
+            <param name="action">当前动作</param>
+            <returns>执行命令的结果信息</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.RunCommand(System.String,System.String,We7.CMS.Plugin.PluginAction)">
+            <summary>
+            运行客户端传来的命令
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <param name="cmd">执行的命令</param>
+            <param name="action">当前动作</param>
+            <returns>执行命令的结果信息</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.RunCommand(System.String,System.String,We7.CMS.Plugin.PluginAction,System.String)">
+            <summary>
+            运行客户端传来的命令(资源平台使用)
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <param name="cmd">执行的命令</param>
+            <param name="action">当前动作</param>
+            <returns>执行命令的结果信息</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.GetPluginInfo(System.String,System.String)">
+            <summary>
+            取得插件信息
+            </summary>
+            <param name="pluginName">插件名称</param>
+            <param name="cmd">执行的命令</param>
+            <returns>插件信息</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.GetAction(System.String)">
+            <summary>
+            行为
+            </summary>
+            <param name="action">动作名称</param>
+            <returns>当前动作枚举</returns>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.PickUpSnapshot(System.IO.FileInfo,We7.CMS.Common.RemotePluginInfo)">
+            <summary>
+            抽取临时截图
+            </summary>
+            <param name="pluginName">插件名称</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.PickUpTempFile(System.String)">
+            <summary>
+            提取插件的临时文件
+            </summary>
+            <param name="pluginName">插件名称</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.CreateTempFile(System.String,System.String,System.String)">
+            <summary>
+            创建临时文件
+            </summary>
+            <param name="zipFile">要解压的文件名称</param>
+            <param name="filePath">要解压的路径</param>
+            <param name="directory">文件目录</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginHelper.CheckPluginTempFile(System.String)">
+            <summary>
+            检测临时插件是否存在。
+            </summary>
+            <param name="pluginName">插件名称</param>
+        </member>
+        <member name="E:We7.CMS.Plugin.PluginHelper.AfterInstall">
+            <summary>
+            安装完成后的事件
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Plugin.PluginHelper.PluginPath">
+            <summary>
+            插件路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Plugin.PluginHelper.PluginGalleryPath">
+            <summary>
+            插件在服务器上存放的目录名称
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginHelper.InstallHandler">
+            <summary>
+            当前操作的委托
+            </summary>
+            <param name="info">插件信息</param>
+        </member>
+        <member name="T:We7.CMS.Plugin.IPluginCommand">
+            <summary>
+            用于执行Plugin的命令
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.IPluginCommand.Run(We7.CMS.Common.PluginInfo,We7.CMS.Plugin.PluginAction)">
+            <summary>
+            运行命令
+            </summary>
+            <param name="info">插件信息</param>
+            <param name="action">当前执行的动作</param>
+            <returns>执行的信息</returns>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginCommandFactory">
+            <summary>
+            生成插件命令的工厂
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginCommandFactory.CreateCommand(System.String)">
+            <summary>
+            取得命令对象
+            </summary>
+            <param name="commandName">命令关键字</param>
+            <returns>命令对象</returns>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluignCheckVersionCommand">
+            <summary>
+            检测插件版本
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluignCheckFileCommand">
+            <summary>
+            检测插件的文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluignCheckFileCommand.CheckFileExits(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            检测布署文件是否存在
+            </summary>
+            <param name="files"></param>
+            <param name="dir"></param>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginUpdatePluginFileCommand">
+            <summary>
+            更新插件的配置文件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginDownLoadCommand">
+            <summary>
+            从服务器下载插件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginDownLoadCommand.ExtractZipFile(System.Byte[],System.String)">
+            <summary>
+            解压ZIP文件
+            </summary>
+            <param name="buffer"></param>
+            <param name="directory"></param>
+        </member>
+        <member name="T:We7.CMS.Plugin.ResourcePlatformPluginDownLoadCommand">
+            <summary>
+            从服务器下载插件(资源平台使用)
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.ResourcePlatformPluginDownLoadCommand.ExtractZipFile(System.Byte[],System.String)">
+            <summary>
+            解压ZIP文件
+            </summary>
+            <param name="buffer"></param>
+            <param name="directory"></param>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginCopyCommand">
+            <summary>
+            拷贝数据文件抽象类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginCopyCommand.CopyFile(We7.CMS.Common.PluginInfo,We7.CMS.Plugin.PluginAction,System.String,System.String)">
+            <summary>
+            拷贝安装文件到指定目录或删除指定目录下的文件
+            </summary>
+            <param name="info">控件信息</param>
+            <param name="action">当前动作</param>
+            <param name="source">源文件</param>
+            <param name="target">目标文件</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginCopyCommand.CopyDirectory(We7.CMS.Common.PluginInfo,We7.CMS.Plugin.PluginAction,System.String,System.String)">
+            <summary>
+            从指定目录复制文件
+            </summary>
+            <param name="info">插件信息</param>
+            <param name="action">当前动作</param>
+            <param name="source">源目录</param>
+            <param name="target">目录目录</param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginCopyCommand.CopyDirectory(System.String,System.String)">
+            <summary>
+            拷贝目录
+            </summary>
+            <param name="source">源目录</param>
+            <param name="target">目标目录</param>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallDBFileCommand">
+            <summary>
+            安装数据映射文件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginDeleteCommand">
+            <summary>
+            删除插件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallWidgetAndControlCommand">
+            <summary>
+            安装前台部件和控件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallSkinCommand">
+            <summary>
+            安装前台模板
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallModelsCommand">
+            <summary>
+            模型安装
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallDllCommand">
+            <summary>
+            安装Dll文件
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Plugin.PluginInstallDBCommand">
+            <summary>
+            安装或卸载插件中对数据库的更新
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginInstallDBCommand.ExecuteDBFile(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            执行指定的数据文件
+            </summary>
+            <param name="dataDir"></param>
+            <param name="DBFileList"></param>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginInstallDBCommand.ExcuteSQL(We7.CMS.Config.BaseConfigInfo,System.String)">
+            <summary>
+            执行SQL，进行数据库初始化
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Plugin.PluginInstallDBCommand.CreateDbDriver(System.String)">
+            <summary>
+            根据数据库类型创建驱动对象
+            </summary>
+            <param name="dbType">类型字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Plugin.ResourceManager.InstallSkin">
+            <summary>
+            安装模板
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.Plugin.ResourceManager.CopyFile(System.String,System.String)">
+            <summary>
+            复制文件
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:We7.CMS.Install.Plugin.ResourceManager.ExecuteDBFile(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            执行指定的数据文件
+            </summary>
+            <param name="info"></param>
+            <param name="dataDirectory"></param>
+            <param name="filePath"></param>
+            <param name="log"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.Plugin.ResourceManager.CreateDbDriver(System.String)">
+            <summary>
+            根据数据库类型创建驱动对象
+            </summary>
+            <param name="dbType">类型字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.VerifyCode.TwistImage(System.Drawing.Bitmap,System.Boolean,System.Double,System.Double)">
+            <summary>
+            正弦曲线Wave扭曲图片（Edit By 51aspx.com）
+            </summary>
+            <param name="srcBmp">图片路径</param>
+            <param name="bXDir">如果扭曲则选择为True</param>
+            <param name="nMultValue">波形的幅度倍数，越大扭曲的程度越高，一般为3</param>
+            <param name="dPhase">波形的起始相位，取值区间[0-2*PI)</param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Install.VerifyCode.VerifyImage">
+            <summary>
+            验证码图片类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.VerifyCode.VerifyImage.Next(System.Int32)">
+            <summary>
+            获得下一个随机数
+            </summary>
+            <param name="max">最大值</param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.VerifyCode.VerifyImage.Next(System.Int32,System.Int32)">
+            <summary>
+            获得下一个随机数
+            </summary>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.Install.Step4">
+            <summary>
+            setup4 的摘要说明. 
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Install.InstallWebService">
+            <summary>
+            insall 的摘要说明
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.InstallWebService.InitDBConfig(System.String,We7.CMS.Install.DatabaseInfo)">
+            <summary>
+            
+            </summary>
+            <param name="setupDbType"></param>
+            <param name="dbi"></param>
+            <param name="ci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.upgrade.UploadButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            上传更新包
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:We7.CMS.Install.upgrade.UnZipFile(System.String)">
+            <summary>
+            解压
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.upgrade.FileListSummary(System.String)">
+            <summary>
+            压缩包列表
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="T:We7.CMS.PluginAttribute">
+            <summary>
+            All extensions must decorate the class with this attribute.
+            It is used for reflection.
+            <remarks>
+            When using this attribute, you must make sure
+            to have a default constructor. It will be used to create
+            an instance of the extension through reflection.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:We7.CMS.PluginAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of the attribute and assigns a description.
+            </summary>
+        </member>
+        <member name="M:We7.CMS.PluginAttribute.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the attribute and assigns a description.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PluginAttribute.Description">
+            <summary>
+            Gets the description of the extension.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PluginAttribute.Version">
+            <summary>
+            Gets the version number of the extension
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PluginAttribute.Author">
+            <summary>
+            Gets the author of the extension
+            </summary>
+        </member>
+        <member name="P:We7.CMS.PluginAttribute.Priority">
+            <summary>
+            Gets the priority of the extension
+            This determins in what order extensions instantiated
+            and in what order they will respond to events
+            </summary>
+        </member>
+        <member name="T:We7.CMS.SortedPlugin">
+            <summary>
+            Helper class for sorting extensions by priority
+            </summary>
+        </member>
+        <member name="F:We7.CMS.SortedPlugin.Priority">
+            <summary>
+            Order in which extensions are sorted and respond to events
+            </summary>
+        </member>
+        <member name="F:We7.CMS.SortedPlugin.Name">
+            <summary>
+            Name of the extension
+            </summary>
+        </member>
+        <member name="F:We7.CMS.SortedPlugin.Type">
+            <summary>
+            Type of the extension
+            </summary>
+        </member>
+        <member name="M:We7.CMS.SortedPlugin.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="p">Priority</param>
+            <param name="n">Name</param>
+            <param name="t">Type</param>
+        </member>
+        <member name="T:We7.CMS.Install.signin">
+            <summary>
+            setup4 的摘要说明. 
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.PluginInfo">
+            <summary>
+            插件信息类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Common.PluginInfo.Save">
+            <summary>
+            保存插件的配置信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.FilePath">
+            <summary>
+            文件的路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.BinDirectory">
+            <summary>
+            Bin文件夹的绝对路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.BaseDircotry">
+            <summary>
+            程序根路径
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginsClientPath">
+            <summary>
+            客户端插件存放的目录名
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginClientPath">
+            <summary>
+            当前插件的根目录（绝对路径）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginLocalGalleryPath">
+            <summary>
+            服务器端插件存放的完整目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginServerGaplleryPath">
+            <summary>
+            远程插件目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginServer">
+            <summary>
+            插件服务器地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginGallery">
+            <summary>
+            服务器端插件存放的目录
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.PluginService">
+            <summary>
+            插件的服务地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.PluginInfo.HasMenu">
+            <summary>
+            插件的菜单数目
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.UrlItem">
+            <summary>
+            URL描述项（用于插件）
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.UrlItem.ID">
+            <summary>
+            菜单id
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.UrlItem.Title">
+            <summary>
+            菜单描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.UrlItem.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.UrlItem.Url">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Common.UrlItem.Main">
+            <summary>
+            是否一级菜单
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Deployment">
+            <summary>
+            插件动作类
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.RemotePluginInfo">
+            <summary>
+            远程插件信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Common.Enum.PluginQueryType">
+            <summary>
+            插件查询类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Install.Step3">
+            <summary>
+            setup 的摘要说明. 
+            </summary>
+        </member>
+        <member name="M:We7.CMS.MoudelMonitoring.SetModelDataDic(Thinkment.Data.ObjectAssistant)">
+            <summary>
+            设置内容模型字典
+            </summary>
+            <param name="assistat"></param>
+        </member>
+        <member name="T:We7.CMS.Install.RemoteInstallWebService">
+            <summary>
+            insall 的摘要说明
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Install.RemoteInstallWebService.Install(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="setupDbType"></param>
+            <param name="dbi"></param>
+            <param name="ci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.RemoteInstallWebService.DownLoad(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="setupDbType"></param>
+            <param name="dbi"></param>
+            <param name="ci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Install.RemoteInstallWebService.BindShopLoginName(System.String,System.String,System.String,System.String)">
+            <summary>
+            在本地站点绑定We7Shop的登陆帐号
+            </summary>
+            <param name="shopLoginName">插件商场登陆帐号</param>
+            <param name="shopPassword">插件商场密码</param>
+            <param name="siteLoginName">本地站点登陆名</param>
+            <param name="sitePassword">本地站点密码</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

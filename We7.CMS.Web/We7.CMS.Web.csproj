@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22701D1C-D8C8-4F4F-95CE-674A041F2788}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.CMS.Web</RootNamespace>
+    <AssemblyName>We7.CMS.Web</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\We7.CMS.Web.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKFinder, Version=2.0.1.1132, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Scripts\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\HtmlAgilityPack\1.4.0\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Thinkment.Data, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\OurSelf\SharedDll\Bin\Thinkment.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\XML\CD.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Errors.aspx" />
+    <Content Include="Go\Go.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Install\Files\Delete.xml" />
+    <Content Include="Install\SQL\Core\Update.xml" />
+    <Content Include="Scripts\ckfinder\skins\kama\app.css" />
+    <Content Include="Scripts\ckfinder\skins\kama\host.css" />
+    <Content Include="Scripts\ckfinder\skins\kama\icons.png" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\ckffolder.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\ckffolderopened.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\ckfminus.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\ckfnothumb.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\ckfplus.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons.png" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\ai.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\avi.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\bmp.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\cs.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\default.icon.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\dll.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\doc.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\docx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\exe.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\fla.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\gif.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\jpg.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\js.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\mdb.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\mp3.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\ogg.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\pdf.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\ppt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\pptx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\rdp.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\swf.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\swt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\txt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\vsd.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\xls.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\xlsx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\xml.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\16\zip.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\ai.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\avi.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\bmp.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\cs.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\default.icon.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\dll.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\doc.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\docx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\exe.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\fla.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\gif.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\jpg.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\js.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\mdb.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\mp3.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\ogg.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\ogg.png" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\pdf.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\ppt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\pptx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\rdp.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\swf.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\swt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\txt.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\vsd.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\xls.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\xlsx.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\xml.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\icons\32\zip.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\loaders\16x16.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\loaders\32x32.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\spacer.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\add.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\clear_basket.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\delete.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\download.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\help.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\refresh.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\settings.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\images\toolbar\view.gif" />
+    <Content Include="Scripts\ckfinder\skins\kama\richcombo.css" />
+    <Content Include="Scripts\ckfinder\skins\kama\skin.js" />
+    <Content Include="Scripts\ckfinder\skins\kama\uipanel.css" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\we7\css\res\ajax-loading.gif" />
+    <Content Include="Scripts\we7\css\res\allow.gif" />
+    <Content Include="Scripts\we7\css\res\blue-loading.gif" />
+    <Content Include="Scripts\we7\css\res\error.gif" />
+    <Content Include="Scripts\we7\css\res\info.png" />
+    <Content Include="Scripts\we7\css\res\trangles.png" />
+    <Content Include="Scripts\we7\css\ui.jqgrid.css" />
+    <Content Include="Scripts\we7\css\ui.multiselect.css" />
+    <Content Include="Scripts\we7\css\we7.tip.css" />
+    <Content Include="Scripts\we7\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\we7\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\we7\jquery.jqGrid.min.js" />
+    <None Include="Scripts\we7\jquery.tools.min.js" />
+    <None Include="Scripts\we7\we7.bind.js" />
+    <Content Include="Scripts\we7\we7.bind.min.js" />
+    <None Include="Scripts\we7\we7.form.js" />
+    <None Include="Scripts\we7\we7.loader.dev.js" />
+    <Content Include="Scripts\we7\we7.loader.js" />
+    <None Include="Scripts\we7\we7.tools.js" />
+    <Content Include="Scripts\we7\_ResourceSets.js" />
+    <None Include="Scripts\we7\_testboard.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Errors.aspx.cs">
+      <DependentUpon>Errors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors.aspx.designer.cs">
+      <DependentUpon>Errors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Go\AttachmentDownload.aspx.cs">
+      <DependentUpon>AttachmentDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\AttachmentDownload.aspx.designer.cs">
+      <DependentUpon>AttachmentDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\其他类\Login.Default\Login.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\其他类\Statistic.Default\Statistic.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\其他类\User.Register\UserRegister.Simple.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\友情链接\LinkList.Default\LinkList.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\图文类\FlashShow.Default\FlashShow.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\PagedArticleList.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\PictureArticleList.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\ChannelMenu.CurrLocation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\ChannelMenu.DropDown.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\ChannelMenu.TopMenu.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Sidebar.ChannelNav.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\导航类\TagList.Hot\TagList.Hot.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\搜索类\Search.Bar\Search.Bar.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\PagedArticleList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Search.SearchUI.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\ArticleList.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\ArticleList.SideList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\ArticleSingle.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\ArticleView.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\NewsTab.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\NewsTab.Speeches.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\PagedArticleList.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Recommand.Newest.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Header.LogoQueryQuick.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Footer.Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\WidgetCollection\评论类\CommentsList.Common\CommentsList.Common.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="admin.aspx" />
+    <Content Include="Config\AdviceEmailConfig.xml" />
+    <Content Include="Config\advicemapping.xml" />
+    <Content Include="Config\CommonUrls.xml" />
+    <Content Include="Config\Dictionary\SignTemplate.xml" />
+    <Content Include="Config\AdviceTag.xml" />
+    <Content Include="Config\TagsWord.xml" />
+    <Content Include="Config\TemplateType.xml" />
+    <Content Include="Config\UrlTags.xml" />
+    <Content Include="Config\UserEmailConfig.xml" />
+    <None Include="Config\db.config.bak" />
+    <None Include="Config\db_sqlite.config.bak" />
+    <Content Include="Config\passport\dnt.config" />
+    <None Include="Config\Render.config" />
+    <Content Include="Config\Departs.xml" />
+    <None Include="Config\Cache.config" />
+    <Content Include="default.aspx" />
+    <Content Include="Go\AttachmentDownload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Config\urls.config" />
+    <Content Include="App_Browsers\Form.browser" />
+    <None Include="Config\site.config.bak" />
+    <None Include="Config\video.config" />
+    <Content Include="favicon.ico" />
+    <Content Include="Go\TemplateGuide.aspx" />
+    <Content Include="Go\CreateHtmlTemplate.aspx" />
+    <Content Include="Install\AuthenticationAPI.aspx" />
+    <Content Include="Install\css\install.css" />
+    <Content Include="Install\images\error_img.png" />
+    <Content Include="Install\InstallWebService.asmx" />
+    <Content Include="Go\ShowChannel.aspx" />
+    <Content Include="Go\ShowArticle.aspx" />
+    <Content Include="Go\ShowSitePage.aspx" />
+    <Content Include="Install\css\general.css" />
+    <Content Include="Install\images\button_pub.gif" />
+    <Content Include="Install\images\error.gif" />
+    <Content Include="Install\images\file.gif" />
+    <Content Include="Install\images\folder.gif" />
+    <Content Include="Install\images\level\1.gif" />
+    <Content Include="Install\images\level\2.gif" />
+    <Content Include="Install\images\level\3.gif" />
+    <Content Include="Install\images\level\4.gif" />
+    <Content Include="Install\images\logo.jpg" />
+    <Content Include="Install\images\ok.gif" />
+    <Content Include="Install\images\succeed.jpg" />
+    <Content Include="Install\Index.aspx" />
+    <Content Include="Install\js\setup.js" />
+    <Content Include="Install\js\Plugin.js" />
+    <Content Include="Install\RemoteInstallWebService.asmx" />
+    <Content Include="Install\SQL\Core\Data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Install\SQL\Core\Create.xml" />
+    <Content Include="Install\step2.aspx" />
+    <Content Include="Install\step3.aspx" />
+    <Content Include="Install\step4.aspx" />
+    <Content Include="Install\succeed.aspx" />
+    <Content Include="Config\Dictionary\provinces.xml" />
+    <Content Include="Config\Dictionary\Tags.xml" />
+    <Content Include="Config\Dictionary\keywords.xml" />
+    <Content Include="Config\thumbnail.xml" />
+    <Content Include="Config\sms.config" />
+    <Content Include="Install\Plugin\PluginCommandHandler.ashx" />
+    <Content Include="Config\CategoryOptions.config" />
+    <None Include="Install\Plugin\Plugin.xml.tpl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <None Include="Scripts\ckfinder\userfiles\.htaccess" />
+    <None Include="Scripts\jQuery\plugin\colorpicker\images\Thumbs.db" />
+    <Content Include="Install\AccountWebService.asmx" />
+    <Content Include="Install\UserServiceAPI.aspx" />
+    <Content Include="Scripts\ckfinder\changelog.txt" />
+    <Content Include="Scripts\ckfinder\ckfinder.html" />
+    <Content Include="Scripts\ckfinder\ckfinder.js" />
+    <Content Include="Scripts\ckfinder\ckfinder_v1.js" />
+    <Content Include="Scripts\ckfinder\config.ascx" />
+    <Content Include="Scripts\ckfinder\config.js" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\connector.aspx" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\cs.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\da.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\de.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\el.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\en.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\es-mx.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\es.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\fr.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\he.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\hu.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\it.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\ja.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\lv.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\nb.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\nl.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\nn.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\no.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\pl.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\pt-br.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\ru.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\sk.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\sl.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\sv.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\zh-cn.xml" />
+    <Content Include="Scripts\ckfinder\core\connector\aspx\lang\zh-tw.xml" />
+    <Content Include="Scripts\ckfinder\install.txt" />
+    <Content Include="Scripts\ckfinder\lang\en.js" />
+    <Content Include="Scripts\ckfinder\lang\zh-cn.js" />
+    <Content Include="Scripts\ckfinder\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckfinder\license.txt" />
+    <Content Include="Scripts\ckfinder\plugins\dummy\lang\en.js" />
+    <Content Include="Scripts\ckfinder\plugins\dummy\lang\pl.js" />
+    <Content Include="Scripts\ckfinder\plugins\dummy\plugin.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\bin\Debug\CKFinder_FileEditor.dll" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\bin\Debug\CKFinder_FileEditor.pdb" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\bin\Release\CKFinder_FileEditor.dll" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\csscolors.css" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\docs.css" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\jscolors.css" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\people.jpg" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\sparqlcolors.css" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\css\xmlcolors.css" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\codemirror.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\editor.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\highlight.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\mirrorframe.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsecss.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsedummy.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsehtmlmixed.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsejavascript.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsesparql.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\parsexml.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\select.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\stringstream.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\tokenize.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\tokenizejavascript.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\undo.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\js\util.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\plugin.js" />
+    <Content Include="Scripts\ckfinder\plugins\imageresize\bin\Debug\CKFinder_ImageResize.dll" />
+    <Content Include="Scripts\ckfinder\plugins\imageresize\bin\Debug\CKFinder_ImageResize.pdb" />
+    <Content Include="Scripts\ckfinder\plugins\imageresize\bin\Release\CKFinder_ImageResize.dll" />
+    <Content Include="Scripts\ckfinder\plugins\imageresize\images\mini.gif" />
+    <Content Include="Scripts\ckfinder\plugins\imageresize\plugin.js" />
+    <Content Include="Scripts\ckfinder\skins\v1\app.css" />
+    <Content Include="Scripts\ckfinder\skins\v1\host.css" />
+    <Content Include="Scripts\ckfinder\skins\v1\icons.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\ckffolder.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\ckffolderopened.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\ckfminus.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\ckfnothumb.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\ckfplus.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\dialog_sides.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\ai.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\avi.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\bmp.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\cs.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\default.icon.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\dll.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\doc.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\docx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\exe.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\fla.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\gif.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\jpg.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\js.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\mdb.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\mp3.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\pdf.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\ppt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\pptx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\rdp.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\swf.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\swt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\txt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\vsd.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\xls.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\xlsx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\xml.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\16\zip.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\ai.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\avi.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\bmp.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\cs.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\default.icon.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\dll.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\doc.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\docx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\exe.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\fla.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\gif.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\jpg.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\js.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\mdb.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\mp3.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\pdf.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\ppt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\pptx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\rdp.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\swf.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\swt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\txt.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\vsd.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\xls.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\xlsx.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\xml.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\icons\32\zip.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\loaders\16x16.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\loaders\32x32.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\spacer.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\sprites.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\add.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\clear_basket.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\delete.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\download.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\help.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\refresh.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\settings.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar\view.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckfinder\skins\v1\richcombo.css" />
+    <Content Include="Scripts\ckfinder\skins\v1\skin.js" />
+    <Content Include="Scripts\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\jQuery\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jQuery\jquery.js" />
+    <Content Include="Scripts\jQuery\jquery.jstree.js" />
+    <Content Include="Scripts\jQuery\jQueryUI\css\jquery-ui.css" />
+    <Content Include="Scripts\jQuery\jQueryUI\jquery-ui.js" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\colorpicker.js" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\css\colorpicker.css" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\blank.gif" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_background.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_hex.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_hsb_b.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_hsb_h.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_hsb_s.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_indic.gif" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_overlay.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_rgb_b.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_rgb_g.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_rgb_r.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_select.gif" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\colorpicker_submit.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_background.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_hex.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_hsb_b.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_hsb_h.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_hsb_s.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_indic.gif" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_rgb_b.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_rgb_g.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_rgb_r.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\custom_submit.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\select.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\select2.png" />
+    <Content Include="Scripts\jQuery\plugin\colorpicker\images\slider.png" />
+    <Content Include="Scripts\jQuery\plugin\jquery.tools.min.js" />
+    <Content Include="Scripts\jQuery\themes\classic\d.png" />
+    <Content Include="Scripts\jQuery\themes\classic\dot_for_ie.gif" />
+    <Content Include="Scripts\jQuery\themes\classic\style.css" />
+    <Content Include="Scripts\jQuery\themes\classic\throbber.gif" />
+    <Content Include="Scripts\ReadMe.txt" />
+    <Content Include="Widgets\resource.xml" />
+    <Content Include="Widgets\Scripts\Plugins\Common.js" />
+    <Content Include="Widgets\Scripts\jquery.pack.js" />
+    <Content Include="Widgets\Scripts\jquery.peex.js" />
+    <Content Include="Widgets\Scripts\Plugins\FlashShow.js" />
+    <Content Include="Widgets\Scripts\resource.xml" />
+    <Content Include="Widgets\Scripts\Plugins\Search.js" />
+    <Content Include="Widgets\Scripts\Plugins\searchKey.ascx" />
+    <Content Include="Scripts\jQuery\jquery-1.4.2.js" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\css\dark-hive\jquery-ui-1.8.5.custom.css" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\js\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jQuery\jQueryUI\1.8.5\js\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="Install\signin.aspx" />
+    <Content Include="Install\VerifyCode.aspx" />
+    <Content Include="Install\upgradeconfig.aspx" />
+    <Content Include="Install\upgrade.aspx" />
+    <Content Include="Install\upgrade-db.aspx" />
+    <Content Include="Go\RSS.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Widgets\Themes\theme\face.jpg" />
+    <Content Include="Widgets\Themes\theme\images\back.gif" />
+    <Content Include="Widgets\Themes\theme\images\more.gif" />
+    <Content Include="Widgets\Themes\theme\images\feed.gif" />
+    <Content Include="Widgets\Themes\theme\images\top.gif" />
+    <Content Include="Widgets\Themes\theme\Style.css" />
+    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\min_line.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Login.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Style\Login.Default.css" />
+    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\back3.gif" />
+    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\LinkList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Style\LinkList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_l.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Statistic.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Style\Statistic.Default.css" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\bg_admin.jpg" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\login_bg.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\member_bg_1.gif" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\JS\common.js" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\JS\validator.js" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Protocol.txt" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Style\UserRegister.Simple_Simple.普通样式.css" />
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\UserRegister.Simple.ascx" />
+    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\FlashShow.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Style\FlashShow.Default.css" />
+    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Swf\focusviewer.swf" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\PagedPictureArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Style\PagedPictureArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\back4.gif" />
+    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\PictureArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Style\PictureArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\ChannelMenu.CurrentLocation.ascx" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Images\730.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Style\ChannelMenu.CurrentLocation.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\ChannelMenu.DropDown.ascx" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\7.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\icon.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_bg.jpg" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_line.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_line.jpg" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_li_left.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_li_right.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\Js\jquery.downhx.js" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\Style\ChannelMenu.DropDown.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\ChannelMenu.TopMenu.ascx" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\icon.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_bg.jpg" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_line.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_line.jpg" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_li_left.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_li_right.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Style\ChannelMenu.TopMenu.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\bg.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\bg_hover.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Sidebar.ChannelNav.ascx" />
+    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Style\Sidebar.ChannelNav.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Images\tag_list.gif" />
+    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Style\TagList.Hot.css" />
+    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\TagList.Hot.ascx" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\ico_down.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\model_search.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\tool.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Search.Bar.ascx" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Style\Search.Bar.css" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\PagedArticleList.DefaultSearch.ascx" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Style\PagedArticleList.DefaultSearch.css" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Search.SearchUI.ascx" />
+    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Style\Search.SearchUI.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\icon3.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Style\ArticleList.2ColumnWidthImage.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\ArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\icon3.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Style\ArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\ArticleList.SideList.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Style\ArticleList.SideList.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\ArticleSingle.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\Style\ArticleSingle.Default.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\ArticleView.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\article_line.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon5.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon7.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Style\ArticleView.Default.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\icon2.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\news_dd.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\news_on.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Style\LatestNews.LatestTopPicture.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\swf\usualfocus.swf" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_46.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_47.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_48.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_49.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_51.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\NewsTab.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Style\NewsTab.Default.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Images\image_14.jpg" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\NewsTab.Speeches.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Style\NewsTab.Speeches.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\PagedArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Style\PagedArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Recommand.Newest.ascx" />
+    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Style\Recommand.Newest.css" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Header.LogoQueryQuick.ascx" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\ico_down.gif" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\model_search.gif" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\tool.gif" />
+    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Style\Header.LogoQueryQuick.css" />
+    <Content Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Footer.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Style\Footer.Default.css" />
+    <Content Include="Widgets\WidgetCollection\评论类\CommentsList.Common\CommentsList.Common.ascx" />
+    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\Register.Title.ascx" />
+    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\Style\Register.Title.css" />
+    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\images\730.gif" />
+    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\Search.Title.ascx" />
+    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\Style\Search.Title.css" />
+    <Content Include="Widgets\WidgetCollection\静态类\top\Style\Top.css" />
+    <Content Include="Widgets\WidgetCollection\静态类\top\top.ascx" />
+    <Content Include="安装说明.html" />
+    <Compile Include="Go\Go.aspx.cs">
+      <DependentUpon>Go.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\Go.aspx.designer.cs">
+      <DependentUpon>Go.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Go\ShowChannel.aspx.cs">
+      <DependentUpon>ShowChannel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\ShowChannel.aspx.designer.cs">
+      <DependentUpon>ShowChannel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Go\ShowArticle.aspx.cs">
+      <DependentUpon>ShowArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\ShowArticle.aspx.designer.cs">
+      <DependentUpon>ShowArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Go\ShowSitePage.aspx.cs">
+      <DependentUpon>ShowSitePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\ShowSitePage.aspx.designer.cs">
+      <DependentUpon>ShowSitePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Go\TemplateGuide.aspx.cs">
+      <DependentUpon>TemplateGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\TemplateGuide.aspx.designer.cs">
+      <DependentUpon>TemplateGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Go\CreateHtmlTemplate.aspx.cs">
+      <DependentUpon>CreateHtmlTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\CreateHtmlTemplate.aspx.designer.cs">
+      <DependentUpon>CreateHtmlTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Install\AuthenticationAPI.aspx.cs">
+      <DependentUpon>AuthenticationAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Install\AuthenticationAPI.aspx.designer.cs">
+      <DependentUpon>AuthenticationAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Install\UserServiceAPI.aspx.cs">
+      <DependentUpon>UserServiceAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Install\UserServiceAPI.aspx.designer.cs">
+      <DependentUpon>UserServiceAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Go\RSS.aspx.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Go\RSS.aspx.designer.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Validate.ashx" />
+    <None Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\Thumbs.db" />
+    <None Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\vm\pager.vm" />
+    <None Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\vm\pager.vm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Report\We7.CMS.Report.csproj">
+      <Project>{50974D16-57A3-4A2D-B46A-EE060D22AE6C}</Project>
+      <Name>We7.CMS.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.UI\We7.CMS.UI.csproj">
+      <Project>{8AACF293-F3C4-4BBE-9227-FAEC14292A7A}</Project>
+      <Name>We7.CMS.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.WebControls\We7.CMS.WebControls.csproj">
+      <Project>{62257C1E-B4F9-48C0-A3CC-D783C1A59169}</Project>
+      <Name>We7.CMS.WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Install\We7.CMS.Install.csproj">
+      <Project>{D16ECF86-E60C-4A3A-831B-89537C463E8B}</Project>
+      <Name>We7.CMS.Install</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Utils\We7.CMS.Utils.csproj">
+      <Project>{F4C28516-9016-449B-B867-84FB5FC9B567}</Project>
+      <Name>We7.CMS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Model.Core\We7.Model.Core.csproj">
+      <Project>{1EC274E4-3A87-4065-A5B3-3275221FB187}</Project>
+      <Name>We7.Model.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Share\We7.UrlRewriter\We7.UrlRewriter.csproj">
+      <Project>{2CBD5F08-0E84-4250-89AD-9A341D847355}</Project>
+      <Name>We7.UrlRewriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="Admin\We7.CMS.Web.Admin.csproj">
+      <Project>{6C5BBA37-982A-4D90-829D-CCD0E35C6144}</Project>
+      <Name>We7.CMS.Web.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="ModelUI\We7.Model.UI.csproj">
+      <Project>{AEC92C9C-BB07-4527-B45F-48D6EDBF0539}</Project>
+      <Name>We7.Model.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="User\We7.CMS.Web.User.csproj">
+      <Project>{06AA1969-D498-4DDB-BED9-12147AC05720}</Project>
+      <Name>We7.CMS.Web.User</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\DB\" />
+    <Folder Include="Models\System\Article\" />
+    <Folder Include="Widgets\WidgetCollection\内容模型类\" />
+    <Folder Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Js\" />
+    <Folder Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2600</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1978/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,111 @@
+@import url("table.css");
+/*会员中心公共属性*/
+body, dl, dt, dd, ol, ul, pre, form, field, input, p, blockquote, th, td, h1, h2, h3, h4, h5, h6 { font-family:"宋体",Arial, Helvetica, sans-serif; margin:0; padding:0; color:#333; font-size:12px;}
+body { background:url(images/bg_memberhead.jpg) repeat-x 0 -95px;}
+table { padding:0; margin:0;}
+th { text-align:right; padding-right:5px; font-weight:normal;}
+td { line-height:200%; padding:0 5px; text-align:left;}
+caption { text-align:center;}
+a:hover, a:active { text-decoration:underline; color:#077ac7;}
+ul, ol { list-style:none; line-height:20px;}
+input, textarea, select, button, file {	font-size:12px;}
+img { border:0;}
+p, li {	line-height:1.8em;}
+br{ clear:right;}
+
+/*会员中心*/
+#main { width:980px; background:none; margin:10px auto;}
+#left, #right { float:left; width:200px; border:1px solid #9cc9e0; background:#fff; padding:0 0 10px 0;}
+#left img { padding:1px; margin:0 auto;}
+/* FORMS */
+form
+{
+	margin: 0.5em 0 1.5em;
+}
+input
+{
+	font-family: arial,tahoma,verdana,sans-serif;
+	margin: 2px 0;
+}
+fieldset
+{
+	border: none;
+}
+label
+{
+	display: block;
+	padding: 5px 0;
+}
+label br
+{
+	clear: left;
+}
+
+/* include margin and padding in the width calculation of input and textarea */
+input[type="text"],
+textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box; /* ie8 only */
+	box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	vertical-align: text-top;
+}
+
+
+/*左边菜单*/
+#treemenu, #space { border-bottom:1px solid #9cc9e0; background:url(images/member_bg.jpg) repeat-x 0 -324px;}
+#treemenu h5, #space h5 { padding:0; margin:0; font-weight:bold; font-size:14px; background:url(images/member_bg_1.gif) no-repeat 15px 6px; height:34px; line-height:34px; text-indent:30px; color:#069;}
+#treemenu ul, #treemenu ol { margin:0; padding:0;}
+#treemenu ul li, #left ol li { text-indent:30px; line-height:24px; margin:4px 0;}
+#treemenu ul li a, #left ol li a { text-decoration:none; width:100%; display:block;}
+#treemenu ul li a:hover { background:#F2F9FD url(images/member_bg_1.gif) no-repeat 170px -24px; font-weight:bold; color:#069;}/*会员空间*/#space { text-align:center; margin:0 auto;}
+a.msg { background:url(images/member_bg_1.gif) no-repeat 0 -88px; padding-left:20px;}
+a.edit { background:url(images/member_bg_1.gif) no-repeat 0 -345px; padding-left:18px;}
+#left ol li.local { background:url(images/member_bg_1.gif) no-repeat 10px -143px;}
+#left ol li.help { background:url(images/member_bg_1.gif) no-repeat 8px -170px;}
+#left ol li.exit { background:url(images/member_bg_1.gif) no-repeat 8px -200px;}
+#left ol li a:hover, a.msg:hover, a.edit:hover { color:#f90; text-decoration:none;}
+
+ /*布局*/
+#top{ width:980px; margin:3px auto 0; background:transparent; height:27px; line-height:27px; color:#077ac7; overflow:hidden;}
+#top td,.cribox_bdr_1 td{ padding:0 6px;}
+#head, #main, #foot,#menu,#submenu{ width:980px; margin:10px auto 0; background:#fff; text-align:left; clear:both; overflow:hidden;}
+#head{ background:transparent; overflow:hidden;}
+#main {	background:url(images/main_bg.gif) repeat-y right 0; /*height:100%; overflow:hidden;*/}
+#foot { background:url(images/bg_foot.jpg) repeat-x 0 0; padding:10px 0; text-align:center; line-height:25px;	color:#454545;	font-family:arial; color:#077ac7;}
+#foot a{ margin:8px auto;}
+#main_l { float:left; width:640px;	overflow:hidden;}
+#main_l h1 { font-size:18px; text-align:center;	margin:10px auto;}
+#main_r { float:right; width:315px;	padding:5px; overflow:hidden;}
+#logo { float:left; width:180px;}
+
+/*头部banner*/
+#topbanner{ float:right; width:638px;}
+.clear { clear:both; }
+
+/*位置导航*/
+#position{ background:#E4F3FC url(images/bg_position.gif) no-repeat 0 0; padding-left:90px; height:28px; line-height:28px; border:1px solid #fff;}
+#position a{ font-weight:bold; color:#077ac7; background:url(images/bg_position.gif) no-repeat right -40px; padding-right:16px;}
+
+#right { float:right; width:770px; border:0; text-align:left;}
+#head { position:relative; height:80px; margin:0 auto; background:none;}
+#foot { padding:10px 0 0 0; background:url(images/bg_memberfoot.jpg) repeat-x 0 0; width:100%;}
+#logo { position:absolute; top:20px; left:30px; width:200px;}
+#banner { width:700px; position:absolute; top:30px; right:0;}
+.align_center { text-align:center; padding:10px;}
+
+/*导航菜单*/
+#membermenu { background:url(images/memberhead_bg.jpg) repeat-x 0 -65px; text-align:center; margin: 1px auto 0; height:30px; line-height:30px;}
+#membermenu a,#menu_now{ color:#fff; text-decoration:none; display:block; display:inline; padding:9px 15px; background:url(images/memberhead_bg.jpg) no-repeat right -35px;}
+#membermenu a:hover,#menu_now { color:#069; text-decoration:none; background:url(images/memberhead_bg.jpg) repeat-x right -2px; border-left:1px solid #52A0E0; border-right:1px solid #52A0E0;}
+/*面包屑导航*/
+#position {	padding-left:5px; color:#787878; border:1px solid #99d3fb; background-color:#ECF7FE; height:24px; line-height:24px;	background-image:none;}
+#position strong {	background:url(images/bg_member_1.gif) no-repeat left -111px; padding-left:20px; color:#077ac7;}
+#position a { background:url(images/bg_member_1.gif) no-repeat right -128px; padding-right:18px; color:#077ac7;}
+.trTitle{ background-color:#E8F2FF; width:100%}
+.ShoppingCartTable{ width:100%;}
+

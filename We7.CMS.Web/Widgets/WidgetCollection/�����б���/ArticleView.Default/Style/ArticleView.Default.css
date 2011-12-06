@@ -1,0 +1,395 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ArticleView.Default
+ * Style:ArticleView_Default
+ * Desc:
+ * Quot:
+*************************************************************/
+/**************文章正文开始*****************/
+.ArticleView_Default .article_line
+{
+    height: 4px;
+    line-height: 4px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat left -358px;
+}
+.ArticleView_Default .article_content
+{
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    padding: 30px;
+}
+.ArticleView_Default .article_content h1
+{
+    color: #2782b9;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 35px;
+}
+.ArticleView_Default .article_info
+{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: url(../images/article_line.gif) repeat-x left center;
+    margin: 26px 0px;
+}
+.ArticleView_Default .article_info a
+{
+    color: #333333;
+}
+.ArticleView_Default .article_info a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_content_list
+{
+    line-height: 180%;
+    font-size: 14px;
+    color: #212121;
+    word-wrap: break-word;
+    word-break: normal;
+}
+.ArticleView_Default .article_mood
+{
+    padding-bottom: 20px;
+}
+.ArticleView_Default .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Default .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Default .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Default .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background: url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li.next
+{
+    background: url(../images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_page li a:hover
+{
+    color: #cc0000;
+}
+/***********相关信息****************/
+.ArticleView_Default .article_about h3
+{
+    font-size: 14px;
+    padding-left: 20px;
+    height: 31px;
+    line-height: 31px;
+    border-bottom: 1px solid #ddd;
+}
+.ArticleView_Default .article_about ul
+{
+    padding: 10px;
+}
+.ArticleView_Default .article_about li
+{
+    height: 22px;
+    line-height: 22px;
+    background: url(../images/icon1.gif) no-repeat left center;
+    padding-left: 10px;
+}
+.ArticleView_Default .article_about li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_about li a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Default .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Default .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Default .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Default .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Default .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background: url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li.next
+{
+    background: url(../images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_page li a:hover
+{
+    color: #cc0000;
+}
+
+
+.ArticleView_Default .mtop10
+{
+    margin-top: 10px;
+}
+.ArticleView_Default .articleAttachments{margin-bottom:10px;line-height:1.5em;}
+.ArticleView_Default .articleAttachments li{margin-left:20px;font-size:14px;}
+.ArticleView_Default .articleAttachments a:hover
+{
+    color: #cc0000;
+}
+/*************************************************************
+ * Command:End
+ * Control:ArticleView.Default
+ * Style:ArticleView_Default
+ * Desc:
+ * Quot:
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleView.Default
+ * Style:ArticleView_Test
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/**************文章正文开始*****************/
+.ArticleView_Test .article_line
+{
+    height: 4px;
+    line-height: 4px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat left -358px;
+}
+.ArticleView_Test .article_content
+{
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    padding: 30px;
+}
+.ArticleView_Test .article_content h1
+{
+    color: #2782b9;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 35px;
+}
+.ArticleView_Test .article_info
+{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: url(../images/article_line.gif) repeat-x left center;
+    margin: 26px 0px;
+}
+.ArticleView_Test .article_info a
+{
+    color: #333333;
+}
+.ArticleView_Test .article_info a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Test .article_content_list
+{
+    line-height: 180%;
+    font-size: 18px;
+    color: #212121;
+    word-wrap: break-word;
+    word-break: normal;
+}
+.ArticleView_Test .article_mood
+{
+    padding-bottom: 20px;
+}
+.ArticleView_Test .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Test .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Test .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Test .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Test .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background: url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Test .article_page li.next
+{
+    background: url(../images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Test .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Test .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Test .article_page li a:hover
+{
+    color: #cc0000;
+}
+/***********相关信息****************/
+.ArticleView_Test .article_about h3
+{
+    font-size: 14px;
+    padding-left: 20px;
+    height: 31px;
+    line-height: 31px;
+    border-bottom: 1px solid #ddd;
+}
+.ArticleView_Test .article_about ul
+{
+    padding: 10px;
+}
+.ArticleView_Test .article_about li
+{
+    height: 22px;
+    line-height: 22px;
+    background: url(../images/icon1.gif) no-repeat left center;
+    padding-left: 10px;
+}
+.ArticleView_Test .article_about li a
+{
+    color: #333;
+}
+.ArticleView_Test .article_about li a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Test .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Test .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Test .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Test .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Test .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background: url(../images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Test .article_page li.next
+{
+    background: url(../images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Test .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Test .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Test .article_page li a:hover
+{
+    color: #cc0000;
+}
+
+
+.ArticleView_Test .mtop10
+{
+    margin-top: 10px;
+}
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleView.Default
+ * Style:ArticleView_Test
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/

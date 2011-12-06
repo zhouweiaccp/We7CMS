@@ -1,0 +1,218 @@
+﻿#designer
+{
+    border: 2px solid #EFEFEF;
+    margin: 3px 0;
+    font-size: 13px;
+    padding: 10px;
+    width: 94%;
+    display: inline-block;
+}
+#designer div
+{
+    margin: 4px 0 0 0;
+    float: left;
+}
+#QuestionPreview
+{
+    width: 100%;
+}
+#QuestionPreview div
+{
+    width: 100%;
+}
+#QuestionPreview #QuestionTitle
+{
+    font-weight: bold;
+}
+#QuestionPreview #QuestionID
+{
+    width: 28px;
+}
+#QuestionPreview #QuestionTxt
+{
+    width: 90%;
+}
+#QuestionPreview #QstPreviewBody ul
+{
+    margin: 0;
+    padding: 2px 0;
+}
+#QuestionPreview #QstPreviewBody ul li
+{
+    height: 24px;
+    letter-spacing: 20px;
+}
+#QuestionPreview #QuestionOpt
+{
+    padding-left: 40%;
+    width: 80%;
+}
+#QuestionDesigner
+{
+    width: 98%;
+    height: auto;
+    padding: 4px 10px;
+    background: none repeat scroll 0 0 #FFF9DD;
+}
+#QuestionDesigner div
+{
+    width: 100%;
+}
+#QuestionTitleSetting textarea
+{
+    width: 70%;
+    float: left;
+}
+#QuestionTitleSetting ul
+{
+    width: 70px;
+    padding: 4px 8px;
+    margin: 0;
+    float: left;
+}
+#QuestionTitleSetting li
+{
+    margin-left: 0px;
+}
+#Notify
+{
+    background:red;
+    color: white;
+    font-weight: bold;
+    padding:4px;
+    display: none;
+}
+.design-icon
+{
+    background-image: url(../Image/designqpic.gif);
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+.design-down
+{
+    background-position: -2px -2px;
+    height: 16px;
+    margin: 0 2px 0 0;
+    width: 16px;
+}
+.design-up
+{
+    background-position: -22px -2px;
+    height: 16px;
+    margin: 0 2px 0 0;
+    width: 16px;
+}
+.design-minus
+{
+    background-position: -22px -60px;
+    height: 17px;
+    width: 17px;
+}
+.design-add
+{
+    background-position: 0 -60px;
+    height: 17px;
+    width: 17px;
+}
+.design-desc
+{
+    background-position: -22px -299px;
+    height: 16px;
+    width: 16px;
+    margin-left: 40px;
+    float: left;
+}
+.underline
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border-color: -moz-use-text-color -moz-use-text-color #7F9DB9;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    color: #999999;
+}
+
+
+
+
+
+#QuestionType
+{
+    background: #CCC;
+    padding: 10px;
+    margin: 14px 0 0 0;
+    height: 18px;
+}
+#QuestionType li
+{
+    display: block;
+    width: 100px;
+    height: 26px;
+    float: left;
+}
+#RadioQuestion
+{
+    display: none;
+    width: 100px;
+}
+#CheckboxQuestion
+{
+    display: none;
+    width: 100px;
+}
+#TextQuestion
+{
+    display: none;
+    width: 100px;
+}
+.QuestionItem
+{
+    margin: 3px 0;
+    font-size: 13px;
+    padding: 10px;
+    width: 94%;
+    display: inline-block;
+}
+.QuestionHover
+{
+    border: 2px solid #EFEFEF;
+}
+.QuestionItem div
+{
+    margin: 4px 0 0 0;
+    float: left;
+    width: 100%;
+}
+.QuestionItem #QuestionTitle
+{
+    font-weight: bold;
+}
+.QuestionItem #QuestionID
+{
+    width: 28px;
+}
+.QuestionItem #QuestionTxt
+{
+    width: 90%;
+}
+.QuestionItem #QstPreviewBody ul
+{
+    margin: 0;
+    padding: 2px 0;
+}
+.QuestionItem #QstPreviewBody ul li
+{
+    height: 24px;
+    padding:4px;
+    letter-spacing: 20px;
+}
+.QuestionItem #QuestionOpt
+{
+    padding-left: 40%;
+    width: 80%;
+}

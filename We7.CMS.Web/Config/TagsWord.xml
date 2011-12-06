@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Alias>
+  <Item>
+  <Value>头部</Value>
+  </Item>
+  <Item>
+    <Value>尾部</Value>
+  </Item>
+  <Item>
+    <Value>左上部</Value>
+  </Item>
+  <Item>
+    <Value>左下部</Value>
+  </Item>
+  <Item>
+    <Value>右上部</Value>
+  </Item>
+  <Item>
+    <Value>右下部</Value>
+  </Item>
+</Alias>

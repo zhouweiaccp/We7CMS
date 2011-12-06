@@ -1,0 +1,90 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>选择显示字段</title>
+    <style>
+        body
+        {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            background-color: #F7F7F7;
+        }
+        th, td
+        {
+            font-size: 12px;
+            font-family: 宋体 Arial;
+        }
+    </style>
+
+    <script type="text/javascript" src="/Admin/ajax/jquery/jquery1.2.6.pack.js"></script>
+
+</head>
+<body style="overflow: hidden; height:100%">
+    <table width="100%" id="ct">
+    </table>
+    <table width="100%" id="fb" style="position:absolute; bottom:10px;">
+        <tr>
+            <td align="center"><button style="width:100px;" id="ok">确定</button><button id="cancel" style="width:100px;">取消</button></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        $(function(){
+            var o=window.dialogArguments;
+            var i=0;
+            var r;
+            var t=$("#ct")[0];
+            for(var a in o.items)
+            {
+                if(i%3==0)
+                {
+                    r=t.insertRow(-1);
+                }
+                var c=document.createElement("TD");
+                r.appendChild(c);
+                c.innerHTML="<input id='"+a+"' name='fields' type='checkbox' value='"+a+"' />";
+                c.width="20";
+                c=document.createElement("TD");
+                r.appendChild(c);
+                c.innerHTML="<label for='"+a+"'>"+o.items[a]+"</label>";
+                c.width="33%";
+                i++;
+            }
+            if(i%3!=0)
+            {
+                i=3-i%3;
+                for(var j=0;j<i;j++)
+                {
+                    c=document.createElement("TD");
+                    r.appendChild(c);
+                    c.innerHTML="&nbsp;"
+                    c=document.createElement("TD");
+                    r.appendChild(c);
+                    c.innerHTML="&nbsp;"
+                }
+            }
+            
+            for(var i=0;i<o.checkitem.length;i++)
+            {
+                $("INPUT:checkbox[value='"+o.checkitem[i]+"']")[0].checked=true;
+            }
+        });
+       
+        $("#ok").bind("click",function()
+        {
+            var fields="";
+            $("INPUT:checkbox[checked]").each(function(index,item){
+                fields+=$(item).val()+",";
+            });
+            if(fields.length>0)
+                fields=fields.substr(0,fields.length-1);
+            window.returnValue=fields;
+            window.close();
+        });
+        $("#cancel").bind("click",function(){
+            window.close();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="会员菜单" dir="UserMenu" desc="会员菜单类控件集合">
+
+  <Parameter name="Level" title="级别"  type="Number" description="仅显示这个级别下的栏目：1为一级菜单，2为二级菜单"
+            required="False" maximum="2" minimum="1" length="0" defaultValue="1" />
+
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="IsHtml" title="是否需要静态化" type="Boolean" description="是否需要静态化"
+ required="True" maxinum="0" minimun="0" length="0" defaultValue="1"/>
+</DataControl>

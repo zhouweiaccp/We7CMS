@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.we7.cn/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.we7.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.we7.cn/">
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWDSiteConfigInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWDSiteConfigInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWDSiteConfigInfoResult" type="tns:SiteConfigInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SiteConfigInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WDWebUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SiteGroupEnabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompangDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RootUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebGroupSericeKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebGroupServiceUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InformationServiceUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdministratorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdministratorKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPasswordHashed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoServername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoUsername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoDomain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SsoWdID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADUrl" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWebSite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebSiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebSiteResult" type="tns:WebSite" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebSite">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:SiteStates" />
+          <s:element minOccurs="1" maxOccurs="1" name="InitLock" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Maximum" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Used" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Overdue" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpuID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HdID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebsitePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnumState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Alias" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Children" type="tns:ArrayOfWebSite" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZoneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteIisID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SiteStates">
+        <s:restriction base="s:string">
+          <s:enumeration value="Starting" />
+          <s:enumeration value="Started" />
+          <s:enumeration value="Stopping" />
+          <s:enumeration value="Stopped" />
+          <s:enumeration value="Pasuing" />
+          <s:enumeration value="Pasued" />
+          <s:enumeration value="Continuing" />
+          <s:enumeration value="Separating" />
+          <s:enumeration value="Separated" />
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="UnResponse" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfWebSite">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebSite" nillable="true" type="tns:WebSite" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWebSiteTree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="children" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebSiteTreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebSiteTreeResult" type="tns:WebSite" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebSites">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebSitesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebSitesResult" type="tns:ArrayOfWebSite" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSiteSMUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSiteSMUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSiteSMUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWDSiteConfigInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWDSiteConfigInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWDSiteConfigInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWDSiteConfigInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSiteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebSite" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSiteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSiteTreeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebSiteTree" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSiteTreeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebSiteTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSitesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebSites" />
+  </wsdl:message>
+  <wsdl:message name="GetWebSitesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSiteSMUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSiteSMUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetSiteSMUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSiteSMUrlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WDWebServiceSoap">
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input message="tns:GetServerTimeSoapIn" />
+      <wsdl:output message="tns:GetServerTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWDSiteConfigInfo">
+      <wsdl:input message="tns:GetWDSiteConfigInfoSoapIn" />
+      <wsdl:output message="tns:GetWDSiteConfigInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSite">
+      <wsdl:input message="tns:GetWebSiteSoapIn" />
+      <wsdl:output message="tns:GetWebSiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSiteTree">
+      <wsdl:input message="tns:GetWebSiteTreeSoapIn" />
+      <wsdl:output message="tns:GetWebSiteTreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSites">
+      <wsdl:input message="tns:GetWebSitesSoapIn" />
+      <wsdl:output message="tns:GetWebSitesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteSMUrl">
+      <wsdl:input message="tns:GetSiteSMUrlSoapIn" />
+      <wsdl:output message="tns:GetSiteSMUrlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WDWebServiceSoap" type="tns:WDWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://www.we7.cn/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://www.we7.cn/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWDSiteConfigInfo">
+      <soap:operation soapAction="http://www.we7.cn/GetWDSiteConfigInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSite">
+      <soap:operation soapAction="http://www.we7.cn/GetWebSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSiteTree">
+      <soap:operation soapAction="http://www.we7.cn/GetWebSiteTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSites">
+      <soap:operation soapAction="http://www.we7.cn/GetWebSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteSMUrl">
+      <soap:operation soapAction="http://www.we7.cn/GetSiteSMUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WDWebServiceSoap12" type="tns:WDWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://www.we7.cn/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap12:operation soapAction="http://www.we7.cn/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWDSiteConfigInfo">
+      <soap12:operation soapAction="http://www.we7.cn/GetWDSiteConfigInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSite">
+      <soap12:operation soapAction="http://www.we7.cn/GetWebSite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSiteTree">
+      <soap12:operation soapAction="http://www.we7.cn/GetWebSiteTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebSites">
+      <soap12:operation soapAction="http://www.we7.cn/GetWebSites" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteSMUrl">
+      <soap12:operation soapAction="http://www.we7.cn/GetSiteSMUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WDWebService">
+    <wsdl:port name="WDWebServiceSoap" binding="tns:WDWebServiceSoap">
+      <soap:address location="http://localhost:1990/WDWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WDWebServiceSoap12" binding="tns:WDWebServiceSoap12">
+      <soap12:address location="http://localhost:1990/WDWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

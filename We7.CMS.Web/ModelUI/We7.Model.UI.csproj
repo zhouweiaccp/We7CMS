@@ -1,0 +1,1085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEC92C9C-BB07-4527-B45F-48D6EDBF0539}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.Model.UI</RootNamespace>
+    <AssemblyName>We7.Model.UI</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\We7.Model.UI.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Solution Items\DLL\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="FCKeditor.net, Version=2.5.3813.35193, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Solution Items\DLL\FCKeditor.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\AddTagCommand.cs" />
+    <Compile Include="Command\BaseCommand.cs" />
+    <Compile Include="Command\CancelPublishCommand.cs" />
+    <Compile Include="Command\CancelTopCommand.cs" />
+    <Compile Include="Command\DBLinkToCommand.cs" />
+    <Compile Include="Command\DBMoveToCommand.cs" />
+    <Compile Include="Command\DBSubmitAuditCommand.cs" />
+    <Compile Include="Command\GetSharedCommand.cs" />
+    <Compile Include="Command\LinkToCommand.cs" />
+    <Compile Include="Command\MoveToCommand.cs" />
+    <Compile Include="Command\PublishSharedCommand.cs" />
+    <Compile Include="Command\SetPublisCommand.cs" />
+    <Compile Include="Command\SetTopCommand.cs" />
+    <Compile Include="Command\SubmitAuditCommand.cs" />
+    <Compile Include="Container\system\SimpleCommand.ascx.cs">
+      <DependentUpon>SimpleCommand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\SimpleCommand.ascx.designer.cs">
+      <DependentUpon>SimpleCommand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\system\SimplenNavigation.ascx.cs">
+      <DependentUpon>SimplenNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\SimplenNavigation.ascx.designer.cs">
+      <DependentUpon>SimplenNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\system\Viewer.ascx.cs">
+      <DependentUpon>Viewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\Viewer.ascx.designer.cs">
+      <DependentUpon>Viewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\AccountEditor.ascx.cs">
+      <DependentUpon>AccountEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\AccountEditor.ascx.designer.cs">
+      <DependentUpon>AccountEditor.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Command.ascx.cs">
+      <DependentUpon>Command.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Command.ascx.designer.cs">
+      <DependentUpon>Command.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Condition.ascx.cs">
+      <DependentUpon>Condition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Condition.ascx.designer.cs">
+      <DependentUpon>Condition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\MultiCommand.ascx.cs">
+      <DependentUpon>MultiCommand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\MultiCommand.ascx.designer.cs">
+      <DependentUpon>MultiCommand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Navigation.ascx.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Navigation.ascx.designer.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutEditor.ascx.cs">
+      <DependentUpon>UxLayoutEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutEditor.ascx.designer.cs">
+      <DependentUpon>UxLayoutEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutViewer.ascx.cs">
+      <DependentUpon>UxLayoutViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutViewer.ascx.designer.cs">
+      <DependentUpon>UxLayoutViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\Viewer.ascx.cs">
+      <DependentUpon>Viewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\Viewer.ascx.designer.cs">
+      <DependentUpon>Viewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutViewer2.ascx.cs">
+      <DependentUpon>UxLayoutViewer2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\we7\UxLayoutViewer2.ascx.designer.cs">
+      <DependentUpon>UxLayoutViewer2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cs\FileHelp.cs" />
+    <Compile Include="Controls\cs\ICascadeDataProvider.cs" />
+    <Compile Include="Controls\cs\ShowImgList.cs" />
+    <Compile Include="Controls\cs\We7FieldControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\gov\GovSN.ascx.cs">
+      <DependentUpon>GovSN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\gov\GovSN.ascx.designer.cs">
+      <DependentUpon>GovSN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\AttachmentUpload.aspx.cs">
+      <DependentUpon>AttachmentUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\AttachmentUpload.aspx.designer.cs">
+      <DependentUpon>AttachmentUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\ImageUpload.aspx.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\ImageUpload.aspx.designer.cs">
+      <DependentUpon>ImageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\QueryAjax.aspx.cs">
+      <DependentUpon>QueryAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\QueryAjax.aspx.designer.cs">
+      <DependentUpon>QueryAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadEx.aspx.cs">
+      <DependentUpon>ImageUploadEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadEx.aspx.designer.cs">
+      <DependentUpon>ImageUploadEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\RelationSelectEx.aspx.cs">
+      <DependentUpon>RelationSelectEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\RelationSelectEx.aspx.designer.cs">
+      <DependentUpon>RelationSelectEx.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\SimpleImage.aspx.cs">
+      <DependentUpon>SimpleImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\SimpleImage.aspx.designer.cs">
+      <DependentUpon>SimpleImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadEx2.aspx.cs">
+      <DependentUpon>ImageUploadEx2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadEx2.aspx.designer.cs">
+      <DependentUpon>ImageUploadEx2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\SimpleAttachment.aspx.cs">
+      <DependentUpon>SimpleAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\SimpleAttachment.aspx.designer.cs">
+      <DependentUpon>SimpleAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadExNew.aspx.cs">
+      <DependentUpon>ImageUploadExNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\page\ImageUploadExNew.aspx.designer.cs">
+      <DependentUpon>ImageUploadExNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Attachment.ascx.cs">
+      <DependentUpon>Attachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Attachment.ascx.designer.cs">
+      <DependentUpon>Attachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\CategoryDropdownList.ascx.cs">
+      <DependentUpon>CategoryDropdownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\CategoryDropdownList.ascx.designer.cs">
+      <DependentUpon>CategoryDropdownList.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\CheckBox.ascx.cs">
+      <DependentUpon>CheckBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\CheckBox.ascx.designer.cs">
+      <DependentUpon>CheckBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\ConstCheckBox.ascx.cs">
+      <DependentUpon>ConstCheckBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\ConstCheckBox.ascx.designer.cs">
+      <DependentUpon>ConstCheckBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\ConstRadioButton.ascx.cs">
+      <DependentUpon>ConstRadioButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\ConstRadioButton.ascx.designer.cs">
+      <DependentUpon>ConstRadioButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\ChildrenTableHorizontal.ascx.cs">
+      <DependentUpon>ChildrenTableHorizontal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\ChildrenTableHorizontal.ascx.designer.cs">
+      <DependentUpon>ChildrenTableHorizontal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\DicLabel.ascx.cs">
+      <DependentUpon>DicLabel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\DicLabel.ascx.designer.cs">
+      <DependentUpon>DicLabel.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\GUID.ascx.cs">
+      <DependentUpon>GUID.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\GUID.ascx.designer.cs">
+      <DependentUpon>GUID.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Image.ascx.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Image.ascx.designer.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\ModelToAdviceLable.ascx.cs">
+      <DependentUpon>ModelToAdviceLable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\ModelToAdviceLable.ascx.designer.cs">
+      <DependentUpon>ModelToAdviceLable.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\MultiUploadify.ascx.cs">
+      <DependentUpon>MultiUploadify.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\MultiUploadify.ascx.designer.cs">
+      <DependentUpon>MultiUploadify.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Number.ascx.cs">
+      <DependentUpon>Number.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Number.ascx.designer.cs">
+      <DependentUpon>Number.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\page\MoreSelect.aspx.cs">
+      <DependentUpon>MoreSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\page\MoreSelect.aspx.designer.cs">
+      <DependentUpon>MoreSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\page\ThumbnailServer.ashx.cs">
+      <DependentUpon>ThumbnailServer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\page\UploadThumbnail.aspx.cs">
+      <DependentUpon>UploadThumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\page\UploadThumbnail.aspx.designer.cs">
+      <DependentUpon>UploadThumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Password.ascx.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Password.ascx.designer.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\RadioButton.ascx.cs">
+      <DependentUpon>RadioButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\RadioButton.ascx.designer.cs">
+      <DependentUpon>RadioButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\RelationSelect.ascx.cs">
+      <DependentUpon>RelationSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\RelationSelect.ascx.designer.cs">
+      <DependentUpon>RelationSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Request.ascx.cs">
+      <DependentUpon>Request.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Request.ascx.designer.cs">
+      <DependentUpon>Request.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Select.ascx.cs">
+      <DependentUpon>Select.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Select.ascx.designer.cs">
+      <DependentUpon>Select.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\SelectInput.ascx.cs">
+      <DependentUpon>SelectInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\SelectInput.ascx.designer.cs">
+      <DependentUpon>SelectInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\TextArea.ascx.cs">
+      <DependentUpon>TextArea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\TextArea.ascx.designer.cs">
+      <DependentUpon>TextArea.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\Thumbnail.ascx.cs">
+      <DependentUpon>Thumbnail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\Thumbnail.ascx.designer.cs">
+      <DependentUpon>Thumbnail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\UserIdToNameLable.ascx.cs">
+      <DependentUpon>UserIdToNameLable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\UserIdToNameLable.ascx.designer.cs">
+      <DependentUpon>UserIdToNameLable.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\XMLSelect.ascx.cs">
+      <DependentUpon>XMLSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\XMLSelect.ascx.designer.cs">
+      <DependentUpon>XMLSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\DateTimeLabel.ascx.cs">
+      <DependentUpon>DateTimeLabel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\DateTimeLabel.ascx.designer.cs">
+      <DependentUpon>DateTimeLabel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\CategoryDoubleCascade.ascx.cs">
+      <DependentUpon>CategoryDoubleCascade.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\CategoryDoubleCascade.ascx.designer.cs">
+      <DependentUpon>CategoryDoubleCascade.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\AccountID.ascx.cs">
+      <DependentUpon>AccountID.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\AccountID.ascx.designer.cs">
+      <DependentUpon>AccountID.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\ChildrenTable.ascx.cs">
+      <DependentUpon>ChildrenTable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\ChildrenTable.ascx.designer.cs">
+      <DependentUpon>ChildrenTable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\Attachment.ascx.cs">
+      <DependentUpon>Attachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\Attachment.ascx.designer.cs">
+      <DependentUpon>Attachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\ChannelSelect.ascx.cs">
+      <DependentUpon>ChannelSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\ChannelSelect.ascx.designer.cs">
+      <DependentUpon>ChannelSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\DoubleCascade.ascx.cs">
+      <DependentUpon>DoubleCascade.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\DoubleCascade.ascx.designer.cs">
+      <DependentUpon>DoubleCascade.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\ThreeCascade.ascx.cs">
+      <DependentUpon>ThreeCascade.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\ThreeCascade.ascx.designer.cs">
+      <DependentUpon>ThreeCascade.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\Thumbnail.ascx.cs">
+      <DependentUpon>Thumbnail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\Thumbnail.ascx.designer.cs">
+      <DependentUpon>Thumbnail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\ThumbnailEx.ascx.cs">
+      <DependentUpon>ThumbnailEx.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\ThumbnailEx.ascx.designer.cs">
+      <DependentUpon>ThumbnailEx.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\AttachmentEx.ascx.cs">
+      <DependentUpon>AttachmentEx.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\AttachmentEx.ascx.designer.cs">
+      <DependentUpon>AttachmentEx.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\DepartmentEx.ascx.cs">
+      <DependentUpon>DepartmentEx.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\DepartmentEx.ascx.designer.cs">
+      <DependentUpon>DepartmentEx.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\IP.ascx.cs">
+      <DependentUpon>IP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\IP.ascx.designer.cs">
+      <DependentUpon>IP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\we7\AttachView.ascx.cs">
+      <DependentUpon>AttachView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\we7\AttachView.ascx.designer.cs">
+      <DependentUpon>AttachView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\CategoryConvert.cs" />
+    <Compile Include="Converter\DepartmentConvert.cs" />
+    <Compile Include="Converter\TagFormatConverter.cs" />
+    <Compile Include="Converter\UserIdToNameConvert.cs" />
+    <Compile Include="Converter\ChannelConvert.cs" />
+    <Compile Include="Converter\StateConvert.cs" />
+    <Compile Include="Converter\ProcessStateConvert.cs" />
+    <Compile Include="Data\AccountDataProvider.cs" />
+    <Compile Include="Data\AdviceDataProvider.cs" />
+    <Compile Include="Data\ArticleDataProvider.cs" />
+    <Compile Include="Data\BaseDataProvider.cs" />
+    <Compile Include="Container\system\CascadeEditor.ascx.cs">
+      <DependentUpon>CascadeEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\CascadeEditor.ascx.designer.cs">
+      <DependentUpon>CascadeEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\system\SimpleCondition.ascx.cs">
+      <DependentUpon>SimpleCondition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\SimpleCondition.ascx.designer.cs">
+      <DependentUpon>SimpleCondition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\system\SimpleList.ascx.cs">
+      <DependentUpon>SimpleList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\SimpleList.ascx.designer.cs">
+      <DependentUpon>SimpleList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Container\system\SimplePager.ascx.cs">
+      <DependentUpon>SimplePager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container\system\SimplePager.ascx.designer.cs">
+      <DependentUpon>SimplePager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\system\TextInput.ascx.cs">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\system\TextInput.ascx.designer.cs">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataBaseHelper.cs" />
+    <Compile Include="Data\AdviceDataProviderEx.cs" />
+    <Compile Include="Panel\system\EditorPanel.ascx.cs">
+      <DependentUpon>EditorPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel\system\EditorPanel.ascx.designer.cs">
+      <DependentUpon>EditorPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\system\ListPanel.ascx.cs">
+      <DependentUpon>ListPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel\system\ListPanel.ascx.designer.cs">
+      <DependentUpon>ListPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\system\MultiPanel.ascx.cs">
+      <DependentUpon>MultiPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel\system\MultiPanel.ascx.designer.cs">
+      <DependentUpon>MultiPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\system\SimpleEditorPanel.ascx.cs">
+      <DependentUpon>SimpleEditorPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel\system\SimpleEditorPanel.ascx.designer.cs">
+      <DependentUpon>SimpleEditorPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Upgrade.aspx.cs">
+      <DependentUpon>Upgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upgrade.aspx.designer.cs">
+      <DependentUpon>Upgrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Container\system\SimpleCommand.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\system\SimplenNavigation.ascx" />
+    <Content Include="Container\we7\Command.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\Condition.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\Editor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\List.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\MultiCommand.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\Navigation.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\Pager.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\RelationSelectEx.aspx" />
+    <Content Include="Controls\system\ChildrenTableHorizontal.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\DateTime.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\Editor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\GUID.ascx" />
+    <Content Include="Controls\system\ModelToAdviceLable.ascx" />
+    <Content Include="Controls\system\MultiUploadify.ascx" />
+    <Content Include="Controls\system\Number.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\page\MoreSelect.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\system\CascadeEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\system\SimpleCondition.ascx" />
+    <Content Include="Container\system\SimpleList.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\system\SimplePager.ascx" />
+    <Content Include="Controls\system\page\uploadify\cancel.png" />
+    <Content Include="Controls\system\page\uploadify\expressInstall.swf" />
+    <Content Include="Controls\system\page\uploadify\jquery.uploadify.v2.1.0.js" />
+    <Content Include="Controls\system\page\uploadify\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="Controls\system\page\uploadify\liulan.jpg" />
+    <Content Include="Controls\system\page\uploadify\swfobject.js" />
+    <Content Include="Controls\system\page\uploadify\uploadify.allglyphs.swf" />
+    <Content Include="Controls\system\page\uploadify\uploadify.css" />
+    <Content Include="Controls\system\page\uploadify\uploadify.swf" />
+    <Content Include="Controls\system\page\UploadThumbnail.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\RadioButton.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\Request.ascx" />
+    <Content Include="Controls\system\Select.ascx" />
+    <Content Include="Controls\system\SelectInput.ascx" />
+    <Content Include="Controls\system\TextArea.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\TextInput.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\ChannelSelect.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Panel\system\EditorPanel.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Panel\system\ListPanel.ascx">
+    </Content>
+    <Content Include="Panel\system\MultiPanel.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.UI\We7.CMS.UI.csproj">
+      <Project>{8AACF293-F3C4-4BBE-9227-FAEC14292A7A}</Project>
+      <Name>We7.CMS.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.CMS.Utils\We7.CMS.Utils.csproj">
+      <Project>{F4C28516-9016-449B-B867-84FB5FC9B567}</Project>
+      <Name>We7.CMS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Model.Core\We7.Model.Core.csproj">
+      <Project>{1EC274E4-3A87-4065-A5B3-3275221FB187}</Project>
+      <Name>We7.Model.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\We7.Share\Thinkment.Data\Thinkment.Data.csproj">
+      <Project>{A665A5A2-2477-4B95-993D-F1772F91089D}</Project>
+      <Name>Thinkment.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Controls.xml" />
+    <Content Include="Config\ModelConfig.xml" />
+    <Content Include="Config\Template\AccountModel.xml" />
+    <Content Include="Config\Template\AdviceModel.xml" />
+    <Content Include="Config\Template\AdviceModelEditDataControl.xml" />
+    <Content Include="Config\Template\ArticleModel.xml" />
+    <Content Include="Config\Template\ArticleModelListDataControl.xml" />
+    <Content Include="Config\Template\ArticleModelViewDataControl.xml" />
+    <Content Include="Container\system\Viewer.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\AccountEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\FrontAccountEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\AttachmentUpload.aspx" />
+    <Content Include="Controls\page\ImageUpload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\QueryAjax.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\ImageUploadEx.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\Attachment.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\CheckBox.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\ConstCheckBox.ascx" />
+    <Content Include="Controls\system\ConstRadioButton.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\Image.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\page\ThumbnailServer.ashx" />
+    <Content Include="Controls\system\Password.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\RelationSelect.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\Text.ascx">
+    </Content>
+    <Content Include="Controls\system\Thumbnail.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\XMLSelect.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\Attachment.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\DoubleCascade.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\ThreeCascade.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\Thumbnail.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="js\admin.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\css.js" />
+    <Content Include="js\jquery.imgareaselect.js" />
+    <Content Include="js\model.js" />
+    <Content Include="js\SearchAjax.js" />
+    <Content Include="js\treeview.js" />
+    <Content Include="js\validator.js" />
+    <Content Include="Panel\system\SimpleEditorPanel.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="skin\color.css" />
+    <Content Include="skin\default.css" />
+    <Content Include="skin\default2.css" />
+    <Content Include="skin\images\admin_bg_1.gif" />
+    <Content Include="skin\images\bg.jpg" />
+    <Content Include="skin\images\bg_1.gif" />
+    <Content Include="skin\images\bg_admin.jpg" />
+    <Content Include="skin\images\bg_arrow.gif" />
+    <Content Include="skin\images\bg_body.jpg" />
+    <Content Include="skin\images\bg_newmsg.gif" />
+    <Content Include="skin\images\bg_table.jpg" />
+    <Content Include="skin\images\border-anim-h.gif" />
+    <Content Include="skin\images\border-anim-v.gif" />
+    <Content Include="skin\images\border-h.gif" />
+    <Content Include="skin\images\border-v.gif" />
+    <Content Include="skin\images\bottom.gif" />
+    <Content Include="skin\images\btn_bg.gif" />
+    <Content Include="skin\images\btn_fjx.gif" />
+    <Content Include="skin\images\btn_sjx.gif" />
+    <Content Include="skin\images\cancelbutton.gif" />
+    <Content Include="skin\images\close.gif" />
+    <Content Include="skin\images\close_1.gif" />
+    <Content Include="skin\images\dir.gif" />
+    <Content Include="skin\images\dot1.png" />
+    <Content Include="skin\images\dot2.png" />
+    <Content Include="skin\images\down.gif" />
+    <Content Include="skin\images\elbow-end-minus.gif" />
+    <Content Include="skin\images\elbow-end-plus.gif" />
+    <Content Include="skin\images\elbow-end.gif" />
+    <Content Include="skin\images\elbow-line.gif" />
+    <Content Include="skin\images\elbow-minus.gif" />
+    <Content Include="skin\images\elbow-plus.gif" />
+    <Content Include="skin\images\elbow.gif" />
+    <Content Include="skin\images\file.gif" />
+    <Content Include="skin\images\folder-closed.gif" />
+    <Content Include="skin\images\folder-open.gif" />
+    <Content Include="skin\images\folder.gif" />
+    <Content Include="skin\images\footer_bg.jpg" />
+    <Content Include="skin\images\footer_bg_c.jpg" />
+    <Content Include="skin\images\footer_bg_l.jpg" />
+    <Content Include="skin\images\footer_bg_r.jpg" />
+    <Content Include="skin\images\icon_1.gif" />
+    <Content Include="skin\images\icon_2.gif" />
+    <Content Include="skin\images\icon_3.gif" />
+    <Content Include="skin\images\icon_4.gif" />
+    <Content Include="skin\images\icon_5.gif" />
+    <Content Include="skin\images\icon_6.gif" />
+    <Content Include="skin\images\icon_7.gif" />
+    <Content Include="skin\images\icon_8.gif" />
+    <Content Include="skin\images\icon_9.gif" />
+    <Content Include="skin\images\icon_gray.jpg" />
+    <Content Include="skin\images\icon_j.jpg" />
+    <Content Include="skin\images\icon_jj.jpg" />
+    <Content Include="skin\images\icon_red.jpg" />
+    <Content Include="skin\images\illegalwords.gif" />
+    <Content Include="skin\images\leaf.gif" />
+    <Content Include="skin\images\list_bg.gif" />
+    <Content Include="skin\images\loading.gif" />
+    <Content Include="skin\images\logo.jpg" />
+    <Content Include="skin\images\member_bg_1.gif" />
+    <Content Include="skin\images\menu_l.gif" />
+    <Content Include="skin\images\menu_r.gif" />
+    <Content Include="skin\images\minus.gif" />
+    <Content Include="skin\images\nopic.gif" />
+    <Content Include="skin\images\plus.gif" />
+    <Content Include="skin\images\pos.gif" />
+    <Content Include="skin\images\position.gif" />
+    <Content Include="skin\images\refresh.gif" />
+    <Content Include="skin\images\refreshed.gif" />
+    <Content Include="skin\images\right.gif" />
+    <Content Include="skin\images\righton.gif" />
+    <Content Include="skin\images\ruler.gif" />
+    <Content Include="skin\images\s.gif" />
+    <Content Include="skin\images\tag_menu.gif" />
+    <Content Include="skin\images\tag_menu_l.png" />
+    <Content Include="skin\images\titlebg1.gif" />
+    <Content Include="skin\images\titlebg2.gif" />
+    <Content Include="skin\images\top.gif" />
+    <Content Include="skin\images\top_bg.jpg" />
+    <Content Include="skin\images\treeview-black-line.gif" />
+    <Content Include="skin\images\treeview-black.gif" />
+    <Content Include="skin\images\treeview-default-line.gif" />
+    <Content Include="skin\images\treeview-default.gif" />
+    <Content Include="skin\images\treeview-famfamfam-line.gif" />
+    <Content Include="skin\images\treeview-famfamfam.gif" />
+    <Content Include="skin\images\treeview-gray-line.gif" />
+    <Content Include="skin\images\treeview-gray.gif" />
+    <Content Include="skin\images\treeview-red-line.gif" />
+    <Content Include="skin\images\treeview-red.gif" />
+    <Content Include="skin\images\up.gif" />
+    <Content Include="skin\imgareaselect-animated.css" />
+    <Content Include="skin\imgareaselect-default.css" />
+    <Content Include="skin\imgareaselect-deprecated.css" />
+    <Content Include="skin\jqm.css" />
+    <Content Include="skin\label.css" />
+    <Content Include="skin\List.css" />
+    <Content Include="skin\style.css" />
+    <Content Include="skin\system.css" />
+    <Content Include="skin\treeview.css" />
+    <Content Include="Upgrade.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Test.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\DefaultModel.config" />
+    <None Include="Config\GeneratorTemplate\AdviceList.vm" />
+    <None Include="Config\GeneratorTemplate\AdviceQueryList.vm" />
+    <None Include="Config\GeneratorTemplate\AdviceView.vm" />
+    <Content Include="Config\ModelConfig.origin.xml" />
+    <Content Include="Config\Template\ArticleModelEditDataControl.xml" />
+    <Content Include="Config\Template\AdviceListDataControl.xml" />
+    <Content Include="Config\Template\AdviceQueryListDataControl.xml" />
+    <Content Include="Config\Template\AdviceViewDataControl.xml" />
+    <Content Include="Container\we7\UxLayoutEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\UxLayoutViewer.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\Viewer.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Container\we7\UxLayoutViewer2.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\gov\GovSN.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\Js\Attachment.js" />
+    <Content Include="Controls\Js\AttachmentUploader.xml" />
+    <Content Include="Controls\Js\Thumbnail.js" />
+    <Content Include="Controls\Js\ThumbnailUploader.xml" />
+    <Content Include="Controls\page\SimpleImage.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\ImageUploadEx2.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\SimpleAttachment.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\page\ImageUploadExNew.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\CategoryDropdownList.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\DicLabel.ascx" />
+    <Content Include="Controls\system\UserIdToNameLable.ascx" />
+    <Content Include="Controls\system\DateTimeLabel.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\CategoryDoubleCascade.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\AccountID.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\system\ChildrenTable.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\ThumbnailEx.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\AttachmentEx.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\DepartmentEx.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\IP.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Controls\we7\AttachView.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="js\CategoryDoubleCascade.js" />
+    <Content Include="skin\images\flower.jpg" />
+    <None Include="Config\GeneratorTemplate\Advice.vm" />
+    <None Include="Config\GeneratorTemplate\ArticleView.vm" />
+    <None Include="Config\GeneratorTemplate\ArticleList.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetAdvice.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetAdviceList.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetAdviceQueryList.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetAdviceView.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetModelPagedList.Default.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetModelView.Default.vm" />
+    <None Include="Config\GeneratorTemplate\DbModelDetails.vm" />
+    <None Include="Config\GeneratorTemplate\DbModelList.vm" />
+    <None Include="Config\GeneratorTemplate\ArticleEditor.vm" />
+    <None Include="Config\GeneratorTemplate\WidgetModelList.Default.vm" />
+    <None Include="Controls\system\page\uploadify\UpDownloadHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\page\js\jquery.imgareaselect\css\" />
+    <Folder Include="Controls\page\js\jquery.imgareaselect\scripts\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

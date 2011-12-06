@@ -1,0 +1,3263 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Header.LogoQueryQuick
+ * Style:Header_LogoQueryQuick
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Header_LogoQueryQuick #logo
+{
+    float: left;
+    width: 255px;
+    padding-top: 18px;
+}
+
+.Header_LogoQueryQuick .web_tool
+{
+    float: right;
+    width: 679px;
+    text-align: right;
+    height: 100px;
+    position: relative;
+}
+.Header_LogoQueryQuick .web_tip
+{
+    height: 31px;
+    line-height: 31px;
+}
+.Header_LogoQueryQuick .web_tip a
+{
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
+    padding: 0px 5px 0px 17px;
+    color: #000000;
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left 3px;
+}
+.Header_LogoQueryQuick .web_tip a.wap
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat 1px -16px;
+    padding-left: 17px;
+    padding-right: 7px;
+}
+.Header_LogoQueryQuick .web_tip a.fav
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left -36px;
+    padding-right: 0px;
+}
+.Header_LogoQueryQuick .web_tip a.home
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left -55px;
+    padding-right: 0px;
+    padding-left: 19px;
+}
+.Header_LogoQueryQuick .web_tip a.rss
+{
+    padding-right: 5px;
+}
+.Header_LogoQueryQuick .web_tip a.ask
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left -84px;
+}
+.Header_LogoQueryQuick .web_tip a.searches
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left -111px;
+}
+.Header_LogoQueryQuick .web_tip a.reg
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/tool.gif) no-repeat left -137px;
+    padding-right: 8px;
+}
+.Header_LogoQueryQuick .web_tip a:hover
+{
+    color: #cc0000;
+}
+/*************全模型搜索*************/
+.Header_LogoQueryQuick .top
+{
+    height: 100px;
+}
+.Header_LogoQueryQuick .full_model_search
+{
+    height: 26px;
+    width: 527px;
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/back.gif) left -778px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+.Header_LogoQueryQuick .full_model_search input.model_search
+{
+    width: 253px;
+    padding-top: 3px;
+    height: 15px;
+    border: none;
+    background: none;
+    padding-left: 55px;
+    color: #c0c0c0;
+}
+.Header_LogoQueryQuick .full_model_search input.model_search_click
+{
+    width: 67px;
+    padding-top: 3px;
+    height: 22px;
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/back.gif) no-repeat -735px -118px;
+    border: none;
+    margin-left: 7px;
+}
+.Header_LogoQueryQuick .full_model_search a
+{
+    color: #333;
+    padding: 0px 3px;
+}
+.Header_LogoQueryQuick .full_model_search a.model_search_all
+{
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/model_search.gif) no-repeat left center;
+    height: 30px;
+}
+.Header_LogoQueryQuick .full_model_search a:hover
+{
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+/*************下拉选项***********/
+.Header_LogoQueryQuick .model_list, .model_project
+{
+    width: 50px;
+    position: absolute;
+    top: 85px;
+    left: 152px;
+    z-index: 3;
+}
+.Header_LogoQueryQuick .model_project
+{
+    z-index: 9;
+    top: 68px;
+    left: 147px;
+}
+.Header_LogoQueryQuick .model_project a
+{
+    color: #8a8d8c;
+    padding-right: 15px;
+    background:url(/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Images/ico_down.gif) no-repeat right center;
+}
+.Header_LogoQueryQuick .model_project a:hover
+{
+    color: #cc0000;
+}
+.Header_LogoQueryQuick .model_list
+{
+    border: 1px solid #ccc;
+    background: #fff;
+    border-top: none;
+    display: none;
+}
+.Header_LogoQueryQuick .model_list ul
+{
+    height: auto !important;
+    min-height: 80px;
+    height: 80px;
+    padding: 0px;
+}
+.Header_LogoQueryQuick .model_list li
+{
+    text-align: left;
+}
+.Header_LogoQueryQuick .model_list li a
+{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #333;
+    padding-left: 5px;
+}
+.Header_LogoQueryQuick .model_list li a:hover
+{
+    color: #000;
+    background: #f0f0f0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*************************************************************
+ * Command:End
+ * Control:Header.LogoQueryQuick
+ * Style:Header_LogoQueryQuick
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.TopMenu
+ * Style:ChannelMenu_TopMenu
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/************网站菜单*************/
+.ChannelMenu_TopMenu{
+	height:64px;background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_bg.jpg);
+}
+.ChannelMenu_TopMenu .menu {
+	height:64px; width:960px; margin:0 auto;
+}
+.ChannelMenu_TopMenu #menubox {
+	height:32px;
+	font-size:14px; padding-top:4px;
+}
+.ChannelMenu_TopMenu #menubox li {
+	float:left;
+	font-weight:bold;
+	color:#000;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_line.gif) no-repeat right top;
+	padding:0px 10px;
+	text-align:center;
+	margin-right:7px;
+	padding-left:0px;
+	cursor: pointer;
+	height:32px;
+	line-height:32px;
+	_background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_line.gif) no-repeat right -1px;
+}
+
+.ChannelMenu_TopMenu #menubox li a {
+	color:#000;
+	cursor: pointer;
+
+	display:inline-block;
+}
+.ChannelMenu_TopMenu #menubox li a:hover {
+	color:#cc0000;
+}
+.ChannelMenu_TopMenu #menubox li a span {
+
+	padding-left:10px;
+
+}
+.ChannelMenu_TopMenu #menubox li a em {
+	padding-right:10px;
+}
+.ChannelMenu_TopMenu #menubox ul {
+	padding-left:15px;
+	height:32px;
+}
+.ChannelMenu_TopMenu #menubox li.current {
+	color:#333;
+}
+.ChannelMenu_TopMenu #menubox li.current a {
+	color:#fff;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_line.jpg) no-repeat center top;
+	display:inline-block;
+	text-align:center;
+}
+.ChannelMenu_TopMenu #menubox li.current span, #menubox li.current span em {
+	display:inline-block;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_li_left.gif) no-repeat left 4px;
+	height:32px;
+	line-height:32px;
+
+
+}
+.ChannelMenu_TopMenu #menubox li.current a:hover {
+	color:#fff;
+}
+.ChannelMenu_TopMenu #menubox li.current span em {
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/menu_li_right.gif) no-repeat right 4px;
+}
+.ChannelMenu_TopMenu .sub_menu {
+	clear:both;
+	height:31px;
+	
+}
+.ChannelMenu_TopMenu .sub_center {
+	padding-left:20px;
+	color:#fff;
+}
+.ChannelMenu_TopMenu .sub_center span {
+	float:right;
+	padding-right:10px;
+}
+.ChannelMenu_TopMenu .sub_center ul {padding-top:3px;}
+.ChannelMenu_TopMenu .sub_center li {
+	float:left;
+	height:28px;
+	line-height:28px;
+}
+.ChannelMenu_TopMenu .sub_center li a {
+	color:#000;
+	margin:0px 7px;
+	padding-left:8px;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/Images/icon.gif) no-repeat left center;
+}
+.ChannelMenu_TopMenu .sub_center li a.current {color:#fff;padding:5px;background:#1b71a4;}
+.ChannelMenu_TopMenu .sub_center li a.current:hover {color:#ffff00;text-decoration:underline;}
+.ChannelMenu_TopMenu .sub_center li a:hover {
+	color:#cc0000;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.TopMenu
+ * Style:ChannelMenu_TopMenu
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:TagList.Hot
+ * Style:TagList_Hot
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.TagList_Hot #Tag_list
+{
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    background:url(/Widgets/WidgetCollection/导航类/TagList.Hot/Images/back.gif) no-repeat left -736px;
+    position: relative;
+}
+.TagList_Hot #Tag_list ul
+{
+    padding-left: 90px;
+}
+.TagList_Hot #Tag_list li
+{
+    display: inline;
+}
+.TagList_Hot #Tag_list li a
+{
+    color: #77807d;
+    background:url(/Widgets/WidgetCollection/导航类/TagList.Hot/Images/tag_list.gif) no-repeat right center;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    padding-right: 5px;
+}
+.TagList_Hot #Tag_list li a:hover
+{
+    color: #cc0000;
+    text-decoration: underline;
+}
+.TagList_Hot #Tag_list strong
+{
+    color: #000;
+    width: 79px;
+    height: 19px;
+    line-height: 19px;
+    display: inline-block;
+    background:url(/Widgets/WidgetCollection/导航类/TagList.Hot/Images/back.gif) no-repeat -735px -95px;
+    padding-left: 3px;
+    color: #fff;
+    padding-right: 8px;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+.TagList_Hot #Tag_list span
+{
+    float: right;
+    margin-right: 10px;
+    display: inline;
+}
+.TagList_Hot .all_tag
+{
+    padding: 13px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+.TagList_Hot .all_tag span
+{
+    font-size: 14px;
+    padding-right: 5px;
+    line-height: 23px;
+}
+.TagList_Hot .all_tag span a
+{
+    color: #333;
+}
+.TagList_Hot .all_tag span a:hover
+{
+    color: #cc0000;
+}
+.TagList_Hot #tag li span
+{
+    float: none;
+    padding: 0px 8px;
+}
+.TagList_Hot #tag li a
+{
+    background: none;
+    padding-left: 0px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:TagList.Hot
+ * Style:TagList_Hot
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:LatestNews.LatestTopPicture
+ * Style:LatestNews_LatestTopPicture
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.LatestNews_LatestTopPicture .content {
+	float:left;
+	width:730px;
+	overflow:hidden;
+}
+.LatestNews_LatestTopPicture .news {
+	height:33px;
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/back.gif) no-repeat left -89px;
+}
+.LatestNews_LatestTopPicture .news ul {
+	padding-left:33px;
+}
+.LatestNews_LatestTopPicture .news li {
+	float:left;
+	height:23px;
+	padding-top:10px;
+	width:98px;
+	text-align:center; font-size:12px;
+}
+.LatestNews_LatestTopPicture .news li a {
+	color:#4c4c4c;
+}
+.LatestNews_LatestTopPicture .news li a:hover, .news li.on a {
+	color:#cc0100;
+}
+.LatestNews_LatestTopPicture .news li.on {
+	font-weight:bold;
+	color:#cc0100;
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/news_on.gif) no-repeat center bottom;
+	height:20px;
+	padding-top:13px;
+}
+.LatestNews_LatestTopPicture .news_list {
+	padding:10px;
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/news_dd.gif) repeat-y left top;
+	padding-bottom:0px;
+	height:230px;
+}
+.LatestNews_LatestTopPicture .news_list_bottom {
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/back.gif) no-repeat left -128px;
+	height:10px;
+	line-height:10px;
+	font-size:0px;
+}
+.LatestNews_LatestTopPicture .news_list_01 {
+	float:left;
+	width:440px;
+	padding-left:10px;
+}
+.LatestNews_LatestTopPicture .head_news {
+	padding-bottom:10px;
+}
+.LatestNews_LatestTopPicture .news_list_01 ul {
+	padding:10px;
+}
+.LatestNews_LatestTopPicture .head_news h3 {
+	font-size:14px;
+	line-height:24px;
+	text-align:center;
+}
+.LatestNews_LatestTopPicture .head_news h3 a {
+	color:#cc0100;
+}
+.LatestNews_LatestTopPicture .head_news h3 a:hover {
+	color:#000;
+}
+.LatestNews_LatestTopPicture .head_news p {
+	padding:5px 0px;
+	line-height:170%;
+	text-indent:20px;
+	padding-bottom:10px;
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/line.gif) repeat-x left bottom;
+	color:#666;
+}
+.LatestNews_LatestTopPicture .news_list_01 li {
+	height:23px;
+	line-height:24px;
+	padding-left:15px;
+	background:url(/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/Images/icon2.gif) no-repeat left center;
+	color:#999999;
+	clear:both;
+}
+.LatestNews_LatestTopPicture .news_list_01 li span.datetime {
+	float:right;
+}
+.LatestNews_LatestTopPicture .news_list_01 li a {
+	color:#343434;
+}
+.LatestNews_LatestTopPicture .news_list_01 li a:hover {
+	color:#cc0000;
+}
+
+/*******右侧FLASH新闻*******/
+.LatestNews_LatestTopPicture .news_flash {
+	float:right;
+	width:226px;
+	padding:5px;
+	border:1px solid #e5e5e5;
+	margin-top:10px;
+	margin-right:10px;
+	display:inline;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:LatestNews.LatestTopPicture
+ * Style:LatestNews_LatestTopPicture
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleList.Default
+ * Style:ArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.ArticleList_Default .area {
+	width:360px;
+	margin-top:10px;
+}
+.ArticleList_Default .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.ArticleList_Default .area h3 span {
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.ArticleList_Default .area h3 em {
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.ArticleList_Default .area h3 em a {
+	color:#fff;
+}
+.ArticleList_Default .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.ArticleList_Default .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.ArticleList_Default .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.ArticleList_Default .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.ArticleList_Default .area li a {
+	color:#313534;
+}
+.ArticleList_Default .area li a:hover {
+	color:#cc0000;
+}
+.ArticleList_Default .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.ArticleList_Default .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.Default/Images/back.gif) no-repeat -141px -79px;
+}
+.ArticleList_Default .area_ad img {
+	border:1px solid #cfd8df;
+}
+ 
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.Default
+ * Style:ArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleList.2ColumnWidthImage
+ * Style:ArticleList_2ColumnWidthImage
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.ArticleList_2ColumnWidthImage {
+   font-size:12px;
+}
+.ArticleList_2ColumnWidthImage .area {
+    width:360px;
+    margin-top:10px;
+}
+.ArticleList_2ColumnWidthImage .area h3 {
+    height:30px;
+    line-height:30px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/back1.gif) no-repeat;
+    font-size:12px;
+    color:#fff;
+    position:relative; text-indent:20px;
+}
+.ArticleList_2ColumnWidthImage .area h3 span {
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/sidebar.gif) no-repeat left top;
+    display:inline-block;
+    padding-left:35px;
+}
+
+.ArticleList_2ColumnWidthImage  .area h3 em {
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/sidebar.gif) no-repeat right -33px;
+    padding-right:35px;
+    color:#fff;
+    display:inline-block;
+}
+.ArticleList_2ColumnWidthImage .area h3 em a {
+    color:#fff;
+}
+.ArticleList_2ColumnWidthImage .area h3 em a:hover {
+    color:#ffff00;
+}
+
+.ArticleList_2ColumnWidthImage .area h3 img {
+    position:absolute;
+    top:10px;
+    left:320px;
+}
+.ArticleList_2ColumnWidthImage .tv_pictrue li{
+    text-decoration:none;
+    }
+.ArticleList_2ColumnWidthImage .area ul.tv_pictrue {
+    height: 132px;
+    min-height: 133px;
+	border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+}
+.ArticleList_2ColumnWidthImage .area ul .tv_pictrue  span{
+     float:right; 
+}
+.ArticleList_2ColumnWidthImage .area ul {
+     background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/area_back.gif) repeat-x scroll left top transparent;
+
+    height: auto !important;
+    padding: 10px 10px 0;
+}
+
+.ArticleList_2ColumnWidthImage .area  .tv_pictrue .tv_u_thumb_title{
+    font-size:12px; font-weight:bold;color:#cc0000;
+}
+.ArticleList_2ColumnWidthImage .area  .tv_pictrue .description{
+     line-height:23px;
+    }
+.ArticleList_2ColumnWidthImage .area ul.tv_text {
+    background: none repeat scroll 0 0 transparent;
+    height: 74px;
+    min-height: 74px;
+    padding: 10px 0 0 10px;
+	border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+}
+.ArticleList_2ColumnWidthImage .area .tv_text li {
+    height:23px;
+    line-height:23px;
+    padding-left:8px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/icon3.gif) no-repeat left center;
+    color:#999999;
+    position:relative;
+}
+.ArticleList_2ColumnWidthImage .area .tv_u_thumb{
+    
+    margin-right:8px;
+    }
+.ArticleList_2ColumnWidthImage .area .tv_u_thumb img{
+    
+    padding:2px; border:1px solid #cfd8df;  float:left; margin-right:10px;
+    }
+
+.ArticleList_2ColumnWidthImage .area li a {
+    color:#313534;
+}
+.ArticleList_2ColumnWidthImage .area li a:hover {
+    color:#cc0000;
+}
+.ArticleList_2ColumnWidthImage .area li span.datetime{
+    position:absolute;
+    top:0px;
+    right:5px;
+}
+.ArticleList_2ColumnWidthImage .underline_area {
+    height:5px;
+    line-height:5px;
+    font-size:0px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/Images/back.gif) no-repeat -141px -79px;
+}
+.ArticleList_2ColumnWidthImage .area_ad img {
+    border:1px solid #cfd8df;
+}
+.ArticleList_2ColumnWidthImage .clear{
+    clear:both; font-size:1px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.2ColumnWidthImage
+ * Style:ArticleList_2ColumnWidthImage
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:PictureArticleList.Default
+ * Style:PictureArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/**************各节点首页下方推荐图文开始****************/
+.PictureArticleList_Default .pic_article h3
+{
+    height: 33px;
+    line-height: 33px;
+    background:url(/Widgets/WidgetCollection/图文类/PictureArticleList.Default/Images/back4.gif) no-repeat;
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+.PictureArticleList_Default .pic_article h3 img {
+    padding-left:680px;
+    top: 10px;
+}
+.PictureArticleList_Default .pic_article ul
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 8px;
+    height: auto !important;
+    min-height: 100px;
+    height: 100px;
+    clear: both;
+    background:url(/Widgets/WidgetCollection/图文类/PictureArticleList.Default/Images/area_back.gif) repeat-x left top;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+.PictureArticleList_Default .pic_article li
+{
+    width: 24%;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.PictureArticleList_Default .pic_article li a
+{
+    color: #333;
+}
+.PictureArticleList_Default .pic_article li a:hover
+{
+    color: #cc0000;
+}
+.PictureArticleList_Default .pic_article li img
+{
+    width: 150px;
+    height: 113px;
+    padding: 2px;
+    border: 1px solid #d3d8dc;
+    background: #ebf0f4;
+    overflow: hidden;
+}
+.PictureArticleList_Default .pic_article li span
+{
+    display: block;
+    line-height: 19px;
+    padding: 0px 10px;
+}
+.PictureArticleList_Default .mtop10
+{
+    margin-top: 10px;
+}
+.PictureArticleList_Default .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/图文类/PictureArticleList.Default/Images/back.gif) no-repeat left -269px;
+}
+.PictureArticleList_Default .clear
+{
+    clear: both;
+}
+.PictureArticleList_Default .clear:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:PictureArticleList.Default
+ * Style:PictureArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleList.SideList
+ * Style:ArticleList_SideList
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.ArticleList_SideList .notice h3{
+    height:32px;
+	line-height:32px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.SideList/Images/back.gif) no-repeat left top;
+	font-size:12px;
+	color:#000;
+	padding-left:28px;
+	font-size:12px;
+}
+.ArticleList_SideList .notice h3 img {margin-top:10px;float:right;padding-right:5px;}
+.ArticleList_SideList .notice ul{
+    padding:4px 8px 0px 12px;
+	border-left:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-bottom:1px solid #dddddd;
+}
+.ArticleList_SideList .notice ul {
+	height:auto!important;
+}
+.ArticleList_SideList .notice li a{
+	color:#313534;
+}
+.ArticleList_SideList .notice li a:hover{
+    color:#cc0000;
+}
+.ArticleList_SideList .underline {
+	height:6px;
+	line-height:6px;
+	font-size:0px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.SideList/Images/back.gif) no-repeat -141px -66px;
+}
+.ArticleList_SideList .notice li{
+	height:24px;
+	line-height:24px;
+	padding-left:10px;
+	background:url(/Widgets/WidgetCollection/文章列表类/ArticleList.SideList/Images/icon1.gif) no-repeat left center;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.SideList
+ * Style:ArticleList_SideList
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Recommand.Newest
+ * Style:Recommand_Newest
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Recommand_Newest .month_tip h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(/Widgets/WidgetCollection/文章列表类/Recommand.Newest/Images/back1.gif) no-repeat;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Recommand_Newest .month_up ul, .month_tip ul
+{
+    padding: 4px 8px 0px 12px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.Recommand_Newest .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/文章列表类/Recommand.Newest/Images/back.gif) no-repeat -141px -66px;
+}
+.Recommand_Newest .month_tip li
+{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    background:url(/Widgets/WidgetCollection/文章列表类/Recommand.Newest/Images/icon1.gif) no-repeat left center;
+}
+.Recommand_Newest .month_up li a
+{
+    color: #313534;
+}
+.Recommand_Newest .month_tip li a:hover, .month_up li a:hover
+{
+    color: #cc0000;
+}
+.Recommand_Newest .month_tip ul
+{
+    background:url(/Widgets/WidgetCollection/文章列表类/Recommand.Newest/Images/back.gif) no-repeat -975px -250px;
+}
+.Recommand_Newest .month_tip li
+{
+    padding-left: 15px;
+    background: none;
+    height: 25px;
+    line-height: 25px;
+}
+
+
+/*************************************************************
+ * Command:End
+ * Control:Recommand.Newest
+ * Style:Recommand_Newest
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Login.Default
+ * Style:Login_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/*****会员登录*********/
+.Login_Default .user h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/back1.gif) no-repeat left top;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Login_Default .user_info
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+    background: #fff;
+}
+.Login_Default .user_login ul
+{
+    padding: 5px;
+}
+.Login_Default .user_login li
+{
+    height: 27px;
+    line-height: 27px;
+    margin: 2px 0px;
+}
+.Login_Default .loginedinfo li
+{
+    height: 21px;
+    line-height: 21px;
+}
+.Login_Default .user_login li.reg_user
+{
+    height: 27px;
+    line-height: 27px;
+    padding: 3px 0px 6px 0px;
+}
+.Login_Default .user_login li.save
+{
+    padding-left: 45px;
+}
+.Login_Default .user_login li.reg
+{
+    padding-top: 5px;
+    background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/min_line.gif) no-repeat center top;
+    text-align: center;
+}
+.Login_Default .user_login li.reg a
+{
+    color: #333;
+    text-decoration: underline;
+}
+.Login_Default .user_login li.reg a:hover
+{
+    color: #f87608;
+    text-decoration: underline;
+}
+.Login_Default .user_login li.save a
+{
+    padding-left: 10px;
+}
+
+.Login_Default .user_login li.save input
+{
+    margin-right: 5px;
+}
+.Login_Default .user_login li input.inputtext
+{
+    background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/back.gif) no-repeat left -64px;
+    border: none;
+    width: 133px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.Login_Default .user_login li input#validationCode2
+{
+    width: 58px !important;
+    background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/back.gif) no-repeat -708px -65px;
+    font-size: 11px;
+    font-family: Arial;
+}
+.Login_Default .user_login li select
+{
+    width: 138px;
+}
+.Login_Default .user_login li img
+{
+    margin-left: 5px;
+}
+
+.Login_Default .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/back.gif) no-repeat -141px -66px;
+}
+
+.Login_Default .user_login li.reg_user {
+	position:relative;
+}
+.Login_Default .user_login li input.user_login_submit {
+	width:66px;
+	height:22px;
+	background:url(/Widgets/WidgetCollection/其他类/Login.Default/Images/back.gif) no-repeat -72px -38px;
+	overflow:hidden;
+	border:none;
+	position:absolute;
+	top:7px;
+	left:20px;
+	cursor: pointer;
+}
+.Login_Default .user_login li input.user_login_submit {top:5px;left:45px;}
+
+/*************************************************************
+ * Command:End
+ * Control:Login.Default
+ * Style:Login_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Vote.Default
+ * Style:Vote_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Vote_Default .vote h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back1.gif) no-repeat;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Vote_Default .vote_content li.vote_check
+{
+    position: relative;
+}
+.Vote_Default .vote_content li.vote_check input
+{
+    width: 66px;
+    height: 22px;
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back.gif) no-repeat -72px -38px;
+    overflow: hidden;
+    border: none;
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    cursor: pointer;
+}
+.Vote_Default .vote_content li.vote_button_line
+{
+    padding: 10px 20px;
+}
+.Vote_Default .vote_content .vote_button
+{
+    width: 66px;
+    height: 22px;
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back.gif) no-repeat -143px -38px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+.Vote_Default .vote_content .voteshow_button
+{
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back.gif) no-repeat -215px -38px;
+    width: 66px;
+    height: 22px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+/************网站调查*************/
+.Vote_Default .vote_content, .statistics_content
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.Vote_Default .vote_content h4
+{
+    font-size: 12px;
+    font-weight: normal;
+    color: #4093cb;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.Vote_Default .vote_content ul
+{
+    padding-left: 10px;
+}
+.Vote_Default .vote_content li
+{
+    height: 22px;
+    line-height: 22px;
+}
+.Vote_Default .vote_content li input
+{
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.Vote_Default .vote_content li.vote_check
+{
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding-top: 10px;
+}
+.Vote_Default .vote_content li.vote_check input
+{
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back.gif) no-repeat -143px -38px;
+}
+.Vote_Default .vote_content li.vote_check input#ShowVote
+{
+    left: 106px;
+    background:url(/Widgets/WidgetCollection/其他类/Vote.Default/Images/back.gif) no-repeat -215px -38px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:Vote.Default
+ * Style:Vote_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Statistic.Default
+ * Style:Statistic_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/****************网站统计****************/
+.Statistic_Default .statistics h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(/Widgets/WidgetCollection/其他类/Statistic.Default/Images/back1.gif) no-repeat;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Statistic_Default .statistics_content
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.Statistic_Default .statistics_content
+{
+    line-height: 26px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+.Statistic_Default *html .statistics_content
+{
+    padding-top: 8px;
+    line-height: 24px;
+}
+.Statistic_Default .statistics_content a
+{
+    color: #ae541f;
+}
+.Statistic_Default .statistics_content a:hover
+{
+    color: #cc0000;
+}
+
+.Statistic_Default .mtop10
+{
+    margin-top: 0px;
+}
+
+.Statistic_Default .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/其他类/Statistic.Default/Images/back.gif) no-repeat -141px -66px;
+}
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:Statistic.Default
+ * Style:Statistic_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:LinkList.Default
+ * Style:LinkList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.LinkList_Default .friend_link h3
+{
+    height: 33px;
+    line-height: 33px;
+    background:url(/Widgets/WidgetCollection/友情链接/LinkList.Default/Images/back3.gif) no-repeat;
+    font-size: 12px;
+    color: #000;
+    padding-left: 34px;
+    position: relative;
+}
+.LinkList_Default .friend_link h3 img
+{
+    position: absolute;
+    top: 10px;
+    left: 910px;
+}
+.LinkList_Default .friend_content
+{
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    background:url(/Widgets/WidgetCollection/友情链接/LinkList.Default/Images/area_back.gif) repeat-x left top;
+    padding: 25px 24px 0px 12px;
+}
+
+/******友情链接********/
+.LinkList_Default .friend_content
+{
+    padding: 15px 0px 0px 0px;
+    height: auto !important;
+    height: 65px;
+    min-height: 65px;
+}
+.LinkList_Default .friend_pic
+{
+    height: auto !important;
+    min-height: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+}
+.LinkList_Default .friend_pic li
+{
+    float: left;
+    width: 96px;
+    height: 37px;
+    overflow: hidden;
+    margin: 0px 0px;
+    margin-left: 10px;
+    display: inline;
+}
+.LinkList_Default .friend_pic li img
+{
+    width: 88px;
+    height: 31px;
+    overflow: hidden;
+    padding: 2px;
+    border: 1px solid #f0f0f0;
+}
+
+.LinkList_Default .underline_picture
+{
+    height: 7px;
+    line-height: 7px;
+    background:url(/Widgets/WidgetCollection/友情链接/LinkList.Default/Images/back.gif) no-repeat left -182px;
+}
+.LinkList_Default .friend_text
+{
+    padding: 10px;
+}
+.LinkList_Default .friend_text li
+{
+    float: left;
+    margin-right: 10px;
+    color: #666;
+    line-height: 22px;
+}
+.LinkList_Default .friend_text
+{
+    padding: 0px 0px 0px 0px;
+}
+.LinkList_Default .friend_text li
+{
+    margin: 0px 0 0px 10px;
+    line-height: 21px;
+    width: 96px;
+    overflow: hidden;
+    height: 21px;
+}
+.LinkList_Default .friend_text li a
+{
+    color: #666;
+}
+.LinkList_Default .friend_text li a:hover
+{
+    color: #cc0000;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:LinkList.Default
+ * Style:LinkList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Footer.Default
+ * Style:Footer_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/*******网站底部定义开始*******/
+.Footer_Default #footer {
+	height:115px;
+	border-top:2px solid #1d87be;
+	background:#f7f7f7;
+	margin-top:10px;
+}
+.Footer_Default .service {
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	color:#444;
+}
+.Footer_Default .service a {
+	color:#444;
+}
+.Footer_Default .service a:hover {
+	color:#cc0000;
+}
+.Footer_Default .copyright {
+	text-align:center;
+	line-height:180%;
+	padding-top:10px;
+	font-family: Arial;
+	color:#444;
+}
+/*********版权信息页与关于我们页面样式定义**********/
+.Footer_Default .copyright_list h1 {
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+}
+.Footer_Default .copyright_list p {
+	line-height:170%;
+	font-size:14px;
+	color:#333;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:Footer.Default
+ * Style:Footer_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Register.Title
+ * Style:Register_Title
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Register_Title h3{
+    background:url(/Widgets/WidgetCollection/静态类/Register.Title/Images/back2.gif) no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+
+
+/*************************************************************
+ * Command:End
+ * Control:Register.Title
+ * Style:Register_Title
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:UserRegister.Simple
+ * Style:UserRegister_Simple
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+/*************************************************************
+ * Command:End
+ * Control:UserRegister.Simple
+ * Style:UserRegister_Simple
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Search.Title
+ * Style:Search_Title
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Search_Title {
+    height:32px;
+    line-height:32px;
+    background:url(/Widgets/WidgetCollection/静态类/Search_Title/Images/730.gif) no-repeat;
+    padding-left:32px;
+}
+  .Search_Title  em, .Search_Title _allweb em {
+    padding:0px 5px;
+}
+  .Search_Title  a, .Search_Title _allweb a {
+    color:#000;
+}
+ .Search_Title  a:hover, .Search_Title _allweb a:hover {
+    color:#cc0000;
+}
+ .r_navigation {
+    height:23px;
+    line-height:23px;
+}
+.Search_Title _allweb {
+    background:url(/Widgets/WidgetCollection/静态类/Search_Title/Images/back.gif) no-repeat left -490px;
+}
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:Search.Title
+ * Style:Search_Title
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:PagedArticleList.DefaultSearch
+ * Style:PagedArticleList_DefaultSearch
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.PagedArticleList_DefaultSearch .article_list
+{
+}
+
+.PagedArticleList_DefaultSearch .article_list h3{
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/back2.gif) no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+.PagedArticleList_DefaultSearch .article_list h3 span
+{
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/sidebar.gif) no-repeat left top;
+    display: inline-block;
+    padding-left: 37px;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em
+{
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/sidebar.gif) no-repeat right -33px;
+    padding-right: 37px;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em a
+{
+    color: #ffff00;
+}
+.PagedArticleList_DefaultSearch .article_list h3 em a:hover
+{
+    color: #fff;
+}
+.PagedArticleList_DefaultSearch .article_list ul
+{
+    padding: 10px 10px 10px 10px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.PagedArticleList_DefaultSearch .article_list li
+{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/line.gif) repeat-x left bottom;
+}
+.PagedArticleList_DefaultSearch .article_list li span.datetime
+{
+    float: right;
+    padding-right: 5px;
+}
+.PagedArticleList_DefaultSearch .article_list li a
+{
+    color: #333;
+    padding-left: 20px;
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/icon4.gif) no-repeat left -29px;
+}
+.PagedArticleList_DefaultSearch .article_list li a:hover {
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/icon4.gif) no-repeat scroll left 1px transparent;
+    color: #AE541F;
+}
+.PagedArticleList_DefaultSearch .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/搜索类/Search.ResultUI/Images/back.gif) no-repeat left -269px;
+}
+.PagedArticleList_DefaultSearch .clear
+{
+    clear: both;
+}
+.PagedArticleList_DefaultSearch .clear:after
+{
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.PagedArticleList_DefaultSearch .page_css, .class_page
+{
+    text-align: center;
+    padding: 5px 0;
+}
+.PagedArticleList_DefaultSearch .page_css a, .class_page a
+{
+    display: inline-block;
+    border: 1px solid #a8c1ce;
+    padding: 3px 8px;
+    color: #4a89a9;
+    line-height: 100%;
+}
+.PagedArticleList_DefaultSearch .page_css a:hover, .class_page a:hover
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_DefaultSearch .page_css b a, .class_page b a
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_DefaultSearch .page_line
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:PagedArticleList.DefaultSearch
+ * Style:PagedArticleList_DefaultSearch
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.CurrentLocation
+ * Style:ChannelMenu_CurrentLocation
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.ChannelMenu_CurrentLocation .sitepath{
+	height:32px;
+	line-height:32px;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.CurrLocation/Images/730.gif) no-repeat;
+	padding-left:32px;
+}
+.ChannelMenu_CurrentLocation .sitepath em, .sitepath_allweb em {
+	padding:0px 5px;
+}
+.ChannelMenu_CurrentLocation .sitepath a, .sitepath_allweb a {
+	color:#000;
+}
+.ChannelMenu_CurrentLocation .sitepath a:hover, .sitepath_allweb a:hover {
+	color:#cc0000;
+}
+.ChannelMenu_CurrentLocation .r_navigation {
+	height:23px;
+	line-height:23px;
+}
+.ChannelMenu_CurrentLocation .sitepath_allweb {
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.CurrLocation/Images/back.gif) no-repeat left -490px;
+}
+ 
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.CurrentLocation
+ * Style:ChannelMenu_CurrentLocation
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleView.Default
+ * Style:ArticleView_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/**************文章正文开始*****************/
+.ArticleView_Default .article_line
+{
+    height: 4px;
+    line-height: 4px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/back.gif) no-repeat left -358px;
+}
+.ArticleView_Default .article_content
+{
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    padding: 30px;
+}
+.ArticleView_Default .article_content h1
+{
+    color: #2782b9;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 35px;
+}
+.ArticleView_Default .article_info
+{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/article_line.gif) repeat-x left center;
+    margin: 26px 0px;
+}
+.ArticleView_Default .article_info a
+{
+    color: #333333;
+}
+.ArticleView_Default .article_info a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_content_list
+{
+    line-height: 180%;
+    font-size: 14px;
+    color: #212121;
+    word-wrap: break-word;
+    word-break: normal;
+}
+.ArticleView_Default .article_mood
+{
+    padding-bottom: 20px;
+}
+.ArticleView_Default .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Default .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Default .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Default .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li.next
+{
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_page li a:hover
+{
+    color: #cc0000;
+}
+/***********相关信息****************/
+.ArticleView_Default .article_about h3
+{
+    font-size: 14px;
+    padding-left: 20px;
+    height: 31px;
+    line-height: 31px;
+    border-bottom: 1px solid #ddd;
+}
+.ArticleView_Default .article_about ul
+{
+    padding: 10px;
+}
+.ArticleView_Default .article_about li
+{
+    height: 22px;
+    line-height: 22px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/icon1.gif) no-repeat left center;
+    padding-left: 10px;
+}
+.ArticleView_Default .article_about li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_about li a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Default .artilcle_tool
+{
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    background: #f2f2f2;
+    padding-right: 8px;
+}
+.ArticleView_Default .artilcle_tool a
+{
+    color: #333;
+}
+.ArticleView_Default .artilcle_tool a:hover
+{
+    color: #cc0000;
+}
+
+.ArticleView_Default .article_page
+{
+    height: 31px;
+    line-height: 31px;
+    margin-top: 15px;
+}
+.ArticleView_Default .article_page li
+{
+    float: left;
+    margin-right: 15px;
+    padding-left: 10px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li.next
+{
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleView.Default/Images/icon7.gif) no-repeat left center;
+}
+.ArticleView_Default .article_page li span
+{
+    color: #cc0000;
+}
+.ArticleView_Default .article_page li a
+{
+    color: #333;
+}
+.ArticleView_Default .article_page li a:hover
+{
+    color: #cc0000;
+}
+
+
+.ArticleView_Default .mtop10
+{
+    margin-top: 10px;
+}
+.ArticleView_Default .articleAttachments{margin-bottom:10px;line-height:1.5em;}
+.ArticleView_Default .articleAttachments li{margin-left:20px;font-size:14px;}
+.ArticleView_Default .articleAttachments a:hover
+{
+    color: #cc0000;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleView.Default
+ * Style:ArticleView_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Sidebar.ChannelNav
+ * Style:Sidebar_ChannelNav
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/******栏目分类**********/
+.Sidebar_ChannelNav .sidebar
+{
+    float: right;
+    width: 220px;
+}
+
+.Sidebar_ChannelNav .subnav li
+{
+    margin-top: 6px;
+}
+.Sidebar_ChannelNav .subnav li a
+{
+    height: 26px;
+    line-height: 26px;
+    background:url(/Widgets/WidgetCollection/导航类/Sidebar.ChannelNav/Images/bg.gif) no-repeat;
+    width: 165px;
+    display: inline-block;
+    padding-left: 33px;
+    color: #333;
+}
+.Sidebar_ChannelNav .subnav li a:hover, .subnav li.class_on a
+{
+    background:url(/Widgets/WidgetCollection/导航类/Sidebar.ChannelNav/Images/bg_hover.gif) no-repeat;
+    color: #ae541f;
+}
+
+.Sidebar_ChannelNav .subnav h3
+{
+    height: 32px;
+    line-height: 32px;
+    background:url(/Widgets/WidgetCollection/导航类/Sidebar.ChannelNav/Images/back.gif) no-repeat left top;
+    font-size: 12px;
+    color: #000;
+    padding-left: 28px;
+    font-size: 12px;
+}
+.Sidebar_ChannelNav .subnav ul
+{
+    padding: 4px 8px 10px 12px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.Sidebar_ChannelNav .underline
+{
+    height: 6px;
+    line-height: 6px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/导航类/Sidebar.ChannelNav/Images/back.gif) no-repeat -141px -66px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:Sidebar.ChannelNav
+ * Style:Sidebar_ChannelNav
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:PagedArticleList.Default
+ * Style:PagedArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.PagedArticleList_Default .article_list
+{
+}
+
+.PagedArticleList_Default .article_list h3{
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/back2.gif) no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+.PagedArticleList_Default .article_list h3 span
+{
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/sidebar.gif) no-repeat left top;
+    display: inline-block;
+    padding-left: 37px;
+}
+.PagedArticleList_Default .article_list h3 em
+{
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/sidebar.gif) no-repeat right -33px;
+    padding-right: 37px;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+}
+.PagedArticleList_Default .article_list h3 em a
+{
+    color: #ffff00;
+}
+.PagedArticleList_Default .article_list h3 em a:hover
+{
+    color: #fff;
+}
+.PagedArticleList_Default .article_list ul
+{
+    padding: 10px 10px 10px 10px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.PagedArticleList_Default .article_list li
+{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/line.gif) repeat-x left bottom;
+}
+.PagedArticleList_Default .article_list li span.datetime
+{
+    float: right;
+    padding-right: 5px;
+}
+.PagedArticleList_Default .article_list li a
+{
+    color: #333;
+    padding-left: 20px;
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/icon4.gif) no-repeat left -29px;
+}
+.PagedArticleList_Default .article_list li a:hover {
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/icon4.gif) no-repeat scroll left 1px transparent;
+    color: #AE541F;
+}
+.PagedArticleList_Default .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/Images/back.gif) no-repeat left -269px;
+}
+.PagedArticleList_Default .clear
+{
+    clear: both;
+}
+.PagedArticleList_Default .clear:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.PagedArticleList_Default .page_css, .class_page
+{
+    text-align: center;
+    padding: 5px 0;
+}
+.PagedArticleList_Default .page_css a, .class_page a
+{
+    display: inline-block;
+    border: 1px solid #a8c1ce;
+    padding: 3px 8px;
+    color: #4a89a9;
+    line-height: 100%;
+}
+.PagedArticleList_Default .page_css a:hover, .class_page a:hover
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_Default .page_css b a, .class_page b a
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedArticleList_Default .page_line
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:PagedArticleList.Default
+ * Style:PagedArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:NewsTab.Default
+ * Style:NewsTab_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/************新闻Tab选项卡*****************/
+.NewsTab_Default .floatLeft{
+    width:360px;
+    height:220px;
+}
+.NewsTab_Default .n4Tab{clear:both; }
+.NewsTab_Default .n4Tab .TabTitle{text-align:center;}
+.NewsTab_Default .n4Tab .TabTitle ul{margin:0; padding:0;}
+.NewsTab_Default .TabTitle li{
+	float:left;
+	height:29px;
+	line-height:29px; padding-right:8px;
+	cursor:pointer;
+	color:#49494b;
+	text-align:center;
+}
+.NewsTab_Default .n4Tab .TabTitle .normal{ color:#333; text-decoration:none; }
+.NewsTab_Default .n4Tab .TabTitle .normal a{ color:#333; text-decoration:none;}
+.NewsTab_Default .n4Tab .TabTitle .active{width:87px; background:url(/Widgets/WidgetCollection/文章列表类/NewsTab.Default/Images/image_48.jpg) no-repeat; color:#060; font-weight:bold; }
+.NewsTab_Default .n4Tab .TabTitle .active a{ color:#fff; font-weight:bold; text-decoration:none;}
+.NewsTab_Default .TabContent {clear:both; margin:0 auto; padding:0px; border:solid 1px #ccc;}
+.NewsTab_Default .TabContent li{list-style:none;line-height:26px; margin-left:5px; padding-left:5px;background:url(/Widgets/WidgetCollection/文章列表类/NewsTab.Default/Images/image_51.jpg) 1px 50% no-repeat;}
+.NewsTab_Default .TabContent a{ color:#000; text-decoration:none;display:inline;}
+.NewsTab_Default .TabContent a:hover{ color:#666; text-decoration:none; display: inline;}
+.NewsTab_Default .TabContent .n4tabclear{ clear:both; font-size:1px;}
+.NewsTab_Default .TabTitle{background:url(/Widgets/WidgetCollection/文章列表类/NewsTab.Default/Images/image_47.jpg) left no-repeat; height:29px;line-height:29px; padding-left:30px;}
+.NewsTab_Default .none {display:none;}
+.NewsTab_Default .n4Tab .TabTitle .clear{ clear:both; font-size:1px;}
+.NewsTab_Default .datetime{color:#999; padding-right:5px;}
+
+/*************************************************************
+ * Command:End
+ * Control:NewsTab.Default
+ * Style:NewsTab_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:AricleSingle.Default
+ * Style:AricleSingle_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/**************文章正文开始*****************/
+
+.ArticleSingle_Default .article_content {
+	border-left:1px solid #dddddd;
+	border-top:1px solid #dddddd;
+	border-bottom:1px solid #dddddd;
+        border-right:1px solid #dddddd;
+	padding:30px;
+}
+.ArticleSingle_Default .article_content h1 {
+	color:#2782b9;
+	font-size:18px;
+	font-family:"微软雅黑";
+	text-align:center;
+	line-height:35px;
+}
+.ArticleSingle_Default .article_info {
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/article_line.gif) repeat-x left center;
+	margin:26px 0px;
+}
+.ArticleSingle_Default .article_info a {
+	color:#333333;
+}
+.ArticleSingle_Default .article_info a:hover {
+	color:#cc0000;
+}
+.ArticleSingle_Default .article_content_list {
+	line-height:180%;
+	font-size:14px;
+	color:#212121;
+	word-wrap:break-word;
+	word-break:normal;
+}
+.ArticleSingle_Default .article_mood {
+	padding-bottom:20px;
+}
+.ArticleSingle_Default .artilcle_tool {
+	height:26px;
+	line-height:26px;
+	text-align:right;
+	background:#f2f2f2;
+	padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+	color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+	color:#cc0000;
+}
+.ArticleSingle_Default .article_page {
+	height:31px;
+	line-height:31px;
+	margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+	float:left;
+	margin-right:15px;
+	padding-left:10px;
+	background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+	color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+	color:#cc0000;
+}
+/***********相关信息****************/
+.ArticleSingle_Default .article_about h3 {
+	font-size:14px;
+	padding-left:20px;
+	height:31px;
+	line-height:31px;
+	border-bottom:1px solid #ddd;
+}
+.ArticleSingle_Default .article_about ul {
+	padding:10px;
+}
+.ArticleSingle_Default .article_about li {
+	height:22px;
+	line-height:22px;
+	background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/icon1.gif) no-repeat left center;
+	padding-left:10px;
+}
+.ArticleSingle_Default .article_about li a {
+	color:#333;
+}
+.ArticleSingle_Default .article_about li a:hover {
+	color:#cc0000;
+}
+
+.ArticleSingle_Default .artilcle_tool {
+	height:26px;
+	line-height:26px;
+	text-align:right;
+	background:#f2f2f2;
+	padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+	color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+	color:#cc0000;
+}
+
+.ArticleSingle_Default .article_page {
+	height:31px;
+	line-height:31px;
+	margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+	float:left;
+	margin-right:15px;
+	padding-left:10px;
+	background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(/Widgets/WidgetCollection/文章列表类/AricleSingle.Default/Images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+	color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+	color:#cc0000;
+}
+
+
+.ArticleSingle_Default .mtop10 {
+	margin-top:10px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:AricleSingle.Default
+ * Style:AricleSingle_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleSingle.Default
+ * Style:ArticleSingle_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/**************文章正文开始*****************/
+
+.ArticleSingle_Default .article_content {
+    border-left:1px solid #dddddd;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+        border-right:1px solid #dddddd;
+    padding:30px; 
+}
+.ArticleSingle_Default .article_content .Content{
+ font-size: 10pt; line-height: 150%
+}
+
+.ArticleSingle_Default .article_content h1 {
+    color:#2782b9;
+    font-size:18px;
+    font-family:"微软雅黑";
+    text-align:center;
+    line-height:35px;
+}
+.ArticleSingle_Default .article_info {
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/article_line.gif) repeat-x left center;
+    margin:26px 0px;
+}
+.ArticleSingle_Default .article_info a {
+    color:#333333;
+}
+.ArticleSingle_Default .article_info a:hover {
+    color:#cc0000;
+}
+.ArticleSingle_Default .article_content_list {
+    line-height:180%;
+    font-size:14px;
+    color:#212121;
+    word-wrap:break-word;
+    word-break:normal;
+}
+.ArticleSingle_Default .article_mood {
+    padding-bottom:20px;
+}
+.ArticleSingle_Default .artilcle_tool {
+    height:26px;
+    line-height:26px;
+    text-align:right;
+    background:#f2f2f2;
+    padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+    color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+    color:#cc0000;
+}
+.ArticleSingle_Default .article_page {
+    height:31px;
+    line-height:31px;
+    margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+    float:left;
+    margin-right:15px;
+    padding-left:10px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+    color:#cc0000;
+}
+/***********相关信息****************/
+.ArticleSingle_Default .article_about h3 {
+    font-size:14px;
+    padding-left:20px;
+    height:31px;
+    line-height:31px;
+    border-bottom:1px solid #ddd;
+}
+.ArticleSingle_Default .article_about ul {
+    padding:10px;
+}
+.ArticleSingle_Default .article_about li {
+    height:22px;
+    line-height:22px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/icon1.gif) no-repeat left center;
+    padding-left:10px;
+}
+.ArticleSingle_Default .article_about li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_about li a:hover {
+    color:#cc0000;
+}
+
+.ArticleSingle_Default .artilcle_tool {
+    height:26px;
+    line-height:26px;
+    text-align:right;
+    background:#f2f2f2;
+    padding-right:8px;
+}
+.ArticleSingle_Default .artilcle_tool a {
+    color:#333;
+}
+.ArticleSingle_Default .artilcle_tool a:hover {
+    color:#cc0000;
+}
+
+.ArticleSingle_Default .article_page {
+    height:31px;
+    line-height:31px;
+    margin-top:15px;
+}
+.ArticleSingle_Default .article_page li {
+    float:left;
+    margin-right:15px;
+    padding-left:10px;
+    background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/icon5.gif) no-repeat left center;
+}
+.ArticleSingle_Default .article_page li.next {background:url(/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/Images/icon7.gif) no-repeat left center;}
+.ArticleSingle_Default .article_page li span {color:#cc0000;}
+.ArticleSingle_Default .article_page li a {
+    color:#333;
+}
+.ArticleSingle_Default .article_page li a:hover {
+    color:#cc0000;
+}
+
+
+.ArticleSingle_Default .mtop10 {
+    margin-top:10px;
+}
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleSingle.Default
+ * Style:ArticleSingle_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:CommentsList.Common
+ * Style:CommentsList_Common
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+/*************************************************************
+ * Command:End
+ * Control:CommentsList.Common
+ * Style:CommentsList_Common
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:PagedPictureArticleList.Default
+ * Style:PagedPictureArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.PagedPictureArticleList_Default .article_list
+{
+}
+
+.PagedPictureArticleList_Default .article_list h3{
+    background:url(/Widgets/WidgetCollection/图文类/PagedPictureArticleList.Default/Images/back2.gif) no-repeat;
+    height: 30px;
+    line-height: 30px; color:#FFF; text-indent:20px;
+}
+.PagedPictureArticleList_Default .article_list h3 span
+{
+    background:url(/Widgets/WidgetCollection/图文类/PagedPictureArticleList.Default/Images/sidebar.gif) no-repeat left top;
+    display: inline-block;
+    padding-left: 37px;
+}
+.PagedPictureArticleList_Default .article_list h3 em
+{
+    background:url(/Widgets/WidgetCollection/图文类/PagedPictureArticleList.Default/Images/sidebar.gif) no-repeat right -33px;
+    padding-right: 37px;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+}
+.PagedPictureArticleList_Default .article_list h3 em a
+{
+    color: #ffff00;
+}
+.PagedPictureArticleList_Default .article_list h3 em a:hover
+{
+    color: #fff;
+}
+.PagedPictureArticleList_Default .article_list ul
+{
+    padding: 10px 5px 5px 5px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.PagedPictureArticleList_Default .article_list li
+{
+    font-size: 14px;
+    color: #666; float:left;
+}
+.PagedPictureArticleList_Default .article_list li img
+{
+    border: 1px solid #DDDDDD; padding:2px;
+}
+.PagedPictureArticleList_Default .article_list li a
+{
+    color: #333;
+    padding-left: 20px;
+}
+.PagedPictureArticleList_Default .article_list li a:hover {
+    color: #AE541F;
+}
+.PagedPictureArticleList_Default .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background:url(/Widgets/WidgetCollection/图文类/PagedPictureArticleList.Default/Images/back.gif) no-repeat left -269px;
+}
+.PagedPictureArticleList_Default .clear
+{
+    clear: both;
+}
+.PagedPictureArticleList_Default .clear:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.PagedPictureArticleList_Default .page_css, .class_page
+{
+    text-align: center;
+    padding: 5px 0;
+}
+.PagedPictureArticleList_Default .page_css a, .class_page a
+{
+    display: inline-block;
+    border: 1px solid #a8c1ce;
+    padding: 3px 8px;
+    color: #4a89a9;
+    line-height: 100%;
+}
+.PagedPictureArticleList_Default .page_css a:hover, .class_page a:hover
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedPictureArticleList_Default .page_css b a, .class_page b a
+{
+    color: #fff;
+    border: 1px solid #4081A1;
+    background: #62A1DF;
+}
+.PagedPictureArticleList_Default .page_line
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:PagedPictureArticleList.Default
+ * Style:PagedPictureArticleList_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.DropDown
+ * Style:ChannelMenu_DropDown
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+/*****************************************************************
+ * 下拉横向菜单控件风格
+ * 名称：横向菜单
+ ******************************************************************/
+.ChannelMenu_DropDown #nav
+{
+    z-index: 100;
+    position: relative;
+    background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.DropDown/Images/menu_bg.jpg) repeat scroll 0 0 transparent;
+    height: 64px;
+}
+
+.ChannelMenu_DropDown #nav ul
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; height:32px;
+}
+.ChannelMenu_DropDown #nav #product
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; height:32px; color:#FFF; font-weight:bold;
+}
+.ChannelMenu_DropDown #nav #product a:hover
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; height:32px; color:#000; font-weight:bold;
+}
+.ChannelMenu_DropDown #nav li
+{
+    float: left;
+    margin: 0px; line-height:32px;
+    cursor: pointer;
+    list-style: none; padding-left:5px;  width:80px; margin-top:8px; text-align:center;
+	background:url(/Widgets/WidgetCollection/导航类/ChannelMenu.DropDown/Images/7.gif) no-repeat;
+}
+.ChannelMenu_DropDown #nav .sonall
+{
+    z-index: 200;
+    position: absolute;
+    top: 32px;
+    padding-right: 12px;
+}
+.ChannelMenu_DropDown .son0
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son1
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son2
+{
+    margin-left: -168px;
+    width: 520px;
+}
+.ChannelMenu_DropDown .son3
+{
+    margin-left: -252px;
+    width: 440px;
+}
+.ChannelMenu_DropDown .son4
+{
+	margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son5
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son6
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son7
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son8
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son9
+{
+    margin-left: -420px;
+    width: 580px;
+}
+.ChannelMenu_DropDown .son10
+{
+    margin-left: -420px;
+    width: 580px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.DropDown
+ * Style:ChannelMenu_DropDown
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:RssFeed.Default
+ * Style:RssFeed_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.RssFeed_Default .area {
+	width:360px;
+	margin-top:10px;
+}
+.RssFeed_Default .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.RssFeed_Default .area h3 span {
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.RssFeed_Default .area h3 em {
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.RssFeed_Default .area h3 em a {
+	color:#fff;
+}
+.RssFeed_Default .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.RssFeed_Default .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.RssFeed_Default .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.RssFeed_Default .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.RssFeed_Default .area li a {
+	color:#313534;
+}
+.RssFeed_Default .area li a:hover {
+	color:#cc0000;
+}
+.RssFeed_Default .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.RssFeed_Default .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(/Widgets/WidgetCollection/商城下载类/RssFeed.Default/Images/back.gif) no-repeat -141px -79px;
+}
+.RssFeed_Default .area_ad img {
+	border:1px solid #cfd8df;
+}
+ 
+/*************************************************************
+ * Command:End
+ * Control:RssFeed.Default
+ * Style:RssFeed_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Header.Logo
+ * Style:Header_Logo
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Header_Logo #logo
+{
+    width: 255px; border:0; height:69px;
+}
+
+
+/*************************************************************
+ * Command:End
+ * Control:Header.Logo
+ * Style:Header_Logo
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:Weather.Default
+ * Style:Weather_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.Weather_Default .wht1
+{
+    background: none repeat scroll 0 0 #EDF2F8;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.Weather_Default .lk37
+{
+    color: #003785;
+}
+.Weather_Default .wht3
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-top: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+.Weather_Default .lk2e
+{
+    color: #2E68AC;
+}
+.Weather_Default .wht2
+{
+    background: none repeat scroll 0 0 #EDF2F8;
+    text-align: center;
+}
+.Weather_Default .whp2
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/wha011.gif) repeat scroll 0 0 transparent;
+    padding-right: 12px;
+    text-align: right;
+}
+.Weather_Default .whptitle
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/Wtitle.gif);
+    width: 118px;
+    height: 27px;
+    border: 0;
+}
+.Weather_Default .whp3
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 27px;
+}
+.Weather_Default table, tr, td
+{
+    color: #000000;
+    font-size: 12px;
+    line-height: 23px;
+}
+.Weather_Default .images_0_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/0.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_1_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/1.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_2_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/2.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_3_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/3.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_4_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/4.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_5_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/5.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_6_gif
+{
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/6.gif) no-repeat;
+    width: 70px;
+    height: 65px;
+    border: 0;
+}
+.Weather_Default .images_7_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/7.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_8_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/8.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}							
+.Weather_Default .images_9_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/9.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}									
+.Weather_Default .images_10_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/10.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_11_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/11.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_12_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/12.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_13_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/13.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_14_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/14.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_15_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/15.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_16_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/16.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_17_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/17.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_18_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/18.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_19_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/19.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_20_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/20.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_21_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/21.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_22_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/22.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_23_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/23.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_24_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/24.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_25_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/25.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_26_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/26.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_27_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/27.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_28_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/28.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}	
+.Weather_Default .images_29_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/29.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}					
+.Weather_Default .images_30_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/30.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}		
+.Weather_Default .images_31_gif	
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/31.gif) no-repeat;					
+    width: 70px;					
+    height: 65px;					
+    border: 0;					
+}	
+/*今天*/
+.Weather_Default .today_todayRed
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/todayRed.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+.Weather_Default .today_tomorrowBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/tomorrowBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}
+.Weather_Default .today_nexttomorrowBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/nexttomorrowBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+/*明天*/
+.Weather_Default .tomorrow_todayBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/todayBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+.Weather_Default .tomorrow_tomorrowRed
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/tomorrowRed.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}
+.Weather_Default .tomorrow_nexttomorrowBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/nexttomorrowBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+/*后天*/
+.Weather_Default .nexttomorrow_todayBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/todayBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+.Weather_Default .nexttomorrow_tomorrowBlak
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/tomorrowBlak.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}
+.Weather_Default .nexttomorrow_nexttomorrowRed
+{					
+    background:url(/Widgets/WidgetCollection/商城下载类/Weather.Default/Images/nexttomorrowRed.gif) no-repeat;					
+    width: 48px;					
+    height: 21px;					
+    border: 0;					
+}	
+
+/*************************************************************
+ * Command:End
+ * Control:Weather.Default
+ * Style:Weather_Default
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:NewsTab.Speeches
+ * Style:NewsTab_Speeches
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/
+.NewsTab_Speeches .ttnew_right_ldjh
+{
+    width: 222px;
+    height: auto;
+}
+.NewsTab_Speeches .ttnew_right_ldjh h3 {
+	height:30px;
+	line-height:30px;
+	background:url(/Widgets/WidgetCollection/文章列表类/NewsTab.Speeches/Images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#000;
+	position:relative; text-indent:28px;
+}
+.NewsTab_Speeches .ttnew_right_ldjh_nr
+{
+    margin: 0 auto;
+    border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.NewsTab_Speeches .ttnew_right_ldjh_nr_1
+{
+    width: 202px;
+    margin: 0 auto;
+}
+.NewsTab_Speeches .ttnew_right_ldjh_nr_11
+{
+    width: 202px;
+    line-height: 25px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    color: #060;
+    font-weight: bold;
+}
+.NewsTab_Speeches .ttnew_right_ldjh_nr_12
+{
+    width: 202px;
+    text-align: left;
+    line-height: 22px;
+    color: #333;
+}
+.NewsTab_Speeches .clear
+{
+    clear: both;
+    font-size: 1px;
+}
+
+/*************************************************************
+ * Command:End
+ * Control:NewsTab.Speeches
+ * Style:NewsTab_Speeches
+ * Desc:目前没有
+ * Quot:we7
+*************************************************************/

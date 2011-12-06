@@ -1,0 +1,38 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Search_Title
+ * Style:Search_Title
+ * Desc:目前没有
+ * Quot:channel.search
+*************************************************************/
+ .Search_Title {
+    height:32px;
+    line-height:32px;
+    background:url(../images/730.gif) no-repeat;
+    padding-left:32px;
+}
+  .Search_Title  em, .Search_Title _allweb em {
+    padding:0px 5px;
+}
+  .Search_Title  a, .Search_Title _allweb a {
+    color:#000;
+}
+ .Search_Title  a:hover, .Search_Title _allweb a:hover {
+    color:#cc0000;
+}
+ .r_navigation {
+    height:23px;
+    line-height:23px;
+}
+.Search_Title _allweb {
+    background:url(../images/back.gif) no-repeat left -490px;
+}
+
+
+/*************************************************************
+ * Command:End
+ * Control:Search_Title
+ * Style:Search_Title
+ * Desc:目前没有
+ * Quot:channel.search
+*************************************************************/

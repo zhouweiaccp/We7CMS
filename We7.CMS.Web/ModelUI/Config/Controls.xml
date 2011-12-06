@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<controls>
+  <control type="TextInput" label="单行文本" defaultValue="{Type:'TextInput',Label:'请输入标题',Name:''}" />
+  <control type="Text" label="标签" defaultValue="{Type:'Text',Label:'请输入标题',Name:''}"/>
+  <control type="TextArea" label="多行文本" defaultValue="{Type:'TextArea',Label:'请输入标题',Name:''}"/>
+  <control type="Select" label="下拉框" defaultValue="{Type:'Select',Label:'请输入标题',Name:'',Params:[{'Name':'data',Value:'Value1|选项1,Value2|选项2'}]}"/>
+  <control type="RadioButton" label="单选框" defaultValue="{Type:'RadioButton',Label:'请输入标题',Name:'',Params:[{'Name':'data',Value:'Value1|选项1,Value2|选项2'}]}"/>
+  <control type="CheckBox" label="复选框"  defaultValue="{Type:'CheckBox',Label:'请输入标题',Name:'',Params:[{'Name':'data',Value:'Value1|选项1,Value2|选项2'}]}"/>
+  <control type="Editor" label="编辑器"  defaultValue="{Type:'Editor',Label:'请输入标题',Name:''}"/>
+  <control type="DateTime" label="时间控件" defaultValue="{Type:'DateTime',Label:'请输入标题',Name:''}"/>
+  <control type="DateTimeLabel" label="时间显示标签" defaultValue="{Type:'DateTimeLabel',Label:'时间显示标签',Name:''}"/>
+  <control type="GUID" label="GUID生成器" defaultValue="{Type:'GUID',Label:'请输入标题',Name:'',Visible:'false'}"/>
+  <control type="Request" label="Url取值器" defaultValue="{Type:'Request',Label:'请输入标题',Name:'',Visible:'false'}"/>
+  <control type="SelectInput" label="多选下拉框" defaultValue="{Type:'SelectInput',Label:'请输入标题',Name:''}"/>
+  <control type="we7.Thumbnail" label="上传图片器" defaultValue="{Type:'We7.Thumbnail',Label:'请输入标题',Name:''}"/>
+  <control type="XMLSelect" label="读Xml下拉框"  defaultValue="{Type:'XMLSelect',Label:'请输入标题',Name:''}"/>
+  <control type="Number" label="数值输入" defaultValue="{Type:'Number',Label:'请输入标题',Name:''}"/>
+  <control type="RelationSelect" label="关联控件" defaultValue="{Type:'RelationSelect',Label:'请输入标题',Name:''}"/>
+	<control type="MultiUploadify" label="批量上传" defaultValue="{Type:'MultiUploadify',Label:'请输入标题',Name:'',Params:[{'Name':'col1','Text':'','Value':''},{'Name':'col2','Text':'','Value':''}]}"/>
+	<control type="Attachment" label="附件上传" defaultValue="{Type:'Attachment',Label:'请输入标题',Name:''}"/>
+  <control type="we7.ChannelSelect" label="栏目控件" defaultValue="{Type:'We7.ChannelSelect',Label:'请输入标题',Name:''}"/>
+  <control type="we7.ThumbnailEx" label="上传图片器(扩展)" defaultValue="{Type:'We7.ThumbnailEx',Label:'请输入标题',Name:''}"/>
+  <control type="CategoryDropdownList" label="类别选择器" defaultValue="{Type:'CategoryDropdownList',Label:'请输入标题',Name:''}"/>
+  <control type="CategoryDoubleCascade" label="类别二级联动" defaultValue="{Type:'CategoryDoubleCascade',Label:'请输入标题',Name:''}"/>
+	<control type="we7.ThreeCascade" label="类别3级联动" defaultValue="{Type:'we7.ThreeCascade',Label:'请输入标题',Name:''}"/>
+	<control type="We7.DepartmentEx" label="部门选择器" defaultValue="{Type:'We7.DepartmentEx',Label:'请输入标题',Name:''}"/>
+  <control type="ChildrenTable" label="子表控件" defaultValue="{Type:'ChildrenTable',Label:'请输入标题',Name:''}"/>
+  <control type="ChildrenTableHorizontal" label="竖向子表控件" defaultValue="{Type:'ChildrenTableHorizontal',Label:'请输入标题',Name:''}"/>
+  <control type="Gov.GovSN" label="部门序列号" defaultValue="{Type:'Gov.GovSN',Label:'请输入标题',Name:''}"/>
+  <control type="We7.IP" label="IP地址" defaultValue="{Type:'We7.IP',Label:'请输入标题',Name:''}"/>  
+</controls>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+
+    <add name="basic_style" src="/Admin/VisualTemplate/Style/VisualDesign.Base.css" type="style"/>
+    <add name="jquery_ui_style" src="/Scripts/jQuery/jQueryUI/css/jquery-ui.css" type="style"/>
+    <add name="jquery" src="/Scripts/jQuery/jquery.js" type="script"/>
+    <add name="jquery_ui" src="/Scripts/jQuery/jQueryUI/jquery-ui.js" type="script"/>
+    <add name="common" src="/Scripts/common.js" type="script"/>
+    <add name="writeCapture" src="/Admin/VisualTemplate/Scripts/writeCapture.js" type="script"/>
+    <add name="visualdesiger" src="/Admin/VisualTemplate/Scripts/jquery.dragsort.js?20110601001" type="script"/>
+    <add name="checkIE" src="/Admin/cgi-bin/CheckBrowser.js" type="script"/>
+ </resource>
+

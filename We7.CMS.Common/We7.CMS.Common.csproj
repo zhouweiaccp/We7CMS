@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.CMS.Common</RootNamespace>
+    <AssemblyName>We7.CMS.Common</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\We7.CMS.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advice.cs" />
+    <Compile Include="AdviceQuery.cs" />
+    <Compile Include="AdviceReply.cs" />
+    <Compile Include="AdviceType.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="ChannelModule.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="Tags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClickRecords.cs" />
+    <Compile Include="MenuItemXml.cs" />
+    <Compile Include="DataControlGroup.cs" />
+    <Compile Include="DataControlInfo.cs" />
+    <Compile Include="Enum\MasterPageMode.cs" />
+    <Compile Include="Enum\ProcessEnding.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="ProcessObject.cs" />
+    <Compile Include="ThreeValueCollection.cs" />
+    <Compile Include="SkinInfo.cs" />
+    <Compile Include="TagsGroup.cs" />
+    <Compile Include="Article.cs" />
+    <Compile Include="DescriptionAttribute.cs" />
+    <Compile Include="Enum\AdviceState.cs" />
+    <Compile Include="JsonResult.cs" />
+    <Compile Include="Processing.cs" />
+    <Compile Include="ProcessHistory.cs" />
+    <Compile Include="ArticleQuery.cs" />
+    <Compile Include="Enum\AdviceParticipateMode.cs" />
+    <Compile Include="Enum\AdviceToWhichDepartment.cs" />
+    <Compile Include="Enum\ArticleAttachment.cs" />
+    <Compile Include="Enum\MailMode.cs" />
+    <Compile Include="FileItem.cs" />
+    <Compile Include="ArticleIndex.cs" />
+    <Compile Include="KeywordGroup.cs" />
+    <Compile Include="RemoteChannel.cs" />
+    <Compile Include="RssChannel.cs" />
+    <Compile Include="RssItem.cs" />
+    <Compile Include="Enum\ArticleStates.cs" />
+    <Compile Include="TemplateVersion.cs" />
+    <Compile Include="Enum\TypeOfArticle.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="CDException.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="Comments.cs" />
+    <Compile Include="PageVisitor.cs" />
+    <Compile Include="ShortMessage.cs" />
+    <Compile Include="DataControl.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="ResourceFile.cs" />
+    <Compile Include="DataControlParameter.cs" />
+    <Compile Include="SiteSetting.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="SystemInformation.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateGroup.cs" />
+    <Compile Include="Enum\TypeOfChannel.cs" />
+    <Compile Include="Enum\ProcessAction.cs" />
+    <Compile Include="Enum\ProcessState.cs" />
+    <Compile Include="Vote.cs" />
+    <Compile Include="VoteAnswer.cs" />
+    <Compile Include="VoteAnswerStat.cs" />
+    <Compile Include="VoteEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

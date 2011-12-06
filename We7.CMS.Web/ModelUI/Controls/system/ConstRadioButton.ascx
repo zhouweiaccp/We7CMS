@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ConstRadioButton.ascx.cs" Inherits="We7.Model.UI.Controls.system.ConstRadionButton" %>
+<asp:RadioButtonList ID="rblEnum" runat="server" ></asp:RadioButtonList>

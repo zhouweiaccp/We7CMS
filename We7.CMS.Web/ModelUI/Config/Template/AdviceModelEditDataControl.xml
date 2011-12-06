@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="反馈录入" dir="UCSystemdotAdviceEdit" group="内容模型" desc="反馈信息录入类控件集合" model="" ctrtype="placeholder">
+
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+   required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="AdviceTypeID" title="反馈模型"  type="KeyValueSelector" description="请选择一个反馈模型。"
+         required="False" maximum="0" minimum="0" length="0" data="advice" />
+</DataControl>

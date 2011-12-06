@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin>
+  <Directory>FullTextSearch</Directory>
+  <Name>站群全文检索插件</Name>
+  <Author>thehim</Author>
+  <Version>V2.6</Version>
+  <Enable>false</Enable>
+  <Compatible>兼容至We7 V2.6+</Compatible>
+  <Summary><![CDATA[
+    站群全文检索子站点搜索，包括参数设置、搜索控件等。
+    ]]></Summary>
+  <Description><![CDATA[
+   站群全文检索子站点搜索，包括参数设置、搜索控件等。
+    ]]></Description>
+  <IsInstalled>true</IsInstalled>
+  <UpdateTime>2010/7/19 0:00:00</UpdateTime>
+  <IsLocal>1</IsLocal>
+</Plugin>

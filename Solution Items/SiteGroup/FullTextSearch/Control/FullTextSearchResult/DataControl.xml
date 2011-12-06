@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="站群搜索结果列表" dir="FullTextSearchResult" desc="站群搜索结果列表控件集合">
+
+  <Parameter name="OnlyThisSite" title="仅搜索本站"  type="Boolean" description="是否仅搜索本站信息"
+       required="False" maximum="0" minimum="0" length="0" />
+  
+  <Parameter name="PageSize" title="每页信息数"  type="Number" description="每页列表数目。必须是整数，0为不限大小。"
+       required="True" maximum="0" minimum="0" length="0" defaultValue="10" />
+  
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  
+</DataControl>

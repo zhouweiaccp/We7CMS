@@ -1,0 +1,1991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://westengine.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://westengine.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://westengine.com/">
+      <s:element name="hello">
+        <s:complexType />
+      </s:element>
+      <s:element name="helloResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="act" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Account">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromSiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartmentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QQ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmailValidate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Home" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PasswordHashed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Overdue" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserModelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelXml" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelConfig" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelSchema" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Point" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Prestige" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Money" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Photo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModelState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birthday" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAccountResult" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistEmailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistUserNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAccont">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAccontResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="act" type="tns:Account" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateAccountResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountResult" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountByLoginNameResult" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountByEmailResult" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="departmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:OwnerRank" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="OwnerRank">
+        <s:restriction base="s:string">
+          <s:enumeration value="Admin" />
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Group" />
+          <s:enumeration value="All" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountList-1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ownerIds" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountList-1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountList-1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountList-4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Criteria" />
+            <s:element minOccurs="0" maxOccurs="1" name="o" type="tns:ArrayOfOrder" />
+            <s:element minOccurs="1" maxOccurs="1" name="begin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Criteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mode" type="tns:CriteriaMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CriteriaType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Criterias" type="tns:ArrayOfCriteria" />
+          <s:element minOccurs="1" maxOccurs="1" name="Adorn" type="tns:Adorns" />
+          <s:element minOccurs="1" maxOccurs="1" name="Start" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CriteriaMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="And" />
+          <s:enumeration value="Or" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CriteriaType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Like" />
+          <s:enumeration value="MoreThan" />
+          <s:enumeration value="MoreThanEquals" />
+          <s:enumeration value="LessThan" />
+          <s:enumeration value="LessThanEquals" />
+          <s:enumeration value="Equals" />
+          <s:enumeration value="NotEquals" />
+          <s:enumeration value="NotLike" />
+          <s:enumeration value="Desc" />
+          <s:enumeration value="Asc" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Criteria" nillable="true" type="tns:Criteria" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Adorns">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Average" />
+          <s:enumeration value="Distinct" />
+          <s:enumeration value="Maximum" />
+          <s:enumeration value="Minimum" />
+          <s:enumeration value="Sum" />
+          <s:enumeration value="Substring" />
+          <s:enumeration value="Total" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Order">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Mode" type="tns:OrderMode" />
+          <s:element minOccurs="0" maxOccurs="1" name="AliasName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Adorn" type="tns:Adorns" />
+          <s:element minOccurs="1" maxOccurs="1" name="Start" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OrderMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Asc" />
+          <s:enumeration value="Desc" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetAccountList-4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountList-4Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountCountByCriteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Criteria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountCountByCriteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAccountCountByCriteriaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAccountCountByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="tns:AccountQuery" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountQuery">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyWord" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartmentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmailValidate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModelState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderKeys" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryAccountCountByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryAccountCountByQueryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAccountsByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="tns:AccountQuery" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAccountsByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAccountsByQueryResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignOut">
+        <s:complexType />
+      </s:element>
+      <s:element name="SignOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignOutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:Account" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:Account" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthenticatedAccount">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAuthenticatedAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthenticatedAccountResult" type="tns:Account" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="tns:Role" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Role">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromSiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RoleType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupRole" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsGroupRole" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddRoleResult" type="tns:Role" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="tns:Role" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRoleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateAccountRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roles" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAccountRolesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AssignAccountRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAccountRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignAccountRoleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleResult" type="tns:Role" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleBytitle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleBytitleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleBytitleResult" type="tns:Role" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:OwnerRank" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRoleCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoles-2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoles-2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoles-2Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoles-2-2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:OwnerRank" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoles-2-2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoles-2-2Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAccountRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAccountRoleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRolesOfAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesOfAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesOfAccountResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountsOfRole-1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountsOfRole-1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountsOfRole-1Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountsOfRole-3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountsOfRole-3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountsOfRole-3Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountCountOfRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountCountOfRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAccountCountOfRoleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dpt" type="tns:Department" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Department">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromSiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Children" type="tns:ArrayOfDepartment" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MapScript" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDepartment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Department" nillable="true" type="tns:Department" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddDepartmentResult" type="tns:Department" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departmentID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDepartmentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dpt" type="tns:Department" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDepartmentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentResult" type="tns:Department" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fields" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDepartments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderDepartmentsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentTreeWithFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentTreeWithFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentTreeWithFormatResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentTree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentTreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentTreeResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="helloSoapIn">
+    <wsdl:part name="parameters" element="tns:hello" />
+  </wsdl:message>
+  <wsdl:message name="helloSoapOut">
+    <wsdl:part name="parameters" element="tns:helloResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistEmail" />
+  </wsdl:message>
+  <wsdl:message name="ExistEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistUserName" />
+  </wsdl:message>
+  <wsdl:message name="ExistUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccontSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAccont" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccontSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAccontResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAccount" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountByEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountList-1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountList-1" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountList-1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountList-1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountList-4SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountList-4" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountList-4SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountList-4Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountCountByCriteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountCountByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountCountByCriteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountCountByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAccountCountByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAccountCountByQuery" />
+  </wsdl:message>
+  <wsdl:message name="QueryAccountCountByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAccountCountByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAccountsByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAccountsByQuery" />
+  </wsdl:message>
+  <wsdl:message name="QueryAccountsByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAccountsByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignOutSoapIn">
+    <wsdl:part name="parameters" element="tns:SignOut" />
+  </wsdl:message>
+  <wsdl:message name="SignOutSoapOut">
+    <wsdl:part name="parameters" element="tns:SignOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidPassword" />
+  </wsdl:message>
+  <wsdl:message name="IsValidPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticatedAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthenticatedAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticatedAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthenticatedAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="AddRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAccountRoles" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAccountRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignAccountRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignAccountRole" />
+  </wsdl:message>
+  <wsdl:message name="AssignAccountRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignAccountRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRole" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleBytitleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoleBytitle" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleBytitleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleBytitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoleCount" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoles-2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoles-2" />
+  </wsdl:message>
+  <wsdl:message name="GetRoles-2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoles-2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetRoles-2-2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoles-2-2" />
+  </wsdl:message>
+  <wsdl:message name="GetRoles-2-2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoles-2-2Response" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccountRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAccountRole" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAccountRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAccountRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesOfAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRolesOfAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesOfAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesOfAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsOfRole-1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountsOfRole-1" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsOfRole-1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountsOfRole-1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsOfRole-3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountsOfRole-3" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsOfRole-3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountsOfRole-3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountCountOfRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountCountOfRole" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountCountOfRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountCountOfRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDepartment" />
+  </wsdl:message>
+  <wsdl:message name="AddDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDepartment" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDepartment" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartment" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartments" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderDepartments" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentTreeWithFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentTreeWithFormat" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentTreeWithFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentTreeWithFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentTreeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentTree" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentTreeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentTreeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountWebServiceSoap">
+    <wsdl:operation name="hello">
+      <wsdl:input message="tns:helloSoapIn" />
+      <wsdl:output message="tns:helloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input message="tns:AddAccountSoapIn" />
+      <wsdl:output message="tns:AddAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistEmail">
+      <wsdl:input message="tns:ExistEmailSoapIn" />
+      <wsdl:output message="tns:ExistEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistUserName">
+      <wsdl:input message="tns:ExistUserNameSoapIn" />
+      <wsdl:output message="tns:ExistUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccont">
+      <wsdl:input message="tns:DeleteAccontSoapIn" />
+      <wsdl:output message="tns:DeleteAccontSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <wsdl:input message="tns:UpdateAccountSoapIn" />
+      <wsdl:output message="tns:UpdateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <wsdl:input message="tns:GetAccountSoapIn" />
+      <wsdl:output message="tns:GetAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByLoginName">
+      <wsdl:input message="tns:GetAccountByLoginNameSoapIn" />
+      <wsdl:output message="tns:GetAccountByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByEmail">
+      <wsdl:input message="tns:GetAccountByEmailSoapIn" />
+      <wsdl:output message="tns:GetAccountByEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <wsdl:input message="tns:GetAccountsSoapIn" />
+      <wsdl:output message="tns:GetAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <wsdl:input name="GetAccountList-1" message="tns:GetAccountList-1SoapIn" />
+      <wsdl:output name="GetAccountList-1" message="tns:GetAccountList-1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <wsdl:input name="GetAccountList-4" message="tns:GetAccountList-4SoapIn" />
+      <wsdl:output name="GetAccountList-4" message="tns:GetAccountList-4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountByCriteria">
+      <wsdl:input message="tns:GetAccountCountByCriteriaSoapIn" />
+      <wsdl:output message="tns:GetAccountCountByCriteriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountCountByQuery">
+      <wsdl:input message="tns:QueryAccountCountByQuerySoapIn" />
+      <wsdl:output message="tns:QueryAccountCountByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountsByQuery">
+      <wsdl:input message="tns:QueryAccountsByQuerySoapIn" />
+      <wsdl:output message="tns:QueryAccountsByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <wsdl:input message="tns:SignOutSoapIn" />
+      <wsdl:output message="tns:SignOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPassword">
+      <wsdl:input message="tns:IsValidPasswordSoapIn" />
+      <wsdl:output message="tns:IsValidPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordSoapIn" />
+      <wsdl:output message="tns:UpdatePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticatedAccount">
+      <wsdl:input message="tns:GetAuthenticatedAccountSoapIn" />
+      <wsdl:output message="tns:GetAuthenticatedAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input message="tns:AddRoleSoapIn" />
+      <wsdl:output message="tns:AddRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input message="tns:DeleteRoleSoapIn" />
+      <wsdl:output message="tns:DeleteRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input message="tns:UpdateRoleSoapIn" />
+      <wsdl:output message="tns:UpdateRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountRoles">
+      <wsdl:input message="tns:UpdateAccountRolesSoapIn" />
+      <wsdl:output message="tns:UpdateAccountRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignAccountRole">
+      <wsdl:input message="tns:AssignAccountRoleSoapIn" />
+      <wsdl:output message="tns:AssignAccountRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <wsdl:input message="tns:GetRoleSoapIn" />
+      <wsdl:output message="tns:GetRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleBytitle">
+      <wsdl:input message="tns:GetRoleBytitleSoapIn" />
+      <wsdl:output message="tns:GetRoleBytitleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCount">
+      <wsdl:input message="tns:GetRoleCountSoapIn" />
+      <wsdl:output message="tns:GetRoleCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input name="GetRoles-2" message="tns:GetRoles-2SoapIn" />
+      <wsdl:output name="GetRoles-2" message="tns:GetRoles-2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input name="GetRoles-2-2" message="tns:GetRoles-2-2SoapIn" />
+      <wsdl:output name="GetRoles-2-2" message="tns:GetRoles-2-2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccountRole">
+      <wsdl:input message="tns:DeleteAccountRoleSoapIn" />
+      <wsdl:output message="tns:DeleteAccountRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfAccount">
+      <wsdl:input message="tns:GetRolesOfAccountSoapIn" />
+      <wsdl:output message="tns:GetRolesOfAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <wsdl:input name="GetAccountsOfRole-1" message="tns:GetAccountsOfRole-1SoapIn" />
+      <wsdl:output name="GetAccountsOfRole-1" message="tns:GetAccountsOfRole-1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <wsdl:input name="GetAccountsOfRole-3" message="tns:GetAccountsOfRole-3SoapIn" />
+      <wsdl:output name="GetAccountsOfRole-3" message="tns:GetAccountsOfRole-3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountOfRole">
+      <wsdl:input message="tns:GetAccountCountOfRoleSoapIn" />
+      <wsdl:output message="tns:GetAccountCountOfRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDepartment">
+      <wsdl:input message="tns:AddDepartmentSoapIn" />
+      <wsdl:output message="tns:AddDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDepartment">
+      <wsdl:input message="tns:DeleteDepartmentSoapIn" />
+      <wsdl:output message="tns:DeleteDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepartment">
+      <wsdl:input message="tns:UpdateDepartmentSoapIn" />
+      <wsdl:output message="tns:UpdateDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <wsdl:input message="tns:GetDepartmentSoapIn" />
+      <wsdl:output message="tns:GetDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <wsdl:input message="tns:GetDepartmentsSoapIn" />
+      <wsdl:output message="tns:GetDepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDepartments">
+      <wsdl:input message="tns:GetOrderDepartmentsSoapIn" />
+      <wsdl:output message="tns:GetOrderDepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTreeWithFormat">
+      <wsdl:input message="tns:GetDepartmentTreeWithFormatSoapIn" />
+      <wsdl:output message="tns:GetDepartmentTreeWithFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTree">
+      <wsdl:input message="tns:GetDepartmentTreeSoapIn" />
+      <wsdl:output message="tns:GetDepartmentTreeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountWebServiceSoap" type="tns:AccountWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="hello">
+      <soap:operation soapAction="http://westengine.com/hello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://westengine.com/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistEmail">
+      <soap:operation soapAction="http://westengine.com/ExistEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistUserName">
+      <soap:operation soapAction="http://westengine.com/ExistUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccont">
+      <soap:operation soapAction="http://westengine.com/DeleteAccont" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <soap:operation soapAction="http://westengine.com/UpdateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap:operation soapAction="http://westengine.com/GetAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByLoginName">
+      <soap:operation soapAction="http://westengine.com/GetAccountByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByEmail">
+      <soap:operation soapAction="http://westengine.com/GetAccountByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <soap:operation soapAction="http://westengine.com/GetAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <soap:operation soapAction="http://westengine.com/GetAccountList-1" style="document" />
+      <wsdl:input name="GetAccountList-1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountList-1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <soap:operation soapAction="http://westengine.com/GetAccountList-4" style="document" />
+      <wsdl:input name="GetAccountList-4">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountList-4">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountByCriteria">
+      <soap:operation soapAction="http://westengine.com/GetAccountCountByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountCountByQuery">
+      <soap:operation soapAction="http://westengine.com/QueryAccountCountByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountsByQuery">
+      <soap:operation soapAction="http://westengine.com/QueryAccountsByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://westengine.com/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <soap:operation soapAction="http://westengine.com/SignOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPassword">
+      <soap:operation soapAction="http://westengine.com/IsValidPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://westengine.com/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticatedAccount">
+      <soap:operation soapAction="http://westengine.com/GetAuthenticatedAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap:operation soapAction="http://westengine.com/AddRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://westengine.com/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://westengine.com/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountRoles">
+      <soap:operation soapAction="http://westengine.com/UpdateAccountRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAccountRole">
+      <soap:operation soapAction="http://westengine.com/AssignAccountRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <soap:operation soapAction="http://westengine.com/GetRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleBytitle">
+      <soap:operation soapAction="http://westengine.com/GetRoleBytitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCount">
+      <soap:operation soapAction="http://westengine.com/GetRoleCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://westengine.com/GetRoles-2" style="document" />
+      <wsdl:input name="GetRoles-2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRoles-2">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://westengine.com/GetRoles-2-2" style="document" />
+      <wsdl:input name="GetRoles-2-2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRoles-2-2">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccountRole">
+      <soap:operation soapAction="http://westengine.com/DeleteAccountRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfAccount">
+      <soap:operation soapAction="http://westengine.com/GetRolesOfAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <soap:operation soapAction="http://westengine.com/GetAccountsOfRole-1" style="document" />
+      <wsdl:input name="GetAccountsOfRole-1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountsOfRole-1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <soap:operation soapAction="http://westengine.com/GetAccountsOfRole-3" style="document" />
+      <wsdl:input name="GetAccountsOfRole-3">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountsOfRole-3">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountOfRole">
+      <soap:operation soapAction="http://westengine.com/GetAccountCountOfRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDepartment">
+      <soap:operation soapAction="http://westengine.com/AddDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDepartment">
+      <soap:operation soapAction="http://westengine.com/DeleteDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepartment">
+      <soap:operation soapAction="http://westengine.com/UpdateDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap:operation soapAction="http://westengine.com/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <soap:operation soapAction="http://westengine.com/GetDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDepartments">
+      <soap:operation soapAction="http://westengine.com/GetOrderDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTreeWithFormat">
+      <soap:operation soapAction="http://westengine.com/GetDepartmentTreeWithFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTree">
+      <soap:operation soapAction="http://westengine.com/GetDepartmentTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountWebServiceSoap12" type="tns:AccountWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="hello">
+      <soap12:operation soapAction="http://westengine.com/hello" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap12:operation soapAction="http://westengine.com/AddAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistEmail">
+      <soap12:operation soapAction="http://westengine.com/ExistEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistUserName">
+      <soap12:operation soapAction="http://westengine.com/ExistUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccont">
+      <soap12:operation soapAction="http://westengine.com/DeleteAccont" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <soap12:operation soapAction="http://westengine.com/UpdateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap12:operation soapAction="http://westengine.com/GetAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByLoginName">
+      <soap12:operation soapAction="http://westengine.com/GetAccountByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByEmail">
+      <soap12:operation soapAction="http://westengine.com/GetAccountByEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <soap12:operation soapAction="http://westengine.com/GetAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <soap12:operation soapAction="http://westengine.com/GetAccountList-1" style="document" />
+      <wsdl:input name="GetAccountList-1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountList-1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountList">
+      <soap12:operation soapAction="http://westengine.com/GetAccountList-4" style="document" />
+      <wsdl:input name="GetAccountList-4">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountList-4">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountByCriteria">
+      <soap12:operation soapAction="http://westengine.com/GetAccountCountByCriteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountCountByQuery">
+      <soap12:operation soapAction="http://westengine.com/QueryAccountCountByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAccountsByQuery">
+      <soap12:operation soapAction="http://westengine.com/QueryAccountsByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://westengine.com/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <soap12:operation soapAction="http://westengine.com/SignOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPassword">
+      <soap12:operation soapAction="http://westengine.com/IsValidPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap12:operation soapAction="http://westengine.com/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticatedAccount">
+      <soap12:operation soapAction="http://westengine.com/GetAuthenticatedAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap12:operation soapAction="http://westengine.com/AddRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap12:operation soapAction="http://westengine.com/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap12:operation soapAction="http://westengine.com/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountRoles">
+      <soap12:operation soapAction="http://westengine.com/UpdateAccountRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAccountRole">
+      <soap12:operation soapAction="http://westengine.com/AssignAccountRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <soap12:operation soapAction="http://westengine.com/GetRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleBytitle">
+      <soap12:operation soapAction="http://westengine.com/GetRoleBytitle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleCount">
+      <soap12:operation soapAction="http://westengine.com/GetRoleCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap12:operation soapAction="http://westengine.com/GetRoles-2" style="document" />
+      <wsdl:input name="GetRoles-2">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRoles-2">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap12:operation soapAction="http://westengine.com/GetRoles-2-2" style="document" />
+      <wsdl:input name="GetRoles-2-2">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRoles-2-2">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccountRole">
+      <soap12:operation soapAction="http://westengine.com/DeleteAccountRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfAccount">
+      <soap12:operation soapAction="http://westengine.com/GetRolesOfAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <soap12:operation soapAction="http://westengine.com/GetAccountsOfRole-1" style="document" />
+      <wsdl:input name="GetAccountsOfRole-1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountsOfRole-1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsOfRole">
+      <soap12:operation soapAction="http://westengine.com/GetAccountsOfRole-3" style="document" />
+      <wsdl:input name="GetAccountsOfRole-3">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountsOfRole-3">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCountOfRole">
+      <soap12:operation soapAction="http://westengine.com/GetAccountCountOfRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDepartment">
+      <soap12:operation soapAction="http://westengine.com/AddDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDepartment">
+      <soap12:operation soapAction="http://westengine.com/DeleteDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepartment">
+      <soap12:operation soapAction="http://westengine.com/UpdateDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap12:operation soapAction="http://westengine.com/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <soap12:operation soapAction="http://westengine.com/GetDepartments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDepartments">
+      <soap12:operation soapAction="http://westengine.com/GetOrderDepartments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTreeWithFormat">
+      <soap12:operation soapAction="http://westengine.com/GetDepartmentTreeWithFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentTree">
+      <soap12:operation soapAction="http://westengine.com/GetDepartmentTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountWebService">
+    <wsdl:port name="AccountWebServiceSoap" binding="tns:AccountWebServiceSoap">
+      <soap:address location="http://localhost:2600/Install/AccountWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountWebServiceSoap12" binding="tns:AccountWebServiceSoap12">
+      <soap12:address location="http://localhost:2600/Install/AccountWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

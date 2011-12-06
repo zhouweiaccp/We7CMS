@@ -1,0 +1,14 @@
+﻿#set ($pre='###')
+<!--${pre} name="$model.Label列表(自动布局)" type="system" version="1.0" created="$CurrentDate" desc="$model.Desc列表控件自动生成布局" author="We7 Group" ${pre}-->
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.CMS.WebControls.ArticleModelProvider" %>
+<div css="$model.ModelName.Replace(".","_")_<%=CssClass%>">
+<% for(int i=0;i<Items.Count;i++){ %>
+<p>·<a href="<%=Items[i].LinkUrl %>" target="_blank">
+#foreach($item in $columns)
+   <%=Items[i]["$item.Name"] %>&nbsp;
+#end
+<%=Items[i].TimeNote %>
+</a>
+</p>
+<%}%>
+</div>

@@ -1,0 +1,52 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:Footer.Default
+ * Style:Footer_Default
+ * Desc::
+ * Quot:
+*************************************************************/
+/*******网站底部定义开始*******/
+.Footer_Default #footer {
+	height:115px;
+	border-top:2px solid #1d87be;
+	background:#f7f7f7;
+	margin-top:10px;
+}
+.Footer_Default .service {
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	color:#444;
+}
+.Footer_Default .service a {
+	color:#444;
+}
+.Footer_Default .service a:hover {
+	color:#cc0000;
+}
+.Footer_Default .copyright {
+	text-align:center;
+	line-height:180%;
+	padding-top:10px;
+	font-family: Arial;
+	color:#444;
+}
+/*********版权信息页与关于我们页面样式定义**********/
+.Footer_Default .copyright_list h1 {
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+}
+.Footer_Default .copyright_list p {
+	line-height:170%;
+	font-size:14px;
+	color:#333;
+}
+/*************************************************************
+ * Command:End
+ * Control:Footer.Default
+ * Style:Footer_Default
+ * Desc::
+ * Quot:
+*************************************************************/

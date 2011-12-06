@@ -1,0 +1,95 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:PictureArticleList.Default
+ * Style:PictureArticleList_Default
+ * Desc::
+ * Quot:
+*************************************************************/
+/**************各节点首页下方推荐图文开始****************/
+.PictureArticleList_Default .pic_article h3
+{
+    height: 33px;
+    line-height: 33px;
+    background: url(../images/back4.gif) no-repeat;
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+.PictureArticleList_Default .pic_article h3 img {
+    padding-left:680px;
+    top: 10px;
+}
+.PictureArticleList_Default .pic_article ul
+{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 8px;
+    height: auto !important;
+    min-height: 100px;
+    height: 100px;
+    clear: both;
+    background: url(../images/area_back.gif) repeat-x left top;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+.PictureArticleList_Default .pic_article li
+{
+    width: 24%;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.PictureArticleList_Default .pic_article li a
+{
+    color: #333;
+}
+.PictureArticleList_Default .pic_article li a:hover
+{
+    color: #cc0000;
+}
+.PictureArticleList_Default .pic_article li img
+{
+    width: 150px;
+    height: 113px;
+    padding: 2px;
+    border: 1px solid #d3d8dc;
+    background: #ebf0f4;
+    overflow: hidden;
+}
+.PictureArticleList_Default .pic_article li span
+{
+    display: block;
+    line-height: 19px;
+    padding: 0px 10px;
+}
+.PictureArticleList_Default .mtop10
+{
+    margin-top: 10px;
+}
+.PictureArticleList_Default .underline_left
+{
+    height: 7px;
+    line-height: 7px;
+    font-size: 0px;
+    background: url(../images/back.gif) no-repeat left -269px;
+}
+.PictureArticleList_Default .clear
+{
+    clear: both;
+}
+.PictureArticleList_Default .clear:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*************************************************************
+ * Command:End
+ * Control:PictureArticleList.Default
+ * Style:PictureArticleList_Default
+ * Desc::
+ * Quot:
+*************************************************************/

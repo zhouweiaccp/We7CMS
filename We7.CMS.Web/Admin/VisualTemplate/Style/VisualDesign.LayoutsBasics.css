@@ -1,0 +1,56 @@
+/* Layouts Basics */
+.sf_cols
+{
+    width: 100%;
+    _width: auto;
+    margin: 0;
+    padding: 0;
+}
+/* clearfix */
+.sf_cols
+{
+    clear: both;
+    _clear: none;
+    *clear: none;
+}
+.sf_cols:after
+{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.sf_cols
+{
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .sf_cols
+{
+    height: 1%;
+}
+* html .sf_cols
+{
+    display: block;
+}
+* html .sf_cols .sf_colsOut
+{
+    display: inline;
+}
+.sf_colsOut + .sf_colsOut
+{
+	*margin-left: -1px !important;
+}
+.sf_colsIn 
+{
+	min-height:1px;
+}
+/* Temporary public site wrapper */
+/*.sfPublicWrapper
+{
+	margin: 20px auto;
+	padding: 0;
+	width: 900px;
+}
+*/

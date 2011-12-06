@@ -1,0 +1,72 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ArticleList.SideList
+ * Style:ArticleList_SideList
+ * Desc::ArticleList.SideList部件的样式
+ * Quot:
+*************************************************************/
+.ArticleList_SideList .notice h3{
+    height:32px;
+	line-height:32px;
+	background:url(../images/back.gif) no-repeat left top;
+	font-size:12px;
+	color:#000;
+	padding-left:28px;
+	font-size:12px;
+}
+.ArticleList_SideList .notice h3 img {margin-top:10px;float:right;padding-right:5px;}
+.ArticleList_SideList .notice ul{
+    padding:4px 8px 0px 12px;
+	border-left:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-bottom:1px solid #dddddd;
+}
+.ArticleList_SideList .notice ul {
+	height:auto!important;
+}
+.ArticleList_SideList .notice li a{
+	color:#313534;
+}
+.ArticleList_SideList .notice li a:hover{
+    color:#cc0000;
+}
+.ArticleList_SideList .underline {
+	height:6px;
+	line-height:6px;
+	font-size:0px;
+	background:url(../images/back.gif) no-repeat -141px -66px;
+}
+.ArticleList_SideList .notice li{
+	height:24px;
+	line-height:24px;
+	padding-left:10px;
+	background:url(../images/icon1.gif) no-repeat left center;
+}
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.SideList
+ * Style:ArticleList_SideList
+ * Desc::ArticleList.SideList部件的样式
+ * Quot:
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ArticleList.SideList
+ * Style:ForTest
+ * Desc:目前没有
+ * Quot:test
+*************************************************************/
+.ForTest { font-size:36px; background:url(/_skins/test/images/62037b5ajw1dgci71319lg.gif)}
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ArticleList.SideList
+ * Style:ForTest
+ * Desc:目前没有
+ * Quot:test
+*************************************************************/

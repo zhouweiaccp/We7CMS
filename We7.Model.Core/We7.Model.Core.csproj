@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1EC274E4-3A87-4065-A5B3-3275221FB187}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>We7.Model.Core</RootNamespace>
+    <AssemblyName>We7.Model.Core</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\We7.Model.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.0.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.61.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CancelPublishCommand.cs" />
+    <Compile Include="Command\CancelTopCommand.cs" />
+    <Compile Include="Command\CompositeCommand.cs" />
+    <Compile Include="Command\DeleteCommand.cs" />
+    <Compile Include="Command\DeleteSelected.cs" />
+    <Compile Include="Command\EditCommand.cs" />
+    <Compile Include="Command\GetCommand.cs" />
+    <Compile Include="Command\InsertCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\QueryCommand.cs" />
+    <Compile Include="Command\RefreshCommand.cs" />
+    <Compile Include="Command\SetPublisCommand.cs" />
+    <Compile Include="Command\SetTopCommand.cs" />
+    <Compile Include="Config\ModelConfig.cs" />
+    <Compile Include="Config\ModelConfigFileManager.cs" />
+    <Compile Include="Config\ModelConfigInfo.cs" />
+    <Compile Include="Data\AccessSQLBuilder.cs" />
+    <Compile Include="Data\CompositeProvider.cs" />
+    <Compile Include="Data\DataBaseHelper.cs" />
+    <Compile Include="Data\DbProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\IDbProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ISQLBuilder.cs" />
+    <Compile Include="Data\MSSqlServerSQLBuilder.cs" />
+    <Compile Include="Data\MySqlSQLBuilder.cs" />
+    <Compile Include="Data\OracleSQLBuilder.cs" />
+    <Compile Include="Data\SQLDbProvider.cs" />
+    <Compile Include="Data\SQLLiteSQLBuilder.cs.cs" />
+    <Compile Include="Data\ThinkmentDriver\BaseHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\CountHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\DeleteHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\InsertHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\ListSelectHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\ModelDBHelper.cs" />
+    <Compile Include="Data\ThinkmentDriver\OperateHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\SelectHandle.cs" />
+    <Compile Include="Data\ThinkmentDriver\UpdateHandle.cs" />
+    <Compile Include="Data\ThinkmentProvider.cs" />
+    <Compile Include="Entity\ColumnInfo.cs" />
+    <Compile Include="Entity\CommonType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\ContentModel.cs" />
+    <Compile Include="Entity\ContentModelCollection.cs" />
+    <Compile Include="Entity\DbProviderInfo.cs" />
+    <Compile Include="Entity\DefaultModel.cs" />
+    <Compile Include="Entity\ModelGroup.cs" />
+    <Compile Include="Entity\We7Control.cs" />
+    <Compile Include="Entity\ListResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\ModelEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\PanelContext.cs" />
+    <Compile Include="Entity\We7DataColumn.cs" />
+    <Compile Include="Entity\DataField.cs" />
+    <Compile Include="Entity\We7DataTable.cs" />
+    <Compile Include="Entity\ContainerInfo.cs" />
+    <Compile Include="Entity\Group.cs" />
+    <Compile Include="Entity\Layout.cs" />
+    <Compile Include="Entity\ModelInfo.cs" />
+    <Compile Include="Entity\We7DataSet.cs" />
+    <Compile Include="Entity\Panel.cs" />
+    <Compile Include="Entity\Param.cs" />
+    <Compile Include="Converter\GetEntityValue.cs" />
+    <Compile Include="Converter\IConvert.cs" />
+    <Compile Include="ListControl\ActionField.cs" />
+    <Compile Include="ListControl\DictionaryConvert.cs" />
+    <Compile Include="ListControl\HtmlField.cs" />
+    <Compile Include="ListControl\HyperLinkField.cs" />
+    <Compile Include="ListControl\IUxConvert.cs" />
+    <Compile Include="ListControl\UxField.cs" />
+    <Compile Include="ListControl\ThumbField.cs" />
+    <Compile Include="ModelHelper.cs" />
+    <Compile Include="ModelHelper.Ext.cs" />
+    <Compile Include="ModelHelper.ModelConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AdviceEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AutoEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CommandContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ConditionContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DefaultGenerator.cs" />
+    <Compile Include="UI\EditorContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\LayoutEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FieldControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\IModelContainer.cs" />
+    <Compile Include="UI\ListContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ModelContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\ModelControlField.cs" />
+    <Compile Include="UI\ModelHandlerPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ModelPanel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PagerContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\UIHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\ViewerContainer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
+      <Project>{BCC9B8D4-ECDD-4840-A969-5AB4AEBB53D8}</Project>
+      <Name>We7.CMS.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Common\We7.CMS.Common.csproj">
+      <Project>{F52AB87F-2FE3-4C48-9AC6-9A79858E8C77}</Project>
+      <Name>We7.CMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.CMS.Config\We7.CMS.Config.csproj">
+      <Project>{8CE6C021-5D92-4E46-A312-6E9C97E94635}</Project>
+      <Name>We7.CMS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Framework\We7.Framework.csproj">
+      <Project>{BB57CB40-B217-415E-8B6D-2BEEDEE19354}</Project>
+      <Name>We7.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\We7.Share\Thinkment.Data\Thinkment.Data.csproj">
+      <Project>{A665A5A2-2477-4B95-993D-F1772F91089D}</Project>
+      <Name>Thinkment.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

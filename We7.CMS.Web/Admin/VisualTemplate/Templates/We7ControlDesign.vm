@@ -1,0 +1,26 @@
+﻿<div style="width: 100%;" controlid="${controlId}" id="${controlId}_widget"
+    class="RadDock  zeControlDock">
+  <div class="RadDock-header">
+    <em>${controlName}</em>
+    <div class="RadDock-command">
+      <a href="javascript:EditWidget('${controlId}')">属性</a>
+      <a href="javascript:showappearance('${controlId}');">切换为..</a>
+      <a  style="display:none;" href="javascript:showwarp('${controlId}');">风格</a>
+      <a href="javascript:DeleteWidget('${controlId}');">删除</a>
+      <a href="javascript:EditWidgetCode('${controlId}');">编辑</a>
+      <a id="${controlId}_copy" href="javascript:CopyParamenter('${controlId}');">复制外观</a>
+      <a id="${controlId}_paste" class="widgetpaste"></a>
+     
+    </div>
+  </div>
+  <div class="RadDock-content">
+    ${controlContent}
+  </div>
+  <div class="RadDock-app" id="${controlId}_app">
+    <ul class="">
+
+    </ul>
+  </div>
+  <input type="hidden" name="${controlId}_ClientState" id="${controlId}_ClientState"
+      autocomplete="off" value='${controlData}'/>
+</div>

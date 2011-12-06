@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataControl name="反馈详细" dir="AdviceView" desc="详细详细" model="" group="内容模型" ctrtype="text">
+  <Parameter name="CssClass" title="样式"  type="StyleSelector" description="每一种样式对应css文件中的相应名称"
+     required="False" maximum="0" minimum="0" length="0" />
+  <Parameter name="AdviceTypeID" title="反馈模型"  type="KeyValueSelector" description="请选择一个反馈模型。"
+       required="False" maximum="0" minimum="0" length="0" data="advice" />
+</DataControl>

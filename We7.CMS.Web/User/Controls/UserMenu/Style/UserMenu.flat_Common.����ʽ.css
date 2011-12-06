@@ -1,0 +1,46 @@
+﻿/*****************************************************************
+ * 菜单控件风格
+ * 名称：flat_common
+ * 风格：横菜单样式，大块灰、红背景图片效果 
+ ******************************************************************/
+
+{WE:STYLE} 
+{
+	width:324px;
+}
+{WE:STYLE} ul {
+    display: inline;
+    list-style:none;
+}
+
+{WE:STYLE} li {
+	padding-top:3px;
+    font-size:14px;
+    display:block;
+    float: left;
+    border-left: solid 1px #fff;
+    text-align:center;
+    line-height:27px;
+}
+
+{WE:STYLE} li a {
+	width:80px;
+    color:#666;
+    text-decoration:none;
+    display:block;
+	font-weight:bold;
+	background-image:url(../We7Controls/ChannelMenu/Page/images/greybackground.JPG);
+ }
+ 
+{WE:STYLE} a:hover,
+{WE:STYLE} li .active,
+{WE:STYLE} a.active:link,
+{WE:STYLE} a.active:visited
+{
+	background-image:url(../We7Controls/ChannelMenu/Page/images/redbackground.JPG);
+    font-weight:bold;
+	display:block;
+	color:#fff;
+	width:80px;
+}
+

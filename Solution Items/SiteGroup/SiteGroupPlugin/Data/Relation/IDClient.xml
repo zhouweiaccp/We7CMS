@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Database	name="WebEngine2007.ID.Client" >
+    <Object type="WebEngine2007.ID.Client.ShareData, WebEngine2007.ID.Client"
+     table="ShareData" primaryKey="ID" identity="">
+      <Property name="ID" field="ID" size="50" type="String" nullable="false"/>
+      <Property name="Title" field="Title" size="128" type="String"/>
+      <Property name="FromChannelID" field="FromChannelID" size="50" type="String"/>
+      <Property name="FromAccountID" field="FromAccountID" size="50" type="String"/>
+      <Property name="FromSiteUrl" field="FromSiteUrl" size="128" type="String"/>
+      <Property name="FromRowID" field="FromRowID" size="50" type="String"/>
+      <Property name="EntryType" field="EntryType" size="128" type="String"/>
+      <Property name="EntryAssembly" field="EntryAssembly" size="128" type="String"/>
+      <Property name="SharingData" field="SharingData" size="65535" type="String"/>
+      <Property name="AttachData" field="AttachData" size="65535" type="String"/>
+      <Property name="Created" field="Created" size="4" type="DateTime"/>
+      <Property name="Updated" field="Updated" size="4" type="DateTime"/>
+      <Property name="Overdue" field="Overdue" size="4" type="DateTime" />
+      <Property name="EnumState" field="EnumState" size="50" type="String"/>
+      <Property name="BillID" field="BillID" size="50" type="String" />
+    </Object>
+    <Object type="WebEngine2007.ID.Client.DeliveryBill, WebEngine2007.ID.Client"
+      table="DeliveryBill" primaryKey="ID" identity="">
+      <Property name="ID" field="ID" size="50" type="String" nullable="false"/>
+      <Property name="BillID" field="BillID" size="50" type="String" />
+      <Property name="Title" field="Title" size="128" type="String"/>
+      <Property name="FromSiteID" field="FromSiteID" size="50" type="String" />
+      <Property name="FromSiteName" field="FromSiteName" size="128" type="String" />
+      <Property name="FromSiteUrl" field="FromSiteUrl" size="128" type="String"/>
+      <Property name="FromChannelID" field="FromChannelID" size="50" type="String" />
+      <Property name="FromChannelName" field="FromChannelName" size="128" type="String" />
+      <Property name="ToSiteID" field="ToSiteID" size="50" type="String" />
+      <Property name="ToSiteName" field="ToSiteName" size="128" type="String" />
+      <Property name="ToSiteUrl" field="ToSiteUrl" size="128" type="String"/>
+      <Property name="ToChannelID" field="ToChannelID" size="50" type="String" />
+      <Property name="ToChannelName" field="ToChannelName" size="128" type="String" />
+      <Property name="Created" field="Created" size="4" type="DateTime"/>
+      <Property name="Updated" field="Updated" size="4" type="DateTime"/>
+      <Property name="Overdue" field="Overdue" size="4" type="DateTime" />
+      <Property name="EnumState" field="EnumState" size="50" type="String" />
+      <Property name="ChannelPartnershipID" field="ChannelPartnershipID" size="50" type="String" />
+    </Object>
+  </Database>
+</Objects>

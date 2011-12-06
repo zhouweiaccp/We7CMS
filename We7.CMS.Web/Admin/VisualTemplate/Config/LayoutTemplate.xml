@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<TemplateList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="系统">
+  <Templates>
+    <Template name="空模板" icon="/Admin/VisualTemplate/images/LayoutTempalte/PageTemplates.NoTemplate.gif" file="~/Admin/VisualTemplate/LayoutTemplate/NoTemplate.ascx"></Template>
+    <Template name="空模板(宽度：960、居中,可变更)" icon="/Admin/VisualTemplate/images/LayoutTempalte/PageTemplates.NoTemplateW.gif" file="~/Admin/VisualTemplate/LayoutTemplate/NoTemplateW.ascx"></Template>
+    <Template name="三行模板" icon="/Admin/VisualTemplate/images/LayoutTempalte/PageTemplates.1ColumnHeaderFooter.gif" file="~/Admin/VisualTemplate/LayoutTemplate/1ColumnHeaderFooter.ascx"></Template>
+    <Template name="三行模板(宽度：960、居中,可变更)" icon="/Admin/VisualTemplate/images/LayoutTempalte/PageTemplates.1ColumnHeaderFooterW.gif" file="~/Admin/VisualTemplate/LayoutTemplate/1ColumnHeaderFooterW.ascx"></Template>
+
+  </Templates>
+</TemplateList>

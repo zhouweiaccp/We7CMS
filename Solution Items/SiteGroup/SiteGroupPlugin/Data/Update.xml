@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Update>
+  <Database db='We7.CMS' >
+    <!--*******************DeliveryBill表中添加的字段**********************-->
+    <Sql>
+      alter table [DeliveryBill] add [BillID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [Title] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [FromSiteID] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [FromSiteName] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [FromSiteUrl] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [FromChannelID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [FromChannelName] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ToSiteID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ToSiteName] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ToSiteUrl] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ToChannelID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ToChannelName] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [Overdue] datetime
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [EnumState] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [DeliveryBill] add [ChannelPartnershipID] nvarchar(50)
+    </Sql>
+
+    <!--*******************ShareData表中添加的字段**********************-->
+    <Sql>
+      alter table [ShareData] add [BillID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [Title] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [FromChannelID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [FromAccountID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [FromSiteUrl] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [FromRowID] nvarchar(50)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [EntryType] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [EntryAssembly] nvarchar(128)
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [SharingData] text
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [AttachData] text
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [Created] datetime
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [Updated] datetime
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [Overdue] datetime
+    </Sql>
+    <Sql>
+      alter table [ShareData] add [EnumState] nvarchar(50)
+    </Sql>
+
+  </Database>
+</Update>

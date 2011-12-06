@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="UTF-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <title fcklang="DlgSyntaxHighLighterProperty">语法高亮代码属性</title>
+    <script language="javascript" type="text/javascript">
+        var oEditor = window.parent.InnerDialogLoaded();
+        var FCKBrowserInfo = oEditor.FCKBrowserInfo;
+        var FCKLang = oEditor.FCKLang;
+        var FCKHighLighter = oEditor.FCKHighLighter;
+
+        var usingTag = "div";
+        var usingFlag = "SyntaxHighlighter";
+
+        //var SCRIPT_PATH	  = FCKConfig.PluginsPath + "SyntaxHighlighter/js/";
+        //var SCRIPT_PATH	  = document.location.protocol+'//'+document.location.host+"/js/code/";
+        var SCRIPT_PATH = "/Admin/fckeditor/js/";
+        var PREFIX = "shBrush";
+        var POSTFIX = ".js";
+        var TypeMapper = {
+            "php": PREFIX + "Php" + POSTFIX,
+            "javascript": PREFIX + "JScript" + POSTFIX,
+            "java": PREFIX + "Java" + POSTFIX,
+            "xml": PREFIX + "Xml" + POSTFIX,
+            "html": PREFIX + "Xml" + POSTFIX,
+            "c++": PREFIX + "Cpp" + POSTFIX,
+            "c#": PREFIX + "CSharp" + POSTFIX,
+            "css": PREFIX + "Css" + POSTFIX,
+            "delphi": PREFIX + "Delphi" + POSTFIX,
+            "python": PREFIX + "Python" + POSTFIX,
+            "ruby": PREFIX + "Ruby" + POSTFIX,
+            "sql": PREFIX + "Sql" + POSTFIX,
+            "vb": PREFIX + "Vb" + POSTFIX
+        };
+
+        window.onload = function () {
+            // First of all, translate the dialog box texts
+            oEditor.FCKLanguageManager.TranslatePage(document);
+
+            LoadSelected();
+
+            // Show the "Ok" button.
+            window.parent.SetOkButton(true);
+
+            document.getElementById("code").focus();
+        }
+
+        function Ok() {
+            if (document.getElementById("codeType").value.length == 0) {
+                alert("请选择一种语言");
+                return false;
+            }
+
+            if (document.getElementById("code").value.length == 0) {
+                alert("代码不能为空");
+                return false;
+            }
+
+            var codeType = document.getElementById("code").className;
+            var codeValue = document.getElementById("code").value;
+            codeValue = codeValue.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, '&gt;');
+            //alert(codeValue);
+            oEditor.FCKUndo.SaveUndoStep();
+
+            var str = "<pre class=\"brush:" + codeType + "\">" +
+	codeValue +
+	"<\/pre>" +
+	"<link type=\"text\/css\" rel=\"stylesheet\" href=\"" + SCRIPT_PATH + "shCore.css\" \/>" +
+	"<script type=\"text\/javascript\" src=\"" + SCRIPT_PATH + "shCore.js\"><\/script>" +
+	"<script type=\"text\/javascript\" src=\"" + SCRIPT_PATH + TypeMapper[codeType] + "\"><\/script>" +
+	"<script type=\"text\/javascript\">SyntaxHighlighter.config.clipboardSwf = \"" + SCRIPT_PATH + "clipboard.swf\";SyntaxHighlighter.all();<\/script>";
+
+            FCKHighLighter.Add(str);
+            return true;
+        }
+
+        function setCodeType(cType) {
+            document.getElementById("code").className = cType;
+        }
+
+        var eSelected = oEditor.FCKSelection.GetSelectedElement();
+
+        function LoadSelected() {
+            if (!eSelected)
+                return;
+            var vTag = usingTag.toUpperCase();
+
+            if (eSelected.tagName == vTag && eSelected.className == usingFlag) {
+                //alert(eSelected.innerHTML);
+                var srcNode = null;
+                if (FCKBrowserInfo.IsIE) {
+                    srcNode = eSelected.firstChild.nextSibling;
+                } else {
+                    srcNode = eSelected.getElementsByTagName('pre').item(0);
+                }
+
+                //var language    = srcNode.className;
+                var language = srcNode.className.replace('brush:', "");
+                //alert(language);
+                var codeTypeNum = document.getElementById("codeType").options.length;
+                document.getElementById("code").className = language;
+
+                for (var i = 0; i < codeTypeNum; i++) {
+                    if (document.getElementById("codeType").options[i].value == language) {
+                        document.getElementById("codeType").options[i].selected = true;
+                    }
+                }
+                var codeContent = srcNode.innerHTML;
+
+                /*		var startInt, endInt;
+                if (FCKBrowserInfo.IsIE) {
+                startInt = 5;
+                endInt = 6;
+                } else {
+                startInt = 6;
+                endInt = 7;
+                }
+                */
+                document.getElementById('code').value = codeContent
+                //	.substring( startInt, codeContent.length - endInt )
+			.replace(/&gt;/g, '>')
+			.replace(/&lt;/g, "<")
+			.replace(/&amp;/g, "&")
+			.replace(/<br>/g, "\r");
+            }
+            else eSelected == null;
+        }
+
+        function codingKeyDown(event, obj) {
+            // Process Tab key
+            var tabKeyCode = 9;
+
+            var keycode = event.keyCode;
+            if (keycode == tabKeyCode) {
+                if (obj.setSelectionRange) {
+                    // mozilla
+                    var s = obj.selectionStart;
+                    var e = obj.selectionEnd;
+                    obj.value = obj.value.substring(0, s) + "\t" + obj.value.substr(e);
+                    obj.setSelectionRange(s + 1, s + 1);
+                    obj.focus();
+                } else if (obj.createTextRange) {
+                    // ie
+                    document.selection.createRange().text = "\t"
+                    event.returnValue = false;
+                } else {
+                    // unsupported browsers
+                }
+
+                if (event.preventDefault) // dom
+                    event.preventDefault();
+                return false; // should work in all browsers
+            }
+
+            // Process Ctrl+A key for select all code
+            if (event.ctrlKey && event.keyCode == 65 || event.keyCode == 97) {
+                document.getElementById("code").select();
+                return;
+            }
+        }
+    </script>
+</head>
+<body scroll="no" style="overflow: hidden">
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="5">
+                    <form>
+                    <tr>
+                        <td width="30">
+                            <span fcklang="DlgSyntaxHighLighterSelectLang">语言</span>
+                        </td>
+                        <td>
+                            <select name="codeType" id="codeType" onchange="setCodeType(this.value);">
+                                <option value="" fcklang="DlgSyntaxHighLighterSelectLang">语言</option>
+                                <option value="cpp">C++</option>
+                                <option value="c#">C#</option>
+                                <option value="css">CSS</option>
+                                <option value="delphi">Delphi</option>
+                                <option value="java">Java</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="php">PHP</option>
+                                <option value="python">Python</option>
+                                <option value="ruby">Ruby</option>
+                                <option value="sql">SQL</option>
+                                <option value="xml">XML</option>
+                                <option value="vb">VB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span fcklang="DlgSyntaxHighLighterCoding">代码</span>
+                        </td>
+                        <td>
+                            <textarea name="code" cols="" rows="" wrap="off" class="" id="code" style="width: 500;
+                                height: 350;" onkeydown="codingKeyDown(event, this);"></textarea>
+                        </td>
+                    </tr>
+                    </form>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

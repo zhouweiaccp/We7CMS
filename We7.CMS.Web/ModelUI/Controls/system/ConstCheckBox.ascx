@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ConstCheckBox.ascx.cs" Inherits="We7.Model.UI.Controls.system.ConstCheckBox" %>
+<asp:CheckBoxList ID="chklEnum" runat="server"></asp:CheckBoxList>

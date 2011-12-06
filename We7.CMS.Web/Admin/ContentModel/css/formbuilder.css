@@ -1,0 +1,390 @@
+﻿
+#stage
+{
+	width: 970px;
+	background: url(   "../images/sidebarbg.png" ) repeat-y scroll -20px 0 #FFFFFF;
+	position: static;
+	padding-bottom: 0px;
+	border-right: solid #aaa 1px;
+	border-bottom: solid #aaa 1px;
+	border-left: solid #F6A828 1px;
+}
+
+#formFields
+{
+}
+
+#side
+{
+	float: left;
+	width: 340px;
+	margin-right: 10px;
+	min-height: 400px;
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom:30px;
+}
+
+#main
+{
+	float: left;
+	width: 610px;
+	padding:0;
+	min-height: 500px;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.drophover
+{
+	cursor: move;
+}
+
+.cfi
+{
+	background-image: url(  "../images/sidebarbg3.png" ) !important;
+}
+
+.afi
+{
+	background-image: url(  "../images/sidebarbg.png" ) !important;
+}
+
+#formFields li.editSelect
+{
+	background-color: #DFEFFF;
+	border: 1px solid #C2D7EF;
+}
+
+#formFields li.hover,
+#queryFields  li.hover,
+#columns li.hover
+{
+	border: 1px dashed #3B699F !important;
+	cursor:pointer;
+}
+
+#side	/*原始使用 ui-widget-content 类选择器，覆盖了 jQuery UI 的对应样式*/
+{
+	background: none repeat scroll 0 0 transparent;
+}
+
+#tabs
+{
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+#controlsContainer
+{
+	margin-left: 0px;
+	width: 95%;
+}
+
+#addFields
+{
+	width: 95%;
+}
+
+#addFields li,
+#closs li
+{
+	padding: 2px 0 1px 0;
+	list-style: none outside none;
+	margin: 5px 10px 7px 5px;
+	width: 45%;
+	float: left;
+	display: block;
+}
+
+#addFields a,
+#closs a
+{
+	-moz-border-radius: 9px 9px 9px 9px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	border-color: #EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+	border-style: solid;
+	border-width: 1px;
+	display: block;
+	font-size: 95%;
+	padding: 4px 0 4px 34px;
+	position: relative;
+	background: url(  "../images/white-grad.png" ) repeat-x scroll left top #EAEAEA;
+}
+
+#addFields a:hover
+{
+	background: none repeat scroll 0 0 #C1DF5D;
+	border: 1px solid #93B825;
+	color: #333333;
+}
+
+#formFields li
+{
+	width: 70%;
+	cursor: pointer !important;
+	padding: 6px 1% 9px;
+
+}
+
+#props label
+{
+	min-width: 50px;
+}
+
+#props div.we7-fieldwarpper
+{
+	padding:2px 1px 1px 1px;
+	vertical-align:middle;
+}
+
+div.we7-fieldwarpper
+{
+	font-size: 9pt;
+	width: 100%;
+}
+.we7-Label-warp
+{
+	float: left;
+	width: 50px;
+}
+
+div.clear:
+{
+	clear: both;
+}
+
+.we7-checkboxlist-h span, .we7-radiobuttonlist-h span
+{
+	float: left;
+	display: block;
+	margin: 0 3px;
+}
+
+div.we7-checkboxlist-v, div.we7-radiobuttonlist-v
+{
+	vertical-align: top;
+}
+
+.we7-checkboxlist-v span, .we7-radiobuttonlist-v span
+{
+	float: left;
+	width: 300px;
+	display: block;
+	clear: right;
+	margin-left: 100px;
+}
+
+.we7-radiobuttonlist-wrap input[type=radio], .we7-radiobuttonlist-wrap label, .we7-checkboxlist-wrap input[type=checkbox], .we7-checkboxlist-wrap label
+{
+	float: left;
+	vertical-align: middle !important;
+	margin: 0 !important;
+	min-width: 10px !important;
+}
+
+.selected
+{
+	background-color: Olive;
+}
+div.we7-fieldwarpper
+{
+	font-size: 9pt;
+	width: 100%;
+}
+
+div.we7-fieldwarpper label
+{
+	float: left;
+	display: block;
+	min-width: 100px;
+}
+
+.arrow
+{
+	height: 28px;
+	margin: 0px 1px 0 -22px;
+	width: 16px;
+}
+
+.fieldActions
+{
+	-moz-border-radius: 12px 12px 12px 12px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	background: none repeat scroll 0 0 #F5F5F5;
+	border: 1px solid #BBBBBB;
+	line-height: 18px;
+	margin: 0 0 0 350px !important;
+	min-width: 0 !important;
+	padding: 5px 4px 2px !important;
+	position: absolute;
+	text-align: center;
+	width: auto !important;
+	z-index: 9000 !important;
+}
+
+.fieldActions img
+{
+	margin: 3px;
+}
+.dragField
+{
+	height: 80px;
+	width: 150px;
+	border: dashed 1px;
+}
+
+#formButtons
+{
+	background: none repeat scroll 0 0 #FFF6BF;
+	border-top: 1px solid #F7DA77;
+	padding:25px 0 29px;
+	text-align: center;
+	width:630px;
+	display: inline-block;
+	margin-bottom: 0;
+	float:left;
+	margin-left:-13px;
+}
+
+.info
+{
+	border-bottom: 1px dotted #CCCCCC;
+	display: inline-block;
+	margin:15px 0 15px;
+	padding: 0 1% 1.1em;
+	width: 580px;
+	text-align:center;
+}
+
+.info h2
+{
+	clear: left;
+	font-size: 160%;
+	font-weight: normal;
+	margin: 0 0 0.2em;
+
+}
+
+.info div
+{
+	color: #555555;
+	font-size: 95%;
+	line-height: 135%;
+}
+
+/*-------布局列表--------*/
+
+    .searchbar
+    {
+        min-height: 50px;
+        border-bottom:solid 2px #999;
+        display:inline-block;
+        padding-bottom:5px;
+    }
+    .columnbar
+    {
+        min-height: 200px;
+        margin-top:20px;
+    }
+    .pagerbar
+    {
+        min-height: 50px;
+        border-top:solid 2px #999;
+        background:url("../images/gray-grad.png") repeat-x scroll left top #DFDFDF;
+        padding-top:10px;
+        text-align:left!important;
+        margin-bottom:10px;
+        padding-left:15px;
+        cursor:pointer;
+    }
+    
+    .pagerbar div.Pager  {
+		float:left!important;
+	}
+	
+
+    #columns
+    {
+        list-style-type: none;
+    }
+
+    .columnli
+    {
+        display: block;
+        height: 20px;
+        margin-top: 2px;
+        width: 50px;
+        float: left;
+        border: solid 1px;
+        background: url(  "../images/white-grad.png" ) repeat-x scroll left top #EAEAEA;
+        text-align:center;
+        padding:2px 4px;
+    }
+    
+    #queryFields li
+    {
+        display: block;
+        margin-top: 2px;
+        float: left;
+
+    }
+    
+    #queryFields div.we7-fieldwarpper label
+    {
+    	display:block;
+    	clear:both;
+    }
+    
+    .colSelect
+    {
+        border: solid 1px #C2D7EF;
+ background: url(  "" ) repeat-x scroll left top #DFEFFF;
+    }
+
+    #closs a:hover
+    {
+        background: none repeat scroll 0 0 #C1DF5D;
+        border: 1px solid #93B825;
+        color: #333333;
+    }
+
+    #props label
+    {
+      min-width:50px;
+    }
+    #closs ul
+    {
+     list-style-type:none;
+    }
+    
+    #closs li
+    {
+    	width: 80%!important;
+    }
+    
+     #closs li a:link, #closs li a:visited
+     {
+     	text-decoration:none;
+     }
+     
+     #drop
+     {
+     	float:left;
+     	margin-bottom:30px;
+     	width: 100px; 
+     	text-align:right; 
+     	margin-top:40px;
+     	vertical-align:top;
+     	position: absolute;
+		top: 150px;
+		left: 0px;
+		margin-left: 230px;
+		padding-right:30px;
+     }
+     .error_item{
+      border:solid 2px red;
+     }
+     

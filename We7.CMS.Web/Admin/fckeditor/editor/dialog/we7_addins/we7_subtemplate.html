@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2008 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * Text field dialog window.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="noindex, nofollow" name="robots" />
+	<script src="../common/fck_dialog_common.js" type="text/javascript"></script>
+	<script src="/admin/cgi-bin/DialogHelper.js" type="text/javascript"></script>
+	<script src="/admin/cgi-bin/base64.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+var dialog	= window.parent ;
+var oEditor = dialog.InnerDialogLoaded() ;
+
+var FCK			= oEditor.FCK ;
+var FCKLang		= oEditor.FCKLang ;
+var FCKConfig	= oEditor.FCKConfig ;
+var FCKRegexLib	= oEditor.FCKRegexLib ;
+var FCKTools	= oEditor.FCKTools ;
+var FCKDomTools = oEditor.FCKDomTools ;
+var FCKDomRange = oEditor.FCKDomRange ;
+var FCK = oEditor.FCK ;
+
+// Gets the document DOM
+var oDOM = oEditor.FCK.EditorDocument ;
+var oActiveEl = dialog.Selection.GetSelectedElement() ;
+
+window.onload = function()
+{
+	// First of all, translate the dialog box texts
+	oEditor.FCKLanguageManager.TranslatePage(document) ;
+	
+    //if ( oActiveEl && oActiveEl.tagName == 'DIV' && ( oActiveEl.className == 'wet' || oActiveEl.tag == 'wet' ) )
+	 if ( oActiveEl && oActiveEl.tagName == 'IMG' && ( oActiveEl.className == 'wet' || oActiveEl.tag == 'wet' ) )
+	{
+		  //var ct = oActiveEl.childNodes[0].getAttribute("tag");
+		  var ct = oActiveEl.getAttribute("controlname");
+		  if(ct)
+		  {
+		    GetE('txtUrl').value=ct+".ascx";
+		    var file=base64encode(GetE('txtUrl').value);
+		    var link='<a href="/admin/DataControlUI/Compose.aspx?file=' +file+'&templateSub=sub" target="_blank" >进入子模板编辑页 </a> ';
+		    document.getElementById("linkFile").innerHTML=link;
+		  }
+	}
+	else
+		oActiveEl = null ;
+
+    GetE('divBrowseServer').style.display = FCKConfig.LinkBrowser ? '' : 'none' ;
+    // Show the initial dialog content.
+	GetE('divInfo').style.display = '' ;
+	
+	dialog.SetOkButton( true ) ;
+	SelectField( 'txtUrl' ) ;
+}
+
+function Ok()
+{
+	if ( GetE('txtUrl').value =='' )
+	{
+		alert( "您还没有选择子模板！" ) ;
+		GetE('txtUrl').focus() ;
+		return false ;
+	}
+	oEditor.FCKUndo.SaveUndoStep() ;
+
+    var vt = GetE('txtUrl').value.replace(".ascx", "");
+	var imgstr='<IMG xmlns:wet="http://www.WestEngine.com" tag="wet" class="wet" controlName="';
+    imgstr+=vt+'"  ';
+    var txt = "<wet:" + vt + " id=\"" + vt + "_0\"  runat=\"server\" ></wet:"+vt+">";
+    txt=HtmlEncode(txt);
+    var icon="/admin/images/sub_temp.png";
+    //icon = "/" + We7TemplateGroupRalatePath + "/" + tagName + ".png";
+        
+    imgstr+=' control="'+txt+'"  src="'+icon+'"  />';
+	    
+    //DeleteDiv();
+    
+    oEditor.FCK.InsertHtml(imgstr);
+	return true ;
+}
+
+function DeleteDiv()
+{
+    	var node = oActiveEl;
+
+        // Remember the current selection position.
+		var range = new FCKDomRange( FCK.EditorWindow ) ;
+		range.MoveToSelection() ;
+		var bookmark = range.CreateBookmark() ;
+		
+        while(node)
+        {
+            if(node.tagName == 'DIV' && ( node.className == 'wet' || node.tag == 'wet' ) )
+                break;
+            node=node.parentNode;
+        }
+		if(node)
+	        FCKDomTools.RemoveNode(node, false ) ;
+	        
+	    // Restore selection.
+		range.MoveToBookmark( bookmark ) ;
+		range.Select() ;
+}
+
+function BrowseServer()
+{
+	//OpenFileBrowser( FCKConfig.LinkBrowserURL, FCKConfig.LinkBrowserWindowWidth, FCKConfig.LinkBrowserWindowHeight ) ;
+	var strFile="/admin/TemplateList.aspx?list=sub";
+    var ret = weShowModelDialog(strFile,handleTemplateListCallback); 
+}
+
+function handleTemplateListCallback(v, t) {
+    if(v == null) return;
+    GetE('txtUrl').value=v;
+    var file=base64encode(GetE('txtUrl').value);
+	var link='<a href="/admin/DataControlUI/Compose.aspx?file=' +file+'&templateSub=sub" target="_blank" >进入子模板编辑页 </a> ';
+	document.getElementById("linkFile").innerHTML=link;
+}
+	</script>
+</head>
+<body style="overflow: hidden">
+<div id="divInfo" style="DISPLAY: none">
+	<table width="100%" style="height: 100%">
+		<tr>
+			<td align="center">
+				<table cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td>
+							<span fcklang="DlgLnkURL">Name</span>
+						</td>
+						<td>
+						</td>
+						<td>
+							<input id="txtUrl" type="text" size="25" />  <span id="linkFile" ></span>
+						</td>
+					</tr>
+				</table>
+				<br />
+				<div id="divBrowseServer">
+				<input type="button" value="Browse Server" fckLang="DlgBtnBrowseServer" onclick="BrowseServer();" />
+				
+				</div>
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

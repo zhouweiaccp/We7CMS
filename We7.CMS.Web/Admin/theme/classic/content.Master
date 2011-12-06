@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="content.master.cs" Inherits="We7.CMS.Web.Admin.theme.classic.content" %>
+
+<%@ Register Assembly="We7.CMS.UI" Namespace="We7.CMS.Controls" TagPrefix="WEC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>管理 -
+        <%=SiteHeadTitle%>
+        - Powered by
+        <%=ProductBrand %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="css/we7-admin.css?20111031002" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/main.css?20110808001" media="screen" />
+    <!--[if gte IE 6]>
+    <link rel='stylesheet' href='css/ie.css' type='text/css' media='all' />
+    <![endif]-->
+    <script type="text/javascript" src="/Scripts/jquery/jquery-1.4.2.js"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        userSettings = {
+            url: "/",
+            uid: "1",
+            time: "1235697253"
+        }
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="/admin/theme/classic/js/common.js"></script>
+    <script type="text/javascript" src="/admin/theme/classic/js/hoverIntent.js"></script>
+    <script src="/admin/cgi-bin/DialogHelper.js" type="text/javascript"></script>
+</head>
+<body class="we7-admin">
+    <form id="mainForm" runat="server">
+    <div id="we7wrap">
+        <div id="we7content">
+            <div id="we7head">
+                <img id="header-logo" src="/admin/theme/classic/images/blank.gif" alt="" height="38"
+                    width="34">
+                <%--<asp:Literal ID="GroupLinksLiteral" runat="server" />--%>
+                <%-- <h1 class="switch">
+                    <span>←<a href="#" id="switchSite"> 切换到其他站点</a></span>
+                    <ul class="siteList" style="display: none;">
+                        <li><a title="hello" href="/Sites/Home/SiteMap?siteName=hello" tabindex="1000">hello</a></li>
+                        <li><a title="demo" href="/Sites/Home/SiteMap?siteName=mydemo" tabindex="1000">demo</a></li>
+                        <li><a title="SampleSite" href="/Sites/Home/SiteMap?siteName=SampleSite" tabindex="1000">
+                            SampleSite</a></li>
+                    </ul>
+                </h1>--%>
+                <div id="favorite-actions">
+                    <div id="favorite-first">
+                        <a href="/" target="_blank">
+                            <%=SiteHeadTitle%></a></div>
+                    <div id="favorite-toggle" style="<%=IsSiteGroup %>">
+                        <iframe id="frameSites" src="" style="display: none;" frameborder="0" marginheight="0"
+                            marginwidth="0" scrolling="no" height="26"></iframe>
+                    </div>
+                    <div style="width: 226px;" id="favorite-inside">
+                        <%--<div class="favorite-action" >正在加载... ...</div>     --%>
+                    </div>
+                </div>
+                <div id="we7head-info">
+                    <div id="user_info">
+                        <p>
+                            <a href="/" target="_blank">站点首页</a> | <a href="/user/index.aspx">会员中心</a> | <a href="#"
+                                title="编辑资料">
+                                <%=SiteLoginUserTitle %></a><span style="display: inline;" class="turbo-nag hidden">
+                                    | <a href="/admin/Signin.aspx?action=logout" target="_top">退出</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <asp:Literal runat="server" ID="GroupHolder"></asp:Literal>
+            <div id="waitLayer" style="z-index: 99; position: absolute; padding: 20px 15px;">
+                <img src="/admin/theme/classic/images/ajax-loader.gif" />
+            </div>
+            <div id="we7body">
+                <span id="mainMenu"></span>
+                <div style="overflow: hidden;" id="we7body-content">
+                    <div class="wrap">
+                        <asp:ContentPlaceHolder ID="MyContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <!-- we7body-content -->
+                <div class="clear">
+                </div>
+            </div>
+            <!-- we7body -->
+            <div class="clear">
+            </div>
+        </div>
+        <!-- we7content -->
+    </div>
+    <!-- we7wrap -->
+    <div id="mask" class="mask">
+    </div>
+    <div id="we7footer">
+        <p id="footer-left" class="alignleft">
+            <span id="footer-thankyou">
+                <asp:Literal ID="CopyrightLiteral" runat="server"></asp:Literal>
+            </span>
+            <asp:Literal ID="AuthorLinksLiteral" runat="server"></asp:Literal>
+        </p>
+        <p id="footer_upgrade" class="alignright" runat="server" visible="false">
+            <strong>
+                <asp:HyperLink runat="server" ID="RebootHyperLink" ToolTip="重启网站，重新加载所有参数" Text="重启" />
+                | <a href="/install/upgrade.aspx" target="_blank" title="升级We7系统到新版本">升级</a>
+                | <asp:LinkButton  runat="server" ID="ReIndexHyperLink" 
+                ToolTip="重建模板、部件、控件、主题索引" Text="重建索引" onclick="ReIndexHyperLink_Click" />
+            </strong>
+        </p>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#frameSites").hide();
+            checkGroup();
+        });
+
+        function checkGroup() {
+            var remote = $("#wdUrl").val();
+            if (remote) {
+                $("#frameSites").show();
+                $("#frameSites").attr("Src", remote);
+            }
+        }      
+    </script>
+</body>
+</html>

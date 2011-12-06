@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Objects>
+  <Database name="We7.CMS.Common">
+    <Object type="We7.CMS.Common.Channel, We7.CMS.Common" table="Channel" primaryKey="ID" identity="" description="栏目表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="栏目唯一标示符" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" description="父级栏目唯一标示符" />
+      <Property name="Alias" field="Alias" size="16" type="String" description="栏目别名" />
+      <Property name="FullPath" field="FullPath" size="255" type="String" description="显示全路径，如：/新闻/图片新闻" />
+      <Property name="Parameter" field="Parameter" size="255" type="String" description="参数" />
+      <Property name="TemplateName" field="TemplateName" size="64" type="String" description="模板名称" />
+      <Property name="DetailTemplate" field="DetailTemplate" size="64" type="String" description="详细页模板" />
+      <Property name="DefaultContentID" field="DefaultContentID" size="40" type="String" description="默认详细内容ID" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="索引" />
+      <Property name="ReferenceID" field="ReferenceID" size="40" type="String" description="参考ID" />
+      <Property name="Name" field="Title" size="64" type="String" description="栏目名称" />
+      <Property name="Description" field="Description" size="255" type="String" description="栏目描述" />
+      <Property name="State" field="State" size="4" type="Int32" description="栏目状态" />
+      <Property name="SecurityLevel" field="SecurityLevel" size="4" type="Int32" description="安全级别" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="ChannelFolder" field="ChannelFolder" size="64" type="String" description="栏目文件夹" />
+      <Property name="TitleImage" field="TitleImage" size="64" type="String" description="标题图片" />
+      <Property name="Process" field="Process" size="16" type="String" description="是否走审批流程：1-审批，其他-不审批" />
+      <Property name="ProcessLayerNO" field="ProcessLayerNO" size="50" type="String" description="审核步骤：1、2、3类，字符串" />
+      <Property name="ProcessEnd" field="ProcessEnd"  size="16" type="String" description="审核完毕动作：0-审结，进入禁用；1-审结后直接启用；2-送跨站审核" />
+      <Property name="Type" field="Type" size="16" type="String" description="栏目类型" />
+      <Property name="ChannelName" field="ChannelName" size="50" type="String" description="频道唯一名称，用于URL" />
+      <Property name="RefAreaID" field="RefAreaID" size="40" type="String" description="栏目来源" />
+      <Property name="IsComment" field="IsComment" size="4" type="Int32" description="是否评论" />
+      <Property name="FullUrl" field="FullUrl" size="255" type="String" description="栏目地址，为原本栏目的channelname的组合" />
+      <Property name="ReturnUrl" field="ReturnUrl" size="255" type="String" description="增加属性 RealUrl 来解决跳转问题，前台菜单控件请使用RealUrl" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="EnumState" field="EnumState" size="40" type="String" description="栏目状态" />
+      <Property name="ArticlesCount" field="ArticlesCount" size="6" type="Int32" description="统计该栏目下的文章数" />
+      <Property name="Tags" field="Tags" size="255" type="String" description="标签" />
+      <Property name="KeyWord" field="KeyWord" size="255" type="String" description="SEO优化关键字" />
+      <Property name="DescriptionKey" field="DescriptionKey" size="255" type="String" description="SEO优化描述" />
+      <Property name="IPStrategy" field="IPStrategy" size="128" type="String" description="IP策略" />
+      <Property name="ModelName" field="ModelName" size="128" type="String" description="模型名称" />
+      <!--<Property name="LinkUrl" field="LinkUrl" size="255" type="String" description="二级域名地址" />
+      <Property name="ChannelDir" field="ChannelDir" size="255" type="String" description="域名扩展" />-->
+    </Object>
+
+    <!--Article文章表-->
+    <Object type="We7.CMS.Common.Article, We7.CMS.Common" table="Article" primaryKey="ID" identity="" description="文章表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="文章唯一标示符" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" nullable="false" description="文章父ID" />
+      <Property name="Title" field="Title" size="100" type="String" nullable="false" description="文章标题" />
+      <Property name="OwnerID" field="OwnerID" size="40" type="String" description="栏目ID" />
+      <Property name="Description" field="Description" size="250" type="String" description="文章描述" />
+      <Property name="AccountID" field="AccountID" size="64" type="String" description="用户唯一标示符" />
+      <Property name="Author" field="Author" size="64" type="String" description="文章作者" />
+      <Property name="Content" field="Content" size="65536" type="String" description="文章内容" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="Overdue" field="Overdue" size="4" type="DateTime" description="文章过期时间" />
+      <Property name="Source" field="Source" size="255" type="String" description="文章来源" />
+      <Property name="AllowComments" field="AllowComments" size="4" type="Int32" description=" 1—为允许评论；0—为不允许评论" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="序列号" />
+      <Property name="State" field="State" size="4" type="Int32" description="文章状态" />
+      <Property name="IsImage" field="IsImage" size="4" type="Int32" description="是否有缩略图" />
+      <Property name="IsShow" field="IsShow" size="4" type="Int32" description="是否置顶" />
+      <Property name="SubTitle" field="SubTitle" size="64" type="String" description="副标题" />
+      <Property name="Thumbnail" field="Thumbnail" size="255" type="String" description="缩略图存放地址（小缩略图）" />
+      <Property name="ContentUrl" field="ContentUrl" size="255" type="String" description="内容URL" />
+      <Property name="IsDeleted" field="IsDeleted" size="4" type="Int32" description=" 是否删除" />
+      <Property name="ContentType" field="ContentType" size="4" type="Int32" description="0—含XML的文章信息，其他参考TypeOfArticle枚举" />
+      <Property name="SourceID" field="SourceID" size="40" type="String" description="引用/wap类型的原文章ID" />
+      <Property name="SN" field="SN" size="8" type="Int32" description="文章流水号" />
+      <Property name="ProcessState" field="ProcessState" size="50" type="String" description="审批当前进程，0：草稿，1-3：一审~三审" />
+      <Property name="ProcessDirection" field="ProcessDirection" size="50" type="String" description="流转来源方向，退回？交？" />
+      <Property name="ProcessSiteID" field="ProcessSiteID" size="50" type="String" description="拥有处置权限的站点ID" />
+      <Property name="FlowXml" field="FlowXml" size="65535" type="String" description="存放文章流转历史数据" />
+      <Property name="FromRowID" field="FromRowID" size="50" type="String" description="共享来源ID" />
+      <Property name="FromSiteUrl" field="FromSiteUrl" size="50" type="String" description="共享来源文章地址" />
+      <Property name="EnumState" field="EnumState" size="40" type="String" description="文章状态信息" />
+      <Property name="ModelXml" field="ModelXml" size="65535" type="String" description="存放扩展信息XML数据" />
+      <Property name="ChannelName" field="ChannelName" size="50" type="String" description="栏目名称" />
+      <Property name="FullChannelPath" field="FullChannelPath" size="255" type="String" description="所属栏目的全路径名称显示：如，/新闻/图片新闻" />
+      <Property name="ChannelFullUrl" field="ChannelFullUrl" size="255" type="String" description="栏目地址" />
+      <Property name="CommentCount" field="CommentCount" size="6" type="Int32" description="评论总数" />
+      <Property name="Tags" field="Tags" size="255" type="String" description="文章标签" />
+      <Property name="KeyWord" field="KeyWord" size="255" type="String" description="SEO 优化文章标题" />
+      <Property name="DescriptionKey" field="DescriptionKey" size="255" type="String" description="SEO 优化文章描述" />
+      <Property name="VideoCode" field="VideoCode" size="65535" type="String" description="存放视频代码" />
+      <Property name="ListKeys" field="ListKeys" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="ListKeys1" field="ListKeys1" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="ListKeys2" field="ListKeys2" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="ListKeys3" field="ListKeys3" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="ListKeys4" field="ListKeys4" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="ListKeys5" field="ListKeys5" size="255" type="String" description="存放modelXml数据（不包含结构）" />
+      <Property name="IPStrategy" field="IPStrategy" size="128" type="String" description="IP策略" />
+      <Property name="PrivacyLevel" field="PrivacyLevel" size="6" type="Int32" description="公开类型" />
+      <Property name="ModelName" field="ModelName" size="50" type="String" description="模型类型" />
+      <Property name="TableName" field="TableName" size="50" type="String" description="表名" />
+      <Property name="ModelConfig" field="ModelConfig" size="65535" type="String" description="模型配置" />
+      <Property name="ModelSchema" field="ModelSchema" size="65535" type="String" description="模型数据架构" />
+      <Property name="Photos" field="Photos" size="65535" type="String" description="多图片保存" />
+      <Property name="Clicks" field="Clicks" size="6" type="Int32" description="点击数" />
+      <Property name="DayClicks" field="DayClicks" size="6" type="Int32" description="日点击量" />
+      <Property name="YesterdayClicks" field="YesterdayClicks" size="6" type="Int32" description="昨日点击量" />
+      <Property name="WeekClicks" field="WeekClicks" size="6" type="Int32" description="周点击量" />
+      <Property name="MonthClicks" field="MonthClicks" size="6" type="Int32" description="月点击量" />
+      <Property name="QuarterClicks" field="QuarterClicks" size="6" type="Int32" description="季点击量" />
+      <Property name="YearClicks" field="YearClicks" size="6" type="Int32" description="年点击量" />
+      <Property name="Color" field="Color" size="20" type="String" description="标题色" />
+      <Property name="FontWeight" field="FontWeight" size="20" type="String" description="标题是否加粗" />
+      <Property name="FontStyle" field="FontStyle" size="20" type="String" description="标题是否斜体" />
+    </Object>
+    
+    
+    
+    <Object type="We7.CMS.Common.Tags, We7.CMS.Common" table="Tags" primaryKey="ID" identity="" description="标签表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="Identifier" field="Identifier" size="64" type="String" nullable="false" description="标识符" />
+      <Property name="Frequency" field="Frequency" size="6" type="Int32" description="使用频率" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="标签创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="标签最后一次更新时间" />
+    </Object>
+
+    <!--文章附件表-->
+    <Object type="We7.CMS.Common.Attachment, We7.CMS.Common" table="Attachment" primaryKey="ID" identity="" description="文章附件表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="False" description="文章附件唯一标示符" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" nullable="True" description="文章唯一标示符" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Decimal" nullable="False" description="文章附件序列号" />
+      <Property name="FileType" field="FileType" size="8" type="String" nullable="False" description="文件类型" />
+      <Property name="FileName" field="FileName" size="255" type="String" nullable="True" description="文件名称" />
+      <Property name="FileSize" field="FileSize" size="4" type="Decimal" nullable="False" description="文件大小" />
+      <Property name="FilePath" field="FilePath" size="255" type="String" nullable="True" description="文件路径" />
+      <Property name="Description" field="Description" size="255" type="String" nullable="False" description="描述" />
+      <Property name="UploadDate" field="UploadDate" size="8" type="DateTime" nullable="False" description="上传日期" />
+      <Property name="DownloadTimes" field="DownloadTimes" size="8" type="String" nullable="True" description="下载次数" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="EnumState" field="EnumState" size="50" type="String" description="状态信息" />
+    </Object>
+    
+    <!--相关文章表-->
+    <Object type="We7.CMS.Common.RelatedArticle, We7.CMS.Common" table="RelatedArticle" primaryKey="ID" identity="" description="相关文章表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="False" description="相关文章唯一标示符" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" description="文章唯一标示符" />
+      <Property name="RelatedID" field="RelatedID" size="40" type="String" description="相关唯一标示符" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+
+    <Object type="We7.CMS.Common.ErrorCode, We7.CMS.Common" table="ErrorCode" primaryKey="ID" identity="" description="错误代码表">
+      <Property name="ID" field="ID" size="4" type="Int32"   nullable="false" description="主键，唯一标示符" />
+      <Property name="Level" field="Level" size="4" type="Int32" description="级别" />
+      <Property name="HelpLink" field="HelpLink" size="255" type="String" description="连接" />
+      <Property name="Title" field="Title" size="128" type="String" description="错误标题" />
+      <Property name="Description" field="Description" size="255" type="String" description="描述备注" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+
+    <!--Comments - 评论表 -->
+    <Object type="We7.CMS.Common.Comments, We7.CMS.Common" table="Comments" primaryKey="ID" identity="" description="评论表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="评论唯一标示符" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" nullable="false" description="文章唯一标示符" />
+      <Property name="Author" field="Author" size="64" type="String" description="评论作者" />
+      <Property name="Content" field="Content" size="65536" type="String" description="评论内容" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="评论索引" />
+      <Property name="State" field="State" size="4" type="Int32" description="评论状态" />
+      <Property name="IP" field="IP" size="40" type="String" description="IP地址" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" description="用户ＩＤ" />
+      <Property name="ArticleName" field="ArticleName" size="100" type="String" description="文章名字" />
+    </Object>
+
+    <!--页面访问者信息表PageVisitor-->
+    <Object type="We7.CMS.Common.PageVisitor, We7.CMS.Common" table="PageVisitor" primaryKey="ID" identity="" description="页面访问者信息表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="页面访问者信息唯一标示符" />
+      <Property name="TypeCode" field="TypeCode" size="4" type="Int32" nullable="false" description="类别：0为登录统计，1为文章统计" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="用户ID" />
+      <Property name="VisitDate" field="VisitDate" size="4" type="DateTime" description="访问时间" />
+      <Property name="LogoutDate" field="LogoutDate" size="4" type="DateTime" description="退出时间" />
+      <Property name="VisitorIP" field="VisitorIP" size="50" type="String" description="访问者IP" />
+      <Property name="Url" field="Url" size="255" type="String" description="入口页面" />
+      <Property name="HttpReferer" field="Http_Referer" size="255" type="String" description="来源应用网址" />
+      <Property name="Clicks" field="Clicks" size="4" type="Int32" description="点击数" />
+      <Property name="OnlineTime" field="OnlineTime" size="4" type="DateTime" description="在线时间" />
+      <Property name="Platform" field="Platform" size="50" type="String" description="操作系统" />
+      <Property name="Browser" field="Browser" size="50" type="String" description="浏览器" />
+      <Property name="Screen" field="Screen" size="50" type="String" description="屏幕分辨率" />
+      <Property name="Province" field="Province" size="50" type="String" description="省份" />
+      <Property name="City" field="City" size="50" type="String" description="城市" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="SearchEngine" field="SearchEngine" size="50" type="String" description="搜索引擎" />
+      <Property name="Keyword" field="Keyword" size="50" type="String" description="搜索引擎关键词" />
+      <Property name="FromSite" field="FromSite" size="100" type="String" description="来源主域名" />
+    </Object>
+
+    <Object type="We7.CMS.Common.PageVisitorHistory, We7.CMS.Common" table="PageVisitorHistory" primaryKey="ID" identity="" description="页面访问者信息历史表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="" />
+      <Property name="TypeCode" field="TypeCode" size="4" type="Int32" nullable="false" description="类别：0为登录统计，1为文章统计" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="用户ID" />
+      <Property name="VisitDate" field="VisitDate" size="4" type="DateTime" description="访问时间" />
+      <Property name="LogoutDate" field="LogoutDate" size="4" type="DateTime" description="退出时间" />
+      <Property name="VisitorIP" field="VisitorIP" size="50" type="String" description="访问者IP" />
+      <Property name="Url" field="Url" size="255" type="String" description="入口页面" />
+      <Property name="HttpReferer" field="Http_Referer" size="255" type="String" description="来源应用网址" />
+      <Property name="Clicks" field="Clicks" size="4" type="Int32" description="点击数" />
+      <Property name="OnlineTime" field="OnlineTime" size="4" type="DateTime" description="在线时间" />
+      <Property name="Platform" field="Platform" size="50" type="String" description="操作系统" />
+      <Property name="Browser" field="Browser" size="50" type="String" description="浏览器" />
+      <Property name="Screen" field="Screen" size="50" type="String" description="屏幕分辨率" />
+      <Property name="Province" field="Province" size="50" type="String" description="省份" />
+      <Property name="City" field="City" size="50" type="String" description="城市" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="SearchEngine" field="SearchEngine" size="50" type="String" description="搜索引擎" />
+      <Property name="Keyword" field="Keyword" size="50" type="String" description="搜索引擎关键词" />
+      <Property name="FromSite" field="FromSite" size="100" type="String" description="来源主域名" />
+    </Object>
+
+    <!--页面访问统计Statistics-->
+    <Object type="We7.CMS.Common.Statistics, We7.CMS.Common" table="Statistics" primaryKey="ID" identity="" description="页面访问统计表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="页面访问统计唯一标示符" />
+      <Property name="VisitorID" field="VisitorID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="ChannelID" field="ChannelID" size="40" type="String" description="栏目唯一标示符" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" description=" 文章唯一标示符" />
+      <Property name="VisitDate" field="VisitDate" size="4" type="DateTime" description="访问时间" />
+      <Property name="Url" field="URL" size="255" type="String" description="入口页面" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+
+    <Object type="We7.CMS.Common.StatisticsHistory, We7.CMS.Common" table="StatisticsHistory" primaryKey="ID" identity="" description="">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="页面访问统计唯一标示符" />
+      <Property name="VisitorID" field="VisitorID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="ChannelID" field="ChannelID" size="40" type="String" description="栏目唯一标示符" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" description=" 文章唯一标示符" />
+      <Property name="VisitDate" field="VisitDate" size="4" type="DateTime" description="访问时间" />
+      <Property name="Url" field="URL" size="255" type="String" description="入口页面" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+    
+    <!--留言反馈表Advice-->
+    <Object type="We7.CMS.Common.Advice, We7.CMS.Common" table="Advice" primaryKey="ID" identity="" description="反馈信息表" >
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈信息唯一标示符" />
+      <Property name="TypeID" field="TypeID" size="40" type="String" description="类型唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="反馈用户唯一标示符" />
+      <Property name="Name" field="Name" size="64" type="String" description="用户名称" />
+      <Property name="Email" field="Email" size="64" type="String" description="用户邮箱" />
+      <Property name="Title" field="Title" size="64" type="String" description="反馈信息标题" />
+      <Property name="Content" field="Content" size="65536" type="String" description="反馈信息内容" />
+      <Property name="CreateDate" field="CreateDate" size="4" type="DateTime" description="反馈信息创建时间" />
+      <Property name="Phone" field="Phone" size="20" type="String" description="用户电话" />
+      <Property name="Fax" field="Fax" size="20" type="String" description="用户传真" />
+      <Property name="Address" field="Address" size="100" type="String" description="用户地址" />
+      <Property name="IsShow" field="IsShow" size="4" type="Int32" description="反馈信息是否公开显示" />
+      <Property name="ReplyDepID" field="ReplyDepID" size="40" type="String" description="反馈部门唯一标示符" />
+      <Property name="SN" field="SN" size="8" type="Int32" description="反馈信息流水号" />
+      <Property name="ReplyCount" field="ReplyCount" size="4" type="Int32" description="反馈总数" />
+      <Property name="State" field="State" size="4" type="Int32" description="反馈信息状态" />
+      <Property name="OwnID" field="OwnID" size="40" type="String" description="栏目唯一标示符" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="MyQueryPwd" field="MyQueryPwd" size="50" type="String" description="个性查询密码" />
+      <Property name="ProcessState" field="ProcessState" size="50" type="String" description="流程状态" />
+      <Property name="ProcessDirection" field="ProcessDirection" size="50" type="String" description="流转来源方向，退回？交？" />
+      <Property name="ProcessSiteID" field="ProcessSiteID" size="50" type="String" description="拥有处置权限的站点ID" />
+      <Property name="FlowXml" field="FlowXml" size="65535" type="String" description="存放文章流转历史数据" />
+      <Property name="Source" field="Source" size="255" type="String" description="反馈来源：用于跨站审批" />
+      <Property name="EnumState" field="EnumState" size="50" type="String" description="状态信息" />
+      <Property name="MustHandle" field="MustHandle" size="4" type="Int32" description="默认“0”为可不办，“1”为必办, “2”为催办。" />
+      <Property name="ToHandleTime" field="ToHandleTime" size="4" type="DateTime" description="反馈信息办理回复时间" />
+      <Property name="AdviceInfoType" field="AdviceInfoType" size="50" type="String" description="反馈信息类型" />
+      <Property name="ToOtherHandleUserID" field="ToOtherHandleUserID" size="50" type="String" description="转交办理人" />
+      <Property name="Display1" field="Display1" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="Display2" field="Display2" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="Display3" field="Display3" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="ModelXml" field="ModelXml" size="65535" type="String" description="反馈存放扩展信息XML数据" />
+      <Property name="ModelName" field="ModelName" size="255" type="String" description="模型名称" />
+      <Property name="ModelConfig" field="ModelConfig" size="65535" type="String" description="模型配置" />
+      <Property name="ModelSchema" field="ModelSchema" size="65535" type="String" description="模型数据架构" />
+      <Property name="AdviceTag" field="AdviceTag" size="64" type="String" description="反馈标签" />
+      <Property name="IsRead" field="IsRead" size="4" type="Int32" description="默认“0”不显示未读标记，“1”为显示未读标记" />
+    </Object>
+    
+    <!--留言反馈表AdviceInfo-->
+    <Object type="We7.CMS.Common.AdviceInfo, We7.CMS.Common" table="AdviceInfo" primaryKey="ID" identity="" description="反馈信息表(重构)" >
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈信息唯一标示符" />
+      <Property name="SN" field="SN" size="12" type="String" description="反馈信息流水号" />
+      <Property name="TypeID" field="TypeID" size="40" type="String" description="类型唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="反馈用户唯一标示符" />
+      <Property name="Name" field="Name" size="64" type="String" description="用户名称" />
+      <Property name="Email" field="Email" size="64" type="String" description="用户邮箱" />
+      <Property name="Title" field="Title" size="64" type="String" description="反馈信息标题" />
+      <Property name="Content" field="Content" size="65536" type="String" description="反馈信息内容" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="反馈信息创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="反馈信息更新时间" />
+      <Property name="Phone" field="Phone" size="20" type="String" description="用户电话" />
+      <Property name="Fax" field="Fax" size="20" type="String" description="用户传真" />
+      <Property name="Address" field="Address" size="100" type="String" description="用户地址" />
+      <Property name="IsShow" field="IsShow" size="4" type="Int32" description="反馈信息是否公开显示" />
+      <Property name="State" field="State" size="4" type="Int32" description="反馈信息状态" />
+      <Property name="IsTop" field="IsTop" size="4" type="Int32" description="置顶:1,置顶;0,不置顶" />
+      <Property name="Priority" field="Priority" size="4" type="Int32" description="默认“0”为可不办，“1”为必办, “2”为催办。" />
+      <Property name="IsRead" field="IsRead" size="4" type="Int32" description="默认“0”不显示未读标记，“1”为显示未读标记" />
+      <Property name="Public" field="Public" size="4" type="Int32" description="默认“0”不公开，“1”公开" />
+      <Property name="MyQueryPwd" field="MyQueryPwd" size="50" type="String" description="个性查询密码" />
+      <Property name="Display1" field="Display1" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="Display2" field="Display2" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="Display3" field="Display3" size="50" type="String" description="反馈信息冗余字段" />
+      <Property name="ModelName" field="ModelName" size="255" type="String" description="模型名称" />
+      <Property name="ModelXml" field="ModelXml" size="65535" type="String" description="反馈存放扩展信息XML数据" />
+      <Property name="ModelConfig" field="ModelConfig" size="65535" type="String" description="模型配置" />
+      <Property name="ModelSchema" field="ModelSchema" size="65535" type="String" description="模型数据架构" />
+      <Property name="Clicks" field="Clicks" size="6" type="Int32" description="点击数" />
+      <Property name="DayClicks" field="DayClicks" size="6" type="Int32" description="日点击量" />
+      <Property name="YesterdayClicks" field="YesterdayClicks" size="6" type="Int32" description="昨日点击量" />
+      <Property name="WeekClicks" field="WeekClicks" size="6" type="Int32" description="周点击量" />
+      <Property name="MonthClicks" field="MonthClicks" size="6" type="Int32" description="月点击量" />
+      <Property name="QuarterClicks" field="QuarterClicks" size="6" type="Int32" description="季点击量" />
+      <Property name="YearClicks" field="YearClicks" size="6" type="Int32" description="年点击量" />
+    </Object>
+    
+    <!--留言反馈-回复表AdviceReply-->
+    <Object type="We7.CMS.Common.AdviceReply, We7.CMS.Common" table="AdviceReply" primaryKey="ID" identity="" description="反馈回复表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈回复唯一标示符" />
+      <Property name="AdviceID" field="AdviceID" size="40" type="String" nullable="false" description="反馈信息唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="Title" field="Title" size="64" type="String" description="反馈回复标题" />
+      <Property name="Content" field="Content" size="65535" type="String" description="反馈回复内容" />
+      <Property name="CreateDate" field="CreateDate" size="4" type="DateTime" description="创建回复时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新回复时间" />
+
+      <Property name="MailBody" field="MailBody" size="65535" type="String" description="备份回复邮件内容" />
+      <Property name="EnumState" field="EnumState" size="50" type="String" description="状态信息" />
+      <Property name="Comment" field="Comment" size="255" type="String" description="客户满意度评价" />
+      <Property name="Suggest" field="Suggest" size="255" type="String" description="反馈意见" />
+    </Object>
+
+    <!--留言反馈-回复表AdviceReplyInfo-->
+    <Object type="We7.CMS.Common.AdviceReplyInfo, We7.CMS.Common" table="AdviceReplyInfo" primaryKey="ID" identity="" description="反馈回复表(重构)">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈回复唯一标示符" />
+      <Property name="AdviceID" field="AdviceID" size="40" type="String" nullable="false" description="反馈信息唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="Title" field="Title" size="64" type="String" description="反馈回复标题" />
+      <Property name="Content" field="Content" size="65535" type="String" description="反馈回复内容" />
+      <Property name="MailBody" field="MailBody" size="65535" type="String" description="备份回复邮件内容" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建回复时间" />
+    </Object>
+
+    <!--留言反馈-回复表AdviceTransfer-->
+    <Object type="We7.CMS.Common.AdviceTransfer, We7.CMS.Common" table="AdviceTransfer" primaryKey="ID" identity="" description="反馈转交处理表(重构)">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈回复唯一标示符" />
+      <Property name="AdviceID" field="AdviceID" size="40" type="String" nullable="false" description="反馈信息唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="FromTypeID" field="FromTypeID" size="40" type="String" description="反馈来源类型" />
+      <Property name="ToTypeID" field="ToTypeID" size="40" type="String" description="转交的反馈类型" />
+      <Property name="Suggest" field="Suggest" size="65535" type="String" description="转交意见" />
+      <Property name="State" field="State" size="4" type="Int32" description="处理状态（0：未处理,1:处理完成）" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="转交时间" />
+    </Object>
+
+    <!--留言反馈-权限表AdviceAuth-->
+    <Object type="We7.CMS.Common.AdviceAuth, We7.CMS.Common" table="AdviceAuth" primaryKey="ID" identity="" description="反馈权限表(重构)">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈回复唯一标示符" />
+      <Property name="AuthID" field="AuthID" size="40" type="String" nullable="false" description="授权实体ID" />
+      <Property name="AuthType" field="AuthType" size="4" type="Int32" description="授权类型" />
+      <Property name="AdviceTypeID" field="AdviceTypeID" size="40" type="String" description="反馈类型ID" />
+      <Property name="Function" field="Function" size="4" type="Int32" description="功能类型（1：查看，2：管理，3：受理，4：办理）" />
+    </Object>
+
+    <!--留言反馈-类型表AdviceType-->
+    <Object type="We7.CMS.Common.AdviceType, We7.CMS.Common" table="AdviceType" primaryKey="ID" identity="" description="反馈类型表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="反馈类型唯一标示符" />
+      <Property name="Title" field="Title" size="64" type="String" description="反馈类型标题" />
+      <Property name="Description" field="Description" size="1024" type="String" description="反馈类型描述" />
+      <Property name="CreateDate" field="CreateDate" size="4" type="DateTime" description="反馈类型创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="反馈类型更新时间" />
+      <Property name="ModelXml" field="ModelXml" size="65535" type="String" description="反馈类型存放扩展信息XML数据" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" nullable="false" description="创建用户唯一标示符" />
+      <Property name="EnumState" field="EnumState" size="50" type="String" description="状态信息" />
+      <Property name="ToWhichDepartment" field="ToWhichDepartment" size="4" type="Int32" description="转交到办理部门过滤，提供以下一组部门供选择：1、同级部门、2、下级部门；3、所有部门；" />
+      <Property name="FlowSeries" field="FlowSeries" size="4" type="Int32" description="上报审核级数" />
+      <Property name="ProcessEnd" field="ProcessEnd"  size="16" type="String" description="审核完毕动作：0-审结，进入禁用；1-审结后直接启用；2-送跨站审核" />
+      <Property name="FlowInnerDepart" field="FlowInnerDepart" size="4" type="Int32" description="是否在部门内审核  0 否 ；1 是" />
+      <Property name="MailMode" field="MailMode" size="255" type="String" description="邮件参与形式" />
+      <Property name="UseSystemMail" field="UseSystemMail" size="4" type="Int32" description="是否使用默认邮件地址 0 默认； 1 专用" />
+      <Property name="MailSMTPServer" field="MailSMTPServer" size="255" type="String" description="邮件SMTP服务器" />
+      <Property name="POPServer" field="POPServer" size="255" type="String" description="POP服务器" />
+      <Property name="MailUser" field="MailUser" size="50" type="String" description="邮箱用户名" />
+      <Property name="MailPassword" field="MailPassword" size="50" type="String" description="邮箱密码" />
+      <Property name="SMSUser" field="SMSUser" size="255" type="String" description="短信通知者" />
+      <Property name="RemindDays" field="RemindDays" size="4" type="Int32" description="过时自动催办天数" />
+      <Property name="MailAddress" field="MailAddress" size="255" type="String" description="此类型绑定邮箱" />
+      <Property name="ParticipateMode" field="ParticipateMode" size="4" type="Int32" description="参与形式：0 是邮件参与；1 是短信通知" />
+      <Property name="ModelName" field="ModelName" size="255" type="String" description="模型名称" />
+    </Object>
+    
+    <!--日志表-->
+    <Object type="We7.CMS.Common.Log, We7.CMS.Common" table="Log" primaryKey="ID" identity="" description="日志表">
+      <Property name="ID" field="LogID" size="40" type="String" nullable="false" description="日志唯一标示符" />
+      <Property name="UserID" field="UserID" size="40" type="String" nullable="false" description="用户唯一标示符" />
+      <Property name="Content" field="Content" size="65536" type="String" description="日志操作内容" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="日志创建时间" />
+      <Property name="Page" field="Page" size="64" type="String" description="操作页面" />
+      <Property name="Remark" field="Remark" size="40" type="String" description="日志备注" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="日志更新时间" />
+    </Object>
+
+		<!--友情链接表-->
+		<Object type="We7.CMS.Common.Link, We7.CMS.Common" table="Link" primaryKey="ID" identity="" description="友情链接表" >
+			<Property name="ID" field="ID" size="40" type="String" nullable="false" description="友情链接唯一标示符" />
+			<Property name="Title" field="Title" size="40" type="String" nullable="false" description="友情链接标题" />
+			<Property name="Url" field="Url" size="255" type="String" description="友情链接地址" />
+			<Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+			<Property name="Thumbnail" field="Thumbnail" size="255" type="String" description="缩略图" />
+			<Property name="Tag" field="Tag" size="64" type="String" description="标签" />
+			<Property name="OrderNumber" field="OrderNumber" size="4" type="Int32" description="编号" />
+			<Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+		</Object>
+
+		<!--短消息信息表-->
+    <Object type="We7.CMS.Common.ShortMessage, We7.CMS.Common" table="Message" primaryKey="ID" identity="" description="短信发送历史表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="短信发送历史唯一标示符" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" nullable="false" description="接收用户唯一标示符" />
+      <Property name="AccountName" field="AccountName" size="40" type="String" description="接收人" />
+      <Property name="ReceiverID" field="ReceiverID" size="40" type="String" nullable="false" description="发送用户唯一标示符" />
+      <Property name="Receivers" field="Receivers" size="255" type="String" description="接收人" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="SendTime" field="SendTime" size="4" type="DateTime" description="发送时间" />
+      <Property name="Subject" field="Subject" size="50" type="String" description="主题" />
+      <Property name="Content" field="Content" size="255" type="String" description="内容" />
+      <Property name="Description" field="Description" size="64" type="String" description="描述" />
+      <Property name="State" field="State" size="4" type="Int32" description="状态" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+    
+    <Object type="We7.CMS.Common.ArticleIndex, We7.CMS.Common" table="ArticleIndex" primaryKey="ArticleID" identity="" description="文章索引表" >
+      <Property name="ArticleID" field="ArticleID" size="50" type="String" nullable="false" description="文章唯一标示符" />
+      <Property name="Operation" field="Operation" size="4" type="Int32" description="操作" />
+      <Property name="IsLock" field="IsLock" size="4" type="Int32" description="是否锁定" />
+    </Object>
+
+    <!--收藏夹-->
+    <Object type="We7.CMS.Common.Favorite, We7.CMS.Common" table="Favorite" primaryKey="FavoriteID" identity="" description="收藏夹表" >
+      <Property name="FavoriteID" field="FavoriteID" size="40" type="String" nullable="false" description="文章唯一标示符" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="Url" field="Url" size="255" type="String" description="Url" />
+      <Property name="Title" field="Title" size="50" type="String" description="标题" />
+      <Property name="Description" field="Description" size="255" type="String" description="描述信息" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="Tag" field="Tag" size="50" type="String" description="标签" />
+      <Property name="Thumbnail" field="Thumbnail" size="255" type="String" description="缩略图存放地址（小缩略图）" />
+      <Property name="ArticleID" field="ArticleID" size="40" type="String" nullable="false" description="对应文章标示符" />
+    </Object>
+
+    <!--类别管理-->
+    <Object type="We7.CMS.Common.Category, We7.CMS.Common" table="Category" primaryKey="ID" identity="" description="表单按钮功能管理表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="表单按钮功能管理唯一标示符" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" nullable="false" description="父级ID" />
+      <Property name="Name" field="Name" size="255" type="String" nullable="false" description="名称" />
+      <Property name="KeyWord" field="KeyWord" size="50" type="String" nullable="false" description="关键字" />
+      <Property name="Description" field="Description" size="255" type="String" nullable="false" description="名称" />
+      <Property name="CreateDate" field="CreateDate" size="4" type="DateTime" nullable="false" description="创建时间" />
+      <Property name="Index" field="Index" size="4" type="Int32" nullable="false" description="索引号" />
+      <Property name="Options" field="Options" size="50" type="String" nullable="false" description="配置信息" />
+    </Object>
+
+    <!-- 用户体系对象 We7.CMS.Accounts.dll  开始-->
+    <!-- Passport (Department, Account, Permissions)-->
+    <Object type="We7.CMS.Common.PF.Account, We7.CMS.Accounts" table="Account" primaryKey="ID" identity="" description="用户表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="用户唯一标示符" />
+      <Property name="FromSiteID" field="FromSiteID" size="40" type="String" description="用户来源站点ID" />
+      <Property name="DepartmentID" field="DepartmentID" size="40" type="String" description="用户所属部门ID" />
+      <Property name="Department" field="Department" size="255" type="String" description="用户所属部门" />
+      <Property name="Description" field="Description" size="512" type="String" description="用户描述信息" />
+      <Property name="LoginName" field="LoginName" size="64" type="String" description="登陆名称" />
+      <Property name="Password" field="Password" size="255" type="String" description="用户密码" />
+      <Property name="Home" field="Home" size="255" type="String" description="通行证ID" />
+      <Property name="FirstName" field="FirstName" size="32" type="String" description="备用名称" />
+      <Property name="LastName" field="LastName" size="32" type="String" description="会员姓名" />
+      <Property name="MiddleName" field="MiddleName" size="32" type="String" description="名称" />
+      <Property name="Email" field="Email" size="128" type="String" description="用户邮箱" />
+      <Property name="Mobile" field="Mobile" size="128" type="String" description="手机号" />
+      <Property name="Photo" field="Photo" size="255" type="String" description="头像" />
+      <Property name="QQ" field="QQ" size="50" type="String" description="QQ号" />
+      <Property name="State" field="State" size="4" type="Int32" description="用户状态" />
+      <Property name="UserType" field="UserType" size="4" type="Int32" description="用户类别：0—普通用户；1—管理用户" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="会员序号" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="PasswordHashed" field="PasswordHashed" size="4" type="Int32" description="密码加密" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <!--<Property name="GroupPassport" field="GroupPassport" size="4" type="Int32" description=" 是否站群用户" />-->
+      <!--<Property name="EnumState" field="EnumState" size="40" type="String" description="状态  用于文章信息以后所有状态的处理，详情参见UserEnumLibrary" />-->
+      <Property name="Overdue" field="Overdue" size="4" type="DateTime" description="用户过期时间" />
+      <!--<Property name="UserModelID" field="UserModelID" size="4" type="Int32" description="用户模型ID号" />-->
+      <Property name="UserModelName" field="UserModelName" size="32" type="String" description="用户模型名称" />
+      <Property name="ModelXml" field="ModelXml" size="65535" type="String" description="用户扩展信息XML数据" />
+      <Property name="Point" field="Point" size="4" type="Int32" description="积分" />
+      <Property name="Prestige" field="Prestige" size="4" type="Int32" description="威望" />
+      <Property name="Money" field="Money" size="18" type="Decimal" description="金钱" />
+      <Property name="PublishCount" field="PublishCount" size="4" type="Int32" description="发表信息总数" />
+      <Property name="ModelName" field="ModelName" size="255" type="String" description="模型名称" />
+      <Property name="ModelConfig" field="ModelConfig" size="65535" type="String" description="模型配置" />
+      <Property name="ModelSchema" field="ModelSchema" size="65535" type="String" description="模型数据架构" />
+      <Property name="EmailValidate" field="EmailValidate" size="4" type="Int32" description="Email验证" />
+      <Property name="ModelState" field="ModelState" size="4" type="Int32" description="模型状态" />
+      <!--
+      <Property name="LastPassword" field="LastPassword" size="255" type="String" description="最后的密码" />
+      <Property name="Question" field="Question" size="255" type="String" description="密码问题" />
+      <Property name="Answer" field="Answer" size="255" type="String" description="密码答案" />
+      -->
+      <Property name="Tel" field="Tel" size="50" type="String" description="电话" />
+      <Property name="Birthday" field="Birthday" size="4" type="DateTime" description="生日" />
+      <Property name="Sex" field="Sex" size="2" type="String" description="性别" />
+    </Object>
+
+    <Object type="We7.CMS.Common.PF.Department, We7.CMS.Accounts" table="Department" primaryKey="ID" identity="" description="部门表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="部门唯一标示符" />
+      <Property name="FromSiteID" field="FromSiteID" size="40" type="String" description="用户来源站点ID" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" description="父级部门ID" />
+      <Property name="Name" field="Title" size="255" type="String" description="部门名称" />
+      <Property name="FullName" field="FullName" size="255" type="String" description="逐层的完整名称，包含父级部门" />
+      <Property name="Description" field="Description" size="512" type="String" description="部门描述" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="部门序列号" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="Number" field="Number" size="255" type="String" description="部门编号" />
+      <Property name="Address" field="Address" size="255" type="String" description="单位地址" />
+      <Property name="Phone" field="Phone" size="255" type="String" description="联系电话" />
+      <Property name="Fax" field="Fax" size="64" type="String" description="传真" />
+      <Property name="Email" field="Email" size="64" type="String" description="工作邮箱" />
+      <Property name="MapScript" field="MapScript" size="65535" type="String" description="地图位置标记代码" />
+      <Property name="SiteUrl" field="SiteUrl" size="255" type="String" description="部门站点URL" />
+      <Property name="Text" field="Text" size="65535" type="String" description="详细职能描述" />
+    </Object>
+
+    <Object type="We7.CMS.Common.PF.Role, We7.CMS.Accounts" table="Role" primaryKey="ID" description="角色表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="角色唯一标示符" />
+      <Property name="FromSiteID" field="FromSiteID" size="40" type="String" description="用户来源站点ID" />
+      <Property name="Name" field="Title" size="64" type="String" description="名称" />
+      <Property name="Description" field="Description" size="512" type="String" description="描述" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="State" field="State" size="40" type="String" description="角色类型" />
+      <Property name="GroupRole" field="GroupRole" size="4" type="Int32" description="是否站群角色" />
+      <Property name="RoleType" field="RoleType" size="4" type="Int32" description="角色类别： 0- 管理员角色 ；1-普通用户角色；" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+
+    <Object type="We7.CMS.Common.PF.AccountRole, We7.CMS.Accounts" table="AccountRole" primaryKey="ID" identity="" description="用户与角色关联表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="用户与角色关联唯一标示符" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="RoleID" field="RoleID" size="40" type="String" description="角色唯一标示符" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="RoleTitle" field="RoleTitle" size="64" type="String" description="角色标题" />
+    </Object>
+
+    <Object type="We7.CMS.Common.Permission, We7.CMS.Accounts" table="Permission" primaryKey="ID" description="对象与权限关联表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="对象与权限关联的唯一标示符" />
+      <Property name="OwnerID" field="OwnerID" size="40" type="String" description="用户ID或RoleID" />
+      <Property name="OwnerType" field="OwnerType" size="4" type="Int32" description="所属类型：0—帐户；1—角色" />
+      <Property name="ObjectID" field="ObjectID" size="40" type="String" description=" 对象ID" />
+      <Property name="Content" field="Content" size="64" type="String" description="权限或权限类别" />
+      <Property name="Url" field="Url" size="255" type="String" description="栏目Url或菜单Url" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+    </Object>
+
+    <Object type="We7.CMS.Common.MenuItem, We7.CMS.Accounts" table="Menu" primaryKey="ID" identity="" description="菜单表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="主键，唯一标示符" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" description="父级菜单ID" />
+      <Property name="EntityID" field="EntityID" size="40" type="String" description="权限类别标示符" />
+      <Property name="Name" field="NameText" size="128" type="String" description="菜单名称" />
+      <Property name="Title" field="Title" size="128" type="String" description="菜单标题，后台显示" />
+      <Property name="Href" field="Href" size="255" type="String" description="连接地址" />
+      <Property name="Icon" field="Icon" size="40" type="String" description="菜单图片" />
+      <Property name="IconHover" field="IconHover" size="40" type="String" description="鼠标停留时显示的图片" />
+      <Property name="Group" field="Group" size="4" type="Int32" description="菜单组分顺序" />
+      <Property name="Type" field="Type" size="4" type="Int32" description="菜单类型" />
+      <Property name="Index" field="SequenceIndex" size="4" type="Int32" description="序列号" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="Updated" field="Updated" size="4" type="DateTime" description="更新时间" />
+      <Property name="MenuType" field="MenuType" size="4" type="Int32" description="菜单类型" />
+      <Property name="ReferenceID" field="ReferenceID" size="40" type="String" description="引用菜单ID" />
+    </Object>
+
+    <!--积分-->
+    <Object type="We7.CMS.Common.Point, We7.CMS.Accounts" table="Point" primaryKey="ID" identity="" description="积分历史表" >
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" description="用户唯一标示符" />
+      <Property name="AccountName" field="AccountName" size="40" type="String" description="用户名称" />
+      <Property name="Value" field="Value" size="4" type="Int32" description="数值" />
+      <Property name="Action" field="Action" size="4" type="Int32" description="收支动作" />
+      <Property name="Description" field="Description" size="255" type="String" description="描述信息" />
+      <Property name="Created" field="Created" size="4" type="DateTime" description="创建时间" />
+      <Property name="ObjectID" field="ObjectID" size="50" type="String" description="相关对象ID" />
+    </Object>
+    <!-- 用户体系对象 We7.CMS.Accounts.dll  结束-->
+
+    <Object type="We7.CMS.Common.ColumnModule,  We7.CMS.Common" table="ColumnModule" primaryKey="ID" identity="" description="栏目模块" >
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="Title" field="Title" size="255" type="String" description="模块名称" />
+      <Property name="Desc" field="Desc" size="255" type="String" description="模块描述" />
+      <Property name="ParamIntro" field="ParamIntro" size="255" type="String" description="参数介绍" />
+      <Property name="Path" field="Path" size="255" type="String" description="模块路径" />
+    </Object>
+
+    <Object type="We7.CMS.Common.ChannelModuleMapping,  We7.CMS.Common" table="ChannelModuleMapping" primaryKey="ID" identity="" description="栏目与模块映射关系" >
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="ChannelID" field="ChannelID" size="40" type="String" description="栏目ID" />
+      <Property name="ModuleID" field="ModuleID" size="40" type="String" description="模块ID" />
+      <Property name="Parameter" field="Parameter" size="255" type="String" description="参数" />
+    </Object>
+    
+    
+
+    <!--点击量的日记录汇总-->
+    <Object type="We7.CMS.Common.ClickRecords, We7.CMS.Common" table="ClickRecords" primaryKey="ID" identity="" description="点击量的日记录汇总表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="ObjectType" field="ObjectType" size="40" type="String" description="对象类型" />
+      <Property name="ObjectID" field="ObjectID" size="40" type="String" description="对象ID" />
+      <Property name="VisitDate" field="VisitDate" size="4" type="Int32" description="访问日期" />
+      <Property name="Clicks" field="Clicks" size="4" type="Int32" description="某一日期的流量统计" />
+    </Object>
+
+    <!--投票-->
+    <Object type="We7.CMS.Common.Vote, We7.CMS.Common" table="Vote" primaryKey="ID" identity="" description="投票表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="Title" field="Title" size="40" type="String" description="投票标题" />
+      <Property name="OptionType" field="OptionType" size="4" type="Int32" description="选项类型" />
+      <Property name="AddDate" field="AddDate" size="4" type="DateTime" description="添加时间" />
+      <Property name="EndDate" field="EndDate" size="4" type="DateTime" description="截止时间" />
+      <Property name="VotePeoples" field="VotePeoples" size="4" type="Int32" description="总投票人数" />
+      <Property name="IsCanRepeat" field="IsCanRepeat" size="4" type="Boolean" description="总投票人数" />
+    </Object>
+
+    <!--投票选项-->
+    <Object type="We7.CMS.Common.VoteEntry, We7.CMS.Common" table="VoteEntry" primaryKey="ID" identity="" description="投票选项表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="VoteID" field="VoteID" size="40" type="String" description="投票ID号" />
+      <Property name="EntryText" field="EntryText" size="255" type="String" description="选项内容" />
+      <Property name="OrderID" field="OrderID" size="4" type="Int32" description="排序ID" />
+    </Object>
+
+    <!--用户投票记录-->
+    <Object type="We7.CMS.Common.VoteAnswer, We7.CMS.Common" table="VoteAnswer" primaryKey="ID" identity="" description="点击量的日记录汇总表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="VoteID" field="VoteID" size="40" type="String" description="投票ID" />
+      <Property name="VoteEntryID" field="VoteEntryID" size="40" type="String" description="投票选项ID" />
+      <Property name="AnswerText" field="AnswerText" size="50" type="String" description="投票答案" />
+      <Property name="AccountID" field="AccountID" size="40" type="String" description="用户ID" />
+      <Property name="IP" field="IP" size="50" type="String" description="用户IP" />
+      <Property name="VoteDate" field="VoteDate" size="4" type="DateTime" description="投票时间" />
+    </Object>
+
+    <!--用户投票统计-->
+    <Object type="We7.CMS.Common.VoteAnswerStat, We7.CMS.Common" table="VoteAnswerStat" primaryKey="ID" identity="" description="点击量的日记录汇总表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标示符" />
+      <Property name="VoteID" field="VoteID" size="40" type="String" description="投票ID" />
+      <Property name="VoteEntryID" field="VoteEntryID" size="40" type="String" description="投票选项ID" />
+      <Property name="VoteEntrySum" field="VoteEntrySum" size="4" type="Int32" description="投票数量" />
+      <Property name="VoteEntryText" field="VoteEntryText" size="255" type="String" description="选项内容" />
+      <Property name="OrderID" field="OrderID" size="4" type="Int32" description="排序ID" />
+    </Object>
+
+    <!--
+    <Object type="We7.CMS.Common.AnswerSheet, We7.CMS.Common" table="AnswerSheet" primaryKey="ID" identity="" description="问卷答题记录表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标识符" />
+      <Property name="QuestionnaireID" field="QuestionnaireID" size="40" type="String" nullable="false" description="所属问卷编号" />
+      <Property name="QuestionID" field="QuestionID" size="40" type="String" nullable="false" description="所属问题编号" />
+      <Property name="OptionID" field="OptionID" size="40" type="String" nullable="false" description="所属选项编号" />
+      <Property name="OptionValue" field="OptionValue" size="400" type="String" description="答题内容" />
+      <Property name="UserName" field="UserName" size="40" type="String" description="用户名" />
+      <Property name="UserIP" field="UserIP" size="200" type="String" description="用户IP" />
+      <Property name="PostDate" field="PostDate" size="8" type="DateTime" description="提交日期" />
+      <Property name="CurrentAnswerQuestionnaireID" field="CurrentAnswerQuestionnaireID" size="40" type="String" nullable="false" description="当前答卷ID" />
+    </Object>
+
+    <Object type="We7.CMS.Common.Option, We7.CMS.Common" table="Option" primaryKey="ID" identity="" description="问卷题目选项表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标识符" />
+      <Property name="QuestionID" field="QuestionID" size="40" type="String" nullable="false" description="所属问题编号" />
+      <Property name="Title" field="Title" size="200" type="String" description="选项标题" />
+      <Property name="Type" field="Type" size="4" type="Int32" description="选项类型" />
+      <Property name="OptionValue" field="OptionValue" size="200" type="String" description="选项值" />
+      <Property name="Score" field="Score" size="4" type="Int32" description="选项分值" />
+      <Property name="OrderID" field="OrderID" size="4" type="Int32" description="排序号" />
+      <Property name="DefaultSelected" field="DefaultSelected" size="1" type="Boolean" description="是否默认选中（单选|多选）" />
+    </Object>
+    
+    <Object type="We7.CMS.Common.Question, We7.CMS.Common" table="Question" primaryKey="ID" identity="" description="问卷题目表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标识符" />
+      <Property name="QuestionnaireID" field="QuestionnaireID" size="40" type="String" nullable="false" description="所属问卷编号" />
+      <Property name="Type" field="Type" size="4" type="Int32" description="题目类型" />
+      <Property name="Title" field="Title" size="200" type="String" description="题目标题" />
+      <Property name="Description" field="Description" size="400" type="String" description="题目说明" />
+      <Property name="OrderID" field="OrderID" size="4" type="Int32" description="题目排序号" />
+      <Property name="MustAnswer" field="MustAnswer" size="1" type="Boolean" description="是否必答" />
+      <Property name="AnswerCount" field="AnswerCount" size="4" type="Int32" description="问题回答次数" />
+    </Object>
+    
+    <Object type="We7.CMS.Common.Questionnaire, We7.CMS.Common" table="Questionnaire" primaryKey="ID" identity="" description="问卷表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标识符" />
+      <Property name="TypeID" field="TypeID" size="40" type="String" nullable="false" description="所属类别编号" />
+      <Property name="Title" field="Title" size="200" type="String" description="问卷标题" />
+      <Property name="Description" field="Description" size="800" type="String" description="问卷描述" />
+      <Property name="Author" field="Author" size="50" type="String" description="发起人" />
+      <Property name="Password" field="Password" size="100" type="String" description="访问密码" />
+      <Property name="State" field="State" size="4" type="Int32" description="问卷状态" />
+      <Property name="UseHits" field="UseHits" size="4" type="Int32" description="参与答题次数" />
+      <Property name="Hit" field="Hit" size="4" type="Int32" description="问卷点击次数" />
+      <Property name="Created" field="Created" size="8" type="DateTime" description="创建日期" />
+      <Property name="Updated" field="Updated" size="8" type="DateTime" description="更新日期" />
+      <Property name="StartDate" field="StartDate" size="8" type="DateTime" description="开始日期" />
+      <Property name="ExpireDate" field="ExpireDate" size="8" type="DateTime" description="过期日期" />
+      <Property name="IsEmailSend" field="IsEmailSend" size="1" type="Boolean" description="是否发送邮件" />
+      <Property name="IsNeedLogin" field="IsNeedLogin" size="1" type="Boolean" description="是否需要登录" />
+      <Property name="IsNeedValidateCode" field="IsNeedValidateCode" size="1" type="Boolean" description="答题是否需要验证码" />
+      <Property name="IpRepeat" field="IpRepeat" size="1" type="Boolean" description="是否允许同一IP多次答题" />
+      <Property name="IsAudited" field="IsAudited" size="1" type="Boolean" description="是否需要审核通过" />
+      <Property name="SuccessConfig" field="SuccessConfig" size="4" type="Int32" description="问卷提交后转向" />
+    </Object>
+
+    <Object type="We7.CMS.Common.QuestionnaireType, We7.CMS.Common" table="QuestionnaireType" primaryKey="ID" identity="" description="问卷类别表">
+      <Property name="ID" field="ID" size="40" type="String" nullable="false" description="唯一标识符" />
+      <Property name="ParentID" field="ParentID" size="40" type="String" nullable="false" description="父类别编号" />
+      <Property name="TypeName" field="TypeName" size="200" type="String" description="类别名称" />
+      <Property name="OrderID" field="OrderID" size="4" type="Int32" description="配需编号" />
+      <Property name="IsShow" field="IsShow" size="1" type="Boolean" description="是否显示" />
+      <Property name="Created" field="Created" size="8" type="DateTime" description="创建日期" />
+      <Property name="Updated" field="Updated" size="8" type="DateTime" description="更新日期" />
+    </Object>
+    -->
+  </Database>
+</Objects>

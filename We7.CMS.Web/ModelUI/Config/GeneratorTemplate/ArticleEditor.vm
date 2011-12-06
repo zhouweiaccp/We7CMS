@@ -1,0 +1,19 @@
+#set ($pre='###')
+#set ($pre2='#')
+<!--${pre} name="$model.Label录入(自动布局)" type="system" version="1.0" created="$CurrentDate" desc="$model.Desc" author="We7 Group" ${pre}-->
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.Model.Core.UI.LayoutEditor" %>
+<asp:PlaceHolder ID="_ID" runat="server"></asp:PlaceHolder>
+<table>
+	#foreach($item in $controls)
+		#if(${item.Name}!='ID')
+			<tr>
+				<td class="lable">
+					$item.Label
+				</td>
+				<td class="content">
+					<asp:PlaceHolder ID="_$item.Name" runat="server"></asp:PlaceHolder>
+				</td>
+			</tr>
+		#end
+    #end          
+</table>

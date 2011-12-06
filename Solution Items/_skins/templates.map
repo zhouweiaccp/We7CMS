@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item url="/home" template="site.home.ascx" />
+  <item url="/*/" template="channel.index.ascx" />
+  <item url="/*/search" template="channel.search.ascx" />
+  <item url="/*/detail" template="channel.detail.ascx" />
+  <item url="/retrievepassword" template="site.retrievepassword.ascx" />
+  <item url="/register" template="site.register.ascx" />
+</items>

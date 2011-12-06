@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>布局属性面板</title>
+
+    <script src="/Scripts/jQuery/jquery.js" type="text/javascript"></script>
+    <script src="/Scripts/jQuery/plugin/jquery.tools.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .tabs
+        {
+            border-bottom: 1px solid #666;
+            height: 30px;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .tabs li
+        {
+            float: left;
+            list-style-image: none !important;
+            margin: 0px;
+            padding: 0px;
+            text-indent: 0px;
+            display: list-item;
+        }
+        .tabs a
+        {
+            background: url(http://flowplayer.org/img/global/tabs.png) no-repeat -652px 0px;
+            color: black;
+            display: block;
+            font-size: 11px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            top: 1px;
+            width: 111px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        var data;
+        // data = { id: "",percent:true, items: [{ id: "", cssclass: "", width: "", style: "" }, { id: "", cssclass: "", width: "", style: ""}] };
+        function initControls() {
+            for (var i = 0; i < data.Columns.length; i++) {
+                var item = data.Columns[i];
+                $('<p>列' + (i + 1) + '<input type="text" /><em class="widthunit" /><p>').appendTo("#widthcols").find("input").attr("index", i).val(item.width).change(function () {
+
+                    data.Columns[parseInt($(this).attr("index"))].width = $(this).val();
+
+                });
+                $('<p>列' + (i + 1) + '<input type="text" /><p>').appendTo("#stylecols").find("input").attr("index", i).val(item.style).change(function() {
+
+                    data.Columns[parseInt($(this).attr("index"))].style = $(this).val();
+
+                });
+                $('<p>列' + (i + 1) + '<input type="text" /><p>').appendTo("#cssclasscols").find("input").attr("index", i).val(item.cssclass).change(function() {
+
+                    data.Columns[parseInt($(this).attr("index"))].cssclass = $(this).val();
+
+                });
+            }
+//              debugger
+            if (data.Columns[0].widthunit=="%") {
+                $("em.widthunit").html("%");
+                $("#percent").attr("checked", "checked");
+            }
+            else {
+                $("em.widthunit").html("px");
+                $("#px").attr("checked", "checked");
+            }
+
+            $("input[name='sizetype']").change(function () {
+                var unit = $(this).val();
+                $(data.Columns).each(function(){
+                    this.widthunit=unit;
+                });
+                $("em.widthunit").html(unit);
+
+
+            });
+
+        }
+        
+        $(document).ready(function(){
+      
+         $("ul.tabs").tabs("div.panes>div");
+        data=parent.TempLayout;
+            initControls();
+        });
+        
+        function Ok()
+        {
+        return data;
+        }
+    </script>
+</head>
+<body>
+<div class="warp">
+        <h3>
+            修改布局元素</h3>
+        <div class="layout">
+            <ul class="tabs">
+                <li><a href="#">大小</a></li>
+                <li><a href="#">自定义样式</a></li>
+                <li><a href="#">类属性</a></li>
+            </ul>
+            <div class="panes">
+                <div>
+                    <hr />
+                    <p>
+                        大小单位:<input type="radio" name="sizetype" value="%" id="percent" /><label for="percent">%</label>
+                        <input type="radio" value="px" name="sizetype" id="px" /><label for="px">px</label>
+                    </p>
+                    <hr />
+                    <p>
+                        样式</p>
+                    <div id="widthcols">
+                    </div>
+                </div>
+                <div>
+                    
+                    <hr />
+                    <div id="stylecols">
+                       
+                    </div>
+                </div>
+            <div>
+                <p>
+                    类</p>
+                <div id="cssclasscols">
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </div>
+</body>
+</html>

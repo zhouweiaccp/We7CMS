@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DateTime.ascx.cs" Inherits="We7.Model.UI.Controls.system.DateTime" %>
+<asp:TextBox runat="server" ID="txtInput" onblur="this.className='input_blur'"></asp:TextBox>

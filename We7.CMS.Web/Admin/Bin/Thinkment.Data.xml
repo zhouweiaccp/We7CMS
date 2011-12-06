@@ -1,0 +1,1034 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thinkment.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Thinkment.Data.OrderMode">
+            <summary>
+            排序类型：升/降
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.Criteria">
+            <summary>
+            SQL条件类
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.Criteria.Add(Thinkment.Data.CriteriaType,System.String,System.Object)">
+            <summary>
+            增加一个条件
+            </summary>
+            <param name="type">运算符</param>
+            <param name="name">字段</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Thinkment.Data.Criteria.AddOr(Thinkment.Data.CriteriaType,System.String,System.Object)">
+            <summary>
+            增加一个“或”的条件
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Mode">
+            <summary>
+            与或模式
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Type">
+            <summary>
+            条件运算符类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Criterias">
+            <summary>
+            子条件表达式列表
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Adorn">
+            <summary>
+            字段函数
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Start">
+            <summary>
+            开始
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Criteria.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.CriteriaType">
+            <summary>
+            条件运算符：等于、大于……
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.SqlDbDriver">
+            <summary>
+            SQL Server数据库驱动
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.BaseDriver">
+            <summary>
+            数据库驱动基类（抽象类）
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.IDbDriver">
+            <summary>
+            数据库驱动接口
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.BuildPaging(System.String,System.String,System.String,System.Collections.Generic.List{Thinkment.Data.Order},System.Int32,System.Int32)">
+            <summary>
+            构建用于分页的sql语句
+            </summary>
+            <param name="table"></param>
+            <param name="fields"></param>
+            <param name="where"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.GetCriteria(Thinkment.Data.CriteriaType)">
+            <summary>
+            根据表达式范式类型，返回字符串
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.CreateConnection(System.String)">
+            <summary>
+            创建数据库连接对象
+            </summary>
+            <param name="connectionString">连接串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.CreateConnection(System.String,System.Boolean)">
+            <summary>
+            创建数据库连接对象
+            </summary>
+            <param name="connectionString"></param>
+            <param name="create"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.BuildOrderString(System.Collections.Generic.List{Thinkment.Data.Order})">
+            <summary>
+            构建排序语句
+            </summary>
+            <param name="orders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.BuildOrderString(System.Collections.Generic.List{Thinkment.Data.Order},System.Boolean)">
+            <summary>
+            构建排序语句
+            </summary>
+            <param name="orders"></param>
+            <param name="reverse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.BuildOrderString(System.Collections.Generic.List{Thinkment.Data.Order},System.Boolean,System.Boolean)">
+            <summary>
+            构建排序语句
+            </summary>
+            <param name="orders"></param>
+            <param name="reverse"></param>
+            <param name="isalias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.FormatTable(System.String)">
+            <summary>
+            格式化数据库表名
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.FormatField(Thinkment.Data.Adorns,System.String)">
+            <summary>
+            格式化字段名（包括函数）
+            </summary>
+            <param name="ad"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.FormatField(Thinkment.Data.Adorns,System.String,System.Int32,System.Int32)">
+            <summary>
+            格式化字段名（包括函数）
+            </summary>
+            <param name="ad"></param>
+            <param name="field"></param>
+            <param name="start"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.FormatField(Thinkment.Data.ConListField)">
+            <summary>
+            格式化字段名（包括函数）,用于扩展字段类
+            </summary>
+            <param name="conListField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.FormatSQL(Thinkment.Data.SqlStatement)">
+            <summary>
+            格式化SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.BaseDriver.GetIdentityExpression(System.String)">
+            <summary>
+            选择标识字段的语句
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.BaseDriver.Prefix">
+            <summary>
+            变量名前缀
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.IConnectionEx">
+            <summary>
+            数据库连接扩展
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.IConnection">
+            <summary>
+            数据库连接对象接口
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.ListField">
+            <summary>
+            Select中的字段或表达式
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ListField.Adorn">
+            <summary>
+            表达式函数
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ListField.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.MySqlDriver">
+            <summary>
+            MySQL数据库驱动
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.IDatabase">
+            <summary>
+            数据库对象接口
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.Adorns">
+            <summary>
+            SQL函数
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.OleDbDriver">
+            <summary>
+            Access数据库驱动
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.DataException">
+            <summary>
+            数据驱动层异常处理
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.IDataAccessPage">
+            <summary>
+            使用数据访问页
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DBAccessHelper.IsDataAccessPage">
+            <summary>
+            是否是数据访问页面
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.Property">
+            <summary>
+            对象属性类，用于描述CD.XML中的映射项信息
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.Property.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            输出到XML
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.Property.FromXml(System.Xml.XmlElement)">
+            <summary>
+            从XML获取各属性值
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.Property.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Field">
+            <summary>
+            数据库字段
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Type">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Info">
+            <summary>
+            对应dll对象属性信息
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Scale">
+            <summary>
+            数值范围
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Readonly">
+            <summary>
+            只读
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Nullable">
+            <summary>
+            允许为空
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Property.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.ConListField">
+            <summary>
+            Select中的字段或表达式（扩展：可对字段进行截取或运算）
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ConListField.Type">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ConListField.Size">
+            <summary>
+            字段大小
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.SQLiteDriver">
+            <summary>
+            SQLite数据库驱动
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.Order">
+            <summary>
+            排序构建类
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.Mode">
+            <summary>
+            升降模式
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.AliasName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.Adorn">
+            <summary>
+            排序项函数目前仅支持SubString
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.Start">
+            <summary>
+            开始
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.Order.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.CriteriaMode">
+            <summary>
+            条件表达式关系：与/或
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.ObjectAssistant">
+            <summary>
+            映射对象执行SQL
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.LoadDataSource(System.String)">
+            <summary>
+            将目录下的映射文件全部加载
+            </summary>
+            <param name="dir"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.LoadDataSource(System.String,System.String[])">
+            <summary>
+            将目录下的映射文件加载到数据列表中
+            </summary>
+            <param name="dir"></param>
+            <param name="dbs"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.LoadFromFile(System.String)">
+            <summary>
+            加载指定的映射文件
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.LoadOldDBConfig(System.String)">
+            <summary>
+            加载旧数据库的配置信息（扩展）
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.LoadDBConnectionString(System.String,System.String)">
+            <summary>
+            载入数据库连接串信息
+            </summary>
+            <param name="connectStr"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.GetDatabases">
+            <summary>
+            取得数据库列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Insert(System.Object)">
+            <summary>
+            插入一条记录
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Insert(System.Object,System.String[])">
+            <summary>
+            插入一条记录（仅列出字段有效）
+            </summary>
+            <param name="obj"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Update(System.Object)">
+            <summary>
+            更新一条记录
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Update(System.Object,System.String[])">
+            <summary>
+            更新一条记录（仅列出字段有效）
+            </summary>
+            <param name="obj"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Update(System.Object,System.String[],Thinkment.Data.Criteria)">
+            <summary>
+            更新满足条件的一组记录（仅列出字段有效）
+            </summary>
+            <param name="obj"></param>
+            <param name="fields"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Select(System.Object)">
+            <summary>
+            选取一条记录
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Select(System.Object,System.String[])">
+            <summary>
+            选取一条记录（仅列出字段有效）
+            </summary>
+            <param name="obj"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Count``1(Thinkment.Data.Criteria)">
+            <summary>
+            计算满足条件的记录数
+            </summary>
+            <typeparam name="T">数据库对象</typeparam>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.Criteria,Thinkment.Data.Order[])">
+            <summary>
+            按条件取得数据库记录列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32)">
+            <summary>
+            按条件取得数据库记录列表（其中部分）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,System.String[])">
+            <summary>
+            按条件取得数据库记录列表（其中部分，仅选取列出部分字段）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ListField[])">
+            <summary>
+             按条件取得数据库记录列表（其中部分）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Delete(System.Object)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="obj">就删这条</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.DeleteList``1(Thinkment.Data.Criteria)">
+            <summary>
+            删除满足条件的一组数据库记录
+            </summary>
+            <typeparam name="T">哪个表</typeparam>
+            <param name="condition">条件</param>
+            <returns>成功删除条数</returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Insert(Thinkment.Data.IConnection,System.Object,System.String[])">
+            <summary>
+            插入一条记录（指定数据库）
+            </summary>
+            <param name="conn">连接串信息</param>
+            <param name="obj"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Update(Thinkment.Data.IConnection,System.Object,System.String[],Thinkment.Data.Criteria)">
+            <summary>
+            更新一组记录（指定数据库）
+            </summary>
+            <param name="conn">连接串信息</param>
+            <param name="obj"></param>
+            <param name="fields"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Select(Thinkment.Data.IConnection,System.Object,System.String[])">
+             <summary>
+            选取一条记录（仅列出字段有效）（指定数据库）
+             </summary>
+             <param name="conn"></param>
+             <param name="obj"></param>
+             <param name="fields"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Count``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria)">
+            <summary>
+            计算满足条件的记录条数（指定数据库）
+            </summary>
+            <typeparam name="T">哪个表</typeparam>
+            <param name="conn">连接串信息</param>
+            <param name="condition">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,System.String[])">
+            <summary>
+            选取满足条件的记录（部分）（指定数据库）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.List``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ListField[])">
+            <summary>
+             选取满足条件的记录（部分）（指定数据库）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.Delete(Thinkment.Data.IConnection,System.Object)">
+            <summary>
+             删除一条记录（指定数据库）
+            </summary>
+            <param name="conn"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.DeleteList``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria)">
+            <summary>
+             删除满足条件的记录（指定数据库）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.ConList``1(Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ConListField[])">
+            <summary>
+            使用内容模型取出满足条件记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns>DataTable数据</returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectAssistant.ConList``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ConListField[])">
+            <summary>
+            使用内容模型取出满足条件记录（指定数据库）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.ObjectAssistant.DicForTable">
+            <summary>
+            数据库字段字典
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.TableInfo">
+            <summary>
+            响应实体
+            功能：拿到表信息结构
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.#ctor">
+            <summary>
+            实例化
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.#ctor(System.Data.DataTable,System.Collections.Generic.Dictionary{System.String,Thinkment.Data.Property})">
+            <summary>
+            实例化此类
+            </summary>
+            <param name="dt"></param>
+            <param name="pro">字段字典</param>
+        </member>
+        <member name="F:Thinkment.Data.TableInfo.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="F:Thinkment.Data.TableInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:Thinkment.Data.TableInfo.Fileds">
+            <summary>
+            字段Key Value
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.ToJson">
+            <summary>
+            获取Json
+            {0}总记录数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.ToJson(System.Object)">
+            <summary>
+            获取Json
+            说明：{"Key":"value"}
+            暂时支持类型：DataRow、DataSet、DataTable、IEnumerable、Hashtable
+            <param name="o">数据类型</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.ToJson(System.Object,System.Boolean)">
+            <summary>
+            获取Json
+            说明：[{key:xx,value:xx},{..}]
+            暂时支持类型：DataRow、DataSet、DataTable、IEnumerable、Hashtable
+            <param name="o">数据类型</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.TableInfo.Convert2Json(System.Object)">
+            <summary>
+            转换Json
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.TableInfo.records">
+            <summary>
+            当前有多少条记录
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.TableInfo.Table">
+            <summary>
+            当前Table
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.TableInfo.FiledsInfo">
+            <summary>
+            字段描述
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.TableInfo.Heard">
+            <summary>
+            字段属性Key
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.OracleDriver">
+            <summary>
+            Oracle数据库驱动
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.SqlStatement">
+            <summary>
+            SQL对象类
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.SqlStatement.CommandType">
+            <summary>
+            SQL对象类型：存储过程？表？
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.SqlStatement.SqlClause">
+            <summary>
+            SQL语句
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.SqlStatement.Parameters">
+            <summary>
+            参数列表
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.ErrorCodes">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.DataParameter">
+            <summary>
+            SQL参数类
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.Precision">
+            <summary>
+            精度
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.Scale">
+            <summary>
+            数值范围
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.Direction">
+            <summary>
+            输入输出方向
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.DbType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.IsNullable">
+            <summary>
+            可以为空
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.ParameterName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.DataParameter.SourceColumn">
+            <summary>
+            来源列
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.ObjectManager">
+            <summary>
+            SQL语句构造及执行管理
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyInsert(Thinkment.Data.IConnection,System.Object,System.String[],System.Object@)">
+            <summary>
+            执行插入操作
+            </summary>
+            <param name="conn"></param>
+            <param name="o"></param>
+            <param name="fields"></param>
+            <param name="identity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyUpdate(Thinkment.Data.IConnection,System.Object,System.String[],Thinkment.Data.Criteria)">
+            <summary>
+            执行更新操作
+            </summary>
+            <param name="conn"></param>
+            <param name="o"></param>
+            <param name="fields"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MySelect(Thinkment.Data.IConnection,System.Object,System.String[])">
+            <summary>
+            执行选取操作
+            </summary>
+            <param name="conn"></param>
+            <param name="o"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyDelete(Thinkment.Data.IConnection,System.Object)">
+            <summary>
+            执行删除一条记录
+            </summary>
+            <param name="conn"></param>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyDeleteList(Thinkment.Data.IConnection,Thinkment.Data.Criteria)">
+            <summary>
+            执行一组记录
+            </summary>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyCount(Thinkment.Data.IConnection,Thinkment.Data.Criteria)">
+            <summary>
+            执行统计记录数
+            </summary>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyList``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,System.String[])">
+            <summary>
+            执行列出记录列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyList``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ListField[])">
+            <summary>
+            执行列出记录列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.ObjectManager.MyList``1(Thinkment.Data.IConnection,Thinkment.Data.Criteria,Thinkment.Data.Order[],System.Int32,System.Int32,Thinkment.Data.ConListField[])">
+            <summary>
+            执行列出记录列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="conn"></param>
+            <param name="condition"></param>
+            <param name="orders"></param>
+            <param name="from"></param>
+            <param name="count"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.ObjectManager.CurObject">
+            <summary>
+            当前表映射信息
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ObjectManager.ObjType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.ObjectManager.CurDatabase">
+            <summary>
+            当前数据库
+            </summary>
+        </member>
+        <member name="T:Thinkment.Data.EntityObject">
+            <summary>
+            表级别的映射对象信息
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.EntityObject.ToXml(System.Xml.XmlDocument)">
+            <summary>
+            将属性输出到XML
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.EntityObject.FromXml(System.Xml.XmlElement)">
+            <summary>
+            从XML加载
+            </summary>
+            <param name="xe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.EntityObject.GetValue(System.Object,System.String)">
+            <summary>
+            从属性字典中获取
+            </summary>
+            <param name="obj"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.EntityObject.BuildCriteria(System.Object)">
+            <summary>
+            构建条件
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Thinkment.Data.EntityObject.BuildOrderList">
+            <summary>
+            构建排序对象列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.IsDataTable">
+            <summary>
+            是否输出DaTable
+            author:丁乐 2011/11/8
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.TypeForDT">
+            <summary>
+            输出Datatable时的Type类型
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.PrimaryKeyName">
+            <summary>
+            键值名称
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.IdentityName">
+            <summary>
+            标识字段名
+            </summary>
+        </member>
+        <member name="P:Thinkment.Data.EntityObject.IsIdentity">
+            <summary>
+            是否有主键
+            </summary>
+        </member>
+        <member name="F:Thinkment.Data.Dictionaries.objColumnDic">
+            <summary>
+            列字段信息
+            丁乐 2011/11/7
+            </summary>
+        </member>
+        <member name="F:Thinkment.Data.Dictionaries.GlobalDBString">
+            <summary>
+            全局数据库连接串；thehim-05-21
+            </summary>
+        </member>
+        <member name="M:Thinkment.Data.Dictionaries.SetGlobalDBString(System.String,System.String)">
+            <summary>
+            允许外面的连接串传入进来；thehim:2009-05-21
+            </summary>
+            <param name="dbString"></param>
+        </member>
+        <member name="M:Thinkment.Data.Dictionaries.GetObjectManager(System.Type)">
+            <summary>
+            获取SQL构造类
+            author:丁乐 2011/11/9
+            </summary>
+            <param name="type">Key(如类为TableInfo则返回表信息)</param>
+            <returns></returns>
+        </member>
+        <member name="P:Thinkment.Data.Dictionaries.ObjColumnDic">
+            <summary>
+            数据库表字段字典
+            </summary>
+        </member>
+    </members>
+</doc>

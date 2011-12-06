@@ -1,0 +1,10 @@
+﻿#set ($pre='###')
+<!--${pre} name="$model.Label详细(自动布局)" type="system" version="1.0" created="$CurrentDate" desc="$model.Desc" author="We7 Group" ${pre}-->
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.CMS.WebControls.ArticleModelProvider" %>
+<div css="$model.ModelName.Replace(".","_")_<%=CssClass%>">
+<table>
+#foreach($item in $columns)
+<tr><td>$item.Label:</td><td><%=Item["$item.Name"] %></td></tr>
+#end
+</table>
+</div>

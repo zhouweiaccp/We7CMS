@@ -1,0 +1,19 @@
+﻿#set ($pre='###')
+<!--${pre} name="$model.Label详细(自动布局,单表结构)" type="system" version="1.0" created="$CurrentDate" desc="$model.Desc,单表结构" author="We7 Group" ${pre}-->
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.CMS.WebControls.DbModelProvider" %>
+<div css="$model.ModelName.Replace(".","_")_<%=CssClass%>">
+<table>
+#foreach($item in $columns)
+	<tr><td>$item.Label:</td><td><%=Item["$item.Name"] %></td></tr>
+#end
+</table>
+</div>
+<%--系统提供的方法
+string ToStr(object fieldValue)
+string ToStr(object fieldValue, int maxlength)
+string ToStr(object fieldValue, int maxlength, string tail)
+string ToDateStr(object fieldValue, string fmt)
+string ToDateStr(object fieldValue)
+int? ToInt(object fieldValue)
+string GetUrl(object id)
+--%>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<BaseConfigInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DBConnectionString>Provider=Microsoft.Jet.OleDb.4.0;Data Source={$App}\App_data\DB\We7_CMS_DB.mdb;Persist Security Info=True;</DBConnectionString>
+  <DBDriver>Thinkment.Data.OleDbDriver</DBDriver>
+  <DBType>Access</DBType>
+</BaseConfigInfo>

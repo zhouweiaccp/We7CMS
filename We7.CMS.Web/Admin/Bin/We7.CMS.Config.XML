@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>We7.CMS.Config</name>
+    </assembly>
+    <members>
+        <member name="T:We7.CMS.Config.Provider.ConfigProvider">
+            <summary>
+            ConfigProvider 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.Provider.ConfigProvider.Instance">
+            <summary>
+            获取配置对象实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.Provider.ConfigProvider.SetInstance(We7.Framework.Config.GeneralConfigInfo)">
+            <summary>
+            设置配置对象实例
+            </summary>
+            <param name="anConfig"></param>
+        </member>
+        <member name="T:We7.CMS.Config.BaseConfigInfo">
+            <summary>
+            基本设置描述类, 加[Serializable]标记为可序列化
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigInfo.DBConnectionString">
+            <summary>
+            数据库连接串
+            格式(中文为用户修改的内容)：
+               Data Source=数据库服务器地址;
+               User ID=您的数据库用户名;
+               Password=您的数据库用户密码;
+               Initial Catalog=数据库名称;Pooling=true
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigInfo.DBDriver">
+            <summary>
+            数据库驱动
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigInfo.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.BaseConfigInfoCollection">
+            <summary>
+            BaseConfigInfo 集合类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> class.
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.#ctor(We7.CMS.Config.BaseConfigInfoCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> class containing the elements of the specified source collection.
+            </summary>
+            <param name="value">A <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> with which to initialize the collection.</param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.#ctor(We7.CMS.Config.BaseConfigInfo[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> class containing the specified array of <see cref="T:We7.CMS.Config.BaseConfigInfo">BaseConfigInfo</see> Components.
+            </summary>
+            <param name="value">An array of <see cref="T:We7.CMS.Config.BaseConfigInfo">BaseConfigInfo</see> Components with which to initialize the collection. </param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.AddRange(We7.CMS.Config.BaseConfigInfo[])">
+            <summary>
+            Copies the elements of the specified <see cref="T:We7.CMS.Config.BaseConfigInfo">BaseConfigInfo</see> array to the end of the collection.
+            </summary>
+            <param name="value">An array of type <see cref="T:We7.CMS.Config.BaseConfigInfo">BaseConfigInfo</see> containing the Components to add to the collection.</param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.AddRange(We7.CMS.Config.BaseConfigInfoCollection)">
+            <summary>
+            Adds the contents of another <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> to the end of the collection.
+            </summary>
+            <param name="value">A <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> containing the Components to add to the collection. </param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.Contains(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            Gets a value indicating whether the collection contains the specified <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see>.
+            </summary>
+            <param name="value">The <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> to search for in the collection.</param>
+            <returns><b>true</b> if the collection contains the specified object; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.CopyTo(We7.CMS.Config.BaseConfigInfo[],System.Int32)">
+            <summary>
+            Copies the collection Components to a one-dimensional <see cref="T:System.Array">Array</see> instance beginning at the specified index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array">Array</see> that is the destination of the values copied from the collection.</param>
+            <param name="index">The index of the array at which to begin inserting.</param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.IndexOf(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            Gets the index in the collection of the specified <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see>, if it exists in the collection.
+            </summary>
+            <param name="value">The <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> to locate in the collection.</param>
+            <returns>The index in the collection of the specified object, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> instance.
+            </summary>
+            <returns>An <see cref="T:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator">BaseConfigInfoCollectionEnumerator</see> for the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> instance.</returns>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigInfoCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> at the specified index in the collection.
+            <para>
+            In C#, this property is the indexer for the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> class.
+            </para>
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator">
+            <summary>
+            Supports a simple iteration over a <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see>.
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator.#ctor(We7.CMS.Config.BaseConfigInfoCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator">BaseConfigInfoCollectionEnumerator</see> class referencing the specified <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> object.
+            </summary>
+            <param name="mappings">The <see cref="T:We7.CMS.Config.BaseConfigInfoCollection">BaseConfigInfoCollection</see> to enumerate.</param>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns><b>true</b> if the enumerator was successfully advanced to the next element; <b>false</b> if the enumerator has passed the end of the collection.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator.Reset">
+            <summary>
+            Sets the enumerator to its initial position, which is before the first element in the collection.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigInfoCollection.BaseConfigInfoCollectionEnumerator.Current">
+            <summary>
+            Gets the current element in the collection.
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.ApplicationInfoCollection">
+            <summary>
+            整合程序配置信息集合
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> class.
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.#ctor(We7.CMS.Config.ApplicationInfoCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> class containing the elements of the specified source collection.
+            </summary>
+            <param name="value">A <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> with which to initialize the collection.</param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.#ctor(We7.CMS.Config.ApplicationInfo[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> class containing the specified array of <see cref="T:We7.CMS.Config.ApplicationInfo">ApplicationInfo</see> Components.
+            </summary>
+            <param name="value">An array of <see cref="T:We7.CMS.Config.ApplicationInfo">ApplicationInfo</see> Components with which to initialize the collection. </param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.AddRange(We7.CMS.Config.ApplicationInfo[])">
+            <summary>
+            Copies the elements of the specified <see cref="T:We7.CMS.Config.ApplicationInfo">ApplicationInfo</see> array to the end of the collection.
+            </summary>
+            <param name="value">An array of type <see cref="T:We7.CMS.Config.ApplicationInfo">ApplicationInfo</see> containing the Components to add to the collection.</param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.AddRange(We7.CMS.Config.ApplicationInfoCollection)">
+            <summary>
+            Adds the contents of another <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> to the end of the collection.
+            </summary>
+            <param name="value">A <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> containing the Components to add to the collection. </param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.Contains(We7.CMS.Config.ApplicationInfo)">
+            <summary>
+            Gets a value indicating whether the collection contains the specified <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see>.
+            </summary>
+            <param name="value">The <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> to search for in the collection.</param>
+            <returns><b>true</b> if the collection contains the specified object; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.CopyTo(We7.CMS.Config.ApplicationInfo[],System.Int32)">
+            <summary>
+            Copies the collection Components to a one-dimensional <see cref="T:System.Array">Array</see> instance beginning at the specified index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array">Array</see> that is the destination of the values copied from the collection.</param>
+            <param name="index">The index of the array at which to begin inserting.</param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.IndexOf(We7.CMS.Config.ApplicationInfo)">
+            <summary>
+            Gets the index in the collection of the specified <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see>, if it exists in the collection.
+            </summary>
+            <param name="value">The <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> to locate in the collection.</param>
+            <returns>The index in the collection of the specified object, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> instance.
+            </summary>
+            <returns>An <see cref="T:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator">ApplicationInfoCollectionEnumerator</see> for the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> instance.</returns>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfoCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> at the specified index in the collection.
+            <para>
+            In C#, this property is the indexer for the <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> class.
+            </para>
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator">
+            <summary>
+            Supports a simple iteration over a <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see>.
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator.#ctor(We7.CMS.Config.ApplicationInfoCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator">ApplicationInfoCollectionEnumerator</see> class referencing the specified <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> object.
+            </summary>
+            <param name="mappings">The <see cref="T:We7.CMS.Config.ApplicationInfoCollection">ApplicationInfoCollection</see> to enumerate.</param>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns><b>true</b> if the enumerator was successfully advanced to the next element; <b>false</b> if the enumerator has passed the end of the collection.</returns>
+        </member>
+        <member name="M:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator.Reset">
+            <summary>
+            Sets the enumerator to its initial position, which is before the first element in the collection.
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfoCollection.ApplicationInfoCollectionEnumerator.Current">
+            <summary>
+            Gets the current element in the collection.
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.StrategyConfigs">
+            <summary>
+            策略的集合
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.AbstractConfig`1">
+            <summary>
+            生成配置文件的抽象类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.ConfigName">
+            <summary>
+            配置文件的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.Save">
+            <summary>
+            保存配置文件
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.Load">
+            <summary>
+            加载配置文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.Serialize">
+            <summary>
+            对当前对象进行序列化
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.DeSerialize">
+            <summary>
+            对当前对象行返序列化
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.AbstractConfig`1.Check(We7.CMS.Config.CheckDelegate)">
+            <summary>
+            用于检测是否符合条件
+            </summary>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Config.AbstractConfig`1.ConfigFilePath">
+            <summary>
+            配置文件路径
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.ConfigName">
+            <summary>
+            配置文件的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.ReLoad">
+            <summary>
+            重新加载数据
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.ContainsName(System.String)">
+            <summary>
+            是否包含同名的策略
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.Format15L(System.String)">
+            <summary>
+            将IP格式化为15字符长，不足的加0
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.FormatOL(System.String)">
+            <summary>
+            将IP还原，去掉0
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.Format15LRang(System.String)">
+            <summary>
+            添加0,格式化对15字符的长度
+            </summary>
+            <param name="rang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.FormatOLRang(System.String)">
+            <summary>
+            去掉多余的0,格式化对原字符的长度
+            </summary>
+            <param name="rang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.CheckIPInRang(System.String,System.String)">
+            <summary>
+            检测IP是否在某一个IP段内
+            </summary>
+            <param name="ip"></param>
+            <param name="rang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.CheckIPInStragegy(System.String,System.String)">
+            <summary>
+            检测IP是否在某一个策略内
+            </summary>
+            <param name="ip"></param>
+            <param name="strStrategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.StrategyConfigs.IsAllow(System.String,System.String)">
+            <summary>
+            检测所给IP在指定策略内是否可用
+            </summary>
+            <param name="ip"></param>
+            <param name="strStrategy"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyConfigs.Item(System.String)">
+            <summary>
+            索引：根据策略的关键字查询策略
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyConfigs.Instance">
+            <summary>
+            取得策略配置文件的实例
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyConfigs.Items">
+            <summary>
+            策略配置文件的集合
+            </summary>
+        </member>
+        <member name="T:StrategyMode">
+            <summary>
+            策略的类型
+            </summary>
+        </member>
+        <member name="F:StrategyMode.ARTICLE">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="F:StrategyMode.CHANNEL">
+            <summary>
+            栏目
+            </summary>
+        </member>
+        <member name="F:StrategyMode.CONVENTION">
+            <summary>
+            常规
+            </summary>
+        </member>
+        <member name="F:StrategyState.DEFAULT">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:StrategyState.ALLOW">
+            <summary>
+            允许
+            </summary>
+        </member>
+        <member name="F:StrategyState.DENY">
+            <summary>
+            禁止
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.AccountModelInfo">
+            <summary>
+            注册模块信息
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.AccountModelItem">
+            <summary>
+            注册模块信息条目项
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.BaseConfigs">
+            <summary>
+            基本设置类
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigs.ResetConfig">
+            <summary>
+            重设配置类实例
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigs.ConfigFileExist">
+            <summary>
+            数据库配置文件是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigs.SaveConfig(We7.CMS.Config.BaseConfigInfo)">
+            <summary>
+            保存配置实例
+            </summary>
+            <param name="baseconfiginfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigs.Serialiaze(We7.CMS.Config.BaseConfigInfo,System.String)">
+            <summary>
+            序列化配置信息为XML
+            </summary>
+            <param name="configinfo">配置信息</param>
+            <param name="configFilePath">配置文件完整路径</param>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigs.GetDBConnectString">
+            <summary>
+            返回数据库连接串
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigs.GetDbType">
+            <summary>
+            返回网站数据库类型
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.BaseConfigFileManager">
+            <summary>
+            基本设置信息管理类
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Config.BaseConfigFileManager.m_lockHelper">
+            <summary>
+            锁对象
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Config.BaseConfigFileManager.m_fileoldchange">
+            <summary>
+            文件修改时间
+            </summary>
+        </member>
+        <member name="F:We7.CMS.Config.BaseConfigFileManager.filename">
+            <summary>
+            配置文件所在路径
+            </summary>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigFileManager.LoadConfig">
+            <summary>
+            加载配置类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigFileManager.LoadRealConfig">
+            <summary>
+            加载真正有效的配置类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:We7.CMS.Config.BaseConfigFileManager.SaveConfig">
+            <summary>
+            保存配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigFileManager.ConfigInfo">
+            <summary>
+            当前配置类的实例
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.BaseConfigFileManager.ConfigFilePath">
+            <summary>
+            获取配置文件所在路径
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.StrategyInfo">
+            <summary>
+            策略的配置信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.Key">
+            <summary>
+            策略的关键字
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.Name">
+            <summary>
+            策略的名称
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.AllowIPRang">
+            <summary>
+            信任IP范围
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.DenyIPRang">
+            <summary>
+            禁止IP范围
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.StrategyInfo.Enable">
+            <summary>
+            策略是否可用
+            </summary>
+        </member>
+        <member name="T:We7.CMS.Config.ApplicationInfo">
+            <summary>
+            整合程序配置信息
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.AppName">
+            <summary>
+            整合程序名称 50字节限制
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.AppUrl">
+            <summary>
+            整合程序Url
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.APIKey">
+            <summary>
+            整合程序API代码 32位
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.Secret">
+            <summary>
+            整合程序密钥 32位
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.CallbackUrl">
+            <summary>
+            登录完成后返回地址 100字节限制
+            </summary>
+        </member>
+        <member name="P:We7.CMS.Config.ApplicationInfo.IPAddresses">
+            <summary>
+            允许的服务器IP地址 逗号分隔
+            </summary>
+        </member>
+    </members>
+</doc>

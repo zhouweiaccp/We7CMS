@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" desc="用户模型" label="用户模型" type="account">
+  <dataSet>
+    <dataTable name="AccountModel">
+      <dataColumn label="ID" name="ID" dataType="String" expression="" direction="InputOutput" mapping="ID" system="true" />
+    </dataTable>
+  </dataSet>
+  <layout>
+    <panel name="edit" label="后台录入面板">
+      <edit path="We7.AccountEditor" visible="true">
+				<group index="0" name="默认" next="0" enable="true">
+          <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false" />
+        </group>
+      </edit>
+      <condition visible="false" path="we7.Condition">
+        <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false" />
+      </condition>
+      <context>
+        <dataKey>ID</dataKey>
+      </context>
+    </panel>
+    <panel name="fedit" label="前台录入界面">
+      <edit path="We7.FrontAccountEditor" visible="true">
+				<group index="0" name="默认" next="0" enable="true">
+          <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false">
+            <param name ="param" value="feid"></param>
+          </control>
+        </group>
+      </edit>
+      <condition visible="false" path="we7.Condition">
+        <control id="ID" label="ID" name="ID" type="Request" required="false" visible="false">
+          <param name ="param" value="feid"></param>
+        </control>
+      </condition>
+      <context>
+        <dataKey>ID</dataKey>
+      </context>
+    </panel>
+  </layout>
+</ModelInfo>
